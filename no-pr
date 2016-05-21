@@ -21,8 +21,8 @@ xkb_symbols "basic" {
     key <AE12>	{ [ backslash, dead_grave,   dead_acute,      notsign ]	};
 
 
-    key <AC10>	{ [    oslash,   Ooblique,   dead_acute, dead_doubleacute ] };
-    key <AC11>	{ [        ae,         AE, dead_circumflex, dead_caron]	};
+    key <AC10>	{ [ parenleft,   Ooblique,   dead_acute, dead_doubleacute ] };
+    key <AC11>	{ [parenright,         AE, dead_circumflex, dead_caron]	};
     key <TLDE>	{ [       bar,    section,    brokenbar,    paragraph ]	};
 
     key <BKSL>	{ [apostrophe,   asterisk, dead_doubleacute, multiply ]	};
