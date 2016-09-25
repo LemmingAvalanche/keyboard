@@ -1,0 +1,19 @@
+Copy whatever xkb files you have to the directory:
+
+#+BEGIN_SRC generic
+/usr/share/X11/xkb/symbols
+#+END_SRC
+
+Remember to remove the files in this directory when you have made modifications
+to one of the files in that directory:
+
+#+BEGIN_SRC generic
+/var/lib/xkb/
+#+END_SRC
+
+You don't have to restart the computer in order for the new key mappings to take
+effect; just restart lightdm:
+
+#+BEGIN_SRC shell
+sudo restart lightdm
+#+END_SRC
