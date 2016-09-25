@@ -47,8 +47,8 @@ xkb_symbols "nodeadkeys" {
 
     key <AE12>	{ [ backslash,      grave,        acute,       ogonek ]	};
     key <AD12>	{ [ diaeresis, asciicircum,  asciitilde,       macron ]	};
-    key <AC10>	{ [    oslash,   Ooblique,        acute,  doubleacute ]	};
-    key <AC11>	{ [        ae,         AE,  asciicircum,        caron ]	};
+    key <AC10>	{ [ parenleft, bracketleft, braceleft, doubleacute ]	};
+    key <AC11>	{ [ parenright, bracketright, braceright, caron ]	};
     key <AB08>	{ [     comma,  semicolon,      cedilla,       ogonek ]	};
     key <AB09>	{ [    period,      colon, periodcentered,   abovedot ]	};
 };
