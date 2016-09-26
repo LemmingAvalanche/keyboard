@@ -15,7 +15,7 @@ xkb_symbols "basic" {
     key <AB10>	{ [     minus, underscore,       endash,       emdash ]	};
     key <AD04>	{ [         r,          R,   registered,    trademark ]	};
     key <AD10>	{ [         p,          P,     Greek_pi,     Greek_PI ]	};
-    key <AD11>	{ [     slash, asciitilde,  acircumflex,  Acircumflex ]	};
+    key <AD11>	{ [     slash, dollar,  acircumflex,  Acircumflex ]	};
     key <AE05>	{ [         5,    percent,      onehalf,    0x1002030 ]	};
 
     key <AE11>	{ [      plus,   question,    plusminus, questiondown ]	};
