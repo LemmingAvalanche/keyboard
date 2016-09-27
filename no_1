@@ -28,6 +28,13 @@ xkb_symbols "basic" {
     key <BKSL>	{ [apostrophe,   asterisk, dead_doubleacute, multiply ]	};
     key <LSGT>	{ [      less,    greater,      onehalf, threequarters]	};
 
+    // Provide more convenient access to the "<" and ">" characdters. I do
+    // not use and do not need the characters which these changes override, so
+    // this should be *safe* to do. Also, as a bonus, use the Norwegian smart
+    // quotes for the fourth levels.
+    key <AC01> { [ a, A, less, guillemotleft ] };
+    key <AC02> { [ s, S, greater, guillemotright ] };
+
     // NON-ALPHANUMERIC KEYS
     include "compose(menu)"
 
