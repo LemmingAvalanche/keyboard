@@ -50,6 +50,7 @@ xkb_symbols "nodeadkeys" {
     key <AC11>	{ [        ae,         AE,  asciicircum,        caron ]	};
     key <AB08>	{ [     comma,  semicolon,      cedilla,       ogonek ]	};
     key <AB09>	{ [    period,      colon, periodcentered,   abovedot ]	};
+    key <BKSL>	{ [apostrophe,   asterisk, multiply, U2218 ]	};
 };
 
 // Norwegian Dvorak
