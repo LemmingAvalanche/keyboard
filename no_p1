@@ -183,7 +183,7 @@ xkb_symbols "smi_nodeadkeys" {
 
     // Modifies the basic Norwegian layout to eliminate dead keys
 
-    include "no(smi)"
+    include "no_p1(smi)"
 
     name[Group1]= "Northern Saami (Norway, eliminate dead keys)";
 
@@ -220,7 +220,7 @@ partial alphanumeric_keys
 xkb_symbols "mac_nodeadkeys" {
 
     // Modifies the basic Norwegian layout to eliminate dead keys
-    include "no(mac)"
+    include "no_p1(mac)"
     name[Group1]= "Norwegian (Macintosh, eliminate dead keys)";
 
     key <AE12>	{ [      grave,     acute,        acute,       ogonek ]	};
@@ -234,7 +234,7 @@ xkb_symbols "colemak" {
     // Q W F P G   J L U Y Ø Å ¨
     // A R S T D   H N E I O Æ '
     // < Z X C V   B K M , . -
-    include "no(basic)"
+    include "no_p1(basic)"
     name[Group1]= "Norwegian (Colemak)";
 
     key <AB06>	{ [         k,          K,          kra,    ampersand ] };
@@ -260,5 +260,5 @@ xkb_symbols "colemak" {
 
 partial alphanumeric_keys
 	xkb_symbols "sun_type6" {
-	include "sun_vndr/no(sun_type6)"
+	include "sun_vndr/no_p1(sun_type6)"
 };
