@@ -45,7 +45,7 @@ xkb_symbols "nodeadkeys" {
     name[Group1]="Norwegian (eliminate dead keys)";
 
     key <AE12>	{ [ backslash,      grave,        acute,       ogonek ]	};
-    key <AD12>	{ [ diaeresis, asciicircum,  asciitilde,       macron ]	};
+    key <AD12>	{ [ asciicircum,  asciitilde, bar, section ]	};
     key <AC10>	{ [    oslash,   Ooblique,        acute,  doubleacute ]	};
     key <AC11>	{ [        ae,         AE,  asciicircum,        caron ]	};
     key <AB08>	{ [     comma,  semicolon,      cedilla,       ogonek ]	};
