@@ -15,21 +15,20 @@ xkb_symbols "basic" {
     key <AB10>	{ [     minus, underscore,       endash,       emdash ]	};
     key <AD04>	{ [         r,          R,   registered,    trademark ]	};
     key <AD10>	{ [         p,          P,     Greek_pi,     Greek_PI ]	};
-    key <AD11>	{ [     slash, dollar,  acircumflex,  Acircumflex ]	};
     key <AE05>	{ [         5,    percent,      onehalf,    0x1002030 ]	};
 
     key <AE11>	{ [      plus,   question,    plusminus, questiondown ]	};
     key <AE12>	{ [ backslash, dead_grave,   dead_acute,      notsign ]	};
 
 
-    key <AC10>	{ [ parenleft, bracketleft, braceleft, dead_doubleacute ] };
-    key <AC11>	{ [parenright, bracketright, braceright, dead_caron]	};
+    key <AC10>	{ [    oslash,   Ooblique,   dead_acute, dead_doubleacute ] };
+    key <AC11>	{ [        ae,         AE, dead_circumflex, dead_caron]	};
     key <TLDE>	{ [       bar,    section,    brokenbar,    paragraph ]	};
 
     key <BKSL>	{ [apostrophe,   asterisk, dead_doubleacute, multiply ]	};
     key <LSGT>	{ [      less,    greater,      onehalf, threequarters]	};
 
-    // non-alphanumeric keys
+    // NON-ALPHANUMERIC KEYS
     include "compose(menu)"
 
     include "nbsp(level3n)"
@@ -44,14 +43,14 @@ xkb_symbols "nodeadkeys" {
 
     // Modifies the basic Norwegian layout to eliminate dead keys
 
-    include "no_pr(basic)"
+    include "no_1(basic)"
 
     name[Group1]="Norwegian (eliminate dead keys)";
 
     key <AE12>	{ [ backslash,      grave,        acute,       ogonek ]	};
     key <AD12>	{ [ asciicircum,  asciitilde, bar, section ]	};
-    key <AC10>	{ [ parenleft, bracketleft, braceleft, doubleacute ]	};
-    key <AC11>	{ [ parenright, bracketright, braceright, caron ]	};
+    key <AC10>	{ [    oslash,   Ooblique,        acute,  doubleacute ]	};
+    key <AC11>	{ [        ae,         AE,  asciicircum,        caron ]	};
     key <AB08>	{ [     comma,  semicolon,      cedilla,       ogonek ]	};
     key <AB09>	{ [    period,      colon, periodcentered,   abovedot ]	};
     key <BKSL>	{ [apostrophe,   asterisk, multiply, U2218 ]	};
@@ -183,7 +182,7 @@ xkb_symbols "smi_nodeadkeys" {
 
     // Modifies the basic Norwegian layout to eliminate dead keys
 
-    include "no(smi)"
+    include "no_1(smi)"
 
     name[Group1]= "Northern Saami (Norway, eliminate dead keys)";
 
@@ -220,7 +219,7 @@ partial alphanumeric_keys
 xkb_symbols "mac_nodeadkeys" {
 
     // Modifies the basic Norwegian layout to eliminate dead keys
-    include "no(mac)"
+    include "no_1(mac)"
     name[Group1]= "Norwegian (Macintosh, eliminate dead keys)";
 
     key <AE12>	{ [      grave,     acute,        acute,       ogonek ]	};
@@ -234,7 +233,7 @@ xkb_symbols "colemak" {
     // Q W F P G   J L U Y Ø Å ¨
     // A R S T D   H N E I O Æ '
     // < Z X C V   B K M , . -
-    include "no(basic)"
+    include "no_1(basic)"
     name[Group1]= "Norwegian (Colemak)";
 
     key <AB06>	{ [         k,          K,          kra,    ampersand ] };
@@ -260,5 +259,5 @@ xkb_symbols "colemak" {
 
 partial alphanumeric_keys
 	xkb_symbols "sun_type6" {
-	include "sun_vndr/no(sun_type6)"
+	include "sun_vndr/no_1(sun_type6)"
 };
