@@ -5,5 +5,6 @@
 sudo trash-put /var/lib/xkb/*
 
 sudo cp ~/.xkb/no_pr /usr/share/X11/xkb/symbols/no_pr
+sudo cp ~/.xkb/no /usr/share/X11/xkb/symbols/no
 
 sudo restart lightdm
