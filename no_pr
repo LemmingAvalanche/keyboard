@@ -44,7 +44,7 @@ xkb_symbols "nodeadkeys" {
 
     // Modifies the basic Norwegian layout to eliminate dead keys
 
-    include "no(basic)"
+    include "no_pr(basic)"
 
     name[Group1]="Norwegian (eliminate dead keys)";
 
