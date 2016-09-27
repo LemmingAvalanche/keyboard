@@ -28,6 +28,9 @@ xkb_symbols "basic" {
     key <BKSL>	{ [apostrophe,   asterisk, dead_doubleacute, multiply ]	};
     key <LSGT>	{ [      less,    greater,      onehalf, threequarters]	};
 
+    // NON-ALPHANUMERIC KEYS
+    include "compose(menu)"
+
     include "nbsp(level3n)"
     include "keypad(ossmath)"
     include "kpdl(comma)"
