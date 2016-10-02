@@ -58,3 +58,13 @@ When I press the two "level 5 shift" keys together, level 5 is either locked or
 unlocked (depending on the lock state). When level 5 is locked, keybindings with
 the Windows/super keys don't work. Which for me means that my Xmonad kyebindings
 don't work.
+
+* "LSGT" produces "Return" on release even when pressed for long
+
+The key "LSGT" (one of the "level 5 shift" keys) produces "Return" when held
+down for a long time and then released. This is not the case for the other
+"level 5 shift"  key, namely the "Return" key.
+
+This only happens if the key is depressed and released without being used as a
+chord. If it is depressed and some other key is depressed before it is released,
+then a "Return" is not produced.
