@@ -18,13 +18,6 @@ I should use ~setxkbmap~ instead of ~xmodmap~ to map keys in the script, since
 Also, apparently running a ~setxkbmap~ after having run an ~xmodmap~ command
 might invalidate whatever changes the ~xmodmap~ invocation made.
 
-* The ~<LTGT>~ key uses "repeat"
-
-I saw through running ~xev~ that holding down the ~<LTGT>~ key lead to it being
-registered again and again as a keypress, instead of just one. Since this is a
-"level 5 shift" key and a compose key, I might not want to have this key
-/repeat/ while depressed.
-
 * The order matters when combining level 2 and level 3 shifts
 
 This only happens for the ~<BKSL>~ key.
@@ -51,20 +44,3 @@ keysym as "ISO_Level3_Shift", but the "KeyRelease event" registers the keysym as
 and release events registers the keysym as "ISO_Level3_Shift".
 
 This might be relevant to this issue.
-
-* Locking at level 5 makes Xmonad keybindings not work
-
-When I press the two "level 5 shift" keys together, level 5 is either locked or
-unlocked (depending on the lock state). When level 5 is locked, keybindings with
-the Windows/super keys don't work. Which for me means that my Xmonad kyebindings
-don't work.
-
-* "LSGT" produces "Return" on release even when pressed for long
-
-The key "LSGT" (one of the "level 5 shift" keys) produces "Return" when held
-down for a long time and then released. This is not the case for the other
-"level 5 shift"  key, namely the "Return" key.
-
-This only happens if the key is depressed and released without being used as a
-chord. If it is depressed and some other key is depressed before it is released,
-then a "Return" is not produced.
