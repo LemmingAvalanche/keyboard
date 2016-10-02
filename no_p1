@@ -31,7 +31,7 @@ xkb_symbols "basic" {
     key <AC11>	{ [parenright, bracketright, braceright, dead_caron]	};
     key <TLDE>	{ [       bar,    section,    brokenbar,    paragraph ]	};
 
-    key <BKSL>	{ [apostrophe,   asterisk, dead_doubleacute, multiply ]	};
+    key <BKSL>	{ [ ] };
     key <LSGT>	{ [      less,    greater,      onehalf, threequarters]	};
 
     // Provide more convenient access to the "<" and ">" characdters. I do
