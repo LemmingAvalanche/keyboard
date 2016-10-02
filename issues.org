@@ -24,3 +24,21 @@ I saw through running ~xev~ that holding down the ~<LTGT>~ key lead to it being
 registered again and again as a keypress, instead of just one. Since this is a
 "level 5 shift" key and a compose key, I might not want to have this key
 /repeat/ while depressed.
+
+* The order matters when combining level 2 and level 3 shifts
+
+This only happens for the ~<BKSL>~ key.
+
+If I press and hold the ~<BKSL>~ key, and then press and hold the ~<Shift_R>~
+key (while still holding down ~<BKSL>~), then I enter level 4 (level 2 and level
+3 shift pressed at the same time). But if I press and hold ~<Shift_R>~ /and
+then/ press and hold ~<BKSL>~, then I am still at level 2. This is not the case
+for the ~<Alt_R>~ (also known as "Alt Gr") key; I can press and release this key
+and ~<Shift_R>~ in any order and they still work as expected, namely that the
+fourth level is accessed whenever both are depressed at the same time.
+
+At first I thought that this had something to do with the fact that ~<Alt_R>~
+was the original (and only) "level 3 shift", and that I had used ~xmodmap~ to
+make ~<BKSL>~ a "level 3 shift" key. But this is /not/ an issue when it comes to
+~<Caps_Lock>~ and ~<Shift_L>~; they work just as well as ~<Alt_R>~ combined with
+~<Shift_R>~.
