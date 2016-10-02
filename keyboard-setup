@@ -15,8 +15,15 @@ xmodmap -e "keycode 36 = $modifier_5"
 # Use an unused keycode for return. This value is not used by my keyboard. I
 # found this out by running `xmodmap -pke`.
 xmodmap -e "keycode 255 = Return"
+
+# Make the <BKSL> key dual-purpose as the "Compose" key when pressed and
+# released by itself, and a level shift 3 when used in a chord.
+xmodmap -e "keycode 51 = $modifier_3"
+xmodmap -e "keycode 254 = Multi_key"
+
 # TODO Should this be run asynchronously? (Update: doesn't seem like it.)
 # Finally use xcape to cause "Return" to generate a linefeed when tapped.
+xcape -e "$modifier_3=Multi_key"
 xcape -e "$modifier_5=Return"
 
 # TODO Do the same procedure for "Caps Lock". In other words, make it act as
