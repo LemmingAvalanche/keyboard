@@ -51,3 +51,10 @@ keysym as "ISO_Level3_Shift", but the "KeyRelease event" registers the keysym as
 and release events registers the keysym as "ISO_Level3_Shift".
 
 This might be relevant to this issue.
+
+* Locking at level 5 makes Xmonad keybindings not work
+
+When I press the two "level 5 shift" keys together, level 5 is either locked or
+unlocked (depending on the lock state). When level 5 is locked, keybindings with
+the Windows/super keys don't work. Which for me means that my Xmonad kyebindings
+don't work.
