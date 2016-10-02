@@ -17,7 +17,6 @@ xmodmap -e "keycode 255 = Return"
 # The "less than great than" key will be the level5_shift for the left side of
 # the keyboard.
 xmodmap -e "keycode 94 = $modifier_5"
-xmodmap -e "keycode 252 = Return"
 
 # Make the <BKSL> key dual-purpose as the "Compose" key when pressed and
 # released by itself, and a level shift 3 when used in a chord.
@@ -26,7 +25,6 @@ xmodmap -e "keycode 254 = Multi_key"
 
 # Caps Lock will be the compose/level3_shift for the left side of the keyboard.
 xmodmap -e "keycode 66 = $modifier_3"
-xmodmap -e "keycode 253 = Multi_key"
 
 # TODO Should this be run asynchronously? (Update: doesn't seem like it.)
 xcape -e "$modifier_3=Multi_key"
