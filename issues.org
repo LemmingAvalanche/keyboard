@@ -10,3 +10,10 @@ This is not a practical issue right now, since I never press the "AltGr" key
 rapidly by mistake. But it could become an issue when I am going to map "Caps
 Lock" to act as another level 3 modifier when held down and pressed with other
 keys.
+
+* I should use ~setxkbmap~ instead of ~xmodmap~
+
+I should use ~setxkbmap~ instead of ~xmodmap~ to map keys in the script, since
+~xmodmap~ seems to be effectively deprecated in favour of ~setxkbmap~ in Ubuntu.
+Also, apparently running a ~setxkbmap~ after having run an ~xmodmap~ command
+might invalidate whatever changes the ~xmodmap~ invocation made.
