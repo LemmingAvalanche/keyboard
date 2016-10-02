@@ -17,3 +17,10 @@ I should use ~setxkbmap~ instead of ~xmodmap~ to map keys in the script, since
 ~xmodmap~ seems to be effectively deprecated in favour of ~setxkbmap~ in Ubuntu.
 Also, apparently running a ~setxkbmap~ after having run an ~xmodmap~ command
 might invalidate whatever changes the ~xmodmap~ invocation made.
+
+* The ~<LTGT>~ key uses "repeat"
+
+I saw through running ~xev~ that holding down the ~<LTGT>~ key lead to it being
+registered again and again as a keypress, instead of just one. Since this is a
+"level 5 shift" key and a compose key, I might not want to have this key
+/repeat/ while depressed.
