@@ -1,0 +1,12 @@
+* "AltGr" button produces newline when quickly pressed
+
+This is due to the way I have mapped the "Return" key to "ISO_Level3_Shift", and
+then this modifier back to produce the "Return" action/character when pressed.
+Since "AltGr" is the original (only) character that was mapped to that
+modifier, they now both emit the keycode 255 when pressed rapidly (255 is the
+unused keycode that I mapped to the "Return" key).
+
+This is not a practical issue right now, since I never press the "AltGr" key
+rapidly by mistake. But it could become an issue when I am going to map "Caps
+Lock" to act as another level 3 modifier when held down and pressed with other
+keys.
