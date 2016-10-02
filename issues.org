@@ -42,3 +42,12 @@ was the original (and only) "level 3 shift", and that I had used ~xmodmap~ to
 make ~<BKSL>~ a "level 3 shift" key. But this is /not/ an issue when it comes to
 ~<Caps_Lock>~ and ~<Shift_L>~; they work just as well as ~<Alt_R>~ combined with
 ~<Shift_R>~.
+
+** Update
+
+When pressing ~<BKSL>~ while running ~xev~, the "KeyPress event" registers the
+keysym as "ISO_Level3_Shift", but the "KeyRelease event" registers the keysym as
+"NoSymbol". This is /not/ the case for the "Caps_Lock" key; both the key press
+and release events registers the keysym as "ISO_Level3_Shift".
+
+This might be relevant to this issue.
