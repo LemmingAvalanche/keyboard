@@ -8,15 +8,15 @@ setxkbmap -option "" -layout "no_p1(nodeadkeys),no_1(nodeadkeys)" -option \
 # The following code is based on the example code in the following readme:
 #     https://github.com/alols/xcape/blob/master/README.md
 # TEMP try with the key directly!
-modifier="ISO_Level3_Shift"
+modifier_3="ISO_Level3_Shift"
 # Return keycode = 36. Found by running `xmodmap -pke`.
-xmodmap -e "keycode 36 = $modifier"
+xmodmap -e "keycode 36 = $modifier_3"
 # Use an unused keycode for return. This value is not used by my keyboard. I
 # found this out by running `xmodmap -pke`.
 xmodmap -e "keycode 255 = Return"
 # TODO Should this be run asynchronously? (Update: doesn't seem like it.)
 # Finally use xcape to cause "Return" to generate a linefeed when tapped.
-xcape -e "$modifier=Return"
+xcape -e "$modifier_3=Return"
 
 # TODO Do the same procedure for "Caps Lock". In other words, make it act as
 # "ISO_Level3_Shift" when chording with it.
