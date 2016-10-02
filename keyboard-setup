@@ -2,7 +2,7 @@
 
 # Set keyboard layouts and options relating to keyboard layouts
 setxkbmap -option "" -layout "no_p1(nodeadkeys),no_1(nodeadkeys)" -option \
-          grp:sclk_toggle -option caps:backspace -option grp_led:scroll :2 \
+          grp:sclk_toggle -option grp_led:scroll :2 \
           -option lv5:lsgt_switch_lock -option nbsp:none
 
 # The following code is based on the example code in the following readme:
