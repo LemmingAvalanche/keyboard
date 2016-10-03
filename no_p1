@@ -31,15 +31,16 @@ xkb_symbols "basic" {
     key <AC11>	{ [parenright, bracketright, braceright, dead_caron]	};
     key <TLDE>	{ [       bar,    section,    brokenbar,    paragraph ]	};
 
-    key <BKSL>	{ [ ] };
-    key <LSGT>	{ [      less,    greater,      onehalf, threequarters]	};
-
     // Provide more convenient access to the "<" and ">" characdters. I do
     // not use and do not need the characters which these changes override, so
     // this should be *safe* to do. Also, as a bonus, use the Norwegian smart
     // quotes for the fourth levels.
     key <AC01> { [ a, A, less, guillemotleft ] };
     key <AC02> { [ s, S, greater, guillemotright ] };
+
+    modifier_map ISO_Level3_Shift { <LSGT> };
+
+    modifier_map ISO_Level5_Shift { <BKSL> };
 
     // non-alphanumeric keys
     include "compose(menu)"
@@ -66,7 +67,6 @@ xkb_symbols "nodeadkeys" {
     key <AC11>	{ [ parenright, bracketright, braceright, caron ]	};
     key <AB08>	{ [     comma,  semicolon,      cedilla,       ogonek ]	};
     key <AB09>	{ [    period,      colon, periodcentered,   abovedot ]	};
-    key <BKSL>	{ [apostrophe,   asterisk, multiply, U2218 ]	};
 };
 
 // Norwegian Dvorak
