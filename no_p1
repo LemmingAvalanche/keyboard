@@ -38,10 +38,21 @@ xkb_symbols "basic" {
     key <AC01> { [ a, A, less, guillemotleft ] };
     key <AC02> { [ s, S, greater, guillemotright ] };
 
-    modifier_map ISO_Level3_Shift { <LSGT> };
 
-    modifier_map ISO_Level5_Shift { <BKSL> };
-
+    // level 3 shift
+    modifier_map mod3 { <BKSL> };
+    key <BKSL> { [
+        ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift,
+        ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift,
+        ISO_Level3_Shift, ISO_Level3_Shift
+    ] };
+    // level 5 shift
+    modifier_map mod5 { <LSGT> };
+    key <LSGT> { [
+        ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift,
+        ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift,
+        ISO_Level5_Shift, ISO_Level5_Shift
+    ] };
     // non-alphanumeric keys
     include "compose(menu)"
 
