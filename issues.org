@@ -18,7 +18,7 @@ I should use ~setxkbmap~ instead of ~xmodmap~ to map keys in the script, since
 Also, apparently running a ~setxkbmap~ after having run an ~xmodmap~ command
 might invalidate whatever changes the ~xmodmap~ invocation made.
 
-* The order matters when combining level 2 and level 3 shifts
+* The order matters when combining level 2 and level 3 shifts :issue_resolved:
 
 This only happens for the ~<BKSL>~ key.
 
@@ -36,7 +36,7 @@ make ~<BKSL>~ a "level 3 shift" key. But this is /not/ an issue when it comes to
 ~<Caps_Lock>~ and ~<Shift_L>~; they work just as well as ~<Alt_R>~ combined with
 ~<Shift_R>~.
 
-** Update
+** Update 1
 
 When pressing ~<BKSL>~ while running ~xev~, the "KeyPress event" registers the
 keysym as "ISO_Level3_Shift", but the "KeyRelease event" registers the keysym as
@@ -44,3 +44,44 @@ keysym as "ISO_Level3_Shift", but the "KeyRelease event" registers the keysym as
 and release events registers the keysym as "ISO_Level3_Shift".
 
 This might be relevant to this issue.
+
+** Update 2
+
+*** Not key ghosting
+
+I did some testing in ~xev~. I suspected that it might have to do with key
+ghosting, but that does not seem to be the case, since ~xev~ manages to register
+both keys (~Shift_R~ and ~BKSL~) while one of them is first held down, no matter
+what order they are depressed in[fn:higher_levels].
+
+[fn:higher_levels] Moreover, it also manages to register the keypresses when
+both of these keys and ~Return~ in addition are pressed down, and apparently in
+whatever order. This is nice, since I feared that key ghosting would mean that I
+could not hold down these keys together and have them all register. (These three
+keys activate all the three shift levels, which means that I get access to the
+eight level when I depress them simultaneusly.)
+
+*** ~NoSymbol~ key when pressed after ~Shift_R~
+
+When I depress and hold ~Shift_R~ and then depress ~BKSL~, the keysym for this
+key is hex value 0x0, ~NoSymbol~.
+
+I think this is due to xkb thinking that ~BKSL~ is supposed to a "shiftable
+key" and not a modifier key. So when shift is held down and ~BKSL~ is pressed as
+well, a lookup is made to see what symbol should be produced. And since ~BKSL~
+has no /levels/ any more, it gets registers as being a "no symbol".
+
+I think what I need to do is to register ~BKSL~ in the ~no_p1~ file so that it
+won't get mistaken for a "shiftable" key (like the alphanumeric keys).
+
+*** Also a problem for ~LSGT~
+
+ ~LSGT~ also has this issue. Which is not surprising, since it too was
+ originally a "shiftable key".
+
+** Update 3: Issue resolved
+
+I fixed the issue by editing the ~no_p1~ file (see the git repository for that
+file). Basically I used the xkb construct ~modifier_map~ to declare ~BKSL~ and
+~LSGT~ to be ~mod3~ and ~mod5~, respectively. I also had to map all levels of
+these keys to their respective shift levels.
