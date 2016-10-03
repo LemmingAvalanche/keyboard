@@ -60,7 +60,6 @@ xkb_symbols "basic" {
     include "keypad(ossmath)"
     include "kpdl(comma)"
 
-    include "level3(ralt_switch)"
 };
 
 partial alphanumeric_keys
