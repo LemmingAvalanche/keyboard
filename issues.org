@@ -1,0 +1,19 @@
+* Can't map a key to use five or more levels
+
+When I make a map looking like this:
+
+#+BEGIN_SRC generic
+key <AB09> { [ period, colon, periodcentered, abovedot, a, b, c, d ] };
+#+END_SRC
+
+In other words, a key with eight levels, the key doesn't work properly any more.
+I can still access the first and second levels, but not the third and fourth (or
+the ones beyond that).
+
+** TODO Fix this issue when I need more than four levels
+
+I won't fix this right away, since I still have convenient access to four levels
+right now, and I need to (1) make better mappings for levels 3 and 4, (2) make
+some "compose" key sequences of my own, and (3) get used to using this new
+setup. It only makes sense to worry about levels five to eight after I have done
+all of that.
