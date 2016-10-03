@@ -17,3 +17,25 @@ right now, and I need to (1) make better mappings for levels 3 and 4, (2) make
 some "compose" key sequences of my own, and (3) get used to using this new
 setup. It only makes sense to worry about levels five to eight after I have done
 all of that.
+
+* Note that depressing all shift keys on the left side of the at the keyboard introduces jamming
+
+When I try to press all shift levels on the left side of the keyboard, the third
+key won't register. I think this is because of keyboard jamming, i.e., that
+these keys use the same circuits (or something) which limits how many of them
+can be depressed simultaneuosly.
+
+This is not a problem for the shift keys on the right side of the keyboard; when
+I depress "Return", "BKSL" and "Shift_R" at the same time, all keypresses are
+registered[fn:xev_note].
+
+Short of using another keyboard, I can't really solve this issue. But I thought
+I should make a not of it in case I get confused about it in the future.
+
+Note that this does not induce a big limitation. It only means that I can't
+conveniently access the eight level. It seems like I can still access the sixth
+and seventh level, or at least most of the keys; pressing "Caps_Lock" and "LSGT"
+at the same time makes a few of the "shiftable" keys on the right side of the
+keyboard jam, but most of the other keys on the right side work.
+
+[fn:xev_note] Found out by running ~xev~.
