@@ -55,6 +55,10 @@ xkb_symbols "basic" {
     ] };
     // non-alphanumeric keys
     include "compose(menu)"
+    // Make the "TLDE" key a compose key as well.
+    // I copied this definition from the definition for "menu" in the file:
+    //     /usr/share/X11/xkb/symbols/compose
+    key <TLDE> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
 
     include "nbsp(level3n)"
     include "keypad(ossmath)"
