@@ -7,7 +7,7 @@ xkb_symbols "basic" {
     // keyboard and a Norwegian keyboard with dead key support
     // and all of ISO-8859-1 characters available.
 
-    include "latin(type2)"
+    include "latin_p1(type2)"
 
     name[Group1]="Norwegian";
 
@@ -145,7 +145,7 @@ xkb_symbols "smi" {
     // http://www.hum.uit.no/a/trond/se-lat9-no-keys.html
     // Written by Børre Gaup <boerre.gaup@pc.nu>.
 
-    include "latin"
+    include "latin_p1"
 
     name[Group1]= "Northern Saami (Norway)";
 
@@ -222,7 +222,7 @@ xkb_symbols "mac" {
     // Describes the differences between a very simple en_US
     // keyboard and a very simple Norwegian keyboard.
 
-    include "latin(type4)"
+    include "latin_p1(type4)"
     name[Group1]= "Norwegian (Macintosh)";
 
     key <TLDE>	{ [       bar,    section     ]	};
