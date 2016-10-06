@@ -32,10 +32,10 @@ xkb_symbols "basic" {
     key <AC01> { [ a, A, less, U2329 ] };
     key <AC02> { [ s, S, greater, U232A ] };
     key <AC03>	{ [         d,          D, U25CB ] };
-    key <AC04>	{ [         f,          F, ordfeminine ]	};
-    key <AC05>	{ [         g,          G ] };
-    key <AC06>	{ [         h,          H ] };
-    key <AC07>	{ [         j,          J ] };
+    key <AC04>	{ [         f,          F, U2606 ] };
+    key <AC05>	{ [         g,          G, U25A0 ] };
+    key <AC06>	{ [         h,          H, U25CF ] };
+    key <AC07>	{ [         j,          J, U25B3 ] };
     key <AC08> { [ k, K, apostrophe, U2019 ] };
     key <AC09> { [ l, L, asterisk, multiply ] };
     key <AC10>	{ [ semicolon,    colon ] };
