@@ -74,7 +74,7 @@ xkb_symbols "type2" {
     key <AE09>	{ [         9, parenright, bracketright, U2282 ] };
     key <AE10>	{ [         0,      equal,   braceright,       degree ]	};
 
-    key <AD01> { [ q, Q ] }
+    key <AD01> { [ q, Q, ordfeminine  ] }
     key <AD02> { [ w, W ] }
     key <AD03>	{ [         e,          E, leftsinglequotemark ] };
     key <AD04>	{ [         r,          R, rightsinglequotemark ] };
