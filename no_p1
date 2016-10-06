@@ -74,7 +74,7 @@ xkb_symbols "nodeadkeys" {
 
     name[Group1]="Norwegian (eliminate dead keys)";
 
-    key <AE12>	{ [ backslash,      grave,        acute ] };
+    key <AE12>	{ [ backslash, grave, acute, U0301] };
     key <AD12>	{ [ asciicircum,  asciitilde, bar, section ]	};
     key <AC10>	{ [ parenleft, bracketleft, braceleft, U2329 ] };
     key <AC11>	{ [ parenright, bracketright, braceright, U232A ] };
