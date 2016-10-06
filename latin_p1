@@ -67,15 +67,15 @@ xkb_symbols "type2" {
     key <AE02>	{ [         2,   quotedbl,           at] };
     key <AE03>	{ [         3, numbersign,     sterling] };
     key <AE04>	{ [         4,   currency,       dollar] };
-    key <AE05>	{ [         5,    percent,      onehalf] };
-    key <AE06>	{ [         6,  ampersand,          yen] };
+    key <AE05>	{ [         5,    percent ] };
+    key <AE06>	{ [         6,  ampersand ] };
     key <AE07>	{ [         7,      slash,    braceleft] };
     key <AE08>	{ [         8,  parenleft,  bracketleft] };
     key <AE09>	{ [         9, parenright, bracketright] };
     key <AE10>	{ [         0,      equal,   braceright,       degree ]	};
 
     key <AD03>	{ [         e,          E,     EuroSign] };
-    key <AD04>	{ [         r,          R,   registered] };
+    key <AD04>	{ [         r,          R ] };
     key <AD05>	{ [         t,          T] };
     key <AD09>	{ [         o,          O] };
     key <AD11>	{ [     aring,  Aring ]	};
