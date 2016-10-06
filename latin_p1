@@ -18,8 +18,8 @@ xkb_symbols "basic" {
 
     key <AD01> { [ q, Q, ordfeminine  ] };
     key <AD02> { [ w, W, degree ] };
-    key <AD03>	{ [ e, E, multiply ] };
-    key <AD04>	{ [ r, R, division ] };
+    key <AD03>	{ [         e,          E, leftsinglequotemark ] };
+    key <AD04>	{ [         r,          R, rightsinglequotemark ] };
     key <AD05>	{ [ t, T, righttack] };
     key <AD06>	{ [         y,          Y, leftarrow ] };
     key <AD07>	{ [         u,          U, downarrow ] };
@@ -74,16 +74,6 @@ xkb_symbols "type2" {
     key <AE09>	{ [         9, parenright, bracketright, U2282 ] };
     key <AE10>	{ [         0,      equal,   braceright,       degree ]	};
 
-    key <AD03>	{ [         e,          E, leftsinglequotemark ] };
-    key <AD04>	{ [         r,          R, rightsinglequotemark ] };
-    key <AD05>	{ [         t,          T] };
-    key <AD09>	{ [         o,          O] };
-    key <AD11>	{ [     aring,  Aring ]	};
-    key <AD12>	{ [dead_diaeresis, dead_circumflex, dead_tilde, dead_caron ] };
-
-    key <AC01>	{ [         a,          A] };
-
-    key <AB03>	{ [         c,          C] };
     key <AB08>	{ [ comma,  semicolon, enfilledcircbullet, U2032 ] };
     key <AB09>	{ [    period,   colon, periodcentered ]	};
     key <AB10>	{ [     minus, underscore ] };
