@@ -20,7 +20,7 @@ xkb_symbols "basic" {
     key <AD02> { [ w, W, degree ] };
     key <AD03>	{ [         e,          E, leftsinglequotemark ] };
     key <AD04>	{ [         r,          R, rightsinglequotemark ] };
-    key <AD05>	{ [ t, T, righttack] };
+    key <AD05>	{ [ t, T, righttack, U2203 ] };
     key <AD06>	{ [         y,          Y, leftarrow ] };
     key <AD07>	{ [         u,          U, downarrow ] };
     key <AD08>	{ [         i,          I, uparrow ] };
@@ -68,7 +68,7 @@ xkb_symbols "type2" {
     key <AE03>	{ [         3, numbersign,     sterling, U2228 ] };
     key <AE04>	{ [         4,   currency,       dollar, U222A ] };
     key <AE05>	{ [         5,    percent, permille, U2229 ] };
-    key <AE06>	{ [         6,  ampersand, U2203, U2200, U2208 ] };
+    key <AE06>	{ [         6,  ampersand, U2208, U2200] };
     key <AE07>	{ [         7,      slash,    braceleft, division ] };
     key <AE08>	{ [         8,  parenleft,  bracketleft, U2286 ] };
     key <AE09>	{ [         9, parenright, bracketright, U2282 ] };
