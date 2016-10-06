@@ -43,8 +43,8 @@ xkb_symbols "basic" {
     key <TLDE>	{ [     grave, asciitilde ] };
 
     key <BKSL>	{ [ backslash,        bar] };
-    key <AB01>	{ [         z,          Z, guillemotleft ]	};
-    key <AB02>	{ [         x,          X, guillemotright ]	};
+    key <AB01>	{ [         z,          Z, guillemotleft, U2039 ]	};
+    key <AB02>	{ [         x,          X, guillemotright, U203A ]	};
     key <AB03>	{ [         c,          C, leftdoublequotemark] };
     key <AB04>	{ [         v,          V, rightdoublequotemark] };
     key <AB05>	{ [         b,          B, U300E, U300C ] };
