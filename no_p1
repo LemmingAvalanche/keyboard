@@ -78,7 +78,7 @@ xkb_symbols "nodeadkeys" {
     key <AD12>	{ [ asciicircum,  asciitilde, bar, section ]	};
     key <AC10>	{ [ parenleft, bracketleft, braceleft, U2329 ] };
     key <AC11>	{ [ parenright, bracketright, braceright, U232A ] };
-    key <AB08>	{ [     comma,  semicolon ] };
+    key <AB08>	{ [ comma, semicolon, enfilledcircbullet, U2032 ] };
     key <AB09>	{ [    period,      colon, periodcentered,   abovedot ]	};
 };
 
