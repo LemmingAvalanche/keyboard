@@ -13,7 +13,6 @@ xkb_symbols "basic" {
 
     key <AB09>	{ [    period,      colon,   ellipsis, periodcentered ]	};
     key <AB10>	{ [     minus, underscore,       endash,       emdash ]	};
-    key <AD04>	{ [         r,          R ] };
     key <AD10>	{ [         p,          P ] };
     key <AD11>	{ [     slash, bar, U2044, U0338] };
     key <AE05>	{ [         5,    percent, 0x1002030 ] };
