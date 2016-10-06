@@ -17,7 +17,7 @@ xkb_symbols "basic" {
     key <AE12>	{ [     equal,       plus ] };
 
     key <AD01> { [ q, Q, ordfeminine  ] };
-    key <AD02> { [ w, W ] };
+    key <AD02> { [ w, W, degree ] };
     key <AD03>	{ [         e,          E,            e,            E ]	};
     key <AD04>	{ [         r,          R ] };
     key <AD05>	{ [         t,          T ] };
