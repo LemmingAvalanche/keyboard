@@ -66,7 +66,7 @@ xkb_symbols "type2" {
     key <AE01>	{ [         1,     exclam,   exclamdown, notsign ] };
     key <AE02>	{ [         2,   quotedbl,           at, U2227 ] };
     key <AE03>	{ [         3, numbersign,     sterling, U2228 ] };
-    key <AE04>	{ [         4,   currency,       dollar, U222A ] };
+    key <AE04>	{ [         4, bar, dollar, U222A ] };
     key <AE05>	{ [         5,    percent, permille, U2229 ] };
     key <AE06>	{ [         6,  ampersand, U2208, U2200] };
     key <AE07>	{ [         7,      slash,    braceleft, division ] };
