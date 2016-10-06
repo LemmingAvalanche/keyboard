@@ -18,7 +18,7 @@ xkb_symbols "basic" {
     key <AD11>	{ [     slash, bar, U2044, U0338] };
     key <AE05>	{ [         5,    percent, 0x1002030 ] };
 
-    key <AE11>	{ [      plus,   question,    plusminus, questiondown ]	};
+    key <AE11>	{ [ plus, question, questiondown, notsign ] };
     key <AE12>	{ [ backslash, dead_grave,   dead_acute,      notsign ]	};
 
     // The <BKSL> button needs to be freed up so that I can use it as a
