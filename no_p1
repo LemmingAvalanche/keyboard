@@ -35,8 +35,8 @@ xkb_symbols "basic" {
     // not use and do not need the characters which these changes override, so
     // this should be *safe* to do. Also, as a bonus, use the Norwegian smart
     // quotes for the fourth levels.
-    key <AC01> { [ a, A, less, guillemotleft ] };
-    key <AC02> { [ s, S, greater, guillemotright ] };
+    key <AC01> { [ a, A, less, U2329 ] };
+    key <AC02> { [ s, S, greater, U232A ] };
 
 
     // level 3 shift
@@ -76,8 +76,8 @@ xkb_symbols "nodeadkeys" {
 
     key <AE12>	{ [ backslash, grave, acute, U0301] };
     key <AD12>	{ [ asciicircum,  asciitilde, U0302, U0303 ] };
-    key <AC10>	{ [ parenleft, bracketleft, braceleft, U2329 ] };
-    key <AC11>	{ [ parenright, bracketright, braceright, U232A ] };
+    key <AC10>	{ [ parenleft, bracketleft, braceleft, U301A ] };
+    key <AC11>	{ [ parenright, bracketright, braceright, U301B ] };
     key <AB08>	{ [ comma, semicolon, enfilledcircbullet, U2032 ] };
     key <AB09>	{ [    period,      colon, periodcentered,   abovedot ]	};
 };
