@@ -20,23 +20,9 @@ xkb_symbols "basic" {
     key <AE11>	{ [ plus, question, questiondown, U0308 ] };
     key <AE12>	{ [ backslash, dead_grave,   dead_acute,      notsign ]	};
 
-    // The <BKSL> button needs to be freed up so that I can use it as a
-    // modifier. So the characters (') and (*) are moved to the third level of
-    // these buttons.
-    key <AC08> { [ k, K, apostrophe, U2019 ] };
-    key <AC09> { [ l, L, asterisk, multiply ] };
-
     key <AC10>	{ [ parenleft, bracketleft, braceleft ] };
     key <AC11>	{ [parenright, bracketright, braceright ]	};
     key <TLDE>	{ [       bar,    section,    brokenbar,    paragraph ]	};
-
-    // Provide more convenient access to the "<" and ">" characdters. I do
-    // not use and do not need the characters which these changes override, so
-    // this should be *safe* to do. Also, as a bonus, use the Norwegian smart
-    // quotes for the fourth levels.
-    key <AC01> { [ a, A, less, U2329 ] };
-    key <AC02> { [ s, S, greater, U232A ] };
-
 
     // level 3 shift
     modifier_map mod3 { <BKSL> };
