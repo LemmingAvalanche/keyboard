@@ -15,7 +15,7 @@ xkb_symbols "basic" {
     key <AB10>	{ [     minus, underscore,       endash,       emdash ]	};
     key <AD04>	{ [         r,          R ] };
     key <AD10>	{ [         p,          P ] };
-    key <AD11>	{ [     slash, dollar ]	};
+    key <AD11>	{ [     slash, bar, U2044, U0338] };
     key <AE05>	{ [         5,    percent, 0x1002030 ] };
 
     key <AE11>	{ [      plus,   question,    plusminus, questiondown ]	};
@@ -75,7 +75,7 @@ xkb_symbols "nodeadkeys" {
     name[Group1]="Norwegian (eliminate dead keys)";
 
     key <AE12>	{ [ backslash, grave, acute, U0301] };
-    key <AD12>	{ [ asciicircum,  asciitilde, bar, section ]	};
+    key <AD12>	{ [ asciicircum,  asciitilde, U0302, U0303 ] };
     key <AC10>	{ [ parenleft, bracketleft, braceleft, U2329 ] };
     key <AC11>	{ [ parenright, bracketright, braceright, U232A ] };
     key <AB08>	{ [ comma, semicolon, enfilledcircbullet, U2032 ] };
