@@ -63,7 +63,7 @@ xkb_symbols "type2" {
 
     include "latin"
 
-    key <AE01>	{ [         1,     exclam,   exclamdown] };
+    key <AE01>	{ [         1,     exclam,   exclamdown, notsign ] };
     key <AE02>	{ [         2,   quotedbl,           at] };
     key <AE03>	{ [         3, numbersign,     sterling] };
     key <AE04>	{ [         4,   currency,       dollar] };
