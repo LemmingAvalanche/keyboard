@@ -31,7 +31,7 @@ xkb_symbols "basic" {
 
     key <AC01> { [ a, A, less, U2329 ] };
     key <AC02> { [ s, S, greater, U232A ] };
-    key <AC03>	{ [         d,          D ] };
+    key <AC03>	{ [         d,          D, U25CB ] };
     key <AC04>	{ [         f,          F, ordfeminine ]	};
     key <AC05>	{ [         g,          G ] };
     key <AC06>	{ [         h,          H ] };
@@ -49,7 +49,7 @@ xkb_symbols "basic" {
     key <AB04>	{ [         v,          V, rightdoublequotemark] };
     key <AB05>	{ [         b,          B ] };
     key <AB06>	{ [         n,          N ] };
-    key <AB07>	{ [         m,          M ] };
+    key <AB07>	{ [         m,          M, U25CA ] };
     key <AB08>	{ [ comma, less, enfilledcircbullet, U2032 ] };
     key <AB09>	{ [    period,    greater ] };
     key <AB10>	{ [     slash,   question ] };
