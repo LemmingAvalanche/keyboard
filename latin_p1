@@ -61,7 +61,7 @@ xkb_symbols "basic" {
 partial
 xkb_symbols "type2" {
 
-    include "latin"
+    include "latin_p1"
 
     key <AE01>	{ [         1,     exclam,   exclamdown, notsign ] };
     key <AE02>	{ [         2,   quotedbl,           at, U2227 ] };
@@ -85,7 +85,7 @@ xkb_symbols "type2" {
 partial
 xkb_symbols "type3" {
 
-    include "latin"
+    include "latin_p1"
 
     key <AD01>	{ [         q,          Q,    backslash,  Greek_OMEGA ]	};
     key <AD02>	{ [         w,          W,          bar,      Lstroke ]	};
@@ -110,7 +110,7 @@ xkb_symbols "type3" {
 partial
 xkb_symbols "type4" {
 
-    include "latin"
+    include "latin_p1"
 
     key <AE02>	{ [         2,   quotedbl,           at,    oneeighth ]	};
     key <AE06>	{ [         6,  ampersand,      notsign,  fiveeighths ]	};
@@ -141,7 +141,7 @@ xkb_symbols "nodeadkeys" {
 partial
 xkb_symbols "type2_nodeadkeys" {
 
-    include "latin(nodeadkeys)"
+    include "latin_p1(nodeadkeys)"
 
     key <AD11>	{ [     aring,      Aring,   diaeresis,        degree ]	};
     key <AD12>	{ [ diaeresis, asciicircum, asciitilde,         caron ]	};
@@ -153,13 +153,13 @@ xkb_symbols "type2_nodeadkeys" {
 partial
 xkb_symbols "type3_nodeadkeys" {
 
-    include "latin(nodeadkeys)"
+    include "latin_p1(nodeadkeys)"
 };
 
 partial
 xkb_symbols "type4_nodeadkeys" {
 
-    include "latin(nodeadkeys)"
+    include "latin_p1(nodeadkeys)"
 
     key <AB10>	{ [   minus, underscore, dead_belowdot,      abovedot ]	};
 };
