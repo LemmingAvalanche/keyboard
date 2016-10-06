@@ -69,9 +69,9 @@ xkb_symbols "type2" {
     key <AE04>	{ [         4,   currency,       dollar], U222a };
     key <AE05>	{ [         5,    percent, permille, U2229 ] };
     key <AE06>	{ [         6,  ampersand, U2203, U2200  ] };
-    key <AE07>	{ [         7,      slash,    braceleft] };
-    key <AE08>	{ [         8,  parenleft,  bracketleft] };
-    key <AE09>	{ [         9, parenright, bracketright] };
+    key <AE07>	{ [         7,      slash,    braceleft, U2208 ] };
+    key <AE08>	{ [         8,  parenleft,  bracketleft, U2286 ] };
+    key <AE09>	{ [         9, parenright, bracketright, U2282 ] };
     key <AE10>	{ [         0,      equal,   braceright,       degree ]	};
 
     key <AD03>	{ [         e,          E,     EuroSign] };
