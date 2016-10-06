@@ -18,9 +18,9 @@ xkb_symbols "basic" {
 
     key <AD01> { [ q, Q, ordfeminine  ] };
     key <AD02> { [ w, W, degree ] };
-    key <AD03>	{ [         e,          E,            e,            E ]	};
-    key <AD04>	{ [         r,          R ] };
-    key <AD05>	{ [         t,          T ] };
+    key <AD03>	{ [ e, E, multiply ] };
+    key <AD04>	{ [ r, R, division ] };
+    key <AD05>	{ [ t, T, righttack] };
     key <AD06>	{ [         y,          Y, leftarrow ] };
     key <AD07>	{ [         u,          U, downarrow ] };
     key <AD08>	{ [         i,          I, uparrow ] };
