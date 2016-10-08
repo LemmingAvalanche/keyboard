@@ -30,15 +30,15 @@ xkb_symbols "basic" {
     key <AD11>	{ [bracketleft,  braceleft, dead_diaeresis, dead_abovering ] };
     key <AD12>	{ [bracketright, braceright, dead_tilde,  dead_macron ]	};
 
-    key <AC01> { [ a, A, less, U2329 ] };
-    key <AC02> { [ s, S, greater, U232A ] };
-    key <AC03>	{ [         d,          D, U25CB ] };
-    key <AC04>	{ [         f,          F, U2606 ] };
-    key <AC05>	{ [         g,          G, U25A0 ] };
-    key <AC06>	{ [         h,          H, U25CF ] };
-    key <AC07>	{ [         j,          J, U25B3 ] };
-    key <AC08> { [ k, K, apostrophe, U2019 ] };
-    key <AC09> { [ l, L, asterisk, multiply ] };
+    key <AC01> { [ a, A, less, U2329, U0304 ] };
+    key <AC02> { [ s, S, greater, U232A, U0308] };
+    key <AC03>	{ [         d,          D, U25CB, NoSymbol, U0302 ] };
+    key <AC04>	{ [         f,          F, U2606, NoSymbol, U0301 ] };
+    key <AC05>	{ [         g,          G, U25A0, NoSymbol, U0300 ] };
+    key <AC06>	{ [         h,          H, U25CF, NoSymbol, U0300 ] };
+    key <AC07>	{ [         j,          J, U25B3, NoSymbol, U0301 ] };
+    key <AC08> { [ k, K, apostrophe, U2019, U0302 ] };
+    key <AC09> { [ l, L, asterisk, multiply, U0308 ] };
     key <AC10>	{ [ semicolon,    colon ] };
     key <AC11>	{ [apostrophe, quotedbl ] };
     key <TLDE>	{ [     grave, asciitilde ] };

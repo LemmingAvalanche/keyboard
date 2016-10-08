@@ -13,8 +13,8 @@ xkb_symbols "basic" {
 
     key.type[Group1] = "EIGHT_LEVEL";
     key <AB09>	{ [    period,      colon,   ellipsis, periodcentered ]	};
-    key <AB10>	{ [     minus, underscore,       endash,       emdash ]	};
-    key <AD11>	{ [     slash, bar, U2044 ] };
+    key <AB10>	{ [     minus, underscore,       endash,       emdash, U0304 ]	};
+    key <AD11>	{ [     slash, bar, U2044, NoSymbol, U030C ] };
     key <AE05>	{ [         5,    percent, 0x1002030 ] };
 
     key <AE11>	{ [ plus, question, questiondown, U0308 ] };
@@ -52,11 +52,11 @@ xkb_symbols "nodeadkeys" {
 
     key.type[Group1] = "EIGHT_LEVEL";
     key <AE12>	{ [ backslash, grave, acute, U0301] };
-    key <AD12>	{ [ asciicircum,  asciitilde, U0302, U0303 ] };
-    key <AC10>	{ [ parenleft, bracketleft, braceleft, U301A ] };
-    key <AC11>	{ [ parenright, bracketright, braceright, U301B ] };
-    key <AB08>	{ [ comma, semicolon, enfilledcircbullet, U2032 ] };
-    key <AB09>	{ [    period,      colon, periodcentered,   abovedot ]	};
+    key <AD12>	{ [ asciicircum,  asciitilde, U0302, U0303, U0303 ] };
+    key <AC10>	{ [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
+    key <AC11>	{ [ parenright, bracketright, braceright, U301B, U0306 ] };
+    key <AB08>	{ [ comma, semicolon, enfilledcircbullet, U2032, U0327 ] };
+    key <AB09>	{ [    period,      colon, periodcentered,   abovedot, U0307 ]	};
 };
 
 // Norwegian Dvorak
