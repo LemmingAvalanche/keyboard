@@ -74,7 +74,7 @@ xkb_symbols "type2" {
     key <AE07>	{ [         7,      slash,    braceleft, division ] };
     key <AE08>	{ [         8,  parenleft,  bracketleft, U2286 ] };
     key <AE09>	{ [         9, parenright, bracketright, U2282 ] };
-    key <AE10>	{ [         0,      equal,   braceright, U2218 ] };
+    key <AE10>	{ [         0,      equal,   braceright, U2205  ] };
 
     key <AB08>	{ [ comma,  semicolon, enfilledcircbullet, U2032 ] };
     key <AB09>	{ [    period,   colon, periodcentered ]	};
