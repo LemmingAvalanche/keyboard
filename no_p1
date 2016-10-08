@@ -24,26 +24,17 @@ xkb_symbols "basic" {
     key <AC11>	{ [parenright, bracketright, braceright ]	};
     key <TLDE>	{ [       bar,    section,    brokenbar,    paragraph ]	};
 
-    // level 3 shift
-    modifier_map mod3 { <BKSL> };
-    key <BKSL> { [
-        ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift,
-        ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift,
-        ISO_Level3_Shift, ISO_Level3_Shift
-    ] };
-    // level 5 shift
-    modifier_map mod5 { <LSGT> };
-    key <LSGT> { [
-        ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift,
-        ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift,
-        ISO_Level5_Shift, ISO_Level5_Shift
-    ] };
     // non-alphanumeric keys
     include "compose(menu)"
     // Make the "TLDE" key a compose key as well.
     // I copied this definition from the definition for "menu" in the file:
     //     /usr/share/X11/xkb/symbols/compose
     key <TLDE> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
+
+    include "level3(modifier_mapping)"
+    include "level3(bksl_switch)"
+    include "level5(modifier_mapping)"
+    include "level5(lsgt_switch)"
 
     include "keypad(ossmath)"
     include "kpdl(comma)"
