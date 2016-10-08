@@ -3,6 +3,7 @@
 default  partial
 xkb_symbols "basic" {
 
+    key.type[Group1] = "EIGHT_LEVEL";
     key <AE01>	{ [         1,     exclam,  exclamdown ] };
     key <AE02>	{ [         2,         at ] };
     key <AE03>	{ [         3, numbersign, sterling ] };
@@ -63,6 +64,7 @@ xkb_symbols "type2" {
 
     include "latin_p1"
 
+    key.type[Group1] = "EIGHT_LEVEL";
     key <AE01>	{ [         1,     exclam,   exclamdown, notsign ] };
     key <AE02>	{ [         2,   quotedbl,           at, U2227 ] };
     key <AE03>	{ [         3, numbersign,     sterling, U2228 ] };

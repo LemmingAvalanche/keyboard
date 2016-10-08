@@ -11,6 +11,7 @@ xkb_symbols "basic" {
 
     name[Group1]="Norwegian";
 
+    key.type[Group1] = "EIGHT_LEVEL";
     key <AB09>	{ [    period,      colon,   ellipsis, periodcentered ]	};
     key <AB10>	{ [     minus, underscore,       endash,       emdash ]	};
     key <AD11>	{ [     slash, bar, U2044 ] };
@@ -58,6 +59,7 @@ xkb_symbols "nodeadkeys" {
 
     name[Group1]="Norwegian (eliminate dead keys)";
 
+    key.type[Group1] = "EIGHT_LEVEL";
     key <AE12>	{ [ backslash, grave, acute, U0301] };
     key <AD12>	{ [ asciicircum,  asciitilde, U0302, U0303 ] };
     key <AC10>	{ [ parenleft, bracketleft, braceleft, U301A ] };
