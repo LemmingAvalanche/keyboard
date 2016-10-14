@@ -6,7 +6,6 @@ setxkbmap -option "" -layout "no_p1(nodeadkeys),no_1(nodeadkeys)" -option \
 
 # The following code is based on the example code in the following readme:
 #     https://github.com/alols/xcape/blob/master/README.md
-modifier_3="ISO_Level3_Shift"
 modifier_5="ISO_Level5_Shift"
 # Return keycode = 36. Found by running `xmodmap -pke`.
 xmodmap -e "keycode 36 = $modifier_5"
@@ -14,18 +13,5 @@ xmodmap -e "keycode 36 = $modifier_5"
 # found this out by running `xmodmap -pke`.
 xmodmap -e "keycode 255 = Return"
 
-# The "less than great than" key will be the level5_shift for the left side of
-# the keyboard.
-xmodmap -e "keycode 94 = $modifier_5"
-
-# Make the <BKSL> key dual-purpose as the "Compose" key when pressed and
-# released by itself, and a level shift 3 when used in a chord.
-xmodmap -e "keycode 51 = $modifier_3"
-xmodmap -e "keycode 254 = Multi_key"
-
-# Caps Lock will be the compose/level3_shift for the left side of the keyboard.
-xmodmap -e "keycode 66 = $modifier_3"
-
 # TODO Should this be run asynchronously? (Update: doesn't seem like it.)
-xcape -e "$modifier_3=Multi_key"
 xcape -e "$modifier_5=Return"
