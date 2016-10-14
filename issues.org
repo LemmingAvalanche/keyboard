@@ -92,3 +92,15 @@ When I re-run the script (perhaps because I ran some ~setxkbmap~ command and
 that nullified the changes done by ~xmodmap~), the ~Return~ key starts producing
 more than one newlines. It seems that the more times I run the script, the more
 newlines it produces.
+
+* Previous commit introduced errors
+
+The previous commit introduced these issues:
+
+- Caps lock no longer works as a modifier.
+- Caps lock acts as caps lock again.
+
+This is—in hindsight—quite understandable; I deleted the ~xmodmap~ invocation
+that mapped "CAPS" to ~modifier_3~. Since that is gone, and my configuration
+(the "no_p1" Xkb configuration file) doesn’t change the default behaviour of
+"CAPS", then of course it goes back to working as caps lock.
