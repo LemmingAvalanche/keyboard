@@ -85,3 +85,10 @@ I fixed the issue by editing the ~no_p1~ file (see the git repository for that
 file). Basically I used the xkb construct ~modifier_map~ to declare ~BKSL~ and
 ~LSGT~ to be ~mod3~ and ~mod5~, respectively. I also had to map all levels of
 these keys to their respective shift levels.
+
+* Re-running script causes ~Return~ key to produce multiple newlines
+
+When I re-run the script (perhaps because I ran some ~setxkbmap~ command and
+that nullified the changes done by ~xmodmap~), the ~Return~ key starts producing
+more than one newlines. It seems that the more times I run the script, the more
+newlines it produces.
