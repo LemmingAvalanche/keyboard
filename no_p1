@@ -36,6 +36,9 @@ xkb_symbols "basic" {
     include "level3(caps_switch)"
     include "level5(modifier_mapping)"
     include "level5(lsgt_switch)"
+    // "Return" is the 2nd level 5 switch, but that is set in a script using
+    // Xcape. The reason for that is that it needs to dual-purpose as regular old
+    // "Return" (carriage return).
 
     include "keypad(ossmath)"
     include "kpdl(comma)"
