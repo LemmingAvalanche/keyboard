@@ -93,7 +93,7 @@ that nullified the changes done by ~xmodmap~), the ~Return~ key starts producing
 more than one newlines. It seems that the more times I run the script, the more
 newlines it produces.
 
-* Previous commit introduced errors
+* Previous commit introduced errors :issue_resolved:
 
 The previous commit introduced these issues:
 
@@ -104,3 +104,14 @@ This is—in hindsight—quite understandable; I deleted the ~xmodmap~ invocatio
 that mapped "CAPS" to ~modifier_3~. Since that is gone, and my configuration
 (the "no_p1" Xkb configuration file) doesn’t change the default behaviour of
 "CAPS", then of course it goes back to working as caps lock.
+
+** Update: issue resolved
+
+I added the following line to my "no_p1" keyboard configuration:
+
+#+BEGIN_SRC generic
+include "level3(caps_switch)"
+#+END_SRC
+
+Which nicely does what I currently want; "CAPS" acts as a level 3 switch and
+nothing else (i.e., not a dual purpose key).
