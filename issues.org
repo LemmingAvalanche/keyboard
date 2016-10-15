@@ -1,4 +1,4 @@
-* Can't map a key to use five or more levels
+* Can't map a key to use five or more levels :issue_resolved:
 
 When I make a map looking like this:
 
@@ -10,8 +10,10 @@ In other words, a key with eight levels, the key doesn't work properly any more.
 I can still access the first and second levels, but not the third and fourth (or
 the ones beyond that).
 
-** TODO Fix this issue when I need more than four levels
-
+** DONE Fix this issue when I need more than four levels
+CLOSED: [2016-10-15 lø. 19:07]
+- CLOSING NOTE [2016-10-15 lø. 19:07] \\
+  This issue was resolved in commit d721475e30e05c35fd87e088626d3fa95e8d46d2.
 I won't fix this right away, since I still have convenient access to four levels
 right now, and I need to (1) make better mappings for levels 3 and 4, (2) make
 some "compose" key sequences of my own, and (3) get used to using this new
