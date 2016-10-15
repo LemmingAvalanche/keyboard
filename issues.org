@@ -41,3 +41,14 @@ at the same time makes a few of the "shiftable" keys on the right side of the
 keyboard jam, but most of the other keys on the right side work.
 
 [fn:xev_note] Found out by running ~xev~.
+
+* Find a way to compile and use configurations without having to be root
+
+My current setup means that I need sudo privileges in order to use them; I copy
+the configuration files to ~/usr/share/X11/xkb/symbols/~ directory. This means
+that I can’t use these configurations on computers that aren’t my own. I should
+find a way to compile and use these files as a regular user. For example, maybe
+there is some dot file or configuration file related to X11 that could handle
+this in a neat way?
+
+** TODO Find a way to use these files without sudo privileges
