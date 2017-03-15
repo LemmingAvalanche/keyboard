@@ -17,3 +17,19 @@ effect; just restart lightdm:
 #+BEGIN_SRC shell
 sudo restart lightdm
 #+END_SRC
+
+Set keymappings with Setxkbmap.  For example:
+
+#+BEGIN_SRC shell
+setxkbmap no_p1
+#+END_SRC
+
+If there is some file named ~no_p1~ in ~/usr/share/X11/xkb/symbols~.
+
+Or set the ~nodeadkeys~ variant:
+
+#+BEGIN_SRC shell
+setxkbmap "no_p1(nodeadkeys)"
+#+END_SRC
+
+The quotes are necessary because of the shell.
