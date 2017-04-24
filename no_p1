@@ -18,7 +18,6 @@ xkb_symbols "basic" {
     key <AE05>	{ [         5,    percent, 0x1002030 ] };
 
     key <AE11>	{ [ plus, question, questiondown, U2218 ] };
-    key <AE12>	{ [ backslash, dead_grave,   dead_acute,      notsign ]	};
 
     key <AC10>	{ [ parenleft, bracketleft, braceleft ] };
     key <AC11>	{ [parenright, bracketright, braceright ]	};
@@ -55,7 +54,6 @@ xkb_symbols "nodeadkeys" {
     name[Group1]="Norwegian (eliminate dead keys)";
 
     key.type[Group1] = "EIGHT_LEVEL";
-    key <AE12>	{ [ backslash, grave, acute, U221A ] };
     key <AD12>	{ [ asciicircum,  asciitilde, U0302, U0303, U0303 ] };
     key <AC10>	{ [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
     key <AC11>	{ [ parenright, bracketright, braceright, U301B, U0306 ] };
