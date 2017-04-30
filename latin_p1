@@ -19,9 +19,9 @@ xkb_symbols "basic" {
 
     key <AD01> { [ q, Q, leftsinglequotemark  ] };
     key <AD02> { [ w, W, rightsinglequotemark ] };
-    key <AD03>	{ [         e,          E ] };
-    key <AD04>	{ [         r,          R ] };
-    key <AD05>	{ [ t, T, righttack, U2203 ] };
+    key <AD03>	{ [         e,          E, percent ] };
+    key <AD04>	{ [         r,          R, ampersand ] };
+    key <AD05>	{ [ t, T, bar, U2203 ] };
     key <AD06>	{ [         y,          Y, leftarrow ] };
     key <AD07>	{ [         u,          U, downarrow ] };
     key <AD08>	{ [         i,          I, uparrow ] };
