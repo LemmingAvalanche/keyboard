@@ -17,8 +17,7 @@ xkb_symbols "basic" {
     key <AD11>	{ [     slash, bar, U2044, NoSymbol, U030C ] };
     key <AE05>	{ [         5,    percent, 0x1002030 ] };
 
-    key <AE11>	{ [ plus, question, questiondown, U2218 ] };
-    key <AE12>	{ [ backslash, dead_grave,   dead_acute,      notsign ]	};
+    key <AE11>	{ [ plus, question, grave, questiondown ] };
 
     key <AC10>	{ [ parenleft, bracketleft, braceleft ] };
     key <AC11>	{ [parenright, bracketright, braceright ]	};
@@ -30,6 +29,7 @@ xkb_symbols "basic" {
     // I copied this definition from the definition for "menu" in the file:
     //     /usr/share/X11/xkb/symbols/compose
     key <TLDE> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
+    key <AE12> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
 
     include "level3(modifier_mapping)"
     include "level3(bksl_switch)"
@@ -55,7 +55,6 @@ xkb_symbols "nodeadkeys" {
     name[Group1]="Norwegian (eliminate dead keys)";
 
     key.type[Group1] = "EIGHT_LEVEL";
-    key <AE12>	{ [ backslash, grave, acute, U221A ] };
     key <AD12>	{ [ asciicircum,  asciitilde, U0302, U0303, U0303 ] };
     key <AC10>	{ [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
     key <AC11>	{ [ parenright, bracketright, braceright, U301B, U0306 ] };
