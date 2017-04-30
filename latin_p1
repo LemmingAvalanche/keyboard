@@ -22,8 +22,8 @@ xkb_symbols "basic" {
     key <AD03>	{ [         e,          E, percent ] };
     key <AD04>	{ [         r,          R, ampersand ] };
     key <AD05>	{ [ t, T, bar, U2203 ] };
-    key <AD06>	{ [         y,          Y  ] };
-    key <AD07>	{ [         u,          U  ] };
+    key <AD06>	{ [         y,          Y, backslash  ] };
+    key <AD07>	{ [         u,          U, grave  ] };
     key <AD08>	{ [         i,          I  ] };
     key <AD09>	{ [         o,          O  ] };
     key <AD10>	{ [         p,          P, U0338, U20D2 ] };
