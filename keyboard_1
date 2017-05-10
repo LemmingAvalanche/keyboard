@@ -4,4 +4,4 @@ xkb_symbols "basic" {
     include "level3(modifier_mapping)"
     include "level3(bksl_switch)"
     include "level3(caps_switch)"
-}
+};
