@@ -1,0 +1,52 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+    // Use caps lock and the key to the left of the return key (on
+    // European (105) keyboards) to access the third level.
+    include "level3(modifier_mapping)"
+    include "level3(bksl_switch)"
+    include "level3(caps_switch)"
+    // Now that we don’t need right alt (altgr) to choose level 3 any
+    // more, make it mirror left alt.
+    include "level3(ralt_alt)"
+
+    // Duplicate commonly used symbols to third level of the alphabetic
+    // section.
+    key <AD03> { [ e, E, percent ] };
+    key <AD04> { [ r, R, ampersand ] };
+    key <AD05> { [ t, T, bar ] };
+    key <AD06> { [ y, Y, backslash ] };
+    key <AD07> { [ u, U, grave ] };
+    key <AD08> { [ i, I, equal ] };
+    key <AD09> { [ o, O, question ] };
+    key <AD10> { [ p, P, plus ] };
+
+    key <AC01> { [ a, A, less ] };
+    key <AC02> { [ s, S, greater ] };
+    key <AC03> { [ d, D, exclam ] };
+    key <AC04> { [ f, F, quotedbl ] };
+    key <AC05> { [ g, G, at ] };
+    key <AC06> { [ h, H, numbersign ] };
+    key <AC07> { [ j, J, dollar ] };
+    key <AC08> { [ k, K, apostrophe ] };
+    key <AC09> { [ l, L, asterisk ] };
+
+    key <AB01> { [ z, Z, braceleft ] };
+    key <AB02> { [ x, X, braceright ] };
+    key <AB03> { [ c, C, parenleft ] };
+    key <AB04> { [ v, V, parenright ] };
+    key <AB05> { [ b, B, bracketleft ] };
+    key <AB06> { [ n, N, bracketright ] };
+    key <AB07> { [ m, M, slash ] };
+};
+
+partial alphanumeric_keys
+xkb_symbols "no" {
+    include "no(basic)"
+    include "keyboard_1(basic)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "no_nodeadkeys" {
+    include "no(nodeadkeys)"
+    include "keyboard_1(basic)"
+};
