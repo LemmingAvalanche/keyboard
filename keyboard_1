@@ -13,4 +13,7 @@ xkb_symbols "basic" {
     // For latin (basic):
     key <AD05> { [ t, T, bar ] };
     key <AD06> { [ y, Y, backslash ] };
+    // For no (basic):
+    key <AC08> { [ k, K, apostrophe ] };
+    key <AC09> { [ l, L, asterisk ] };
 };
