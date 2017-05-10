@@ -28,6 +28,14 @@ xkb_symbols "basic" {
     key <AC07> { [ j, J, dollar ] };
     key <AC08> { [ k, K, apostrophe ] };
     key <AC09> { [ l, L, asterisk ] };
+
+    key <AB01> { [ z, Z, braceleft ] };
+    key <AB02> { [ x, X, braceright ] };
+    key <AB03> { [ c, C, bracketleft ] };
+    key <AB04> { [ v, V, bracketright ] };
+    key <AB05> { [ b, B, parenleft ] };
+    key <AB06> { [ n, N, parenright ] };
+    key <AB07> { [ m, M, slash ] };
 };
 
 partial alphanumeric_keys
