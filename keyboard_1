@@ -21,7 +21,7 @@ xkb_symbols "basic" {
 };
 
 partial alphanumeric_keys
-xkb_symbols "keyboard_1_no" {
+xkb_symbols "no" {
     include "no(basic)"
     include "keyboard_1(basic)"
 };
