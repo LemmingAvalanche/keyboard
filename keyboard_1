@@ -32,10 +32,10 @@ xkb_symbols "basic" {
 
     key <AB01> { [ z, Z, braceleft ] };
     key <AB02> { [ x, X, braceright ] };
-    key <AB03> { [ c, C, bracketleft ] };
-    key <AB04> { [ v, V, bracketright ] };
-    key <AB05> { [ b, B, parenleft ] };
-    key <AB06> { [ n, N, parenright ] };
+    key <AB03> { [ c, C, parenleft ] };
+    key <AB04> { [ v, V, parenright ] };
+    key <AB05> { [ b, B, bracketleft ] };
+    key <AB06> { [ n, N, bracketright ] };
     key <AB07> { [ m, M, slash ] };
 };
 
