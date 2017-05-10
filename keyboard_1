@@ -18,6 +18,24 @@ xkb_symbols "basic" {
     // For no (basic):
     key <AC08> { [ k, K, apostrophe ] };
     key <AC09> { [ l, L, asterisk ] };
+
+    // Duplicate commonly used symbols to third level of the alphabetic
+    // section.
+    key <AD03> { [ e, E, percent ] };
+    key <AD04> { [ r, R, ampersand ] };
+    // key <AD05> { [ t, T, bar ] };
+    // key <AD06> { [ y, Y, backslash ] };
+    key <AD07> { [ u, U, grave ] };
+    key <AD08> { [ i, I, equal ] };
+    key <AD09> { [ o, O, question ] };
+
+    key <AC03> { [ d, D, exclam ] };
+    key <AC04> { [ f, F, quotedbl ] };
+    key <AC05> { [ g, G, at ] };
+    key <AC06> { [ h, H, numbersign ] };
+    key <AC07> { [ j, J, dollar ] };
+    // key <AC08> { [ k, K, apostrophe ] };
+    // key <AC09> { [ l, L, asterisk ] };
 };
 
 partial alphanumeric_keys
