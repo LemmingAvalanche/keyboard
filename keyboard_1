@@ -18,6 +18,7 @@ xkb_symbols "basic" {
     key <AD07> { [ u, U, grave ] };
     key <AD08> { [ i, I, equal ] };
     key <AD09> { [ o, O, question ] };
+    key <AD10> { [ p, P, plus ] };
 
     key <AC01> { [ a, A, less ] };
     key <AC02> { [ s, S, greater ] };
