@@ -6,6 +6,9 @@ xkb_symbols "basic" {
     include "level3(modifier_mapping)"
     include "level3(bksl_switch)"
     include "level3(caps_switch)"
+    // Now that we don’t need right alt (altgr) to choose level 3 any
+    // more, make it mirror left alt.
+    include "level3(ralt_alt)"
 
     // Find new keys for the characters that were on the <bksl> key,
     // since that key is now used as a level 3 shift.
