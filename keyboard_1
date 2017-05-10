@@ -1,6 +1,5 @@
 default partial alphanumeric_keys
 xkb_symbols "basic" {
-    include "latin(type2)"
     // Use caps lock and the key to the left of the return key (on
     // European (105) keyboards) to access the third level.
     include "level3(modifier_mapping)"
