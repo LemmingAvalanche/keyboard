@@ -19,6 +19,8 @@ xkb_symbols "basic" {
     key <AD08> { [ i, I, equal ] };
     key <AD09> { [ o, O, question ] };
 
+    key <AC01> { [ a, A, less ] };
+    key <AC02> { [ s, S, greater ] };
     key <AC03> { [ d, D, exclam ] };
     key <AC04> { [ f, F, quotedbl ] };
     key <AC05> { [ g, G, at ] };
