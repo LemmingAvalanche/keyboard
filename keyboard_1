@@ -20,3 +20,9 @@ xkb_symbols "basic" {
     key <AC08> { [ k, K, apostrophe ] };
     key <AC09> { [ l, L, asterisk ] };
 };
+
+partial alphanumeric_keys
+xkb_symbols "keyboard_1_no" {
+    include "no(basic)"
+    include "keyboard_1(basic)"
+};
