@@ -4,16 +4,16 @@ Keyboard mappings for Xkb.
 
 Copy whatever xkb files you have to the directory:
 
-#+BEGIN_SRC generic
+#+BEGIN_EXAMPLE
 /usr/share/X11/xkb/symbols
-#+END_SRC
+#+END_EXAMPLE
 
 Remember to remove the files in this directory when you have made modifications
 to one of the files in that directory:
 
-#+BEGIN_SRC generic
+#+BEGIN_EXAMPLE
 /var/lib/xkb/
-#+END_SRC
+#+END_EXAMPLE
 
 Set keymappings with Setxkbmap.  For example:
 
