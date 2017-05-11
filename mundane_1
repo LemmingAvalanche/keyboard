@@ -32,8 +32,8 @@ xkb_symbols "basic" {
     key <AC08> { [ k, K, apostrophe ] };
     key <AC09> { [ l, L, asterisk ] };
 
-    key <AB01> { [ z, Z, braceleft ] };
-    key <AB02> { [ x, X, braceright ] };
+    key <AB01> { [ z, Z, braceleft, guillemotleft ] };
+    key <AB02> { [ x, X, braceright, guillemotright ] };
     key <AB03> { [ c, C, parenleft ] };
     key <AB04> { [ v, V, parenright ] };
     key <AB05> { [ b, B, bracketleft ] };
