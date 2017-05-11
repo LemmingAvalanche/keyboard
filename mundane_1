@@ -9,8 +9,8 @@ xkb_symbols "basic" {
     // more, make it mirror left alt.
     include "level3(ralt_alt)"
 
-    key <AD01> { [ q, Q, leftsinglequotemark ] };
-    key <AD02> { [ w, W, rightsinglequotemark ] };
+    key <AD01> { [ q, Q, leftsinglequotemark, leftdoublequotemark ] };
+    key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark ] };
     // Duplicate commonly used symbols to third level of the alphabetic
     // section.
     key <AD03> { [ e, E, percent ] };
