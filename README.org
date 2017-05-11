@@ -1,3 +1,7 @@
+Keyboard mappings for Xkb.
+
+* Installation or setup instructions
+
 Copy whatever xkb files you have to the directory:
 
 #+BEGIN_SRC generic
