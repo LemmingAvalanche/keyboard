@@ -54,3 +54,20 @@ sudo restart lightdm
 #+END_SRC
 
 This should take you back to the login screen.
+
+* Tools
+
+The following are useful tools for working with Xkb.
+
+- ~ckbcomp~: “compile a XKB keyboard description to a keymap suitable
+  for loadkeys”.  Use this when the mapping won’t compile and you want
+  better error messages.  Remember to use a relative path to the file if
+  you want to try to compile a mapping in the current directory.
+- ~setxkbmap~: “set the keyboard using the X Keyboard Extension”.
+- ~man xkeyboard-config~: “XKB data description files”.  Really useful to
+  find ready-made options like “swap Ctrl and Caps Lock”.
+- ~xkbprint~: “print an XKB keyboard description”.  Print a PostScript
+  file of a keyboard mapping.  The easiest way to use seems to be to
+  print the current keyboard by using [[https://askubuntu.com/a/381393/136104][an “X display specification”:]]
+  ~xkbprint :0 output.ps~.  You should be able to open the PostScript
+  file in a PDF viewer.
