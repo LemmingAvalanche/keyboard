@@ -58,3 +58,7 @@ this in a neat way?
 It seems that this link contains some good pointers:
 
     https://askubuntu.com/questions/875163/is-it-possible-to-use-a-custom-keyboard-layout-without-sudo-access-if-so-how
+
+Also this one:
+
+    https://askubuntu.com/questions/876005/what-file-is-the-setxkbmap-option-rules-meant-to-take-and-how-can-i-add-keyboa/896297#896297
