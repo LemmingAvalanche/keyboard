@@ -71,3 +71,8 @@ The following are useful tools for working with Xkb.
   print the current keyboard by using [[https://askubuntu.com/a/381393/136104][an “X display specification”:]]
   ~xkbprint :0 output.ps~.  You should be able to open the PostScript
   file in a PDF viewer.
+
+* Files
+
+- Keyboard mappings for the system is located in ~/usr/share/X11/xkb/symbols~.
+- Compose mappings for X: ~/usr/share/X11/locale/en_US.UTF-8/Compose~.
