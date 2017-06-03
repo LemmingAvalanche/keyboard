@@ -8,8 +8,9 @@ Copy whatever xkb files you have to the directory:
 /usr/share/X11/xkb/symbols
 #+END_EXAMPLE
 
-Remember to remove the files in this directory when you have made modifications
-to one of the files in that directory:
+Remember to remove the files in this directory (/the cache/ it seems to
+be called) when you have made modifications to one of the files in that
+directory:
 
 #+BEGIN_EXAMPLE
 /var/lib/xkb/
