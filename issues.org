@@ -51,8 +51,43 @@ find a way to compile and use these files as a regular user. For example, maybe
 there is some dot file or configuration file related to X11 that could handle
 this in a neat way?
 
-** TODO Find a way to use these files without sudo privileges
+** DONE Find a way to use these files without sudo privileges
+   CLOSED: [2017-06-04 sø. 19:05]
 
+   - CLOSING NOTE [2017-06-04 sø. 19:05] \\
+     I seem to have found a way to compile and use keymap files without
+     sudo privileges.
+
+     This method seems to be restricted to use /one/ custom file, since
+     the `include` statements etc. in that file seems to probably use
+     the files in the “standard” directory — ~/usr/share/X11/xkb/~ in my
+     case.  If that’s the case, then that drawback will be workable for
+     me, since I just need to put all things that depend on each other
+     in the same file.
+
+     So the method is this:
+
+     #+BEGIN_SRC shell
+     setxkbmap <mapping> -print | xkbcomp -I<custom directory> - "$DISPLAY"
+     #+END_SRC
+
+     This prints the mapping and pipes it to a compiler, and then
+     finally it is passed to the display ~DISPLAY~.
+
+     Something strange is the way the argument to ~-I~ is right next to
+     it, for example (with a concrete string):
+
+     #+BEGIN_SRC
+     -I"xkb-from-usr/"
+     #+END_SRC
+
+     This weirdness is on purpose since this:
+
+     #+BEGIN_SRC
+     -I "xkb-from-usr/"
+     #+END_SRC
+
+     Seems like it doesn’t work.
 ** Update [2017-05-11 to.]
 
 It seems that this link contains some good pointers:
