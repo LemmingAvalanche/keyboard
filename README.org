@@ -77,3 +77,15 @@ The following are useful tools for working with Xkb.
 
 - Keyboard mappings for the system is located in ~/usr/share/X11/xkb/symbols~.
 - Compose mappings for X: ~/usr/share/X11/locale/en_US.UTF-8/Compose~.
+
+* The source repository of XKB configurations
+
+Apparently this is where you can find the releases of the “source” of
+the XKB configuration that comes installed on Linux etc.:
+
+https://www.freedesktop.org/wiki/Software/XKeyboardConfig/
+
+I downloaded the repository and indeed it looks similar my XKB
+configuration located at ~/usr/share/X11/xkb/~.  The directory structure
+looks the same, and I opened the Norwegian (~no~) keyboard mapping file
+and it looked similar to the one I have on my system.
