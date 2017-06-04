@@ -62,3 +62,16 @@ It seems that this link contains some good pointers:
 Also this one:
 
     https://askubuntu.com/questions/876005/what-file-is-the-setxkbmap-option-rules-meant-to-take-and-how-can-i-add-keyboa/896297#896297
+
+** Update [2017-06-04 sø.]
+
+I downloaded [[https://github.com/aspiers/desktop-config][Adam Spier’s]] keyboard configuration.  He has some custom
+keyboard mappings.  By figuring out how he uses ~setxkbmap~ to enable
+his custom mappings, I could perhaps figure out how to do the same and
+in turn be able to use my own mappings without sudo priviliges.
+
+*** Context
+
+I found the repository in this email:
+
+https://groups.google.com/a/listserv.bat.ru/forum/#!topic/xkb/g0Mr_IJqMKQ
