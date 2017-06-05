@@ -112,7 +112,10 @@ I found the repository in this email:
 
 https://groups.google.com/a/listserv.bat.ru/forum/#!topic/xkb/g0Mr_IJqMKQ
 
-* TODO find a project name
+* DONE find a project name
+  CLOSED: [2017-06-05 ma. 14:57]
 
+  - CLOSING NOTE [2017-06-05 ma. 14:57] \\
+    Project name: “Twin Dexter”.
 I need a project name for these configurations.  I want to name the
 keymapping file after the project.
