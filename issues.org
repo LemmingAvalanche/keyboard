@@ -111,3 +111,8 @@ in turn be able to use my own mappings without sudo priviliges.
 I found the repository in this email:
 
 https://groups.google.com/a/listserv.bat.ru/forum/#!topic/xkb/g0Mr_IJqMKQ
+
+* TODO find a project name
+
+I need a project name for these configurations.  I want to name the
+keymapping file after the project.
