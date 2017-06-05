@@ -119,3 +119,12 @@ https://groups.google.com/a/listserv.bat.ru/forum/#!topic/xkb/g0Mr_IJqMKQ
     Project name: “Twin Dexter”.
 I need a project name for these configurations.  I want to name the
 keymapping file after the project.
+
+* TODO make test script for the keymappings
+
+Make a test script for the keymappings to run on every commit.  This to
+make sure that silly mistakes like parsing errors or using wrong
+includes sneak in.
+
+I just found out that I used the wrong includes in my keymappings file.
+I should take steps to avoid this in the future.
