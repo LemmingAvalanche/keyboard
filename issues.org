@@ -128,3 +128,123 @@ includes sneak in.
 
 I just found out that I used the wrong includes in my keymappings file.
 I should take steps to avoid this in the future.
+
+* Keyboard scripts
+
+** "AltGr" button produces newline when quickly pressed
+
+This is due to the way I have mapped the "Return" key to "ISO_Level3_Shift", and
+then this modifier back to produce the "Return" action/character when pressed.
+Since "AltGr" is the original (only) character that was mapped to that
+modifier, they now both emit the keycode 255 when pressed rapidly (255 is the
+unused keycode that I mapped to the "Return" key).
+
+This is not a practical issue right now, since I never press the "AltGr" key
+rapidly by mistake. But it could become an issue when I am going to map "Caps
+Lock" to act as another level 3 modifier when held down and pressed with other
+keys.
+
+** I should use ~setxkbmap~ instead of ~xmodmap~
+
+I should use ~setxkbmap~ instead of ~xmodmap~ to map keys in the script, since
+~xmodmap~ seems to be effectively deprecated in favour of ~setxkbmap~ in Ubuntu.
+Also, apparently running a ~setxkbmap~ after having run an ~xmodmap~ command
+might invalidate whatever changes the ~xmodmap~ invocation made.
+
+** The order matters when combining level 2 and level 3 shifts :issue_resolved:
+
+This only happens for the ~<BKSL>~ key.
+
+If I press and hold the ~<BKSL>~ key, and then press and hold the ~<Shift_R>~
+key (while still holding down ~<BKSL>~), then I enter level 4 (level 2 and level
+3 shift pressed at the same time). But if I press and hold ~<Shift_R>~ /and
+then/ press and hold ~<BKSL>~, then I am still at level 2. This is not the case
+for the ~<Alt_R>~ (also known as "Alt Gr") key; I can press and release this key
+and ~<Shift_R>~ in any order and they still work as expected, namely that the
+fourth level is accessed whenever both are depressed at the same time.
+
+At first I thought that this had something to do with the fact that ~<Alt_R>~
+was the original (and only) "level 3 shift", and that I had used ~xmodmap~ to
+make ~<BKSL>~ a "level 3 shift" key. But this is /not/ an issue when it comes to
+~<Caps_Lock>~ and ~<Shift_L>~; they work just as well as ~<Alt_R>~ combined with
+~<Shift_R>~.
+
+*** Update 1
+
+When pressing ~<BKSL>~ while running ~xev~, the "KeyPress event" registers the
+keysym as "ISO_Level3_Shift", but the "KeyRelease event" registers the keysym as
+"NoSymbol". This is /not/ the case for the "Caps_Lock" key; both the key press
+and release events registers the keysym as "ISO_Level3_Shift".
+
+This might be relevant to this issue.
+
+*** Update 2
+
+**** Not key ghosting
+
+I did some testing in ~xev~. I suspected that it might have to do with key
+ghosting, but that does not seem to be the case, since ~xev~ manages to register
+both keys (~Shift_R~ and ~BKSL~) while one of them is first held down, no matter
+what order they are depressed in[fn:higher_levels].
+
+[fn:higher_levels] Moreover, it also manages to register the keypresses when
+both of these keys and ~Return~ in addition are pressed down, and apparently in
+whatever order. This is nice, since I feared that key ghosting would mean that I
+could not hold down these keys together and have them all register. (These three
+keys activate all the three shift levels, which means that I get access to the
+eight level when I depress them simultaneusly.)
+
+**** ~NoSymbol~ key when pressed after ~Shift_R~
+
+When I depress and hold ~Shift_R~ and then depress ~BKSL~, the keysym for this
+key is hex value 0x0, ~NoSymbol~.
+
+I think this is due to xkb thinking that ~BKSL~ is supposed to a "shiftable
+key" and not a modifier key. So when shift is held down and ~BKSL~ is pressed as
+well, a lookup is made to see what symbol should be produced. And since ~BKSL~
+has no /levels/ any more, it gets registers as being a "no symbol".
+
+I think what I need to do is to register ~BKSL~ in the ~no_p1~ file so that it
+won't get mistaken for a "shiftable" key (like the alphanumeric keys).
+
+**** Also a problem for ~LSGT~
+
+~LSGT~ also has this issue. Which is not surprising, since it too was
+originally a "shiftable key".
+
+*** Update 3: Issue resolved
+
+I fixed the issue by editing the ~no_p1~ file (see the git repository for that
+file). Basically I used the xkb construct ~modifier_map~ to declare ~BKSL~ and
+~LSGT~ to be ~mod3~ and ~mod5~, respectively. I also had to map all levels of
+these keys to their respective shift levels.
+
+* Re-running script causes ~Return~ key to produce multiple newlines
+
+When I re-run the script (perhaps because I ran some ~setxkbmap~ command and
+that nullified the changes done by ~xmodmap~), the ~Return~ key starts producing
+more than one newlines. It seems that the more times I run the script, the more
+newlines it produces.
+
+* Previous commit introduced errors :issue_resolved:
+
+The previous commit introduced these issues:
+
+- Caps lock no longer works as a modifier.
+- Caps lock acts as caps lock again.
+
+This is—in hindsight—quite understandable; I deleted the ~xmodmap~ invocation
+that mapped "CAPS" to ~modifier_3~. Since that is gone, and my configuration
+(the "no_p1" Xkb configuration file) doesn’t change the default behaviour of
+"CAPS", then of course it goes back to working as caps lock.
+
+** Update: issue resolved
+
+I added the following line to my "no_p1" keyboard configuration:
+
+#+BEGIN_SRC generic
+include "level3(caps_switch)"
+#+END_SRC
+
+Which nicely does what I currently want; "CAPS" acts as a level 3 switch and
+nothing else (i.e., not a dual purpose key).
