@@ -52,3 +52,8 @@ xkb_symbols "no_nodeadkeys" {
     include "no(nodeadkeys)"
     include "twin-dexter(latin)"
 };
+
+partial alphanumeric_keys
+xkb_symbols "no_p1" {
+    include "no_nodeadkeys"
+};
