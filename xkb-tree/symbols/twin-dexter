@@ -63,4 +63,5 @@ xkb_symbols "no_p1" {
     // "Return" is the 2nd level 5 switch, but that is set in a script using
     // Xcape. The reason for that is that it needs to dual-purpose as regular old
     // "Return" (carriage return).
+    key.type[Group1] = "EIGHT_LEVEL";
 };
