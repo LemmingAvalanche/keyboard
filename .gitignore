@@ -1,4 +1,5 @@
 xkb-from-usr/
 aspiers-desktop-config/
+test-xkb/
 *.xkm
 *.ps
