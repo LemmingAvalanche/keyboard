@@ -56,4 +56,11 @@ xkb_symbols "no_nodeadkeys" {
 partial alphanumeric_keys
 xkb_symbols "no_p1" {
     include "no_nodeadkeys"
+
+    // Make levels 5–8 possible.
+    include "level5(modifier_mapping)"
+    include "level5(lsgt_switch)"
+    // "Return" is the 2nd level 5 switch, but that is set in a script using
+    // Xcape. The reason for that is that it needs to dual-purpose as regular old
+    // "Return" (carriage return).
 };
