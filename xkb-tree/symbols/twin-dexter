@@ -64,4 +64,13 @@ xkb_symbols "no_p1" {
     // Xcape. The reason for that is that it needs to dual-purpose as regular old
     // "Return" (carriage return).
     key.type[Group1] = "EIGHT_LEVEL";
+
+    // Map Norwegian characters “æøå” to other symbols.  Useful when
+    // programming (hence the name `no_p1`: the `p1` stands for
+    // “programming 1”.  See also: [→1].
+    key <AD11>	{ [     slash, bar, U2044, NoSymbol ] };
+
+    // →1
+    key <AC10>	{ [ parenleft, bracketleft, braceleft ] };
+    key <AC11>	{ [parenright, bracketright, braceright ]	};
 };
