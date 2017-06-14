@@ -86,6 +86,9 @@ xkb_symbols "no_p1" {
     key <AC10> { [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
     key <AC11> { [ parenright, bracketright, braceright, U301B, U0306 ] };
 
+    key <AB05> { [ b, B, U300E, U300C ] };
+    key <AB06> { [ n, N, U300F, U300D ] };
+    key <AB07> { [ m, M, U25CA ] };
     key <AB08> { [ comma, semicolon, enfilledcircbullet, U2032, U0327 ] };
     key <AB09> { [ period, colon, periodcentered, abovedot, U0307 ] };
     key <AB10> { [ minus, underscore, endash, emdash, U0304 ] };
