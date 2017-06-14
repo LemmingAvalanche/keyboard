@@ -69,7 +69,7 @@ xkb_symbols "no_p1" {
     // programming (hence the name `no_p1`: the `p1` stands for
     // “programming 1”.  See also: [→1].
     key <AD11>	{ [     slash, bar, U2044, NoSymbol, U030C ] };
-    key <AD12>	{ [ asciicircum,  asciitilde, U0302, U0303, U0303 ] };
+    key <AD12>	{ [ asciicircum,  asciitilde, U0302, NoSymbol, U0303 ] };
 
     // Keys <AC01> to <AC11>to on this row contain diacritics on the
     // fifth level.
