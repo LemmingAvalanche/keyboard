@@ -68,25 +68,25 @@ xkb_symbols "no_p1" {
     // Map Norwegian characters “æøå” to other symbols.  Useful when
     // programming (hence the name `no_p1`: the `p1` stands for
     // “programming 1”.  See also: [→1].
-    key <AD11>	{ [     slash, bar, U2044, NoSymbol, U030C ] };
-    key <AD12>	{ [ asciicircum,  asciitilde, U0302, NoSymbol, U0303 ] };
+    key <AD11> { [ slash, bar, U2044, NoSymbol, U030C ] };
+    key <AD12> { [ asciicircum, asciitilde, U0302, NoSymbol, U0303 ] };
 
     // Keys <AC01> to <AC11>to on this row contain diacritics on the
     // fifth level.
     key <AC01> { [ a, A, less, U2329, U0304 ] };
     key <AC02> { [ s, S, greater, U232A, U0308] };
-    key <AC03>	{ [         d,          D, exclam, NoSymbol, U0302 ] };
-    key <AC04>	{ [         f,          F, quotedbl  , NoSymbol, U0301 ] };
-    key <AC05>	{ [         g,          G, at, NoSymbol, U0300 ] };
-    key <AC06>	{ [         h,          H, numbersign, leftarrow, U0300 ] };
-    key <AC07>	{ [         j,          J, dollar, downarrow, U0301 ] };
+    key <AC03> { [ d, D, exclam, NoSymbol, U0302 ] };
+    key <AC04> { [ f, F, quotedbl, NoSymbol, U0301 ] };
+    key <AC05> { [ g, G, at, NoSymbol, U0300 ] };
+    key <AC06> { [ h, H, numbersign, leftarrow, U0300 ] };
+    key <AC07> { [ j, J, dollar, downarrow, U0301 ] };
     key <AC08> { [ k, K, apostrophe, uparrow, U0302 ] };
     key <AC09> { [ l, L, asterisk, rightarrow, U0308 ] };
     // →1
-    key <AC10>	{ [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
-    key <AC11>	{ [ parenright, bracketright, braceright, U301B, U0306 ] };
+    key <AC10> { [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
+    key <AC11> { [ parenright, bracketright, braceright, U301B, U0306 ] };
 
-    key <AB08>	{ [ comma, semicolon, enfilledcircbullet, U2032, U0327 ] };
-    key <AB09>	{ [    period,      colon, periodcentered,   abovedot, U0307 ]	};
-    key <AB10>	{ [     minus, underscore,       endash,       emdash, U0304 ]	};
+    key <AB08> { [ comma, semicolon, enfilledcircbullet, U2032, U0327 ] };
+    key <AB09> { [ period, colon, periodcentered, abovedot, U0307 ] };
+    key <AB10> { [ minus, underscore, endash, emdash, U0304 ] };
 };
