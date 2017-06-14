@@ -129,6 +129,52 @@ includes sneak in.
 I just found out that I used the wrong includes in my keymappings file.
 I should take steps to avoid this in the future.
 
+* TODO Make experimental keymapping using numeric row
+
+I had the idea today that I could use my numeric row for some things.
+Namely:
+
+- Symmetric compose keys.
+- Symmetric 1st and 2nd level shift keys.  Either normal, or the “press
+  once and release and then press the key to be modified” (I don’t know
+  the term for this right now).
+
+I would map these keys to some keys used by the index, middle, and/or
+ring fingers.
+
+The initial idea was at first to get a more comfortable or ergonomic
+compose keys by placing them on two of the numeric keys accessed by the
+index fingers on either side (symmetric).  Then I would place those
+now-missing numbers (perhaps 4 and 7) on one of the free keys on the
+numeric row on the far left and far right.  They are free since now they
+are not used as compose keys, and they are not used as symbol keys since
+I access the symbol keys on the alphabetic row.
+
+The more radical next step is to replace more of the numeric keys with
+things like 1st and 2nd level shift — and perhaps even more stuff.  Then
+I would not be able to use the numeric row for producing numbers.
+
+** What about producing numbers?
+
+The most “radical” version of this scheme is to put both compose and
+shift keys on the numeric row.  But then I would need to find some other
+place for producing numbers.  What i could do — and which is an idea that
+I’ve had separately of this idea — is to make a “numpad” on the
+alphabetic section.  this would be achieved by assigning some shift
+level to these keys.  For example, maybe use the fifth level?
+
+** Problems
+
+What comes to my mind as the biggest drawback of this approach is that
+it could become hard to use number keys together with control, alt, and
+the super keys (Windows keys).  Xmonad uses ~S-<num>~ to change to
+desktop ~<num>~.  On the other hand, I can’t immediately think of other
+applications that uses the control, alt, or super keys together with
+numbers and that I also use.
+
+One way to mitigate this would be to have an alternative keyboard layout
+to switch to when it becomes more convenient to use the numberic row.
+
 * Keyboard scripts
 
 ** "AltGr" button produces newline when quickly pressed
