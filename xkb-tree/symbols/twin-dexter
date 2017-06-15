@@ -90,6 +90,10 @@ xkb_symbols "no-p1" {
     key <AC10> { [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
     key <AC11> { [ parenright, bracketright, braceright, U301B, U0306 ] };
 
+    key <AB01> { [ z, Z, guillemotleft, U2039 ] };
+    key <AB02> { [ x, X, guillemotright, U203A ] };
+    key <AB03> { [ c, C, leftdoublequotemark ] };
+    key <AB04> { [ v, V, rightdoublequotemark ] };
     key <AB05> { [ b, B, U300E, U300C ] };
     key <AB06> { [ n, N, U300F, U300D ] };
     key <AB07> { [ m, M, U25CA ] };
