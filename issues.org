@@ -294,3 +294,20 @@ include "level3(caps_switch)"
 
 Which nicely does what I currently want; "CAPS" acts as a level 3 switch and
 nothing else (i.e., not a dual purpose key).
+
+* TODO option ~altwin(swap_alt_win)~ does not work for ~no-p2~
+
+Using this line for ~no-p2~ does not work:
+
+#+BEGIN_SRC
+include "altwin(swap_alt_win)"
+#+END_SRC
+
+However, this works:
+
+#+BEGIN_SRC
+setxkbmap -option altwin:swap_alt_win "no(nodeadkeys)"
+#+END_SRC
+
+So there must be something wrong with my keymappings.  Probably with one
+of the alt keys.
