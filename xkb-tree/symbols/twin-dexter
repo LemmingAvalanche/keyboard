@@ -105,6 +105,8 @@ xkb_symbols "no-p1" {
 partial alphanumeric_keys
 xkb_symbols "no-p2" {
     include "twin-dexter(no-p1)"
-    key <LSGT> { type[Group1]="ONE_LEVEL", [ Shift_L ] };
+    key <LSGT> {
+      [ Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L ]
+    };
     include "altwin(swap_alt_win)"
 };
