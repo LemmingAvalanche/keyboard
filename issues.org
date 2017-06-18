@@ -375,3 +375,24 @@ KeyRelease event, serial 76, synthetic NO, window 0x3600001,
     XLookupString gives 0 bytes:
     XFilterEvent returns: False
 #+END_SRC
+
+** What Emacs says
+
+Using the not-functioning ~no-p2~ setup, this is what the echo buffer
+says when I press ~Super-f~ for the left super button (while in normal
+mode):
+
+#+BEGIN_SRC
+s-f is undefined
+#+END_SRC
+
+And for the right super key:
+
+#+BEGIN_SRC
+M-s-f is undefined
+#+END_SRC
+
+Ah!  Notice the ~M~ when pressing the right, which is not there when
+pressing the left.  I am guessing that this has to do with the fact that
+I map the ~AltGr~ key (right alt) to act like “alt”, i.e., to act like
+the right alt key.
