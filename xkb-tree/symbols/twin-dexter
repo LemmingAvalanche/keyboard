@@ -108,6 +108,8 @@ xkb_symbols "swap_r_win_menu_key" {
     replace key <MENU> { [ Alt_R ] };
 };
 
+// Like `no-p1`, but with a new level 2 shift key and more convenient
+// Alt keys.
 partial alphanumeric_keys
 xkb_symbols "no-p2" {
     include "twin-dexter(no-p1)"
