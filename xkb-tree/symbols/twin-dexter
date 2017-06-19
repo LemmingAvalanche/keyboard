@@ -101,10 +101,10 @@ xkb_symbols "no-p1" {
     key <AB10> { [ minus, underscore, endash, emdash, U0304 ] };
 };
 
-// Swap the right Alt key and the menu key.
+// Swap the right Win key and the menu key.
 partial modifier_keys
-xkb_symbols "swap_r_alt_menu_key" {
-    replace key <RALT> { [ Multi_key ] };
+xkb_symbols "swap_r_win_menu_key" {
+    replace key <RWIN> { [ Multi_key ] };
     replace key <MENU> { [ Alt_R ] };
 };
 
@@ -115,5 +115,5 @@ xkb_symbols "no-p2" {
       [ Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L ]
     };
     include "altwin(swap_alt_win)"
-    include "twin-dexter(swap_r_alt_menu_key)"
+    include "twin-dexter(swap_r_win_menu_key)"
 };
