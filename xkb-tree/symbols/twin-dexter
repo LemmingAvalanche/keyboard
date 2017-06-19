@@ -113,6 +113,10 @@ xkb_symbols "swap_r_win_menu_key" {
 partial alphanumeric_keys
 xkb_symbols "no-p2" {
     include "twin-dexter(no-p1)"
+    // Effectively “extend” the left shift key by mapping the key to the
+    // right of it as another `Shift_L` key.  This makes it easier to
+    // use shift together with left Alt (on the Windows key in this
+    // mapping).
     key <LSGT> {
       [ Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L ]
     };
