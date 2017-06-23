@@ -5,9 +5,8 @@ xkb_symbols "latin" {
     include "level3(modifier_mapping)"
     include "level3(bksl_switch)"
     include "level3(caps_switch)"
-    // Now that we don’t need right alt (altgr) to choose level 3 any
-    // more, make it mirror left alt.
-    include "level3(ralt_alt)"
+    // Use right Alt as Alt key, instead of AltGr key.
+    key <RALT> { [ Alt_R ] };
 
     key <AD01> { [ q, Q, leftsinglequotemark, leftdoublequotemark ] };
     key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark ] };
