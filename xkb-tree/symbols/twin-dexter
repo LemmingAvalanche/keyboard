@@ -153,3 +153,8 @@ xkb_symbols "no-p3" {
     key <AB04> { [ v, V, rightdoublequotemark, NoSymbol, 3 ] };
     key <AB05> { [ b, B, U300E, U300C, 0 ] };
 };
+
+xkb_symbols "no-p4" {
+    include "twin-dexter(no-p2)"
+
+};
