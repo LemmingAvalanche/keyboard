@@ -1,8 +1,10 @@
 #!/bin/sh
 
 # Set keyboard layouts and options relating to keyboard layouts
-setxkbmap -option "" -layout "no_p1(nodeadkeys),no_1(nodeadkeys)" -option \
-          grp:sclk_toggle -option grp_led:scroll :2 -option nbsp:none
+setxkbmap -option "" -layout "twin-dexter(no-p1),twin-dexter(no-nodeadkeys)" \
+         -option grp:sclk_toggle -option grp_led:scroll :2 \
+         -option nbsp:none -print |
+             xkbcomp -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
 
 # The following code is based on the example code in the following readme:
 #     https://github.com/alols/xcape/blob/master/README.md

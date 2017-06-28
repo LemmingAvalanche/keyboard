@@ -1,0 +1,103 @@
+default partial alphanumeric_keys
+xkb_symbols "latin" {
+    // Use caps lock and the key to the left of the return key (on
+    // European (105) keyboards) to access the third level.
+    include "level3(modifier_mapping)"
+    include "level3(bksl_switch)"
+    include "level3(caps_switch)"
+    // Now that we don’t need right alt (altgr) to choose level 3 any
+    // more, make it mirror left alt.
+    include "level3(ralt_alt)"
+
+    key <AD01> { [ q, Q, leftsinglequotemark, leftdoublequotemark ] };
+    key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark ] };
+    // Duplicate commonly used symbols to third level of the alphabetic
+    // section.
+    key <AD03> { [ e, E, percent ] };
+    key <AD04> { [ r, R, ampersand ] };
+    key <AD05> { [ t, T, bar ] };
+    key <AD06> { [ y, Y, backslash ] };
+    key <AD07> { [ u, U, grave ] };
+    key <AD08> { [ i, I, equal ] };
+    key <AD09> { [ o, O, question ] };
+    key <AD10> { [ p, P, plus ] };
+
+    key <AC01> { [ a, A, less ] };
+    key <AC02> { [ s, S, greater ] };
+    key <AC03> { [ d, D, exclam ] };
+    key <AC04> { [ f, F, quotedbl ] };
+    key <AC05> { [ g, G, at ] };
+    key <AC06> { [ h, H, numbersign ] };
+    key <AC07> { [ j, J, dollar ] };
+    key <AC08> { [ k, K, apostrophe ] };
+    key <AC09> { [ l, L, asterisk ] };
+
+    key <AB01> { [ z, Z, braceleft, guillemotleft ] };
+    key <AB02> { [ x, X, braceright, guillemotright ] };
+    key <AB03> { [ c, C, parenleft ] };
+    key <AB04> { [ v, V, parenright ] };
+    key <AB05> { [ b, B, bracketleft ] };
+    key <AB06> { [ n, N, bracketright ] };
+    key <AB07> { [ m, M, slash ] };
+};
+
+partial alphanumeric_keys
+xkb_symbols "no" {
+    include "no(basic)"
+    include "twin-dexter(latin)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "no-nodeadkeys" {
+    include "no(nodeadkeys)"
+    include "twin-dexter(latin)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "no-p1" {
+    include "twin-dexter(no-nodeadkeys)"
+
+    // Make levels 5–8 possible.
+    include "level5(modifier_mapping)"
+    include "level5(lsgt_switch)"
+    // "Return" is the 2nd level 5 switch, but that is set in a script using
+    // Xcape. The reason for that is that it needs to dual-purpose as regular old
+    // "Return" (carriage return).
+    key.type[Group1] = "EIGHT_LEVEL";
+
+    // Make the <TLDE> and <AE12> key into compose keys.
+    key <TLDE> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
+    key <AE12> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
+
+    // Map Norwegian characters “æøå” to other symbols.  Useful when
+    // programming (hence the name `no-p1`: the `p1` stands for
+    // “programming 1”.  See also: [→1].
+    key <AD11> { [ slash, bar, U2044, NoSymbol, U030C ] };
+    key <AD12> { [ asciicircum, asciitilde, U0302, NoSymbol, U0303 ] };
+
+    // Keys <AC01> to <AC11>to on this row contain diacritics on the
+    // fifth level.
+    key <AC01> { [ a, A, less, U2329, U0304 ] };
+    key <AC02> { [ s, S, greater, U232A, U0308] };
+    key <AC03> { [ d, D, exclam, NoSymbol, U0302 ] };
+    key <AC04> { [ f, F, quotedbl, NoSymbol, U0301 ] };
+    key <AC05> { [ g, G, at, NoSymbol, U0300 ] };
+    key <AC06> { [ h, H, numbersign, leftarrow, U0300 ] };
+    key <AC07> { [ j, J, dollar, downarrow, U0301 ] };
+    key <AC08> { [ k, K, apostrophe, uparrow, U0302 ] };
+    key <AC09> { [ l, L, asterisk, rightarrow, U0308 ] };
+    // →1
+    key <AC10> { [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
+    key <AC11> { [ parenright, bracketright, braceright, U301B, U0306 ] };
+
+    key <AB01> { [ z, Z, guillemotleft, U2039 ] };
+    key <AB02> { [ x, X, guillemotright, U203A ] };
+    key <AB03> { [ c, C, leftdoublequotemark ] };
+    key <AB04> { [ v, V, rightdoublequotemark ] };
+    key <AB05> { [ b, B, U300E, U300C ] };
+    key <AB06> { [ n, N, U300F, U300D ] };
+    key <AB07> { [ m, M, U25CA ] };
+    key <AB08> { [ comma, semicolon, enfilledcircbullet, U2032, U0327 ] };
+    key <AB09> { [ period, colon, periodcentered, abovedot, U0307 ] };
+    key <AB10> { [ minus, underscore, endash, emdash, U0304 ] };
+};
