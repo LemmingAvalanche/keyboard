@@ -180,12 +180,12 @@ xkb_symbols "no-p4" {
     };
     replace key <AE04> {
         type[Group1]="ONE_LEVEL",
-        [ ISO_Level2_Latch ]
+        [ ISO_Level3_Latch ]
     };
     // TODO: fill in keys 5, 6, 7.
     replace key <AE08> {
         type[Group1]="ONE_LEVEL",
-        [ ISO_Level2_Latch ]
+        [ ISO_Level3_Latch ]
     };
     replace key <AE09> {
         type[Group1]="ONE_LEVEL",
