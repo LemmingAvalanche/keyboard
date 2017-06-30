@@ -2,4 +2,4 @@
 
 # Set keyboard to the argument, where the argument is one of the
 # mappings in the file.
-setxkbmap "twin-dexter($1)" -compat level5 -print | xkbcomp -I"xkb-tree" - "$DISPLAY"
+setxkbmap "twin-dexter($1)" -print | xkbcomp -I"xkb-tree" - "$DISPLAY"
