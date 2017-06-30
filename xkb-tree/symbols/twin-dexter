@@ -170,8 +170,14 @@ xkb_symbols "no-p4" {
     key <AD10> { [ p, P, plus, NoSymbol, 0 ] };
 
     // Levels
-    replace key <AE02> { [ ISO_Level5_Latch ] };
-    replace key <AE03> { [ ISO_Level3_Latch ] };
+    replace key <AE02> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level5_Latch ]
+    };
+    replace key <AE03> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level3_Latch ]
+    };
     replace key <AE04> {
         type[Group1]="ONE_LEVEL",
         [ ISO_Level2_Latch ]
@@ -181,6 +187,12 @@ xkb_symbols "no-p4" {
         type[Group1]="ONE_LEVEL",
         [ ISO_Level2_Latch ]
     };
-    replace key <AE09> { [ ISO_Level3_Latch ] };
-    replace key <AE10> { [ ISO_Level5_Latch ] };
+    replace key <AE09> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level3_Latch ]
+    };
+    replace key <AE10> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level5_Latch ]
+    };
 };
