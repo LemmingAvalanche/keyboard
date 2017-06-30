@@ -168,4 +168,13 @@ xkb_symbols "no-p4" {
     key <AD08> { [ i, I, equal, NoSymbol, 8 ] };
     key <AD09> { [ o, O, question, NoSymbol, 9 ] };
     key <AD10> { [ p, P, plus, NoSymbol, 0 ] };
+
+    // Levels
+    key <AE02> { [ ISO_Level5_Latch ] };
+    key <AE03> { [ ISO_Level3_Latch ] };
+    key <AE04> { [ ISO_Level2_Latch ] };
+    // TODO: fill in keys 5, 6, 7.
+    key <AE08> { [ ISO_Level2_Latch ] };
+    key <AE09> { [ ISO_Level3_Latch ] };
+    key <AE10> { [ ISO_Level5_Latch ] };
 };
