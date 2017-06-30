@@ -154,8 +154,11 @@ xkb_symbols "no-p3" {
     key <AB05> { [ b, B, U300E, U300C, 0 ] };
 };
 
+xkb_compat    { include "level5"  };
+
 xkb_symbols "no-p4" {
     include "twin-dexter(no-p2)"
+    // For latches
 
     key.type[Group1] = "EIGHT_LEVEL";
     key <AD01> { [ q, Q, leftsinglequotemark, leftdoublequotemark, 1 ] };
