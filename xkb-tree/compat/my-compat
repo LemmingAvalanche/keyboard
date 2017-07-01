@@ -10,7 +10,6 @@ default partial xkb_compatibility "default"  {
     latchMods.latchToLock= True;
 
     interpret ISO_Level2_Latch {
-	useModMapMods= level1;
 	action= LatchMods(modifiers=Shift);
     };
 
