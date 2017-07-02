@@ -294,3 +294,105 @@ include "level3(caps_switch)"
 
 Which nicely does what I currently want; "CAPS" acts as a level 3 switch and
 nothing else (i.e., not a dual purpose key).
+
+* TODO option ~altwin(swap_alt_win)~ does not work for ~no-p2~
+
+Using this line for ~no-p2~ does not work:
+
+#+BEGIN_SRC
+include "altwin(swap_alt_win)"
+#+END_SRC
+
+However, this works:
+
+#+BEGIN_SRC
+setxkbmap -option altwin:swap_alt_win "no(nodeadkeys)"
+#+END_SRC
+
+So there must be something wrong with my keymappings.  Probably with one
+of the alt keys.
+
+** ~xev~ output
+
+This is the output for a swap setup that works, when pressing the right
+and left super keys:
+
+#+BEGIN_SRC
+KeyPress event, serial 44, synthetic NO, window 0x3600001,
+    root 0xd6, subw 0x0, time 37204852, (780,620), root:(781,621),
+    state 0x0, keycode 108 (keysym 0xffec, Super_R), same_screen YES,
+    XLookupString gives 0 bytes:
+    XmbLookupString gives 0 bytes:
+    XFilterEvent returns: False
+
+KeyRelease event, serial 44, synthetic NO, window 0x3600001,
+    root 0xd6, subw 0x0, time 37216035, (780,620), root:(781,621),
+    state 0x40, keycode 108 (keysym 0xffec, Super_R), same_screen YES,
+    XLookupString gives 0 bytes:
+    XFilterEvent returns: False
+
+KeyPress event, serial 44, synthetic NO, window 0x3600001,
+    root 0xd6, subw 0x0, time 37219251, (780,620), root:(781,621),
+    state 0x0, keycode 64 (keysym 0xffeb, Super_L), same_screen YES,
+    XLookupString gives 0 bytes:
+    XmbLookupString gives 0 bytes:
+    XFilterEvent returns: False
+
+KeyRelease event, serial 44, synthetic NO, window 0x3600001,
+    root 0xd6, subw 0x0, time 37220915, (780,620), root:(781,621),
+    state 0x40, keycode 64 (keysym 0xffeb, Super_L), same_screen YES,
+    XLookupString gives 0 bytes:
+    XFilterEvent returns: False
+#+END_SRC
+
+And this is the output for the setup that /doesn’t/ work, namely the
+~no-p2~ with the swap option:
+
+#+BEGIN_SRC
+KeyPress event, serial 76, synthetic NO, window 0x3600001,
+    root 0xd6, subw 0x0, time 37804728, (708,1079), root:(709,1080),
+    state 0x0, keycode 108 (keysym 0xffec, Super_R), same_screen YES,
+    XLookupString gives 0 bytes:
+    XmbLookupString gives 0 bytes:
+    XFilterEvent returns: False
+
+KeyRelease event, serial 76, synthetic NO, window 0x3600001,
+    root 0xd6, subw 0x0, time 37807752, (708,1079), root:(709,1080),
+    state 0x48, keycode 108 (keysym 0xffec, Super_R), same_screen YES,
+    XLookupString gives 0 bytes:
+    XFilterEvent returns: False
+
+KeyPress event, serial 76, synthetic NO, window 0x3600001,
+    root 0xd6, subw 0x0, time 37808184, (708,1079), root:(709,1080),
+    state 0x0, keycode 64 (keysym 0xffeb, Super_L), same_screen YES,
+    XLookupString gives 0 bytes:
+    XmbLookupString gives 0 bytes:
+    XFilterEvent returns: False
+
+KeyRelease event, serial 76, synthetic NO, window 0x3600001,
+    root 0xd6, subw 0x0, time 37810328, (708,1079), root:(709,1080),
+    state 0x40, keycode 64 (keysym 0xffeb, Super_L), same_screen YES,
+    XLookupString gives 0 bytes:
+    XFilterEvent returns: False
+#+END_SRC
+
+** What Emacs says
+
+Using the not-functioning ~no-p2~ setup, this is what the echo buffer
+says when I press ~Super-f~ for the left super button (while in normal
+mode):
+
+#+BEGIN_SRC
+s-f is undefined
+#+END_SRC
+
+And for the right super key:
+
+#+BEGIN_SRC
+M-s-f is undefined
+#+END_SRC
+
+Ah!  Notice the ~M~ when pressing the right, which is not there when
+pressing the left.  I am guessing that this has to do with the fact that
+I map the ~AltGr~ key (right alt) to act like “alt”, i.e., to act like
+the right alt key.
