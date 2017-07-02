@@ -134,6 +134,8 @@ xkb_symbols "no-p3" {
     // Make a “numpad”.
     // This numpad has zero on the lowest right corner.  Comma and
     // period are on the second and third row from the top, respectively.
+    // Set `EIGHT_LEVEL` in case it is necessary.
+    key.type[Group1] = "EIGHT_LEVEL";
     // First (topmost) numpad row.
     key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark, 7 ] };
     key <AD03> { [ e, E, percent, NoSymbol, 8 ] };
