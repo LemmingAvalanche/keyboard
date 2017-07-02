@@ -185,7 +185,7 @@ xkb_symbols "no-p4" {
         type[Group1]="ONE_LEVEL",
         [ ISO_Level2_Latch ]
     };
-    // TODO: fill in keys 5, 6, 7.
+    // TODO: fill in key key 6.
     replace key <AE08> {
         type[Group1]="ONE_LEVEL",
         [ ISO_Level2_Latch ]
@@ -198,4 +198,14 @@ xkb_symbols "no-p4" {
         type[Group1]="ONE_LEVEL",
         [ ISO_Level5_Latch ]
     };
+    // compose
+    replace key <AE05> {
+        type[Group1]="ONE_LEVEL",
+        [ Multi_key ]
+    };
+    replace key <AE07> {
+        type[Group1]="ONE_LEVEL",
+        [ Multi_key ]
+    };
+
 };
