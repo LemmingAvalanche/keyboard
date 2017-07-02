@@ -127,3 +127,7 @@ xkb_symbols "no-p2" {
         [ ISO_Level5_Shift ]
     };
 };
+
+xkb_symbols "no-p3" {
+    include "twin-dexter(no-p2)"
+};
