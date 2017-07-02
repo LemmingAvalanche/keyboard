@@ -295,8 +295,18 @@ include "level3(caps_switch)"
 Which nicely does what I currently want; "CAPS" acts as a level 3 switch and
 nothing else (i.e., not a dual purpose key).
 
-* TODO option ~altwin(swap_alt_win)~ does not work for ~no-p2~
+* DONE option ~altwin(swap_alt_win)~ does not work for ~no-p2~
+  CLOSED: [2017-06-23 fr. 20:54]
+  - CLOSING NOTE [2017-06-23 fr. 20:54] \\
+    Changing this line:
 
+        include "level3(ralt_alt)"
+
+    To this:
+
+        key <RALT> { [ Alt_R ] };
+
+    Seems to be what fixed the issue.
 Using this line for ~no-p2~ does not work:
 
 #+BEGIN_SRC
