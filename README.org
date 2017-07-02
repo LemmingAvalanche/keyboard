@@ -77,6 +77,9 @@ The following are useful tools for working with Xkb.
 
 - Keyboard mappings for the system is located in ~/usr/share/X11/xkb/symbols~.
 - Compose mappings for X: ~/usr/share/X11/locale/en_US.UTF-8/Compose~.
+- Keysymbol definitions are in: ~/usr/include/X11/keysymdef.h~.  There
+  you can find what keys and symbols (characters) are named, for example
+  ~XK_Home~ (home key) and ~XK_ampersand~ (~&~).
 
 * The source repository of XKB configurations
 
