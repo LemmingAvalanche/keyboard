@@ -127,3 +127,29 @@ xkb_symbols "no-p2" {
         [ ISO_Level5_Shift ]
     };
 };
+
+// Like `no-p2`, but with an “alphabetic numpad”.
+xkb_symbols "no-p3" {
+    include "twin-dexter(no-p2)"
+
+    // Make a “numpad”.
+    // This numpad has zero on the lowest right corner.  Comma and
+    // period are on the second and third row from the top, respectively.
+    // Set `EIGHT_LEVEL` in case it is necessary.
+    key.type[Group1] = "EIGHT_LEVEL";
+    // First (topmost) numpad row.
+    key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark, 7 ] };
+    key <AD03> { [ e, E, percent, NoSymbol, 8 ] };
+    key <AD04> { [ r, R, ampersand, NoSymbol, 9 ] };
+    // Second numpad row.
+    key <AC01> { [ a, A, less, U2329, comma ] };
+    key <AC02> { [ s, S, greater, U232A, 4 ] };
+    key <AC03> { [ d, D, exclam, NoSymbol, 5 ] };
+    key <AC04> { [ f, F, quotedbl, NoSymbol, 6 ] };
+    // Second numpad row.
+    key <AB01> { [ z, Z, guillemotleft, U2039, period ] };
+    key <AB02> { [ x, X, guillemotright, U203A, 1 ] };
+    key <AB03> { [ c, C, leftdoublequotemark, NoSymbol, 2 ] };
+    key <AB04> { [ v, V, rightdoublequotemark, NoSymbol, 3 ] };
+    key <AB05> { [ b, B, U300E, U300C, 0 ] };
+};
