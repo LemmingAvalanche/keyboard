@@ -129,8 +129,11 @@ includes sneak in.
 I just found out that I used the wrong includes in my keymappings file.
 I should take steps to avoid this in the future.
 
-* TODO Make experimental keymapping using numeric row
+* DONE Make experimental keymapping using numeric row
+  CLOSED: [2017-07-03 ma. 20:10]
 
+  - CLOSING NOTE [2017-07-03 ma. 20:10] \\
+    This has been implemented in keymapping ~no-p3~.
 I had the idea today that I could use my numeric row for some things.
 Namely:
 
