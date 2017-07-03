@@ -211,5 +211,16 @@ xkb_symbols "no-p4" {
         type[Group1]="ONE_LEVEL",
         [ Menu ]
     };
-
+    // Hyper modifier
+    // Need to map `<HYPR>` to `mod2` (by default mapped to `Numlock`),
+    // or else it is mapped to the same modifier as the `Super` keys.
+    modifier_map Mod2 { <HYPR> };
+    replace key <TLDE> {
+        type[Group1]="ONE_LEVEL",
+        [ Hyper_R ]
+    };
+    replace key <AE12> {
+        type[Group1]="ONE_LEVEL",
+        [ Hyper_L ]
+    };
 };
