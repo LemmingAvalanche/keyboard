@@ -409,3 +409,11 @@ Ah!  Notice the ~M~ when pressing the right, which is not there when
 pressing the left.  I am guessing that this has to do with the fact that
 I map the ~AltGr~ key (right alt) to act like “alt”, i.e., to act like
 the right alt key.
+
+* TODO Use some hyper keybinding to change layouts or groups
+
+I have managed to get the hyper modifier up and running today, on
+~no-p4~.  The first thing I could use it for is to use some hyper
+keybinding to change layouts or groups.  That way I could use ~no-p4~
+and then switch to ~no-p3~ when I need to change windows, since Xmonad
+does not work well with ~no-p4~ (that has to do with modifiers).
