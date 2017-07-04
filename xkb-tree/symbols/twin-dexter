@@ -135,6 +135,7 @@ xkb_symbols "delete-group-switch" {
 // Like `no-p2`, but with an “alphabetic numpad”.
 xkb_symbols "no-p3" {
     include "twin-dexter(no-p2)"
+    include "twin-dexter(delete-group-switch)"
 
     // Make a “numpad”.
     // This numpad has zero on the lowest right corner.  Comma and
@@ -162,6 +163,7 @@ xkb_compat    { include "level5"  };
 
 xkb_symbols "no-p4" {
     include "twin-dexter(no-p2)"
+    include "twin-dexter(delete-group-switch)"
     // For latches
 
     key.type[Group1] = "EIGHT_LEVEL";
