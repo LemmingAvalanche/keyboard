@@ -3,6 +3,7 @@
 # Set keyboard layouts and options relating to keyboard layouts
 setxkbmap -option "" -layout "twin-dexter(no-p4),twin-dexter(no-p3)" \
          -compat my-complete \
+         -option grp:sclk_toggle \
          -option grp_led:scroll :2 \
          -option nbsp:none -print |
              xkbcomp -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
