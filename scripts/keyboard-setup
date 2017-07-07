@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Set keyboard layouts and options relating to keyboard layouts
+# NOTE: the `-compat` option is so that level 2 latch works properly.
 setxkbmap -option "" -layout "twin-dexter(no-p3),twin-dexter(no-p4)" \
          -compat my-complete \
          -option grp:sclk_toggle \
