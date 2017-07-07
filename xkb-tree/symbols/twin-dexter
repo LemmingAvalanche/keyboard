@@ -30,7 +30,23 @@ xkb_symbols "latin" {
     key <AC07> { [ j, J, dollar ] };
     key <AC08> { [ k, K, apostrophe ] };
     key <AC09> { [ l, L, asterisk ] };
+};
 
+// Common mappings for all “Norwegian” keymappings.
+partial alphanumeric_keys
+xkb_symbols "no-common" {
+    // Norwegian characters
+    key <AD11>	{ [ aring, Aring ] };
+    key <AC10>	{ [ oslash, Ooblique ] };
+    key <AC11>	{ [ ae, AE ] };
+
+    // Make ASCII symbols and other useful symbols available on the
+    // alpbabetic section.
+    //
+    // For the “programming” keymappings, the Norwegian keys are used
+    // (<AD11>, <AC10>, and <AC11>) to make certain symbols available on
+    // the alpbabetic section.  So the displaced symbols need to get a
+    // new home.
     key <AB01> { [ z, Z, braceleft, guillemotleft ] };
     key <AB02> { [ x, X, braceright, guillemotright ] };
     key <AB03> { [ c, C, parenleft ] };
@@ -44,12 +60,14 @@ partial alphanumeric_keys
 xkb_symbols "no" {
     include "no(basic)"
     include "twin-dexter(latin)"
+    include "twin-dexter(no-common)"
 };
 
 partial alphanumeric_keys
 xkb_symbols "no-nodeadkeys" {
     include "no(nodeadkeys)"
     include "twin-dexter(latin)"
+    include "twin-dexter(no-common)"
 };
 
 partial alphanumeric_keys
