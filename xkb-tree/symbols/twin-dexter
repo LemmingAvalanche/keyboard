@@ -153,3 +153,74 @@ xkb_symbols "no-p3" {
     key <AB04> { [ v, V, rightdoublequotemark, NoSymbol, 3 ] };
     key <AB05> { [ b, B, U300E, U300C, 0 ] };
 };
+
+xkb_compat    { include "level5"  };
+
+xkb_symbols "no-p4" {
+    include "twin-dexter(no-p2)"
+    // For latches
+
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <AD01> { [ q, Q, leftsinglequotemark, leftdoublequotemark, 1 ] };
+    key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark, 2 ] };
+    key <AD03> { [ e, E, percent, NoSymbol, 3 ] };
+    key <AD04> { [ r, R, ampersand, NoSymbol, 4 ] };
+    key <AD05> { [ t, T, bar, NoSymbol, 5 ] };
+    key <AD06> { [ y, Y, backslash, NoSymbol, 6 ] };
+    key <AD07> { [ u, U, grave, NoSymbol, 7 ] };
+    key <AD08> { [ i, I, equal, NoSymbol, 8 ] };
+    key <AD09> { [ o, O, question, NoSymbol, 9 ] };
+    key <AD10> { [ p, P, plus, NoSymbol, 0 ] };
+
+    // Levels
+    replace key <AE02> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level5_Latch ]
+    };
+    replace key <AE03> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level3_Latch ]
+    };
+    replace key <AE04> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level2_Latch ]
+    };
+    replace key <AE08> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level2_Latch ]
+    };
+    replace key <AE09> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level3_Latch ]
+    };
+    replace key <AE10> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level5_Latch ]
+    };
+    // compose
+    replace key <AE05> {
+        type[Group1]="ONE_LEVEL",
+        [ Multi_key ]
+    };
+    replace key <AE07> {
+        type[Group1]="ONE_LEVEL",
+        [ Multi_key ]
+    };
+    // Menu key (right mouse click).
+    replace key <AE06> {
+        type[Group1]="ONE_LEVEL",
+        [ Menu ]
+    };
+    // Hyper modifier
+    // Need to map `<HYPR>` to `mod2` (by default mapped to `Numlock`),
+    // or else it is mapped to the same modifier as the `Super` keys.
+    modifier_map Mod2 { <HYPR> };
+    replace key <TLDE> {
+        type[Group1]="ONE_LEVEL",
+        [ Hyper_R ]
+    };
+    replace key <AE12> {
+        type[Group1]="ONE_LEVEL",
+        [ Hyper_L ]
+    };
+};

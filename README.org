@@ -72,6 +72,11 @@ The following are useful tools for working with Xkb.
   print the current keyboard by using [[https://askubuntu.com/a/381393/136104][an “X display specification”:]]
   ~xkbprint :0 output.ps~.  You should be able to open the PostScript
   file in a PDF viewer.
+- ~xkbset~: utility to set user preferences like “stickykeys” (“latch”
+  in Xkb terminology), mousekeys, and so on.  This might be a useful
+  complement to ~setxkbmap~ since it seems that setting latch options is
+  pretty limited with ~setxkbmap~, at least according to ~man
+  xkeyboard-config~.  ([[https://superuser.com/a/414535][Source]])
 
 * Files
 
