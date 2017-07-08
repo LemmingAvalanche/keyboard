@@ -146,14 +146,15 @@ xkb_symbols "no-p2" {
     };
 };
 
-xkb_symbols "delete-group-switch" {
-    key <DELE> { [ Delete, Delete, ISO_Next_Group ] };
+xkb_symbols "group-switches" {
+    key <RTRN> { [ RTRN, RTRN, RTRN, ISO_Next_Group ] };
+    key <BKSP> { [ Backspace, Backspace, Backspace, ISO_Prev_Group ] };
 };
 
 // Like `no-p2`, but with an “alphabetic numpad”.
 xkb_symbols "no-p3" {
     include "twin-dexter(no-p2)"
-    include "twin-dexter(delete-group-switch)"
+    include "twin-dexter(group-switches)"
 
     // Make a “numpad”.
     // This numpad has zero on the lowest right corner.  Comma and
@@ -181,7 +182,7 @@ xkb_compat    { include "level5"  };
 
 xkb_symbols "no-p4" {
     include "twin-dexter(no-p2)"
-    include "twin-dexter(delete-group-switch)"
+    include "twin-dexter(group-switches)"
     // For latches
 
     key.type[Group1] = "EIGHT_LEVEL";
