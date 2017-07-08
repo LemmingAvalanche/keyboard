@@ -417,3 +417,49 @@ I have managed to get the hyper modifier up and running today, on
 keybinding to change layouts or groups.  That way I could use ~no-p4~
 and then switch to ~no-p3~ when I need to change windows, since Xmonad
 does not work well with ~no-p4~ (that has to do with modifiers).
+
+* TODO Return and Backspace keys don’t work with a certain group switch setup
+
+I’ve been trying this setup for switching between groups:
+
+#+BEGIN_SRC
+xkb_symbols "group-switches" {
+    key <RTRN> { [ RTRN, RTRN, RTRN, ISO_Next_Group ] };
+    key <BKSP> { [ Backspace, Backspace, Backspace, ISO_Prev_Group ] };
+};
+#+END_SRC
+
+Which ~no-p3~ and ~no-p4~ use:
+
+#+BEGIN_SRC
+// Like `no-p2`, but with an “alphabetic numpad”.
+xkb_symbols "no-p3" {
+    include "twin-dexter(no-p2)"
+    include "twin-dexter(group-switches)"
+…
+xkb_symbols "no-p4" {
+    include "twin-dexter(no-p2)"
+    include "twin-dexter(group-switches)"
+…
+#+END_SRC
+
+My keyboard setup looks like this:
+
+#+BEGIN_SRC shell
+# Set keyboard layouts and options relating to keyboard layouts
+# NOTE: the `-compat` option is so that level 2 latch works properly.
+setxkbmap -option "" -layout "twin-dexter(no-p3),twin-dexter(no-p4)" \
+         -compat my-complete \
+         -option grp:sclk_toggle \
+         -option grp_led:scroll :2 \
+         -option nbsp:none -print |
+             xkbcomp -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
+#+END_SRC
+
+So the first grop is ~no-p3~ and the second is ~no-p4~.
+
+The problem is that when I have ~no-p3~ selected I can use return and
+backslash as usual on the lower levels (on level four they choose the
+next and previous group, respectively), but if I switch to ~no-p4~,
+these keys produce ~NoSymbol~ when unshifted (level 1), but can emit the
+group switches on the fourt level.
