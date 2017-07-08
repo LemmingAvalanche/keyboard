@@ -180,7 +180,7 @@ xkb_symbols "no-p3" {
     include "twin-dexter(alphabet-section-numpad)"
 };
 
-xkb_compat    { include "level5"  };
+xkb_compat { include "level5" };
 
 xkb_symbols "no-p4" {
     include "twin-dexter(no-p2)"
