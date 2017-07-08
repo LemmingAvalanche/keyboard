@@ -202,6 +202,7 @@ xkb_compat { include "level5" };
 
 xkb_symbols "no-p4" {
     include "twin-dexter(no-p2)"
+    include "twin-dexter(numpad-and-combining)"
     include "twin-dexter(delete-group-switch)"
     // For latches
 
