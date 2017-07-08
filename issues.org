@@ -463,3 +463,38 @@ backslash as usual on the lower levels (on level four they choose the
 next and previous group, respectively), but if I switch to ~no-p4~,
 these keys produce ~NoSymbol~ when unshifted (level 1), but can emit the
 group switches on the fourt level.
+
+** Update 2017-07-08T16:51:01+0200
+
+According to ~xev~, the return and backspace keys both emit ~NoSymbol~
+at level 2 and 3, the group switches at level 4, and the regular
+symbols unshifted for ~no-p3~.  So I am unable to make newlines and
+backspaces with ~no-p3~ when I am on the second and third level.  For
+~no-p4~ I am unable to do these two things, since it emits ~NoSymbol~
+for all but the fourth level.
+
+I also tested switching the second layout to another layout to see if
+the issue was with something else than ~no-p4~:
+
+#+BEGIN_SRC
+# Set keyboard layouts and options relating to keyboard layouts
+# NOTE: the `-compat` option is so that level 2 latch works properly.
+setxkbmap -option "" -layout "twin-dexter(no-p3),no" \
+         -compat my-complete \
+         -option grp:sclk_toggle \
+         -option grp_led:scroll :2 \
+         -option nbsp:none -print |
+             xkbcomp -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
+#+END_SRC
+
+(~no~ is the second layout.)
+
+But ~no~ acts the same as ~no-p3~.  So the issue is apparently with
+~no-p4~.
+
+I tried to do two things to try to find the problematic part of ~no-p4~:
+
+1. Remove the part that customizes the latches.
+2. Remove the part that adds the Hyper keys.
+
+But neither of these worked.
