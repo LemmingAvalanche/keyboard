@@ -269,4 +269,13 @@ xkb_symbols "no-p4" {
         type[Group1]="ONE_LEVEL",
         [ Hyper_L ]
     };
+
+    // Control keys on the numeric row.
+    modifier_map  Control { <AE01>, <AE11> };
+    replace key <AE01> {
+        [ Control_L ]
+    };
+    replace key <AE11> {
+        [ Control_R ]
+    };
 };
