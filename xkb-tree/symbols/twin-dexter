@@ -260,7 +260,7 @@ xkb_symbols "no-p4" {
     // Hyper modifier
     // Need to map `<HYPR>` to `mod2` (by default mapped to `Numlock`),
     // or else it is mapped to the same modifier as the `Super` keys.
-    modifier_map Mod2 { <HYPR> };
+    modifier_map Mod2 { <HYPR>, <TLDE>, <AE12> };
     replace key <TLDE> {
         type[Group1]="ONE_LEVEL",
         [ Hyper_R ]
