@@ -498,3 +498,17 @@ I tried to do two things to try to find the problematic part of ~no-p4~:
 2. Remove the part that adds the Hyper keys.
 
 But neither of these worked.
+
+** Update  2017-07-08T17:15:28+0200
+
+I removed almost everything from ~no-p4~ to see if the problem
+persisted:
+
+#+BEGIN_SRC
+xkb_symbols "no-p4" {
+    include "twin-dexter(no-p2)"
+    include "twin-dexter(group-switches)"
+};
+#+END_SRC
+
+And yes, return and backspace then still didn’t work on ~no-p4~.
