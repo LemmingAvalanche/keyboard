@@ -512,3 +512,8 @@ xkb_symbols "no-p4" {
 #+END_SRC
 
 And yes, return and backspace then still didn’t work on ~no-p4~.
+
+** Update 2017-07-08T17:30:30+0200
+
+I tried to move the include of the group switch last in both ~no-p3~,
+~no-p4~.  That did not make any difference.
