@@ -279,3 +279,9 @@ xkb_symbols "no-p4" {
         [ Control_R ]
    };
 };
+
+// Norwegian version of `no-p4`.
+xkb_symbols "no-4" {
+    include "twin-dexter(no-p4)"
+    include "twin-dexter(no-common)"
+};
