@@ -260,19 +260,19 @@ xkb_symbols "no-p4" {
     // Hyper modifier
     // Need to map `<HYPR>` to `mod2` (by default mapped to `Numlock`),
     // or else it is mapped to the same modifier as the `Super` keys.
-    modifier_map Mod2 { <HYPR>, <TLDE>, <AE12> };
-    replace key <TLDE> {
+    modifier_map Mod2 { <HYPR>, <AE01>, <AE11> };
+    replace key <AE01> {
         type[Group1]="ONE_LEVEL",
         [ Hyper_R ]
     };
-    replace key <AE12> {
+    replace key <AE11> {
         type[Group1]="ONE_LEVEL",
         [ Hyper_L ]
     };
 
     // Control key on the right side of the numeric row.
-    modifier_map  Control { <AE11> };
-    replace key <AE11> {
+    modifier_map  Control { <AE12> };
+    replace key <AE12> {
         [ Control_R ]
     };
 };
