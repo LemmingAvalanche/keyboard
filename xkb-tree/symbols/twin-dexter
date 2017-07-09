@@ -270,6 +270,12 @@ xkb_symbols "no-p4" {
         [ Hyper_L ]
     };
 
+    // A level 5 shift on the left side of the numeric row.
+    modifier_map mod3 { <TLDE> };
+    replace key <TLDE> {
+        [ ISO_Level5_Shift ]
+    };
+
     // Control key on the right side of the numeric row.
     modifier_map  Control { <AE12> };
     replace key <AE12> {
