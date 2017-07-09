@@ -36,9 +36,9 @@ xkb_symbols "latin" {
 partial alphanumeric_keys
 xkb_symbols "no-common" {
     // Norwegian characters
-    key <AD11>	{ [ aring, Aring ] };
-    key <AC10>	{ [ oslash, Ooblique ] };
-    key <AC11>	{ [ ae, AE ] };
+    key <AD11>	{ [ aring, Aring, braceleft ] };
+    key <AC10>	{ [ oslash, Ooblique, parenleft ] };
+    key <AC11>	{ [ ae, AE, parenright ] };
 
     // Make ASCII symbols and other useful symbols available on the
     // alpbabetic section.
@@ -47,10 +47,7 @@ xkb_symbols "no-common" {
     // (<AD11>, <AC10>, and <AC11>) to make certain symbols available on
     // the alpbabetic section.  So the displaced symbols need to get a
     // new home.
-    key <AB01> { [ z, Z, braceleft, guillemotleft ] };
-    key <AB02> { [ x, X, braceright, guillemotright ] };
-    key <AB03> { [ c, C, parenleft ] };
-    key <AB04> { [ v, V, parenright ] };
+    key <AD12> { [ asciicircum, asciitilde, braceright, NoSymbol, U0303 ] };
     key <AB05> { [ b, B, bracketleft ] };
     key <AB06> { [ n, N, bracketright ] };
     key <AB07> { [ m, M, slash ] };
