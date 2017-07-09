@@ -280,5 +280,5 @@ xkb_symbols "no-p4" {
     modifier_map  Control { <AE12> };
     replace key <AE12> {
         [ Control_R ]
-    };
+   };
 };
