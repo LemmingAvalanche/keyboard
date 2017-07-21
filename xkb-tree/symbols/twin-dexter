@@ -260,12 +260,6 @@ xkb_symbols "no-p4" {
     replace key <TLDE> {
         [ ISO_Level5_Shift ]
     };
-
-    // Control key on the right side of the numeric row.
-    modifier_map  Control { <AE12> };
-    replace key <AE12> {
-        [ Control_R ]
-   };
 };
 
 // Norwegian version of `no-p4`.
