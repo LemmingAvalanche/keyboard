@@ -53,6 +53,18 @@ xkb_symbols "no-common" {
     key <AB07> { [ m, M, slash ] };
 };
 
+// “Esperanto common”.  Common keys for Esperanto-focused layouts,
+// adopted from a Norwegian keyboard.
+partial alphanumeric_keys
+xkb_symbols "eo-common" {
+    // Esperanto accents.
+    //
+    // These replaces the Norwegian characters, which are not used in
+    // Esperanto.
+    key <AC10>	{ [ U0302, section, parenleft, U301A, U0304 ] };
+    key <AC11>	{ [ U016D, U016C, parenright, U301B, U0306 ] };
+};
+
 partial alphanumeric_keys
 xkb_symbols "no" {
     include "no(basic)"
