@@ -279,3 +279,9 @@ xkb_symbols "no-4" {
     include "twin-dexter(no-p4)"
     include "twin-dexter(no-common)"
 };
+
+// Esperanto version of `no-p4`.
+xkb_symbols "eo-4" {
+    include "twin-dexter(no-p4)"
+    include "twin-dexter(eo-common)"
+};
