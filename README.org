@@ -77,6 +77,9 @@ The following are useful tools for working with Xkb.
   complement to ~setxkbmap~ since it seems that setting latch options is
   pretty limited with ~setxkbmap~, at least according to ~man
   xkeyboard-config~.  ([[https://superuser.com/a/414535][Source]])
+- ~xkbwatch~: reports the changes to the Xkb states.  This might be
+  useful if you want some visual indication of things like the lock- or
+  lack-state of the various shifts, for example.
 
 * Files
 
