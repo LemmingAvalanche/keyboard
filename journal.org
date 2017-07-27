@@ -1,0 +1,58 @@
+* [2017-07-27 Thu]
+
+** Recent experiences with ~no-p4~ and ~no-4~ :experience-report:
+
+I have had a nice time using the two layouts ~twin-dexter(no-p4)~ and
+~twin-dexter(no-4)~ lately.  I also have had the less radical
+~twin-dexter(no-p3)~ at the ready, but I haven’t ended up needing that
+lately.
+
+This is the script that I manually run after starting up my laptop
+(NixOS):
+
+#+BEGIN_SRC shell
+~/xkb/scripts/keyboard-setup "twin-dexter(no-p3)" "twin-dexter(no-p4)" "twin-dexter(no-4)"
+#+END_SRC
+
+The reason that ~twin-dexter(no-p3)~ is included is as a fallback for
+when using the “4” layouts becomes too constraining or limiting.  This
+was very much necessary before when I couldn’t shift windows in Xmonad
+while using a “4” layout, but I am able to do that now that I have
+customised Xmonad to use the numpad for shifting
+windows [fn:xmonad-numpad-added].
+
+[fn:xmonad-numpad-added]: This was added in commit r#f62477962622 (“Add
+numpad keys to change betwee workspaces”, 2017-07-08).
+
+I made ~twin-dexter(no-4)~ in order to more conveniently write in
+Norwegian, because I found using compose key combinations to be
+awkward.  Shifting between the two is easy since I use ~Shift2-Delete~
+(~Caps Lock-Delete~), since ~Delete~ is bound to ~ISO_Next_Group~ on
+that level (third level).  The only time that I find it inconvenient to
+use ~twin-dexter(no-4)~ is when I have to use symbols like forward slash
+and other programming-related symbols a fair bit, since these symbolses
+are moved around compared to ~twin-dexter(no-p4)~.  But when I am only
+writing Norwegian prose with the former layout and programming and
+English with the latter, this setup feels very convenient.
+
+The “big idea” behind the “4” layouts is to replace the numeric row with
+modifiers, compose keys, and the menu key, and to move the numbers to
+the “alphabetic numpad” on the left hand.  This makes all three
+shift-levels very easy to access from the home row.  This is what I
+thought beforehand, and it has turned out to be true when trying it out
+for a good while, now.  Another change is that these are “latches”, or
+“sticky keys”, which means that they are not typically held down and
+pressed with another key but are instead tapped and then released before
+hitting the next key.  So far, this seems to be a superior alternative
+to the standard “hold then press second then release” shift behavior.
+
+I had a lot of trouble, and still continue to have trouble with,
+adjusting to use the “alphabetic numpad”.  It was really painful in the
+beginning, but I feel that I persevered to a point where I am making
+progress.  Things also got a lot easier lately when I learned that
+“latched shift keys” can /also/ be held down in order to more easily
+press multiple same-shifted symbols.  So I can hold down the relevant
+shift key and write strings like ~2017~, instead of having to alternate
+between tapping the relevant shift key and the key.  For some reason I
+didn’t stumble upon this fact by myself by simply trying to hold down a
+shift key and pressing a non-modifier key.
