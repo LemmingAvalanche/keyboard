@@ -5,7 +5,7 @@
 # sent to `setxkbmap` to be used as the three layouts.
 #
 # NOTE: the `-compat` option is so that level 2 latch works properly.
-setxkbmap -option "" -layout "$1,$2,$3" \
+setxkbmap -option "" -layout "$1,$2" \
          -compat my-complete \
          -option grp:sclk_toggle \
          -option grp_led:scroll :2 \
