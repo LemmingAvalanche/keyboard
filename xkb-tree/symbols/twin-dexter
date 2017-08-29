@@ -267,10 +267,23 @@ xkb_symbols "no-p4" {
         [ Hyper_L ]
     };
 
-    // A level 5 shift on the left side of the numeric row.
-    modifier_map mod3 { <TLDE> };
+    // Modified Extend layer by way of a dead key.
+    //
+    // There are two symmetric keys, in the sense that they exist on
+    // opposite sides of the keyboard to facilitate touch typing.
+    //
+    // This depends on the `~/.Xcompose` file which is maintained in the
+    // dotfiles repository.  `~/.Xcompose` contains mappings which begin
+    // with `<dead_greek>` like e.g. the following:
+    //
+    //     <dead_greek> <q> : Escape
+    //
+    // Which maps the sequence `<dead_greek> <q>` to the escape key.
     replace key <TLDE> {
-        [ ISO_Level5_Shift ]
+        [ dead_greek ]
+    };
+    replace key <AE12> {
+        [ dead_greek ]
     };
 };
 
