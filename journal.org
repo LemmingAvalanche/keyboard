@@ -95,3 +95,22 @@ be able to switch layouts without moving my hands as much as under my
 present setup.  Another motivation is that all the “space” for buttons
 left open enough room for four of the group switching buttons/symbols (I
 only use one of them in the old and current setup).
+
+** Yet another dead key?
+
+I might want to use another key for a dead key.  (Geez, will I even be
+able to find enough symbols to use in all these mappings?)
+
+The key I have in mind is ~<AD12>~, which currently has this mapping in
+~twin-dexter(no-p1)~ and layouts that inherit from that one:
+
+#+BEGIN_EXAMPLE
+key <AD12> { [ asciicircum, asciitilde, U0302, NoSymbol, U0303 ] };
+#+END_EXAMPLE
+
+I don’t think I need this key that much in this capacity, namely as a
+normal key.  The reason for that is that I can move ~asciicircum~ and
+~asciitilde~ to the second and third level of the `<AD12>` key,
+respectively.  I think this would make typing the ~asciicircum~ symbol
+only marginally less convenient, and it would free up room for a /lot/
+of new mappings.
