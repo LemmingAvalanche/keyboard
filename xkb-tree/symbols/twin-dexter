@@ -174,7 +174,7 @@ xkb_symbols "alphabet-section-numpad" {
     key <AC02> { [ s, S, greater, U232A, 4 ] };
     key <AC03> { [ d, D, exclam, NoSymbol, 5 ] };
     key <AC04> { [ f, F, quotedbl, NoSymbol, 6 ] };
-    // Second numpad row.
+    // Third numpad row.
     key <AB01> { [ z, Z, guillemotleft, U2039, period ] };
     key <AB02> { [ x, X, guillemotright, U203A, 1 ] };
     key <AB03> { [ c, C, leftdoublequotemark, NoSymbol, 2 ] };
