@@ -298,3 +298,8 @@ xkb_symbols "eo-4" {
     include "twin-dexter(no-p4)"
     include "twin-dexter(eo-common)"
 };
+
+xkb_symbols "no-p5" {
+    include "twin-dexter(no-p4)"
+    key <AD11> { [ slash, asciicircum, asciitilde, NoSymbol, U030C ] };
+};
