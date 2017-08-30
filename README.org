@@ -89,6 +89,19 @@ The following are useful tools for working with Xkb.
   you can find what keys and symbols (characters) are named, for example
   ~XK_Home~ (home key) and ~XK_ampersand~ (~&~).
 
+** Finding files on NixOS
+
+The above listed files are not stored in the usual places on NixOS.  You
+can use a utility like Find to search for them in the ~/nix/store/~
+directory tree:
+
+#+BEGIN_SRC shell
+cd /nix/store
+find -name 'keysymdef.h'
+#+END_SRC
+
+This should give you several results.
+
 * The source repository of XKB configurations
 
 Apparently this is where you can find the releases of the “source” of
