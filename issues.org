@@ -517,3 +517,32 @@ And yes, return and backspace then still didn’t work on ~no-p4~.
 
 I tried to move the include of the group switch last in both ~no-p3~,
 ~no-p4~.  That did not make any difference.
+
+* TODO What do the rest of the “multi-character” and “international” keys do?
+
+~keysymdef.h~ contains this section:
+
+#+BEGIN_EXAMPLE
+/* International & multi-key character composition */
+
+#define XK_Multi_key                     0xff20  /* Multi-key character compose */
+#define XK_Codeinput                     0xff37
+#define XK_SingleCandidate               0xff3c
+#define XK_MultipleCandidate             0xff3d
+#define XK_PreviousCandidate             0xff3e
+#+END_EXAMPLE
+
+I know and use multi key, but what do the rest of the keys do?  Could
+they be useful to me?  I want to find out.  My suspicion is that they
+have to do with input methods for things like Asian languages.
+
+I googled this and found this on the “Unreliable guide to XKB”:
+
+#+BEGIN_QUOTE
+The file /usr/X11R6/lib/X11/locale/localename/Compose contains the list
+of compose sequences for a particular locale or encoding (eg. iso8859-2)
+and what they produce. (There are other composition keys, such as
+Codeinput, but I don't know what they do.
+#+END_QUOTE
+
+(Source: https://www.charvolant.org/doug/xkb/html/node5.html)
