@@ -56,3 +56,42 @@ shift key and write strings like ~2017~, instead of having to alternate
 between tapping the relevant shift key and the key.  For some reason I
 didn’t stumble upon this fact by myself by simply trying to hold down a
 shift key and pressing a non-modifier key.
+
+* [2017-08-31 Thu]
+
+** Using dead key mappings as a poor man’s extra level
+
+I have implemented a first version of what I have referred to as an
+Extend layer variation using dead key mappings.  The support for this on
+the keymapping side was implemented in r#41cf161098c3 (“Turn two keys
+into a dead key”, 2017-08-30), while the bulk of the implementation (the
+mappings) were implemented in r#6e9fdf9eff69 (“Make an “Extend layer” by
+way of a dead key”, 2017-08-30) in the dotfiles repository.
+
+The purpose of this was to be able to get a new effective layer which
+could be accessed with a single prefix key, just like the first, second
+and third shift levels for layouts like ~twin-dexter(no-p4)~ and
+~twin-dexter(no-4)~.  In this way, I have a new layer which can be
+accessed in the same way as the first three shift layers, namely by
+pressing and releasing a key (the dead key) and then pressing any of the
+regular (non-modifier, non-compose, etc.) keys.
+
+I have also wanted to implement the Extend layer as one of the shift
+layers.  I might still do that, and then these two ways to access the
+layers can complement each other.
+
+*** Problems
+
+There are two problems so far.
+
+1. Mouse buttons and movement does not seem to work.
+2. Group switching keys does not work.
+
+As for the first, I suspect that the compose mappings that I am using is
+not powerful enough to implement things like moving the cursor by offset
+coordinates.  As for the second, I have tried to find out why it doesn’t
+work but with no luck.  My motivation for these mappings is that I would
+be able to switch layouts without moving my hands as much as under my
+present setup.  Another motivation is that all the “space” for buttons
+left open enough room for four of the group switching buttons/symbols (I
+only use one of them in the old and current setup).
