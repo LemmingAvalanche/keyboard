@@ -11,10 +11,21 @@ xkb_symbols "latin" {
     // Make levels 5–8 possible.
     key.type[Group1] = "EIGHT_LEVEL";
 
-    key <AD01> { [
+    key <AD01> {
+    // Make an explicit group so that we can use an `actions` section
+    // (see below).
+    symbols[Group1] = [
         q, Q, leftsinglequotemark, leftdoublequotemark,
-        NoSymbol, NoSymbol, Escape, Escape
-    ] };
+        NoSymbol, NoSymbol, Control_L, Control_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate actions for control keys.
+        SetMods(mods=Control), SetMods(mods=Shift+Control)
+    ]
+    };
     key <AD02> { [
         w, W, rightsinglequotemark, rightdoublequotemark,
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
@@ -55,7 +66,7 @@ xkb_symbols "latin" {
     ] };
     key <AC01> { [
         a, A, less, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, Escape, Escape
     ] };
     key <AC02> { [
         s, S, greater, NoSymbol,
@@ -194,7 +205,7 @@ xkb_symbols "no-p1" {
     // fifth level.
     key <AC01> { [
         a, A, less, U2329,
-        U0304, NoSymbol, NoSymbol, NoSymbol
+        U0304, NoSymbol, Escape, Escape
     ] };
     key <AC02> { [
         s, S, greater, U232A,
@@ -333,7 +344,7 @@ xkb_symbols "alphabet-section-numpad" {
     // Second numpad row.
     key <AC01> { [
         a, A, less, U2329, comma,
-        NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, Escape, Escape
     ] };
     key <AC02> { [
         s, S, greater, U232A,
