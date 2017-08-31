@@ -279,6 +279,11 @@ xkb_symbols "no-p4" {
     //     <dead_greek> <q> : Escape
     //
     // Which maps the sequence `<dead_greek> <q>` to the escape key.
+    //
+    // NOTE: The dead key mappings defined with these keys in my compose
+    // file does not work in applications like Firefox, among others.
+    // See: r#1a5af3d1f941 (“Add update about dead key mappings not
+    // working”, 2017-08-31) in the dotfiles repository.
     replace key <TLDE> {
         [ dead_greek ]
     };
