@@ -8,37 +8,80 @@ xkb_symbols "latin" {
     // Use right Alt as Alt key, instead of AltGr key.
     key <RALT> { [ Alt_R ] };
 
-    key <AD01> { [ q, Q, leftsinglequotemark, leftdoublequotemark ] };
-    key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark ] };
+    key <AD01> { [
+        q, Q, leftsinglequotemark, leftdoublequotemark
+    ] };
+    key <AD02> { [
+        w, W, rightsinglequotemark, rightdoublequotemark
+    ] };
     // Duplicate commonly used symbols to third level of the alphabetic
     // section.
-    key <AD03> { [ e, E, percent ] };
-    key <AD04> { [ r, R, ampersand ] };
-    key <AD05> { [ t, T, bar ] };
-    key <AD06> { [ y, Y, backslash ] };
-    key <AD07> { [ u, U, grave ] };
-    key <AD08> { [ i, I, equal ] };
-    key <AD09> { [ o, O, question ] };
-    key <AD10> { [ p, P, plus ] };
-
-    key <AC01> { [ a, A, less ] };
-    key <AC02> { [ s, S, greater ] };
-    key <AC03> { [ d, D, exclam ] };
-    key <AC04> { [ f, F, quotedbl ] };
-    key <AC05> { [ g, G, at ] };
-    key <AC06> { [ h, H, numbersign ] };
-    key <AC07> { [ j, J, dollar ] };
-    key <AC08> { [ k, K, apostrophe ] };
-    key <AC09> { [ l, L, asterisk ] };
+    key <AD03> { [
+        e, E, percent
+    ] };
+    key <AD04> { [
+        r, R, ampersand
+    ] };
+    key <AD05> { [
+        t, T, bar
+    ] };
+    key <AD06> { [
+        y, Y, backslash
+    ] };
+    key <AD07> { [
+        u, U, grave
+    ] };
+    key <AD08> { [
+        i, I, equal
+    ] };
+    key <AD09> { [
+        o, O, question
+    ] };
+    key <AD10> { [
+        p, P, plus
+    ] };
+    key <AC01> { [
+        a, A, less
+    ] };
+    key <AC02> { [
+        s, S, greater
+    ] };
+    key <AC03> { [
+        d, D, exclam
+    ] };
+    key <AC04> { [
+        f, F, quotedbl
+    ] };
+    key <AC05> { [
+        g, G, at
+    ] };
+    key <AC06> { [
+        h, H, numbersign
+    ] };
+    key <AC07> { [
+        j, J, dollar
+    ] };
+    key <AC08> { [
+        k, K, apostrophe
+    ] };
+    key <AC09> { [
+        l, L, asterisk
+    ] };
 };
 
 // Common mappings for all “Norwegian” keymappings.
 partial alphanumeric_keys
 xkb_symbols "no-common" {
     // Norwegian characters
-    key <AD11>	{ [ aring, Aring, braceleft, NoSymbol, U030C ] };
-    key <AC10>	{ [ oslash, Ooblique, parenleft, U301A, U0304 ] };
-    key <AC11>	{ [ ae, AE, parenright, U301B, U0306 ] };
+    key <AD11>	{ [
+        aring, Aring, braceleft, NoSymbol, U030C
+    ] };
+    key <AC10>	{ [
+        oslash, Ooblique, parenleft, U301A, U0304
+    ] };
+    key <AC11>	{ [
+        ae, AE, parenright, U301B, U0306
+    ] };
 
     // Make ASCII symbols and other useful symbols available on the
     // alpbabetic section.
@@ -47,10 +90,18 @@ xkb_symbols "no-common" {
     // (<AD11>, <AC10>, and <AC11>) to make certain symbols available on
     // the alpbabetic section.  So the displaced symbols need to get a
     // new home.
-    key <AD12> { [ asciicircum, asciitilde, braceright, NoSymbol, U0303 ] };
-    key <AB05> { [ b, B, bracketleft, U300C, 0 ] };
-    key <AB06> { [ n, N, bracketright, U300D] };
-    key <AB07> { [ m, M, slash ] };
+    key <AD12> { [
+        asciicircum, asciitilde, braceright, NoSymbol, U0303
+    ] };
+    key <AB05> { [
+        b, B, bracketleft, U300C, 0
+    ] };
+    key <AB06> { [
+        n, N, bracketright, U300D
+    ] };
+    key <AB07> { [
+        m, M, slash
+    ] };
 };
 
 // “Esperanto common”.  Common keys for Esperanto-focused layouts,
@@ -61,8 +112,12 @@ xkb_symbols "eo-common" {
     //
     // These replaces the Norwegian characters, which are not used in
     // Esperanto.
-    key <AC10>	{ [ U0302, section, parenleft, U301A, U0304 ] };
-    key <AC11>	{ [ U016D, U016C, parenright, U301B, U0306 ] };
+    key <AC10>	{ [
+        U0302, section, parenleft, U301A, U0304
+    ] };
+    key <AC11>	{ [
+        U016D, U016C, parenright, U301B, U0306
+    ] };
 };
 
 partial alphanumeric_keys
@@ -95,34 +150,80 @@ xkb_symbols "no-p1" {
     // Map Norwegian characters “æøå” to other symbols.  Useful when
     // programming (hence the name `no-p1`: the `p1` stands for
     // “programming 1”.  See also: [→1].
-    key <AD11> { [ slash, bar, U2044, NoSymbol, U030C ] };
-    key <AD12> { [ asciicircum, asciitilde, U0302, NoSymbol, U0303 ] };
+    key <AD11> { [
+        slash, bar, U2044, NoSymbol, U030C
+    ] };
+    key <AD12> { [
+        asciicircum, asciitilde, U0302, NoSymbol, U0303
+    ] };
 
     // Keys <AC01> to <AC11> on this row contain diacritics on the
     // fifth level.
-    key <AC01> { [ a, A, less, U2329, U0304 ] };
-    key <AC02> { [ s, S, greater, U232A, U0308] };
-    key <AC03> { [ d, D, exclam, NoSymbol, U0302 ] };
-    key <AC04> { [ f, F, quotedbl, NoSymbol, U0301 ] };
-    key <AC05> { [ g, G, at, NoSymbol, U0300 ] };
-    key <AC06> { [ h, H, numbersign, leftarrow, U0300 ] };
-    key <AC07> { [ j, J, dollar, downarrow, U0301 ] };
-    key <AC08> { [ k, K, apostrophe, uparrow, U0302 ] };
-    key <AC09> { [ l, L, asterisk, rightarrow, U0308 ] };
+    key <AC01> { [
+        a, A, less, U2329, U0304
+    ] };
+    key <AC02> { [
+        s, S, greater, U232A, U0308
+    ] };
+    key <AC03> { [
+        d, D, exclam, NoSymbol, U0302
+    ] };
+    key <AC04> { [
+        f, F, quotedbl, NoSymbol, U0301
+    ] };
+    key <AC05> { [
+        g, G, at, NoSymbol, U0300
+    ] };
+    key <AC06> { [
+        h, H, numbersign, leftarrow, U0300
+    ] };
+    key <AC07> { [
+        j, J, dollar, downarrow, U0301
+    ] };
+    key <AC08> { [
+        k, K, apostrophe, uparrow, U0302
+    ] };
+    key <AC09> { [
+        l, L, asterisk, rightarrow, U0308
+    ] };
     // →1
-    key <AC10> { [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
-    key <AC11> { [ parenright, bracketright, braceright, U301B, U0306 ] };
+    key <AC10> { [
+        parenleft, bracketleft, braceleft, U301A, U0304
+    ] };
+    key <AC11> { [
+        parenright, bracketright, braceright, U301B, U0306
+    ] };
 
-    key <AB01> { [ z, Z, guillemotleft, U2039 ] };
-    key <AB02> { [ x, X, guillemotright, U203A ] };
-    key <AB03> { [ c, C, leftdoublequotemark ] };
-    key <AB04> { [ v, V, rightdoublequotemark ] };
-    key <AB05> { [ b, B, U300E, U300C ] };
-    key <AB06> { [ n, N, U300F, U300D ] };
-    key <AB07> { [ m, M, U25CA ] };
-    key <AB08> { [ comma, semicolon, enfilledcircbullet, U2032, U0327 ] };
-    key <AB09> { [ period, colon, periodcentered, abovedot, U0307 ] };
-    key <AB10> { [ minus, underscore, endash, emdash, U0304 ] };
+    key <AB01> { [
+        z, Z, guillemotleft, U2039
+    ] };
+    key <AB02> { [
+        x, X, guillemotright, U203A
+    ] };
+    key <AB03> { [
+        c, C, leftdoublequotemark
+    ] };
+    key <AB04> { [
+        v, V, rightdoublequotemark
+    ] };
+    key <AB05> { [
+        b, B, U300E, U300C
+    ] };
+    key <AB06> { [
+        n, N, U300F, U300D
+    ] };
+    key <AB07> { [
+        m, M, U25CA
+    ] };
+    key <AB08> { [
+        comma, semicolon, enfilledcircbullet, U2032, U0327
+    ] };
+    key <AB09> { [
+        period, colon, periodcentered, abovedot, U0307
+    ] };
+    key <AB10> { [
+        minus, underscore, endash, emdash, U0304
+    ] };
 };
 
 // Swap the right Win key and the menu key.
@@ -163,20 +264,44 @@ xkb_symbols "alphabet-section-numpad" {
     // Set `EIGHT_LEVEL` in case it is necessary.
     key.type[Group1] = "EIGHT_LEVEL";
     // First (topmost) numpad row.
-    key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark, 7 ] };
-    key <AD03> { [ e, E, percent, NoSymbol, 8 ] };
-    key <AD04> { [ r, R, ampersand, NoSymbol, 9 ] };
+    key <AD02> { [
+        w, W, rightsinglequotemark, rightdoublequotemark, 7
+    ] };
+    key <AD03> { [
+        e, E, percent, NoSymbol, 8
+    ] };
+    key <AD04> { [
+        r, R, ampersand, NoSymbol, 9
+    ] };
     // Second numpad row.
-    key <AC01> { [ a, A, less, U2329, comma ] };
-    key <AC02> { [ s, S, greater, U232A, 4 ] };
-    key <AC03> { [ d, D, exclam, NoSymbol, 5 ] };
-    key <AC04> { [ f, F, quotedbl, NoSymbol, 6 ] };
+    key <AC01> { [
+        a, A, less, U2329, comma
+    ] };
+    key <AC02> { [
+        s, S, greater, U232A, 4
+    ] };
+    key <AC03> { [
+        d, D, exclam, NoSymbol, 5
+    ] };
+    key <AC04> { [
+        f, F, quotedbl, NoSymbol, 6
+    ] };
     // Third numpad row.
-    key <AB01> { [ z, Z, guillemotleft, U2039, period ] };
-    key <AB02> { [ x, X, guillemotright, U203A, 1 ] };
-    key <AB03> { [ c, C, leftdoublequotemark, NoSymbol, 2 ] };
-    key <AB04> { [ v, V, rightdoublequotemark, NoSymbol, 3 ] };
-    key <AB05> { [ b, B, U300E, U300C, 0 ] };
+    key <AB01> { [
+        z, Z, guillemotleft, U2039, period
+    ] };
+    key <AB02> { [
+        x, X, guillemotright, U203A, 1
+    ] };
+    key <AB03> { [
+        c, C, leftdoublequotemark, NoSymbol, 2
+    ] };
+    key <AB04> { [
+        v, V, rightdoublequotemark, NoSymbol, 3
+    ] };
+    key <AB05> { [
+        b, B, U300E, U300C, 0
+    ] };
 };
 
 // Fifth level keymappings.
@@ -185,16 +310,34 @@ xkb_symbols "alphabet-section-numpad" {
 xkb_symbols "numpad-and-combining" {
     include "twin-dexter(alphabet-section-numpad)"
     // Second row
-    key <AC06> { [ h, H, numbersign, leftarrow, U0300 ] };
-    key <AC07> { [ j, J, dollar, downarrow, U0301 ] };
-    key <AC08> { [ k, K, apostrophe, uparrow, U0302 ] };
-    key <AC09> { [ l, L, asterisk, rightarrow, U0308 ] };
-    key <AC10> { [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
-    key <AC11> { [ parenright, bracketright, braceright, U301B, U0306 ] };
+    key <AC06> { [
+        h, H, numbersign, leftarrow, U0300
+    ] };
+    key <AC07> { [
+        j, J, dollar, downarrow, U0301
+    ] };
+    key <AC08> { [
+        k, K, apostrophe, uparrow, U0302
+    ] };
+    key <AC09> { [
+        l, L, asterisk, rightarrow, U0308
+    ] };
+    key <AC10> { [
+        parenleft, bracketleft, braceleft, U301A, U0304
+    ] };
+    key <AC11> { [
+        parenright, bracketright, braceright, U301B, U0306
+    ] };
     // Third (bottom) row
-    key <AB08> { [ comma, semicolon, enfilledcircbullet, U2032, U0327 ] };
-    key <AB09> { [ period, colon, periodcentered, abovedot, U0307 ] };
-    key <AB10> { [ minus, underscore, endash, emdash, U0304 ] };
+    key <AB08> { [
+        comma, semicolon, enfilledcircbullet, U2032, U0327
+    ] };
+    key <AB09> { [
+        period, colon, periodcentered, abovedot, U0307
+    ] };
+    key <AB10> { [
+        minus, underscore, endash, emdash, U0304
+    ] };
 };
 
 // Like `no-p2`, but with an “alphabetic numpad”.
@@ -305,5 +448,7 @@ xkb_symbols "no-p5" {
     include "twin-dexter(no-p4)"
     // Wean myself off using the `<AD12>` key by moving two of the
     // symbols to the `<AD11>` key.
-    key <AD11> { [ slash, asciicircum, asciitilde, NoSymbol, U030C ] };
+    key <AD11> { [
+        slash, asciicircum, asciitilde, NoSymbol, U030C
+    ] };
 };
