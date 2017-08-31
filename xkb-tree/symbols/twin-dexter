@@ -8,6 +8,9 @@ xkb_symbols "latin" {
     // Use right Alt as Alt key, instead of AltGr key.
     key <RALT> { [ Alt_R ] };
 
+    // Make levels 5–8 possible.
+    key.type[Group1] = "EIGHT_LEVEL";
+
     key <AD01> { [
         q, Q, leftsinglequotemark, leftdoublequotemark
     ] };
