@@ -98,7 +98,7 @@ xkb_symbols "no-p1" {
     key <AD11> { [ slash, bar, U2044, NoSymbol, U030C ] };
     key <AD12> { [ asciicircum, asciitilde, U0302, NoSymbol, U0303 ] };
 
-    // Keys <AC01> to <AC11>to on this row contain diacritics on the
+    // Keys <AC01> to <AC11> on this row contain diacritics on the
     // fifth level.
     key <AC01> { [ a, A, less, U2329, U0304 ] };
     key <AC02> { [ s, S, greater, U232A, U0308] };
