@@ -114,3 +114,15 @@ normal key.  The reason for that is that I can move ~asciicircum~ and
 respectively.  I think this would make typing the ~asciicircum~ symbol
 only marginally less convenient, and it would free up room for a /lot/
 of new mappings.
+
+** Dead key layer not working
+
+The “Extend layer” does not work in most of the applications that I am
+using.  It works in Spacemacs and Xterm, but not in Firefox,
+Gnome-terminal, among others.  This means that the utility is severly
+diminished, since it would be of most in applications like Firefox—I
+already use Evil in Spacemacs so I don’t need things like convenient
+access to arrow keys in that application.
+
+Maybe this was a failed experiment?  Maybe I should just make an Extend
+layer as one of the shift levels and drop the dead key variant?
