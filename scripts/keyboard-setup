@@ -1,11 +1,13 @@
 #!/bin/sh
 
 # Set keyboard layouts and options relating to keyboard layouts
-# This program expects two arguments, which are the keymappings to be
-# sent to `setxkbmap` to be used as the two layouts.
+#
+# This program takes any number of arguments, which are used as layouts
+# 1 to n (although I think you can only use up to four layouts, so you
+# should probably not pass in more than four arguments).
 #
 # NOTE: the `-compat` option is so that level 2 latch works properly.
-setxkbmap -option "" -layout "$1,$2" \
+setxkbmap -option "" -layout "$@" \
          -compat my-complete \
          -option grp:sclk_toggle \
          -option grp_led:scroll :2 \
