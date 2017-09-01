@@ -28,21 +28,21 @@ xkb_symbols "latin" {
     };
     key <AD02> { [
         w, W, rightsinglequotemark, rightdoublequotemark,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, ISO_First_Group, NoSymbol
     ] };
     // Duplicate commonly used symbols to third level of the alphabetic
     // section.
     key <AD03> { [
         e, E, percent, NoSymbol,
-        NoSymbol, NoSymbol, XF86Back, XF86Back
+        NoSymbol, NoSymbol, ISO_Prev_Group, NoSymbol
     ] };
     key <AD04> { [
         r, R, ampersand, NoSymbol,
-        NoSymbol, NoSymbol, XF86Forward, XF86Forward
+        NoSymbol, NoSymbol, ISO_Next_Group, NoSymbol
     ] };
     key <AD05> { [
         t, T, bar, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, ISO_Last_Group, NoSymbol
     ] };
     key <AD06> { [
         y, Y, backslash, NoSymbol,
@@ -70,19 +70,28 @@ xkb_symbols "latin" {
     ] };
     key <AC02> { [
         s, S, greater, NoSymbol,
-        NoSymbol, NoSymbol, ISO_First_Group, NoSymbol
+        NoSymbol, NoSymbol, XF86Back, XF86Back
     ] };
     key <AC03> { [
         d, D, exclam, NoSymbol,
-        NoSymbol, NoSymbol, ISO_Prev_Group, NoSymbol
+        NoSymbol, NoSymbol, XF86Forward, XF86Forward
     ] };
-    key <AC04> { [
+    key <AC04> {
+    symbols[Group1] = [
         f, F, quotedbl, NoSymbol,
-        NoSymbol, NoSymbol, ISO_Next_Group, NoSymbol
-    ] };
+        NoSymbol, NoSymbol, Alt_L, Alt_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate actions for alt keys.
+        SetMods(mods=Alt), SetMods(mods=Shift+Alt)
+    ]
+    };
     key <AC05> { [
         g, G, at, NoSymbol,
-        NoSymbol, NoSymbol, ISO_Last_Group, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC06> { [
         h, H, numbersign, NoSymbol,
@@ -209,19 +218,28 @@ xkb_symbols "no-p1" {
     ] };
     key <AC02> { [
         s, S, greater, U232A,
-        U0308, NoSymbol, ISO_First_Group, NoSymbol
+        U0308, NoSymbol, XF86Back, XF86Back
     ] };
     key <AC03> { [
         d, D, exclam, NoSymbol,
-        U0302, NoSymbol, ISO_Prev_Group, NoSymbol
+        U0302, NoSymbol, XF86Forward, XF86Forward
     ] };
-    key <AC04> { [
+    key <AC04> {
+    symbols[Group1] = [
         f, F, quotedbl, NoSymbol,
-        U0301, NoSymbol, ISO_Next_Group, NoSymbol
-    ] };
+        U0301, NoSymbol, Alt_L, Alt_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate actions for alt keys.
+        SetMods(mods=Alt), SetMods(mods=Shift+Alt)
+    ]
+    };
     key <AC05> { [
         g, G, at, NoSymbol,
-        U0300, NoSymbol, ISO_Last_Group, NoSymbol
+        U0300, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC06> { [
         h, H, numbersign, leftarrow,
@@ -331,15 +349,15 @@ xkb_symbols "alphabet-section-numpad" {
     // First (topmost) numpad row.
     key <AD02> { [
         w, W, rightsinglequotemark, rightdoublequotemark,
-        7, NoSymbol, NoSymbol, NoSymbol
+        7, NoSymbol, ISO_First_Group, NoSymbol
     ] };
     key <AD03> { [
         e, E, percent, NoSymbol,
-        8, NoSymbol, XF86Back, XF86Back
+        8, NoSymbol, ISO_Prev_Group, NoSymbol
     ] };
     key <AD04> { [
         r, R, ampersand, NoSymbol,
-        9, NoSymbol, XF86Forward, XF86Forward
+        9, NoSymbol, ISO_Next_Group, NoSymbol
     ] };
     // Second numpad row.
     key <AC01> { [
@@ -348,15 +366,16 @@ xkb_symbols "alphabet-section-numpad" {
     ] };
     key <AC02> { [
         s, S, greater, U232A,
-        4, NoSymbol, ISO_First_Group, NoSymbol
+        4, NoSymbol, XF86Back, XF86Back
     ] };
     key <AC03> { [
         d, D, exclam, NoSymbol,
-        5, NoSymbol, ISO_Prev_Group, NoSymbol
+        5, NoSymbol, XF86Forward, XF86Forward
     ] };
-    key <AC04> { [
+    key <AC04> {
+    symbols[Group1] = [
         f, F, quotedbl, NoSymbol,
-        6, NoSymbol, ISO_Next_Group, NoSymbol
+        6, NoSymbol, Alt_L, Alt_L
     ] };
     // Third numpad row.
     key <AB01> { [
