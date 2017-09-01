@@ -124,7 +124,7 @@ keymapping file after the project.
 
 Make a test script for the keymappings to run on every commit.  This to
 make sure that silly mistakes like parsing errors or using wrong
-includes sneak in.
+includes don’t sneak in.
 
 I just found out that I used the wrong includes in my keymappings file.
 I should take steps to avoid this in the future.
