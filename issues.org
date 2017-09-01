@@ -423,8 +423,13 @@ keybinding to change layouts or groups.  That way I could use ~no-p4~
 and then switch to ~no-p3~ when I need to change windows, since Xmonad
 does not work well with ~no-p4~ (that has to do with modifiers).
 
-* TODO Return and Backspace keys don’t work with a certain group switch setup
+* DONE Return and Backspace keys don’t work with a certain group switch setup
+  CLOSED: [2017-09-01 Fri 12:43]
 
+  - CLOSING NOTE [2017-09-01 Fri 12:43] \\
+    I haven’t found a solution for this specific issue, but it is not really
+    relevant any more since I have set up group switching keys on one of
+    the extend layer (seventh layer) that does work for all keys.
 I’ve been trying this setup for switching between groups:
 
 #+BEGIN_SRC
