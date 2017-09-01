@@ -17,6 +17,34 @@ This sets up the keyboard to use the layouts ~twin-dexter(no-p5)~ and
 keyboard, it will light on and off to indicate what layouts you are on.
 This might make it easier to use two layouts.
 
+* Layouts
+
+These are the layouts that are intended for use in
+~xkb-tree/symbols/twin-dexter~ as of 2017-09-01:
+
+- ~no~ — Basic Norwegian layout.  The primary difference from the
+  regular Norwegian layout on Linux is that common symbols (mostly
+  ASCII) are duplicated on the “alphabetic section” on the third level
+  (the level accessed by the ~AltGr~ on most European keyboards).
+- ~no-nodeadkeys~ — Like ~no~, but with dead keys disabled.  This makes
+  typing things like “caret” (ASCII circumflex) easier.
+- ~no-p1~ — Like ~no-nodeadkeys~, but replaces the Norwegian characters
+  ~Æ~, ~Ø~ and ~Å~ with characters that are useful for programming,
+  namely ~)~, ~(~ and ~/~, respectively.  (This is the granddaddy of the
+  other layouts—wanting to remap the Norwegian characters to symbols
+  that are useful for programming was my initial motivation for
+  learning about keyboard layouts under Linux (Xserver).)
+- ~no-p2~ — Like ~no-p1~, but with a new level 2 shift key and more
+  convenient ~Alt~ keys.
+- ~no-p3~ — Like ~no-p2~, but with an “alphabetic numpad”.
+- ~no-p4~ — Like ~no-p2~, but with a radically different “numeric row”.
+- ~no-4~ — Norwegian version of ~no-p4~.
+- ~eo-4~ — Esperanto version of `no-p4`.  Esperanto layouts use the same
+  strategy as the “programming” layouts with regards to the standard
+  Norwegian layouts; replace the Norwegian keys with characters that are
+  useful for Esperanto.
+- ~no-p5~ — A minor variation of ~no-4~.  Of no real general interest.
+
 * Tools
 
 The following are useful tools for working with Xkb.
