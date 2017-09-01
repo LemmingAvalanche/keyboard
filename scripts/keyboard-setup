@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Set keyboard layouts and options relating to keyboard layouts
-# This program expects three arguments, which are the keymappings to be
-# sent to `setxkbmap` to be used as the three layouts.
+# This program expects two arguments, which are the keymappings to be
+# sent to `setxkbmap` to be used as the two layouts.
 #
 # NOTE: the `-compat` option is so that level 2 latch works properly.
 setxkbmap -option "" -layout "$1,$2" \
