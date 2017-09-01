@@ -1,5 +1,10 @@
 Keyboard mappings for Xkb.
 
+* Software needed
+
+The Xkb utilities ~setxkbmap~ and ~xkbcomp~ are needed for
+~scripts/keyboard-setup~.
+
 * Usage
 
 ~scripts/keyboard-setup~ is a wrapper around ~setxkbmap~ that I use to
