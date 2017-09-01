@@ -8,37 +8,125 @@ xkb_symbols "latin" {
     // Use right Alt as Alt key, instead of AltGr key.
     key <RALT> { [ Alt_R ] };
 
-    key <AD01> { [ q, Q, leftsinglequotemark, leftdoublequotemark ] };
-    key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark ] };
+    // Make levels 5–8 possible.
+    key.type[Group1] = "EIGHT_LEVEL";
+
+    key <AD01> {
+    // Make an explicit group so that we can use an `actions` section
+    // (see below).
+    symbols[Group1] = [
+        q, Q, leftsinglequotemark, leftdoublequotemark,
+        NoSymbol, NoSymbol, Control_L, Control_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate actions for control keys.
+        SetMods(mods=Control), SetMods(mods=Shift+Control)
+    ]
+    };
+    key <AD02> { [
+        w, W, rightsinglequotemark, rightdoublequotemark,
+        NoSymbol, NoSymbol, ISO_First_Group, NoSymbol
+    ] };
     // Duplicate commonly used symbols to third level of the alphabetic
     // section.
-    key <AD03> { [ e, E, percent ] };
-    key <AD04> { [ r, R, ampersand ] };
-    key <AD05> { [ t, T, bar ] };
-    key <AD06> { [ y, Y, backslash ] };
-    key <AD07> { [ u, U, grave ] };
-    key <AD08> { [ i, I, equal ] };
-    key <AD09> { [ o, O, question ] };
-    key <AD10> { [ p, P, plus ] };
-
-    key <AC01> { [ a, A, less ] };
-    key <AC02> { [ s, S, greater ] };
-    key <AC03> { [ d, D, exclam ] };
-    key <AC04> { [ f, F, quotedbl ] };
-    key <AC05> { [ g, G, at ] };
-    key <AC06> { [ h, H, numbersign ] };
-    key <AC07> { [ j, J, dollar ] };
-    key <AC08> { [ k, K, apostrophe ] };
-    key <AC09> { [ l, L, asterisk ] };
+    key <AD03> { [
+        e, E, percent, NoSymbol,
+        NoSymbol, NoSymbol, ISO_Prev_Group, NoSymbol
+    ] };
+    key <AD04> { [
+        r, R, ampersand, NoSymbol,
+        NoSymbol, NoSymbol, ISO_Next_Group, NoSymbol
+    ] };
+    key <AD05> { [
+        t, T, bar, NoSymbol,
+        NoSymbol, NoSymbol, ISO_Last_Group, NoSymbol
+    ] };
+    key <AD06> { [
+        y, Y, backslash, NoSymbol,
+        NoSymbol, NoSymbol, Page_Up, Page_Up
+    ] };
+    key <AD07> { [
+        u, U, grave, NoSymbol,
+        NoSymbol, NoSymbol, Home, Home
+    ] };
+    key <AD08> { [
+        i, I, equal, NoSymbol,
+        NoSymbol, NoSymbol, Up, Up
+    ] };
+    key <AD09> { [
+        o, O, question, NoSymbol,
+        NoSymbol, NoSymbol, End, End
+    ] };
+    key <AD10> { [
+        p, P, plus, NoSymbol,
+        NoSymbol, NoSymbol, Delete, Delete
+    ] };
+    key <AC01> { [
+        a, A, less, NoSymbol,
+        NoSymbol, NoSymbol, Escape, Escape
+    ] };
+    key <AC02> { [
+        s, S, greater, NoSymbol,
+        NoSymbol, NoSymbol, XF86Back, XF86Back
+    ] };
+    key <AC03> { [
+        d, D, exclam, NoSymbol,
+        NoSymbol, NoSymbol, XF86Forward, XF86Forward
+    ] };
+    key <AC04> {
+    symbols[Group1] = [
+        f, F, quotedbl, NoSymbol,
+        NoSymbol, NoSymbol, Alt_L, Alt_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate actions for alt keys.
+        SetMods(mods=Alt), SetMods(mods=Shift+Alt)
+    ]
+    };
+    key <AC05> { [
+        g, G, at, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC06> { [
+        h, H, numbersign, NoSymbol,
+        NoSymbol, NoSymbol, Page_Down, Page_Down
+    ] };
+    key <AC07> { [
+        j, J, dollar, NoSymbol,
+        NoSymbol, NoSymbol, Left, Left
+    ] };
+    key <AC08> { [
+        k, K, apostrophe, NoSymbol,
+        NoSymbol, NoSymbol, Down, Down
+    ] };
+    key <AC09> { [
+        l, L, asterisk, NoSymbol,
+        NoSymbol, NoSymbol, Right, Right
+    ] };
 };
 
 // Common mappings for all “Norwegian” keymappings.
 partial alphanumeric_keys
 xkb_symbols "no-common" {
     // Norwegian characters
-    key <AD11>	{ [ aring, Aring, braceleft, NoSymbol, U030C ] };
-    key <AC10>	{ [ oslash, Ooblique, parenleft, U301A, U0304 ] };
-    key <AC11>	{ [ ae, AE, parenright, U301B, U0306 ] };
+    key <AD11>	{ [
+        aring, Aring, braceleft, NoSymbol,
+        U030C, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC10>	{ [
+        oslash, Ooblique, parenleft, U301A,
+        U0304, NoSymbol, BackSpace, BackSpace
+    ] };
+    key <AC11>	{ [
+        ae, AE, parenright, U301B,
+        U0306, NoSymbol, NoSymbol, NoSymbol
+    ] };
 
     // Make ASCII symbols and other useful symbols available on the
     // alpbabetic section.
@@ -47,10 +135,22 @@ xkb_symbols "no-common" {
     // (<AD11>, <AC10>, and <AC11>) to make certain symbols available on
     // the alpbabetic section.  So the displaced symbols need to get a
     // new home.
-    key <AD12> { [ asciicircum, asciitilde, braceright, NoSymbol, U0303 ] };
-    key <AB05> { [ b, B, bracketleft, U300C, 0 ] };
-    key <AB06> { [ n, N, bracketright, U300D] };
-    key <AB07> { [ m, M, slash ] };
+    key <AD12> { [
+        asciicircum, asciitilde, braceright, NoSymbol,
+        U0303, NoSymbol, Insert, Insert
+    ] };
+    key <AB05> { [
+        b, B, bracketleft, U300C,
+        0, NoSymbol, Pointer_Button1, Pointer_Button1
+    ] };
+    key <AB06> { [
+        n, N, bracketright, U300D,
+        NoSymbol, NoSymbol, Pointer_Button2, Pointer_Button2
+    ] };
+    key <AB07> { [
+        m, M, slash, NoSymbol,
+        NoSymbol, NoSymbol, Pointer_Button3, Pointer_Button3
+    ] };
 };
 
 // “Esperanto common”.  Common keys for Esperanto-focused layouts,
@@ -61,8 +161,14 @@ xkb_symbols "eo-common" {
     //
     // These replaces the Norwegian characters, which are not used in
     // Esperanto.
-    key <AC10>	{ [ U0302, section, parenleft, U301A, U0304 ] };
-    key <AC11>	{ [ U016D, U016C, parenright, U301B, U0306 ] };
+    key <AC10>	{ [
+        U0302, section, parenleft, U301A,
+        U0304, NoSymbol, BackSpace, BackSpace
+    ] };
+    key <AC11>	{ [
+        U016D, U016C, parenright, U301B,
+        U0306, NoSymbol, NoSymbol, NoSymbol
+    ] };
 };
 
 partial alphanumeric_keys
@@ -95,34 +201,112 @@ xkb_symbols "no-p1" {
     // Map Norwegian characters “æøå” to other symbols.  Useful when
     // programming (hence the name `no-p1`: the `p1` stands for
     // “programming 1”.  See also: [→1].
-    key <AD11> { [ slash, bar, U2044, NoSymbol, U030C ] };
-    key <AD12> { [ asciicircum, asciitilde, U0302, NoSymbol, U0303 ] };
+    key <AD11> { [
+        slash, bar, U2044, NoSymbol,
+        U030C, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AD12> { [
+        asciicircum, asciitilde, U0302, NoSymbol,
+        U0303, NoSymbol, Insert, Insert
+    ] };
 
     // Keys <AC01> to <AC11> on this row contain diacritics on the
     // fifth level.
-    key <AC01> { [ a, A, less, U2329, U0304 ] };
-    key <AC02> { [ s, S, greater, U232A, U0308] };
-    key <AC03> { [ d, D, exclam, NoSymbol, U0302 ] };
-    key <AC04> { [ f, F, quotedbl, NoSymbol, U0301 ] };
-    key <AC05> { [ g, G, at, NoSymbol, U0300 ] };
-    key <AC06> { [ h, H, numbersign, leftarrow, U0300 ] };
-    key <AC07> { [ j, J, dollar, downarrow, U0301 ] };
-    key <AC08> { [ k, K, apostrophe, uparrow, U0302 ] };
-    key <AC09> { [ l, L, asterisk, rightarrow, U0308 ] };
+    key <AC01> { [
+        a, A, less, U2329,
+        U0304, NoSymbol, Escape, Escape
+    ] };
+    key <AC02> { [
+        s, S, greater, U232A,
+        U0308, NoSymbol, XF86Back, XF86Back
+    ] };
+    key <AC03> { [
+        d, D, exclam, NoSymbol,
+        U0302, NoSymbol, XF86Forward, XF86Forward
+    ] };
+    key <AC04> {
+    symbols[Group1] = [
+        f, F, quotedbl, NoSymbol,
+        U0301, NoSymbol, Alt_L, Alt_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate actions for alt keys.
+        SetMods(mods=Alt), SetMods(mods=Shift+Alt)
+    ]
+    };
+    key <AC05> { [
+        g, G, at, NoSymbol,
+        U0300, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC06> { [
+        h, H, numbersign, leftarrow,
+        U0300, NoSymbol, Page_Down, Page_Down
+    ] };
+    key <AC07> { [
+        j, J, dollar, downarrow,
+        U0301, NoSymbol, Left, Left
+    ] };
+    key <AC08> { [
+        k, K, apostrophe, uparrow,
+        U0302, NoSymbol, Down, Down
+    ] };
+    key <AC09> { [
+        l, L, asterisk, rightarrow,
+        U0308, NoSymbol, Right, Right
+    ] };
     // →1
-    key <AC10> { [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
-    key <AC11> { [ parenright, bracketright, braceright, U301B, U0306 ] };
+    key <AC10> { [
+        parenleft, bracketleft, braceleft, U301A,
+        U0304, NoSymbol, BackSpace, BackSpace
+    ] };
+    key <AC11> { [
+        parenright, bracketright, braceright, U301B,
+        U0306, NoSymbol, NoSymbol, NoSymbol
+    ] };
 
-    key <AB01> { [ z, Z, guillemotleft, U2039 ] };
-    key <AB02> { [ x, X, guillemotright, U203A ] };
-    key <AB03> { [ c, C, leftdoublequotemark ] };
-    key <AB04> { [ v, V, rightdoublequotemark ] };
-    key <AB05> { [ b, B, U300E, U300C ] };
-    key <AB06> { [ n, N, U300F, U300D ] };
-    key <AB07> { [ m, M, U25CA ] };
-    key <AB08> { [ comma, semicolon, enfilledcircbullet, U2032, U0327 ] };
-    key <AB09> { [ period, colon, periodcentered, abovedot, U0307 ] };
-    key <AB10> { [ minus, underscore, endash, emdash, U0304 ] };
+    key <AB01> { [
+        z, Z, guillemotleft, U2039,
+        NoSymbol, NoSymbol, Undo, Redo
+    ] };
+    key <AB02> { [
+        x, X, guillemotright, U203A,
+        NoSymbol, NoSymbol, XF86Cut, XF86Cut
+    ] };
+    key <AB03> { [
+        c, C, leftdoublequotemark, NoSymbol,
+        NoSymbol, NoSymbol, XF86Copy, XF86Copy
+    ] };
+    key <AB04> { [
+        v, V, rightdoublequotemark, NoSymbol,
+        NoSymbol, NoSymbol, XF86Paste, XF86Paste
+    ] };
+    key <AB05> { [
+        b, B, U300E, U300C,
+        NoSymbol, NoSymbol, Pointer_Button1, Pointer_Button1
+    ] };
+    key <AB06> { [
+        n, N, U300F, U300D,
+        NoSymbol, NoSymbol, Pointer_Button2, Pointer_Button2
+    ] };
+    key <AB07> { [
+        m, M, U25CA, NoSymbol,
+        NoSymbol, NoSymbol, Pointer_Button3, Pointer_Button3
+    ] };
+    key <AB08> { [
+        comma, semicolon, enfilledcircbullet, U2032,
+        U0327, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB09> { [
+        period, colon, periodcentered, abovedot,
+        U0307, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB10> { [
+        minus, underscore, endash, emdash,
+        U0304, NoSymbol, NoSymbol, NoSymbol
+    ] };
 };
 
 // Swap the right Win key and the menu key.
@@ -163,20 +347,57 @@ xkb_symbols "alphabet-section-numpad" {
     // Set `EIGHT_LEVEL` in case it is necessary.
     key.type[Group1] = "EIGHT_LEVEL";
     // First (topmost) numpad row.
-    key <AD02> { [ w, W, rightsinglequotemark, rightdoublequotemark, 7 ] };
-    key <AD03> { [ e, E, percent, NoSymbol, 8 ] };
-    key <AD04> { [ r, R, ampersand, NoSymbol, 9 ] };
+    key <AD02> { [
+        w, W, rightsinglequotemark, rightdoublequotemark,
+        7, NoSymbol, ISO_First_Group, NoSymbol
+    ] };
+    key <AD03> { [
+        e, E, percent, NoSymbol,
+        8, NoSymbol, ISO_Prev_Group, NoSymbol
+    ] };
+    key <AD04> { [
+        r, R, ampersand, NoSymbol,
+        9, NoSymbol, ISO_Next_Group, NoSymbol
+    ] };
     // Second numpad row.
-    key <AC01> { [ a, A, less, U2329, comma ] };
-    key <AC02> { [ s, S, greater, U232A, 4 ] };
-    key <AC03> { [ d, D, exclam, NoSymbol, 5 ] };
-    key <AC04> { [ f, F, quotedbl, NoSymbol, 6 ] };
+    key <AC01> { [
+        a, A, less, U2329, comma,
+        NoSymbol, Escape, Escape
+    ] };
+    key <AC02> { [
+        s, S, greater, U232A,
+        4, NoSymbol, XF86Back, XF86Back
+    ] };
+    key <AC03> { [
+        d, D, exclam, NoSymbol,
+        5, NoSymbol, XF86Forward, XF86Forward
+    ] };
+    key <AC04> {
+    symbols[Group1] = [
+        f, F, quotedbl, NoSymbol,
+        6, NoSymbol, Alt_L, Alt_L
+    ] };
     // Third numpad row.
-    key <AB01> { [ z, Z, guillemotleft, U2039, period ] };
-    key <AB02> { [ x, X, guillemotright, U203A, 1 ] };
-    key <AB03> { [ c, C, leftdoublequotemark, NoSymbol, 2 ] };
-    key <AB04> { [ v, V, rightdoublequotemark, NoSymbol, 3 ] };
-    key <AB05> { [ b, B, U300E, U300C, 0 ] };
+    key <AB01> { [
+        z, Z, guillemotleft, U2039,
+        period, NoSymbol, Undo, Redo
+    ] };
+    key <AB02> { [
+        x, X, guillemotright, U203A,
+        1, NoSymbol, XF86Cut, XF86Cut
+    ] };
+    key <AB03> { [
+        c, C, leftdoublequotemark, NoSymbol,
+        2, NoSymbol, XF86Copy, XF86Copy
+    ] };
+    key <AB04> { [
+        v, V, rightdoublequotemark, NoSymbol,
+        3, NoSymbol, XF86Paste, XF86Paste
+    ] };
+    key <AB05> { [
+        b, B, U300E, U300C,
+        0, NoSymbol, Pointer_Button1, Pointer_Button1
+    ] };
 };
 
 // Fifth level keymappings.
@@ -185,16 +406,43 @@ xkb_symbols "alphabet-section-numpad" {
 xkb_symbols "numpad-and-combining" {
     include "twin-dexter(alphabet-section-numpad)"
     // Second row
-    key <AC06> { [ h, H, numbersign, leftarrow, U0300 ] };
-    key <AC07> { [ j, J, dollar, downarrow, U0301 ] };
-    key <AC08> { [ k, K, apostrophe, uparrow, U0302 ] };
-    key <AC09> { [ l, L, asterisk, rightarrow, U0308 ] };
-    key <AC10> { [ parenleft, bracketleft, braceleft, U301A, U0304 ] };
-    key <AC11> { [ parenright, bracketright, braceright, U301B, U0306 ] };
+    key <AC06> { [
+        h, H, numbersign, leftarrow,
+        U0300, NoSymbol, Page_Down, Page_Down
+    ] };
+    key <AC07> { [
+        j, J, dollar, downarrow,
+        U0301, NoSymbol, Left, Left
+    ] };
+    key <AC08> { [
+        k, K, apostrophe, uparrow,
+        U0302, NoSymbol, Down, Down
+    ] };
+    key <AC09> { [
+        l, L, asterisk, rightarrow,
+        U0308, NoSymbol, Right, Right
+    ] };
+    key <AC10> { [
+        parenleft, bracketleft, braceleft, U301A,
+        U0304, NoSymbol, BackSpace, BackSpace
+    ] };
+    key <AC11> { [
+        parenright, bracketright, braceright, U301B,
+        U0306, NoSymbol, NoSymbol, NoSymbol
+    ] };
     // Third (bottom) row
-    key <AB08> { [ comma, semicolon, enfilledcircbullet, U2032, U0327 ] };
-    key <AB09> { [ period, colon, periodcentered, abovedot, U0307 ] };
-    key <AB10> { [ minus, underscore, endash, emdash, U0304 ] };
+    key <AB08> { [
+        comma, semicolon, enfilledcircbullet, U2032,
+        U0327, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB09> { [
+        period, colon, periodcentered, abovedot,
+        U0307, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB10> { [
+        minus, underscore, endash, emdash,
+        U0304, NoSymbol, NoSymbol, NoSymbol
+    ] };
 };
 
 // Like `no-p2`, but with an “alphabetic numpad”.
@@ -305,5 +553,8 @@ xkb_symbols "no-p5" {
     include "twin-dexter(no-p4)"
     // Wean myself off using the `<AD12>` key by moving two of the
     // symbols to the `<AD11>` key.
-    key <AD11> { [ slash, asciicircum, asciitilde, NoSymbol, U030C ] };
+    key <AD11> { [
+        slash, asciicircum, asciitilde, NoSymbol,
+        U030C, NoSymbol, NoSymbol, NoSymbol
+    ] };
 };
