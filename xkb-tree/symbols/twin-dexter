@@ -14,6 +14,9 @@ xkb_symbols "latin" {
     key <AD01> {
     // Make an explicit group so that we can use an `actions` section
     // (see below).
+    // NOTE: Pressing control and alt keys on the seventh and eight
+    // level by using latch keys does not work that well.  See: issue in
+    // the `issues.org` file dated 2017-09-01.
     symbols[Group1] = [
         q, Q, leftsinglequotemark, leftdoublequotemark,
         NoSymbol, NoSymbol, Control_L, Control_L
@@ -76,6 +79,9 @@ xkb_symbols "latin" {
         d, D, exclam, NoSymbol,
         NoSymbol, NoSymbol, XF86Forward, XF86Forward
     ] };
+    // NOTE: Pressing control and alt keys on the seventh and eight
+    // level by using latch keys does not work that well.  See: issue in
+    // the `issues.org` file dated 2017-09-01.
     key <AC04> {
     symbols[Group1] = [
         f, F, quotedbl, NoSymbol,
@@ -225,6 +231,9 @@ xkb_symbols "no-p1" {
         U0302, NoSymbol, XF86Forward, XF86Forward
     ] };
     key <AC04> {
+    // NOTE: Pressing control and alt keys on the seventh and eight
+    // level by using latch keys does not work that well.  See: issue in
+    // the `issues.org` file dated 2017-09-01.
     symbols[Group1] = [
         f, F, quotedbl, NoSymbol,
         U0301, NoSymbol, Alt_L, Alt_L
@@ -372,6 +381,9 @@ xkb_symbols "alphabet-section-numpad" {
         d, D, exclam, NoSymbol,
         5, NoSymbol, XF86Forward, XF86Forward
     ] };
+    // NOTE: Pressing control and alt keys on the seventh and eight
+    // level by using latch keys does not work that well.  See: issue in
+    // the `issues.org` file dated 2017-09-01.
     key <AC04> {
     symbols[Group1] = [
         f, F, quotedbl, NoSymbol,
