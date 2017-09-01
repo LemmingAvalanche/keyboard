@@ -556,3 +556,33 @@ Codeinput, but I don't know what they do.
 #+END_QUOTE
 
 (Source: https://www.charvolant.org/doug/xkb/html/node5.html)
+
+* [2017-09-01 Fri]
+
+** Control and alt keys on extend layers don’t work with latch keys
+
+Right now I can access left control and left alt on the extend layers on
+the ~Q~ and ~F~ keys, respectively.  This works perfectly if I press
+down the different shift keys in the regular way (non-latch) in order to
+access these keys (or, symbols on these layers).  However, there is a
+hitch if I access these layers with the latch shift key behavior.  What
+happens then is that, after having pressed either left control or left
+alt, the next keypress after that will be consumed as an extend layer
+keypress.  It is as if pressing these two modifier keys does not
+“consume” the latch states; instead, the key pressed after that consumes
+them.
+
+Here is a concrete example.  First ~ISO_Level5_Latch~ is pressed and
+released, then ~ISO_Level3_Latch~ is pressed and released.  At this
+point we have latched levels 5 and 3 and hence the next normal key is
+going to be “accessed” on its seventh layer.  Then we press ~Q~ and
+release, which has ~Control_L~ mapped to this level.  I now expect this
+to have consumed the latch key states, and so there is no active
+latches.  But this is wrong according to Xev.  If I, right after having
+pressed ~Q~, press the ~H~, the keypress event is not a lowercase ~h~
+but is instead ~Left~ (according to Xev).  Why ~Left~?   Well, the ~H~
+key is mapped to ~Left~ on the seventh layer, so the latch key states
+must still be active.  Then the ~H~ key is pressed again.  Now a
+lowercase ~h~ is the keypress event, as expected.  So the first key
+pressed after pressing the left control must have consumed the latch key
+states.
