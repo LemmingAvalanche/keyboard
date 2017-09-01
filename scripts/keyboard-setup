@@ -6,6 +6,10 @@
 # commas.  I think you can only use up to four layouts, so you should
 # probably not pass in more than four layouts.
 #
+# Example usage:
+#
+#     keyboard-setup "twin-dexter(no-p5),twin-dexter(no-4)"
+#
 # NOTE: the `-compat` option is so that level 2 latch works properly.
 setxkbmap -option "" -layout "$1" \
          -compat my-complete \
