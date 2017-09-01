@@ -410,8 +410,13 @@ pressing the left.  I am guessing that this has to do with the fact that
 I map the ~AltGr~ key (right alt) to act like “alt”, i.e., to act like
 the right alt key.
 
-* TODO Use some hyper keybinding to change layouts or groups
+* DONE Use some hyper keybinding to change layouts or groups
+  CLOSED: [2017-09-01 Fri 12:41]
 
+  - CLOSING NOTE [2017-09-01 Fri 12:41] \\
+    I have set up four group switching keys accessible on one of the
+    extend layers (the seventh layer).  So making keybindings to those
+    using hyper is not needed.
 I have managed to get the hyper modifier up and running today, on
 ~no-p4~.  The first thing I could use it for is to use some hyper
 keybinding to change layouts or groups.  That way I could use ~no-p4~
