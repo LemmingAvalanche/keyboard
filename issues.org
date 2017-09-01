@@ -586,3 +586,56 @@ must still be active.  Then the ~H~ key is pressed again.  Now a
 lowercase ~h~ is the keypress event, as expected.  So the first key
 pressed after pressing the left control must have consumed the latch key
 states.
+
+*** Update 2017-09-02T01:29:51+02:00
+
+On further reflection, a control key not consuming the latch states
+makes perfect sense.  When I for example want to press ~Control+D~ by
+first latching the ~Shift~ key and then pressing ~Control+d~, I don’t
+want or expect pressing the Control key to consume the latch state.  In
+fact, that would make it impossible to use keys like the control keys in
+concert with the latch shift keys, since the control keys need to
+pressed slightly before the keys they are pressed together with, like
+~D~.
+
+Anyway, I tried to look into a way to make this unusual case work.
+First I tried to find out more about /actions/, since they seem to be
+the place where I need to make changes in order to make this thing
+work.  I had a look at An Unreliable Guide and I found
+[[https://www.charvolant.org/doug/xkb/html/node5.html#SECTION00055000000000000000][this section]], which describes the different actions that can be
+associated with keys.  Tables 2–4 describes actions and fields for
+actions.  This is the only place I found that documents these things.  I
+also had a look at some of the files in the ~X11/compat~ directory.  In
+addition, I also had a look in the ~X11/type~ directory.
+
+I tried to change the actions of seventh layer control key in many
+ways.  The action that is defined for this key as of now is:
+
+#+BEGIN_EXAMPLE
+actions[Group1] = [
+    // Do not set any action for non-Extend layer keys.
+    NoAction(), NoAction(), NoAction(), NoAction(),
+    NoAction(), NoAction(),
+    // We need to set appropriate actions for control keys.
+    SetMods(mods=Control), SetMods(mods=Shift+Control)
+]
+#+END_EXAMPLE
+
+I tried to change ~SetMods(mods=Control)~ in such a way as to both set
+~Control~ as a modifier, and also consume/release the two active latches
+(level 3 and 5).  All of the attempts were unsuccessful.  Right now I
+suspect that I focused on actions that were meant to clear
+(consume/release) /held down/ modifiers, while I wanted to eliminate
+latched modifiers.  If that makes sense.
+
+**** What now?
+
+Solving this problem would make a very niché use-case for this control
+key possible: latch two levels in order to get to a control key on the
+alphabetic section.  I don’t even know if I ever would find that to be
+practical, as compared to holding down the two shifts as regular shifts
+and then pressing the control key.  So this problem is too hard for the
+reward to bother with.
+
+In case I come back to this for some reason, I should ask someone else
+about this.
