@@ -4,3 +4,6 @@ test-xkb/
 *.xkm
 *.ps
 BigBagKbdTrixXKB/
+*.pdf
+*.tex
+auto/
