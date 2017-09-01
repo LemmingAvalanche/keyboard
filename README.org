@@ -73,7 +73,7 @@ The following are useful tools for working with Xkb.
   xkeyboard-config~.  ([[https://superuser.com/a/414535][Source]])
 - ~xkbwatch~: reports the changes to the Xkb states.  This might be
   useful if you want some visual indication of things like the lock- or
-  lack-state of the various shifts, for example.
+  lach-state of the various shifts, for example.
 
 * Files
 
