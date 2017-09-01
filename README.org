@@ -1,5 +1,22 @@
 Keyboard mappings for Xkb.
 
+* Usage
+
+~scripts/keyboard-setup~ is a wrapper around ~setxkbmap~ that I use to
+set up some of the layouts in ~xkb-tree/symbols/~.
+
+Example usage:
+
+#+BEGIN_SRC shell
+scripts/keyboard-setup "twin-dexter(no-p5),twin-dexter(no-4)"
+#+END_SRC
+
+This sets up the keyboard to use the layouts ~twin-dexter(no-p5)~ and
+~twin-dexter(no-4)~.  You can switch between layouts by pressing
+~Shift+ScrollLock~.  If you have a scroll lock light indicator on your
+keyboard, it will light on and off to indicate what layouts you are on.
+This might make it easier to use two layouts.
+
 * Tools
 
 The following are useful tools for working with Xkb.
