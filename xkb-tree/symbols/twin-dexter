@@ -18,7 +18,7 @@ xkb_symbols "latin" {
     // level by using latch keys does not work that well.  See: issue in
     // the `issues.org` file dated 2017-09-01.
     symbols[Group1] = [
-        q, Q, leftsinglequotemark, leftdoublequotemark,
+        q, Q, leftsinglequotemark, U2607,
         NoSymbol, NoSymbol, Control_L, Control_L
     ],
     actions[Group1] = [
@@ -30,7 +30,7 @@ xkb_symbols "latin" {
     ]
     };
     key <AD02> { [
-        w, W, rightsinglequotemark, rightdoublequotemark,
+        w, W, rightsinglequotemark, dagger,
         NoSymbol, NoSymbol, ISO_First_Group, NoSymbol
     ] };
     // Duplicate commonly used symbols to third level of the alphabetic
@@ -357,7 +357,7 @@ xkb_symbols "alphabet-section-numpad" {
     key.type[Group1] = "EIGHT_LEVEL";
     // First (topmost) numpad row.
     key <AD02> { [
-        w, W, rightsinglequotemark, rightdoublequotemark,
+        w, W, rightsinglequotemark, dagger,
         7, NoSymbol, ISO_First_Group, NoSymbol
     ] };
     key <AD03> { [
