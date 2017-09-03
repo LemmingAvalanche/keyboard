@@ -561,12 +561,16 @@ xkb_symbols "eo-4" {
     include "twin-dexter(eo-common)"
 };
 
+// Like no-p4 but with dead key on `<AD12>`.
 xkb_symbols "no-p5" {
     include "twin-dexter(no-p4)"
-    // Wean myself off using the `<AD12>` key by moving two of the
-    // symbols to the `<AD11>` key.
+    // Move the keys that I’ve used that on `<AD12>` to `<AD11>`, since
+    // `<AD12>` gets remapped to a dead key.
     key <AD11> { [
         slash, asciicircum, asciitilde, NoSymbol,
         U030C, NoSymbol, NoSymbol, NoSymbol
     ] };
+    replace key <AD12> {
+        [ dead_iota ]
+    };
 };
