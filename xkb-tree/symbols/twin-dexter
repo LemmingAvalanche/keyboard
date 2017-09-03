@@ -277,10 +277,14 @@ xkb_symbols "no-p1" {
     ] };
 
     key <AB01> { [
+        // TODO: the level four `‹` is not useful any more, since I
+        // produce this through another means now.
         z, Z, guillemotleft, U2039,
         NoSymbol, NoSymbol, Undo, Redo
     ] };
     key <AB02> { [
+        // TODO: the level four `›` is not useful any more, since I
+        // produce this through another means now.
         x, X, guillemotright, U203A,
         NoSymbol, NoSymbol, XF86Cut, XF86Cut
     ] };
@@ -370,10 +374,14 @@ xkb_symbols "alphabet-section-numpad" {
     ] };
     // Second numpad row.
     key <AC01> { [
+        // TODO: the level four `〈` is not useful any more, since I
+        // produce this through another means now.
         a, A, less, U2329, comma,
         NoSymbol, Escape, Escape
     ] };
     key <AC02> { [
+        // TODO: the level four `〉` is not useful any more, since I
+        // produce this through another means now.
         s, S, greater, U232A,
         4, NoSymbol, XF86Back, XF86Back
     ] };
