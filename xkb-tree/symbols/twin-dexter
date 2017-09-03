@@ -425,18 +425,23 @@ xkb_symbols "alphabet-section-numpad" {
 // Numpad on the left side, combining characters on the right side.
 xkb_symbols "numpad-and-combining" {
     include "twin-dexter(alphabet-section-numpad)"
-    // Second row
-    key <AC06> { [
-        h, H, numbersign, leftarrow,
-        U0300, NoSymbol, Page_Down, Page_Down
+    // First row
+    key <AD09> { [
+        o, O, question, NoSymbol,
+        U030C, NoSymbol, End, End
     ] };
+    key <AD10> { [
+        p, P, plus, NoSymbol,
+        U0306, NoSymbol, Delete, Delete
+    ] };
+    // Second row
     key <AC07> { [
         j, J, dollar, downarrow,
         U0301, NoSymbol, Left, Left
     ] };
     key <AC08> { [
         k, K, apostrophe, uparrow,
-        U0302, NoSymbol, Down, Down
+        U0300, NoSymbol, Down, Down
     ] };
     key <AC09> { [
         l, L, asterisk, rightarrow,
@@ -444,16 +449,16 @@ xkb_symbols "numpad-and-combining" {
     ] };
     key <AC10> { [
         parenleft, bracketleft, braceleft, U301A,
-        U0304, NoSymbol, BackSpace, BackSpace
-    ] };
-    key <AC11> { [
-        parenright, bracketright, braceright, U301B,
-        U0306, NoSymbol, NoSymbol, NoSymbol
+        U0302, NoSymbol, BackSpace, BackSpace
     ] };
     // Third (bottom) row
+    key <AB07> { [
+        m, M, U25CA, NoSymbol,
+        U0327, NoSymbol, Pointer_Button3, Pointer_Button3
+    ] };
     key <AB08> { [
         comma, semicolon, enfilledcircbullet, U2032,
-        U0327, NoSymbol, NoSymbol, NoSymbol
+        U0323, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB09> { [
         period, colon, periodcentered, abovedot,
