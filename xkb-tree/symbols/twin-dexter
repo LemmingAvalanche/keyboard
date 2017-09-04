@@ -428,44 +428,54 @@ xkb_symbols "numpad-and-combining" {
     // First row
     key <AD09> { [
         o, O, question, NoSymbol,
+        // caron
         U030C, NoSymbol, End, End
     ] };
     key <AD10> { [
         p, P, plus, NoSymbol,
+        // breve
         U0306, NoSymbol, Delete, Delete
     ] };
     // Second row
     key <AC07> { [
         j, J, dollar, downarrow,
+        // acute accent
         U0301, NoSymbol, Left, Left
     ] };
     key <AC08> { [
         k, K, apostrophe, uparrow,
+        // grave accent
         U0300, NoSymbol, Down, Down
     ] };
     key <AC09> { [
         l, L, asterisk, rightarrow,
+        // diaresis
         U0308, NoSymbol, Right, Right
     ] };
     key <AC10> { [
         parenleft, bracketleft, braceleft, U301A,
+        // circumflex
         U0302, NoSymbol, BackSpace, BackSpace
     ] };
     // Third (bottom) row
     key <AB07> { [
         m, M, U25CA, NoSymbol,
+        // cedilLa
         U0327, NoSymbol, Pointer_Button3, Pointer_Button3
     ] };
     key <AB08> { [
         comma, semicolon, enfilledcircbullet, U2032,
+        // dot below
         U0323, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB09> { [
         period, colon, periodcentered, abovedot,
+        // dot above
         U0307, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB10> { [
         minus, underscore, endash, emdash,
+        // macron
         U0304, NoSymbol, NoSymbol, NoSymbol
     ] };
 };
