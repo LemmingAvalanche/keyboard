@@ -123,15 +123,15 @@ xkb_symbols "no-common" {
     // Norwegian characters
     key <AD11>	{ [
         aring, Aring, braceleft, NoSymbol,
-        U030C, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC10>	{ [
         oslash, Ooblique, parenleft, U301A,
-        U0304, NoSymbol, BackSpace, BackSpace
+        NoSymbol, NoSymbol, BackSpace, BackSpace
     ] };
     key <AC11>	{ [
         ae, AE, parenright, U301B,
-        U0306, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
 
     // Make ASCII symbols and other useful symbols available on the
@@ -143,7 +143,7 @@ xkb_symbols "no-common" {
     // new home.
     key <AD12> { [
         asciicircum, asciitilde, braceright, NoSymbol,
-        U0303, NoSymbol, Insert, Insert
+        NoSymbol, NoSymbol, Insert, Insert
     ] };
     key <AB05> { [
         b, B, bracketleft, U300C,
@@ -169,11 +169,11 @@ xkb_symbols "eo-common" {
     // Esperanto.
     key <AC10>	{ [
         U0302, section, parenleft, U301A,
-        U0304, NoSymbol, BackSpace, BackSpace
+        NoSymbol, NoSymbol, BackSpace, BackSpace
     ] };
     key <AC11>	{ [
         U016D, U016C, parenright, U301B,
-        U0306, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
 };
 
@@ -213,22 +213,22 @@ xkb_symbols "no-p1" {
     ] };
     key <AD12> { [
         asciicircum, asciitilde, U0302, NoSymbol,
-        U0303, NoSymbol, Insert, Insert
+        NoSymbol, NoSymbol, Insert, Insert
     ] };
 
     // Keys <AC01> to <AC11> on this row contain diacritics on the
     // fifth level.
     key <AC01> { [
         a, A, less, U2329,
-        U0304, NoSymbol, Escape, Escape
+        NoSymbol, NoSymbol, Escape, Escape
     ] };
     key <AC02> { [
         s, S, greater, U232A,
-        U0308, NoSymbol, XF86Back, XF86Back
+        NoSymbol, NoSymbol, XF86Back, XF86Back
     ] };
     key <AC03> { [
         d, D, exclam, NoSymbol,
-        U0302, NoSymbol, XF86Forward, XF86Forward
+        NoSymbol, NoSymbol, XF86Forward, XF86Forward
     ] };
     key <AC04> {
     // NOTE: Pressing control and alt keys on the seventh and eight
@@ -236,7 +236,7 @@ xkb_symbols "no-p1" {
     // the `issues.org` file dated 2017-09-01.
     symbols[Group1] = [
         f, F, quotedbl, NoSymbol,
-        U0301, NoSymbol, Alt_L, Alt_L
+        NoSymbol, NoSymbol, Alt_L, Alt_L
     ],
     actions[Group1] = [
         // Do not set any action for non-Extend layer keys.
@@ -248,32 +248,32 @@ xkb_symbols "no-p1" {
     };
     key <AC05> { [
         g, G, at, NoSymbol,
-        U0300, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC06> { [
         h, H, numbersign, leftarrow,
-        U0300, NoSymbol, Page_Down, Page_Down
+        NoSymbol, NoSymbol, Page_Down, Page_Down
     ] };
     key <AC07> { [
         j, J, dollar, downarrow,
-        U0301, NoSymbol, Left, Left
+        NoSymbol, NoSymbol, Left, Left
     ] };
     key <AC08> { [
         k, K, apostrophe, uparrow,
-        U0302, NoSymbol, Down, Down
+        NoSymbol, NoSymbol, Down, Down
     ] };
     key <AC09> { [
         l, L, asterisk, rightarrow,
-        U0308, NoSymbol, Right, Right
+        NoSymbol, NoSymbol, Right, Right
     ] };
     // →1
     key <AC10> { [
         parenleft, bracketleft, braceleft, U301A,
-        U0304, NoSymbol, BackSpace, BackSpace
+        NoSymbol, NoSymbol, BackSpace, BackSpace
     ] };
     key <AC11> { [
         parenright, bracketright, braceright, U301B,
-        U0306, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
 
     key <AB01> { [
@@ -310,15 +310,15 @@ xkb_symbols "no-p1" {
     ] };
     key <AB08> { [
         comma, semicolon, enfilledcircbullet, U2032,
-        U0327, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB09> { [
         period, colon, periodcentered, abovedot,
-        U0307, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB10> { [
         minus, underscore, endash, emdash,
-        U0304, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
 };
 
