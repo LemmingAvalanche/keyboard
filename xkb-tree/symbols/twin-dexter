@@ -209,7 +209,7 @@ xkb_symbols "no-p1" {
     // “programming 1”.  See also: [→1].
     key <AD11> { [
         slash, bar, U2044, NoSymbol,
-        U030C, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AD12> { [
         asciicircum, asciitilde, U0302, NoSymbol,
@@ -591,7 +591,7 @@ xkb_symbols "no-p5" {
     // `<AD12>` gets remapped to a dead key.
     key <AD11> { [
         slash, asciicircum, asciitilde, NoSymbol,
-        U030C, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     replace key <AD12> {
         [ dead_iota ]
