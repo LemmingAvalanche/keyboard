@@ -427,54 +427,54 @@ xkb_symbols "numpad-and-combining" {
     include "twin-dexter(alphabet-section-numpad)"
     // First row
     key <AD09> { [
-        o, O, question, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // caron
-        U030C, NoSymbol, End, End
+        U030C, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AD10> { [
-        p, P, plus, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // breve
-        U0306, NoSymbol, Delete, Delete
+        U0306, NoSymbol, NoSymbol, NoSymbol
     ] };
     // Second row
     key <AC07> { [
-        j, J, dollar, downarrow,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // acute accent
-        U0301, NoSymbol, Left, Left
+        U0301, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC08> { [
-        k, K, apostrophe, uparrow,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // grave accent
-        U0300, NoSymbol, Down, Down
+        U0300, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC09> { [
-        l, L, asterisk, rightarrow,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // diaresis
-        U0308, NoSymbol, Right, Right
+        U0308, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC10> { [
-        parenleft, bracketleft, braceleft, U301A,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // circumflex
-        U0302, NoSymbol, BackSpace, BackSpace
+        U0302, NoSymbol, NoSymbol, NoSymbol
     ] };
     // Third (bottom) row
     key <AB07> { [
-        m, M, U25CA, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // cedilLa
-        U0327, NoSymbol, Pointer_Button3, Pointer_Button3
+        U0327, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB08> { [
-        comma, semicolon, enfilledcircbullet, U2032,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // dot below
         U0323, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB09> { [
-        period, colon, periodcentered, abovedot,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // dot above
         U0307, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB10> { [
-        minus, underscore, endash, emdash,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         // macron
         U0304, NoSymbol, NoSymbol, NoSymbol
     ] };
