@@ -361,62 +361,58 @@ xkb_symbols "alphabet-section-numpad" {
     key.type[Group1] = "EIGHT_LEVEL";
     // First (topmost) numpad row.
     key <AD02> { [
-        w, W, rightsinglequotemark, dagger,
-        7, NoSymbol, ISO_First_Group, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        7, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AD03> { [
-        e, E, percent, NoSymbol,
-        8, NoSymbol, ISO_Prev_Group, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        8, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AD04> { [
-        r, R, ampersand, NoSymbol,
-        9, NoSymbol, ISO_Next_Group, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        9, NoSymbol, NoSymbol, NoSymbol
     ] };
     // Second numpad row.
     key <AC01> { [
         // TODO: the level four `〈` is not useful any more, since I
         // produce this through another means now.
-        a, A, less, U2329,
-        comma, NoSymbol, Escape, Escape
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        comma, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC02> { [
         // TODO: the level four `〉` is not useful any more, since I
         // produce this through another means now.
-        s, S, greater, U232A,
-        4, NoSymbol, XF86Back, XF86Back
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        4, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC03> { [
-        d, D, exclam, NoSymbol,
-        5, NoSymbol, XF86Forward, XF86Forward
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        5, NoSymbol, NoSymbol, NoSymbol
     ] };
-    // NOTE: Pressing control and alt keys on the seventh and eight
-    // level by using latch keys does not work that well.  See: issue in
-    // the `issues.org` file dated 2017-09-01.
-    key <AC04> {
-    symbols[Group1] = [
-        f, F, quotedbl, NoSymbol,
-        6, NoSymbol, Alt_L, Alt_L
+    key <AC04> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        6, NoSymbol, NoSymbol, NoSymbol
     ] };
     // Third numpad row.
     key <AB01> { [
-        z, Z, guillemotleft, U2039,
-        period, NoSymbol, Undo, Redo
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        period, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB02> { [
-        x, X, guillemotright, U203A,
-        1, NoSymbol, XF86Cut, XF86Cut
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        1, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB03> { [
-        c, C, leftdoublequotemark, NoSymbol,
-        2, NoSymbol, XF86Copy, XF86Copy
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        2, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB04> { [
-        v, V, rightdoublequotemark, NoSymbol,
-        3, NoSymbol, XF86Paste, XF86Paste
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        3, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB05> { [
-        b, B, U300E, U300C,
-        0, NoSymbol, Pointer_Button1, Pointer_Button1
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        0, NoSymbol, NoSymbol, NoSymbol
     ] };
 };
 
