@@ -376,8 +376,8 @@ xkb_symbols "alphabet-section-numpad" {
     key <AC01> { [
         // TODO: the level four `〈` is not useful any more, since I
         // produce this through another means now.
-        a, A, less, U2329, comma,
-        NoSymbol, Escape, Escape
+        a, A, less, U2329,
+        comma, NoSymbol, Escape, Escape
     ] };
     key <AC02> { [
         // TODO: the level four `〉` is not useful any more, since I
