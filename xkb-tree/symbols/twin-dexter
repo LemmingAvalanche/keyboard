@@ -13,82 +13,63 @@ xkb_symbols "latin" {
     key.type[Group1] = "EIGHT_LEVEL";
 
     key <AD01> { [
-        q, Q, leftsinglequotemark, U2607,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        q, Q, leftsinglequotemark, U2607
     ] };
     key <AD02> { [
-        w, W, rightsinglequotemark, dagger,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        w, W, rightsinglequotemark, dagger
     ] };
     // Duplicate commonly used symbols to third level of the alphabetic
     // section.
     key <AD03> { [
-        e, E, percent, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        e, E, percent, NoSymbol
     ] };
     key <AD04> { [
-        r, R, ampersand, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        r, R, ampersand, NoSymbol
     ] };
     key <AD05> { [
-        t, T, bar, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        t, T, bar, NoSymbol
     ] };
     key <AD06> { [
-        y, Y, backslash, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        y, Y, backslash, NoSymbol
     ] };
     key <AD07> { [
-        u, U, grave, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        u, U, grave, NoSymbol
     ] };
     key <AD08> { [
-        i, I, equal, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        i, I, equal, NoSymbol
     ] };
     key <AD09> { [
-        o, O, question, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        o, O, question, NoSymbol
     ] };
     key <AD10> { [
-        p, P, plus, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        p, P, plus, NoSymbol
     ] };
     key <AC01> { [
-        a, A, less, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        a, A, less, NoSymbol
     ] };
     key <AC02> { [
-        s, S, greater, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        s, S, greater, NoSymbol
     ] };
     key <AC03> { [
-        d, D, exclam, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        d, D, exclam, NoSymbol
     ] };
     key <AC04> { [
-        f, F, quotedbl, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        f, F, quotedbl, NoSymbol
     ] };
     key <AC05> { [
-        g, G, at, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        g, G, at, NoSymbol
     ] };
     key <AC06> { [
-        h, H, numbersign, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        h, H, numbersign, NoSymbol
     ] };
     key <AC07> { [
-        j, J, dollar, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        j, J, dollar, NoSymbol
     ] };
     key <AC08> { [
-        k, K, apostrophe, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        k, K, apostrophe, NoSymbol
     ] };
     key <AC09> { [
-        l, L, asterisk, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        l, L, asterisk, NoSymbol
     ] };
 };
 
