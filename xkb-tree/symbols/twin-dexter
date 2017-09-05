@@ -10,6 +10,10 @@ xkb_symbols "latin" {
     key <RALT> { [ Alt_R ] };
 
     // Make levels 5–8 possible.
+    //
+    // This layout does not define any keys on levels 5–8, but it
+    // inherits (includes) `my-extend` which defines keys for the
+    // seventh and eighth level.
     key.type[Group1] = "EIGHT_LEVEL";
 
     key <AD01> { [
