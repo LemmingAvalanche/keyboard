@@ -1,3 +1,9 @@
+// Common layout for all other layouts in this file to build on.  Not
+// really meant to be used directly.
+//
+// The name “latin” is just taken from the naming that Xkb itself used.
+// European layouts like `no` (Norwegian) inherit from some “latin”/
+// variant.
 default partial alphanumeric_keys
 xkb_symbols "latin" {
     // Use caps lock and the key to the left of the return key (on
