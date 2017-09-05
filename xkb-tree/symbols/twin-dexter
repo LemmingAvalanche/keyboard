@@ -593,3 +593,164 @@ xkb_symbols "no-p5" {
         [ dead_iota ]
     };
 };
+
+// My variation of extend layers, using levels seven and eight.
+//
+// See: https://forum.colemak.com/topic/2014-extend-extra-extreme/
+xkb_symbols "my-extend" {
+
+    key <AD01> {
+    // Make an explicit group so that we can use an `actions` section
+    // (see below).
+    // NOTE: Pressing control and alt keys on the seventh and eight
+    // level by using latch keys does not work that well.  See: issue in
+    // the `issues.org` file dated 2017-09-01.
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Control_L, Control_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate actions for control keys.
+        SetMods(mods=Control), SetMods(mods=Shift+Control)
+    ]
+    };
+    key <AD02> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, ISO_First_Group, NoSymbol
+    ] };
+    key <AD03> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, ISO_Prev_Group, NoSymbol
+    ] };
+    key <AD04> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, ISO_Next_Group, NoSymbol
+    ] };
+    key <AD05> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, ISO_Last_Group, NoSymbol
+    ] };
+    key <AD06> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Page_Up, Page_Up
+    ] };
+    key <AD07> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Home, Home
+    ] };
+    key <AD08> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Up, Up
+    ] };
+    key <AD09> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, End, End
+    ] };
+    key <AD10> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Delete, Delete
+    ] };
+    key <AC01> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Escape, Escape
+    ] };
+    key <AC02> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, XF86Back, XF86Back
+    ] };
+    key <AC03> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, XF86Forward, XF86Forward
+    ] };
+    // NOTE: Pressing control and alt keys on the seventh and eight
+    // level by using latch keys does not work that well.  See: issue in
+    // the `issues.org` file dated 2017-09-01.
+    key <AC04> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Alt_L, Alt_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate actions for alt keys.
+        SetMods(mods=Alt), SetMods(mods=Shift+Alt)
+    ]
+    };
+    key <AC05> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC06> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Page_Down, Page_Down
+    ] };
+    key <AC07> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Left, Left
+    ] };
+    key <AC08> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Down, Down
+    ] };
+    key <AC09> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Right, Right
+    ] };
+    key <AC10>	{ [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, BackSpace, BackSpace
+    ] };
+    key <AC11>	{ [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB01> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Undo, Redo
+    ] };
+    key <AB02> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, XF86Cut, XF86Cut
+    ] };
+    key <AB03> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, XF86Copy, XF86Copy
+    ] };
+    key <AB04> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, XF86Paste, XF86Paste
+    ] };
+    key <AB05> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Pointer_Button1, Pointer_Button1
+    ] };
+    key <AB06> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Pointer_Button2, Pointer_Button2
+    ] };
+    key <AB07> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Pointer_Button3, Pointer_Button3
+    ] };
+    // TODO: unmapped
+    key <AB08> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // TODO: unmapped
+    key <AB09> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // TODO: unmapped
+    key <AB10> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+
+};
