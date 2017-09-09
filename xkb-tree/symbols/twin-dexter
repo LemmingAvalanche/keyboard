@@ -471,7 +471,7 @@ xkb_symbols "no-p4" {
         [ dead_greek ]
     };
     replace key <AE12> {
-        [ dead_greek ]
+        [ dead_belowmacron ]
     };
 };
 
