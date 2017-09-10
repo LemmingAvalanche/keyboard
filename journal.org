@@ -126,3 +126,49 @@ access to arrow keys in that application.
 
 Maybe this was a failed experiment?  Maybe I should just make an Extend
 layer as one of the shift levels and drop the dead key variant?
+
+* [2017-09-10 Sun]
+
+** Using dead keys to insert strings like phrases or standard data
+
+A few days ago I had the idea to use dead key mappings to expand
+abbreviations to full strings.  I have made two commits containing a few
+such things in my dotfiles repository:
+
+- r#a693606da1db (“Try to make abbreviation expanders”, 2017-09-07)
+- r#fd2c279d1c68 (“Add some “standard data””, 2017-09-08)
+
+As an example, I can type ~<dead_greek> <b> <t> <w>~ and get the
+resulting string ~by the way~:
+
+#+BEGIN_EXAMPLE
+<dead_greek> <b> <t> <w> : "by the way"
+#+END_EXAMPLE
+
+Another example is not a phrase but some “data”, namely my name:
+
+#+BEGIN_EXAMPLE
+<dead_greek> <k> : "Kristoffer Haugsbakk"
+#+END_EXAMPLE
+
+This is useful when I have to type in my name in some form online and
+Firefox does not know that it should fill it in automatically.
+
+*** Novelty
+
+At least to me this is a novel idea.  I have seen this implemented
+elsewhere, but they have used ~<Multi_key>~ (the compose key).  I prefer
+to use the compose key for three-combo
+mappings [fn:for_example_compose], so I have been hesitant to make
+compose key mappings for things like phrases.  But it hit me that,
+although I might not want to occupy compose mappings for this purpose,
+there are a lot of dead keys that I can use that I don’t have a need
+for.  By using dead keys for this purpose, I can have my cake and eat it
+too—I can use three-combo compose mappings while still being able to
+have mappings for phrases and data (such my name and email addresses).
+
+[fn:for_example_compose]: For example this currency mapping:
+
+#+BEGIN_EXAMPLE
+<Multi_key> <y> <dollar> : "¥" # YEN SIGN
+#+END_EXAMPLE
