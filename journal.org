@@ -172,3 +172,24 @@ have mappings for phrases and data (such my name and email addresses).
 #+BEGIN_EXAMPLE
 <Multi_key> <y> <dollar> : "¥" # YEN SIGN
 #+END_EXAMPLE
+
+*** Using tab
+
+Based on an experiment I just did I can use special characters like tab
+(~\t~) in strings.  This should mean that I can embed tabs to tab to the
+next field, like when filling in forms online.
+
+For exaomple, this mapping:
+
+#+BEGIN_EXAMPLE
+# Address
+<dead_greek> <a> : "Karibakken 88\t1234\tFugletveit"
+#+END_EXAMPLE
+
+Should produce these strings, delimited with a tab:
+
+- ~Karibakken~
+- ~1234~
+- ~Fugletveit~
+
+Where each bullet corresponds to a field.
