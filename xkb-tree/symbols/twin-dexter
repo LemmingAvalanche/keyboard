@@ -31,7 +31,7 @@ xkb_symbols "latin" {
     // Duplicate commonly used symbols to third level of the alphabetic
     // section.
     key <AD03> { [
-        e, E, percent, NoSymbol
+        e, E, percent, righttack
     ] };
     key <AD04> { [
         r, R, ampersand, NoSymbol
