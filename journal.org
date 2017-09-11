@@ -193,3 +193,62 @@ Should produce these strings, delimited with a tab:
 - ~Fugletveit~
 
 Where each bullet corresponds to a field.
+
+* [2017-09-11 Mon]
+
+** Rolling key combinations with compose key
+
+I just found out that it works quite well to “roll” my fingers from the
+compose key (`Multi_key`) to another shift key, in the case that the
+first symbol following the compose key is on some shift level.  For
+example, if I want to type capital lambda (`Λ`), I need to type this
+sequence:
+
+#+BEGIN_EXAMPLE
+Multi_key shift l f
+#+END_EXAMPLE
+
+One way to achieve this is to type the compose key on the right side,
+then the shift key on the left side, then the ~l~ key, then the ~f~ key:
+
+#+BEGIN_EXAMPLE
+7, 4, l, f
+#+END_EXAMPLE
+
+This way I alternate between the right and left hand two times.
+
+It turns out that it is more comfortable to do it in this way:
+
+#+BEGIN_EXAMPLE
+5, 4, l, f
+#+END_EXAMPLE
+
+In other words, use both the compose and shift key on the left side.
+More concretely, depress the ~5~ key with the index finger and then the
+~4~ key with the middle finger—this can be done in a rolling motion.
+
+I think I haven’t tried to do this that much since rolling my fingers
+quickly does not work for multiple latch keys; if I roll my keys in
+quick succession, both latches don’t register properly.  But rolling my
+fingers works much better when I first hit the compose key and then a
+latch shift key.
+
+I think I should keep in mind to do this for all capital greek letters,
+and also for all compose key mappings that start with a shifted key.
+
+*** Implications for compose mappings
+
+I think I should rethink some mappings with this “rolling technique” in
+mind.  In particular, some of the mappings should use a shifted key for
+the first argument instead of the second argument.  For example, this
+currency mapping:
+
+#+BEGIN_EXAMPLE
+<Multi_key> <y> <dollar> : "¥" # YEN SIGN
+#+END_EXAMPLE
+
+Should probably be changed to this:
+
+#+BEGIN_EXAMPLE
+<Multi_key> <dollar> <y> : "¥" # YEN SIGN
+#+END_EXAMPLE
