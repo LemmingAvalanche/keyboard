@@ -133,10 +133,13 @@ layer as one of the shift levels and drop the dead key variant?
 
 A few days ago I had the idea to use dead key mappings to expand
 abbreviations to full strings.  I have made two commits containing a few
-such things in my dotfiles repository:
+such things in my dotfiles repository[fn:update-about-insert-strings]:
 
 - r#a693606da1db (“Try to make abbreviation expanders”, 2017-09-07)
 - r#fd2c279d1c68 (“Add some “standard data””, 2017-09-08)
+
+[fn:update-about-insert-strings] Update 2017-10-18: The second commit
+    does not exist anymore since I have removed it in a rebase.
 
 As an example, I can type ~<dead_greek> <b> <t> <w>~ and get the
 resulting string ~by the way~:
@@ -145,7 +148,7 @@ resulting string ~by the way~:
 <dead_greek> <b> <t> <w> : "by the way"
 #+END_EXAMPLE
 
-Another example is not a phrase but some “data”, namely my name:
+Another example is not a phrase but some “data”, namely my name[fn:update-auto-expand-name]:
 
 #+BEGIN_EXAMPLE
 <dead_greek> <k> : "Kristoffer Haugsbakk"
@@ -153,6 +156,9 @@ Another example is not a phrase but some “data”, namely my name:
 
 This is useful when I have to type in my name in some form online and
 Firefox does not know that it should fill it in automatically.
+
+[fn:update-auto-expand-name]: Update 2017-10-18: This does not exist
+    anymore, either (see previous footnote about the removed commit).
 
 *** Novelty
 
