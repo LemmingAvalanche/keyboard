@@ -1,0 +1,21 @@
+* The source repository of XKB configurations
+
+Apparently this is where you can find the releases of the “source” of
+the XKB configuration that comes installed on Linux etc.:
+
+https://www.freedesktop.org/wiki/Software/XKeyboardConfig/
+
+I downloaded the repository and indeed it looks similar my XKB
+configuration located at ~/usr/share/X11/xkb/~.  The directory structure
+looks the same, and I opened the Norwegian (~no~) keyboard mapping file
+and it looked similar to the one I have on my system.
+
+* Example of custom configurations
+
+Adam Spiers has a repository which among other things contains custom
+keymappings, keycodes, and geometry:
+
+https://github.com/aspiers/desktop-config/tree/master/.xkb
+
+His keymappings (the ~symbols~ directory) might be useful to look at in
+order to figure out how to structure things.
