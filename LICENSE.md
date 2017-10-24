@@ -1,15 +1,7 @@
-Copyright for most of this directory tree: unknown/undecided.
+Copyright 2017, Kristoffer Haugsbakk, unless otherwise noted.
 
-Some of the content is adapted from Øystein Bech Gadmar’s Extend layer
-and is thus perhaps subject to the copyright given for that content (see
-below).  This content taken from his [Big bag of tricks] repository,
-cloned in August of 2017.
-
-[Big bag of tricks]: https://github.com/DreymaR/BigBagKbdTrixXKB
-
-# Copyright for Extend layout
-
-Copyright 2016, Øystein Bech Gadmar (a.k.a. "DreymaR")
+Copyright 2016, Øystein Bech Gadmar (a.k.a. "DreymaR"), for
+`xkb-tree/symbols/extend`.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
