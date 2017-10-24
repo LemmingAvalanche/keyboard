@@ -95,3 +95,7 @@ find -name 'keysymdef.h'
 #+END_SRC
 
 This should give you several results.
+
+* License
+
+The MIT license; see `LICENSE.md`.
