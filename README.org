@@ -1,4 +1,30 @@
-Keyboard mappings for Xkb.
+Keyboard mappings for Linux using Xkb.
+
+This repository contains keyboard layouts which are based on an ISO
+(European) 105 key Qwerty layout, more specifically the Norwegian layout
+(~no~).  The two main layout variations are “programming” (meant for
+writing English and programming) and “Norwegian” (meant for writing
+Norwegian, not great for programming).  The range of layouts vary from
+small (but arguably very worthwhile) customizations to radical
+customizations that makes the typing experience much better, in the
+author’s experience.
+
+These layouts are Qwerty in the sense that no letters are changed
+around.  But the customizations are still quite drastic.  The goal of
+these layouts is not to make a new arrangement of letters that is better
+optimized for speed or ergonomics of writing prose (based on alternating
+hands, letter frequencies, etc.), like layouts like Dvorak and Colemaks
+tries to do.  Instead, the goal of these layouts could be contrasted by
+describing them as customizing the /fringes/ of the layouts, such as the
+~Caps Lock~ key and the numeric row.  For example, layout ~no-p1~ uses
+the ~Caps Lock~ key and the ~BKSL~ key (left of the ~Return~ key on
+European keyboards) to access “shift level 3”, which makes it easier to
+access a lot of symbols compared to the regular Norwegian layout; on the
+regular Norwegian layout one has to use the ~AltGr~ to access the third
+level and type symbols like the braces (~{}~) and brackets (~[]~).
+~no-p1~ also makes the [[https://en.wikipedia.org/wiki/Compose_key][Compose key]] available on both sides of the
+keyboard, which makes it convenient to type combinations (compositions)
+like ~+- ⇒ ±~, ~so ⇒ §~, ~!? ⇒ ‽~, ~<3 ⇒ ♥~ and many (many) more.
 
 * Software needed
 
