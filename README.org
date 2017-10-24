@@ -124,4 +124,4 @@ This should give you several results.
 
 * License
 
-The MIT license; see `LICENSE.md`.
+The MIT license; see ~LICENSE.md~.
