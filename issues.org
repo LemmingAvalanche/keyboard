@@ -1,4 +1,44 @@
-* Can't map a key to use five or more levels :issue-closed:
+* TODO make test script for the keymappings
+
+Make a test script for the keymappings to run on every commit.  This to
+make sure that silly mistakes like parsing errors or using wrong
+includes don’t sneak in.
+
+I just found out that I used the wrong includes in my keymappings file.
+I should take steps to avoid this in the future.
+
+* TODO What do the rest of the “multi-character” and “international” keys do?
+
+~keysymdef.h~ contains this section:
+
+#+BEGIN_EXAMPLE
+/* International & multi-key character composition */
+
+#define XK_Multi_key                     0xff20  /* Multi-key character compose */
+#define XK_Codeinput                     0xff37
+#define XK_SingleCandidate               0xff3c
+#define XK_MultipleCandidate             0xff3d
+#define XK_PreviousCandidate             0xff3e
+#+END_EXAMPLE
+
+I know and use multi key, but what do the rest of the keys do?  Could
+they be useful to me?  I want to find out.  My suspicion is that they
+have to do with input methods for things like Asian languages.
+
+I googled this and found this on the “Unreliable guide to XKB”:
+
+#+BEGIN_QUOTE
+The file /usr/X11R6/lib/X11/locale/localename/Compose contains the list
+of compose sequences for a particular locale or encoding (eg. iso8859-2)
+and what they produce. (There are other composition keys, such as
+Codeinput, but I don't know what they do.
+#+END_QUOTE
+
+(Source: https://www.charvolant.org/doug/xkb/html/node5.html)
+
+* Closed issues
+
+** Can't map a key to use five or more levels :issue-closed:
 
 When I make a map looking like this:
 
@@ -10,7 +50,7 @@ In other words, a key with eight levels, the key doesn't work properly any more.
 I can still access the first and second levels, but not the third and fourth (or
 the ones beyond that).
 
-** DONE Fix this issue when I need more than four levels
+*** DONE Fix this issue when I need more than four levels
 CLOSED: [2016-10-15 lø. 19:07]
 - CLOSING NOTE [2016-10-15 lø. 19:07] \\
   This issue was resolved in commit r#d721475e30e0 (“Add access to
@@ -21,7 +61,7 @@ some "compose" key sequences of my own, and (3) get used to using this new
 setup. It only makes sense to worry about levels five to eight after I have done
 all of that.
 
-* Note that depressing all shift keys on the left side of the at the keyboard introduces jamming :issue-closed:
+** Note that depressing all shift keys on the left side of the at the keyboard introduces jamming :issue-closed:
 
 When I try to press all shift levels on the left side of the keyboard, the third
 key won't register. I think this is because of keyboard jamming, i.e., that
@@ -43,7 +83,7 @@ keyboard jam, but most of the other keys on the right side work.
 
 [fn:xev_note] Found out by running ~xev~.
 
-* Find a way to compile and use configurations without having to be root :issue-closed:
+** Find a way to compile and use configurations without having to be root :issue-closed:
 
 My current setup means that I need sudo privileges in order to use them; I copy
 the configuration files to ~/usr/share/X11/xkb/symbols/~ directory. This means
@@ -52,8 +92,8 @@ find a way to compile and use these files as a regular user. For example, maybe
 there is some dot file or configuration file related to X11 that could handle
 this in a neat way?
 
-** DONE Find a way to use these files without sudo privileges
-   CLOSED: [2017-06-04 sø. 19:05]
+*** DONE Find a way to use these files without sudo privileges
+    CLOSED: [2017-06-04 sø. 19:05]
 
    - CLOSING NOTE [2017-06-04 sø. 19:05] \\
      I seem to have found a way to compile and use keymap files without
@@ -89,7 +129,7 @@ this in a neat way?
      #+END_SRC
 
      Seems like it doesn’t work.
-** Update [2017-05-11 to.]
+*** Update [2017-05-11 to.]
 
 It seems that this link contains some good pointers:
 
@@ -99,38 +139,30 @@ Also this one:
 
     https://askubuntu.com/questions/876005/what-file-is-the-setxkbmap-option-rules-meant-to-take-and-how-can-i-add-keyboa/896297#896297
 
-** Update [2017-06-04 sø.]
+*** Update [2017-06-04 sø.]
 
 I downloaded [[https://github.com/aspiers/desktop-config][Adam Spier’s]] keyboard configuration.  He has some custom
 keyboard mappings.  By figuring out how he uses ~setxkbmap~ to enable
 his custom mappings, I could perhaps figure out how to do the same and
 in turn be able to use my own mappings without sudo priviliges.
 
-*** Context
+**** Context
 
 I found the repository in this email:
 
 https://groups.google.com/a/listserv.bat.ru/forum/#!topic/xkb/g0Mr_IJqMKQ
 
-* DONE find a project name :issue-closed:
-  CLOSED: [2017-06-05 ma. 14:57]
+** DONE find a project name :issue-closed:
+   CLOSED: [2017-06-05 ma. 14:57]
 
   - CLOSING NOTE [2017-06-05 ma. 14:57] \\
     Project name: “Twin Dexter”.
 I need a project name for these configurations.  I want to name the
 keymapping file after the project.
 
-* TODO make test script for the keymappings
 
-Make a test script for the keymappings to run on every commit.  This to
-make sure that silly mistakes like parsing errors or using wrong
-includes don’t sneak in.
-
-I just found out that I used the wrong includes in my keymappings file.
-I should take steps to avoid this in the future.
-
-* DONE Make experimental keymapping using numeric row :issue-closed:
-  CLOSED: [2017-07-03 ma. 20:10]
+** DONE Make experimental keymapping using numeric row :issue-closed:
+   CLOSED: [2017-07-03 ma. 20:10]
 
   - CLOSING NOTE [2017-07-03 ma. 20:10] \\
     This has been implemented in keymapping ~no-p3~.
@@ -157,7 +189,7 @@ The more radical next step is to replace more of the numeric keys with
 things like 1st and 2nd level shift — and perhaps even more stuff.  Then
 I would not be able to use the numeric row for producing numbers.
 
-** What about producing numbers?
+*** What about producing numbers?
 
 The most “radical” version of this scheme is to put both compose and
 shift keys on the numeric row.  But then I would need to find some other
@@ -166,7 +198,7 @@ I’ve had separately of this idea — is to make a “numpad” on the
 alphabetic section.  this would be achieved by assigning some shift
 level to these keys.  For example, maybe use the fifth level?
 
-** Problems
+*** Problems
 
 What comes to my mind as the biggest drawback of this approach is that
 it could become hard to use number keys together with control, alt, and
@@ -178,9 +210,9 @@ numbers and that I also use.
 One way to mitigate this would be to have an alternative keyboard layout
 to switch to when it becomes more convenient to use the numberic row.
 
-* Keyboard scripts :issue-closed:
+** Keyboard scripts :issue-closed:
 
-** "AltGr" button produces newline when quickly pressed
+*** "AltGr" button produces newline when quickly pressed
 
 This is due to the way I have mapped the "Return" key to "ISO_Level3_Shift", and
 then this modifier back to produce the "Return" action/character when pressed.
@@ -193,14 +225,14 @@ rapidly by mistake. But it could become an issue when I am going to map "Caps
 Lock" to act as another level 3 modifier when held down and pressed with other
 keys.
 
-** I should use ~setxkbmap~ instead of ~xmodmap~
+*** I should use ~setxkbmap~ instead of ~xmodmap~
 
 I should use ~setxkbmap~ instead of ~xmodmap~ to map keys in the script, since
 ~xmodmap~ seems to be effectively deprecated in favour of ~setxkbmap~ in Ubuntu.
 Also, apparently running a ~setxkbmap~ after having run an ~xmodmap~ command
 might invalidate whatever changes the ~xmodmap~ invocation made.
 
-** The order matters when combining level 2 and level 3 shifts
+*** The order matters when combining level 2 and level 3 shifts
 
 This only happens for the ~<BKSL>~ key.
 
@@ -218,7 +250,7 @@ make ~<BKSL>~ a "level 3 shift" key. But this is /not/ an issue when it comes to
 ~<Caps_Lock>~ and ~<Shift_L>~; they work just as well as ~<Alt_R>~ combined with
 ~<Shift_R>~.
 
-*** Update 1
+**** Update 1
 
 When pressing ~<BKSL>~ while running ~xev~, the "KeyPress event" registers the
 keysym as "ISO_Level3_Shift", but the "KeyRelease event" registers the keysym as
@@ -227,9 +259,9 @@ and release events registers the keysym as "ISO_Level3_Shift".
 
 This might be relevant to this issue.
 
-*** Update 2
+**** Update 2
 
-**** Not key ghosting
+***** Not key ghosting
 
 I did some testing in ~xev~. I suspected that it might have to do with key
 ghosting, but that does not seem to be the case, since ~xev~ manages to register
@@ -243,7 +275,7 @@ could not hold down these keys together and have them all register. (These three
 keys activate all the three shift levels, which means that I get access to the
 eight level when I depress them simultaneusly.)
 
-**** ~NoSymbol~ key when pressed after ~Shift_R~
+***** ~NoSymbol~ key when pressed after ~Shift_R~
 
 When I depress and hold ~Shift_R~ and then depress ~BKSL~, the keysym for this
 key is hex value 0x0, ~NoSymbol~.
@@ -256,26 +288,26 @@ has no /levels/ any more, it gets registers as being a "no symbol".
 I think what I need to do is to register ~BKSL~ in the ~no_p1~ file so that it
 won't get mistaken for a "shiftable" key (like the alphanumeric keys).
 
-**** Also a problem for ~LSGT~
+***** Also a problem for ~LSGT~
 
 ~LSGT~ also has this issue. Which is not surprising, since it too was
 originally a "shiftable key".
 
-*** Update 3: Issue resolved
+**** Update 3: Issue resolved
 
 I fixed the issue by editing the ~no_p1~ file (see the git repository for that
 file). Basically I used the xkb construct ~modifier_map~ to declare ~BKSL~ and
 ~LSGT~ to be ~mod3~ and ~mod5~, respectively. I also had to map all levels of
 these keys to their respective shift levels.
 
-* Re-running script causes ~Return~ key to produce multiple newlines :issue-closed:
+** Re-running script causes ~Return~ key to produce multiple newlines :issue-closed:
 
 When I re-run the script (perhaps because I ran some ~setxkbmap~ command and
 that nullified the changes done by ~xmodmap~), the ~Return~ key starts producing
 more than one newlines. It seems that the more times I run the script, the more
 newlines it produces.
 
-* Previous commit introduced errors :issue-closed:
+** Previous commit introduced errors :issue-closed:
 
 The previous commit introduced these issues:
 
@@ -287,7 +319,7 @@ that mapped "CAPS" to ~modifier_3~. Since that is gone, and my configuration
 (the "no_p1" Xkb configuration file) doesn’t change the default behaviour of
 "CAPS", then of course it goes back to working as caps lock.
 
-** Update: issue resolved
+*** Update: issue resolved
 
 I added the following line to my "no_p1" keyboard configuration:
 
@@ -298,8 +330,8 @@ include "level3(caps_switch)"
 Which nicely does what I currently want; "CAPS" acts as a level 3 switch and
 nothing else (i.e., not a dual purpose key).
 
-* DONE option ~altwin(swap_alt_win)~ does not work for ~no-p2~ :issue-closed:
-  CLOSED: [2017-06-23 fr. 20:54]
+** DONE option ~altwin(swap_alt_win)~ does not work for ~no-p2~ :issue-closed:
+   CLOSED: [2017-06-23 fr. 20:54]
   - CLOSING NOTE [2017-06-23 fr. 20:54] \\
     Changing this line:
 
@@ -325,7 +357,7 @@ setxkbmap -option altwin:swap_alt_win "no(nodeadkeys)"
 So there must be something wrong with my keymappings.  Probably with one
 of the alt keys.
 
-** ~xev~ output
+*** ~xev~ output
 
 This is the output for a swap setup that works, when pressing the right
 and left super keys:
@@ -389,7 +421,7 @@ KeyRelease event, serial 76, synthetic NO, window 0x3600001,
     XFilterEvent returns: False
 #+END_SRC
 
-** What Emacs says
+*** What Emacs says
 
 Using the not-functioning ~no-p2~ setup, this is what the echo buffer
 says when I press ~Super-f~ for the left super button (while in normal
@@ -410,8 +442,8 @@ pressing the left.  I am guessing that this has to do with the fact that
 I map the ~AltGr~ key (right alt) to act like “alt”, i.e., to act like
 the right alt key.
 
-* DONE Use some hyper keybinding to change layouts or groups :issue-closed:
-  CLOSED: [2017-09-01 Fri 12:41]
+** DONE Use some hyper keybinding to change layouts or groups :issue-closed:
+   CLOSED: [2017-09-01 Fri 12:41]
 
   - CLOSING NOTE [2017-09-01 Fri 12:41] \\
     I have set up four group switching keys accessible on one of the
@@ -423,8 +455,8 @@ keybinding to change layouts or groups.  That way I could use ~no-p4~
 and then switch to ~no-p3~ when I need to change windows, since Xmonad
 does not work well with ~no-p4~ (that has to do with modifiers).
 
-* DONE Return and Backspace keys don’t work with a certain group switch setup :issue-closed:
-  CLOSED: [2017-09-01 Fri 12:43]
+** DONE Return and Backspace keys don’t work with a certain group switch setup :issue-closed:
+   CLOSED: [2017-09-01 Fri 12:43]
 
   - CLOSING NOTE [2017-09-01 Fri 12:43] \\
     I haven’t found a solution for this specific issue, but it is not really
@@ -474,7 +506,7 @@ next and previous group, respectively), but if I switch to ~no-p4~,
 these keys produce ~NoSymbol~ when unshifted (level 1), but can emit the
 group switches on the fourt level.
 
-** Update 2017-07-08T16:51:01+0200
+*** Update 2017-07-08T16:51:01+0200
 
 According to ~xev~, the return and backspace keys both emit ~NoSymbol~
 at level 2 and 3, the group switches at level 4, and the regular
@@ -509,7 +541,7 @@ I tried to do two things to try to find the problematic part of ~no-p4~:
 
 But neither of these worked.
 
-** Update  2017-07-08T17:15:28+0200
+*** Update  2017-07-08T17:15:28+0200
 
 I removed almost everything from ~no-p4~ to see if the problem
 persisted:
@@ -523,43 +555,15 @@ xkb_symbols "no-p4" {
 
 And yes, return and backspace then still didn’t work on ~no-p4~.
 
-** Update 2017-07-08T17:30:30+0200
+*** Update 2017-07-08T17:30:30+0200
 
 I tried to move the include of the group switch last in both ~no-p3~,
 ~no-p4~.  That did not make any difference.
 
-* TODO What do the rest of the “multi-character” and “international” keys do?
 
-~keysymdef.h~ contains this section:
+** [2017-09-01 Fri]
 
-#+BEGIN_EXAMPLE
-/* International & multi-key character composition */
-
-#define XK_Multi_key                     0xff20  /* Multi-key character compose */
-#define XK_Codeinput                     0xff37
-#define XK_SingleCandidate               0xff3c
-#define XK_MultipleCandidate             0xff3d
-#define XK_PreviousCandidate             0xff3e
-#+END_EXAMPLE
-
-I know and use multi key, but what do the rest of the keys do?  Could
-they be useful to me?  I want to find out.  My suspicion is that they
-have to do with input methods for things like Asian languages.
-
-I googled this and found this on the “Unreliable guide to XKB”:
-
-#+BEGIN_QUOTE
-The file /usr/X11R6/lib/X11/locale/localename/Compose contains the list
-of compose sequences for a particular locale or encoding (eg. iso8859-2)
-and what they produce. (There are other composition keys, such as
-Codeinput, but I don't know what they do.
-#+END_QUOTE
-
-(Source: https://www.charvolant.org/doug/xkb/html/node5.html)
-
-* [2017-09-01 Fri]
-
-** Control and alt keys on extend layers don’t work with latch keys :issue-closed:
+*** Control and alt keys on extend layers don’t work with latch keys :issue-closed:
 
 Right now I can access left control and left alt on the extend layers on
 the ~Q~ and ~F~ keys, respectively.  This works perfectly if I press
@@ -587,7 +591,7 @@ lowercase ~h~ is the keypress event, as expected.  So the first key
 pressed after pressing the left control must have consumed the latch key
 states.
 
-*** Update 2017-09-02T01:29:51+02:00
+**** Update 2017-09-02T01:29:51+02:00
 
 On further reflection, a control key not consuming the latch states
 makes perfect sense.  When I for example want to press ~Control+D~ by
@@ -628,7 +632,7 @@ suspect that I focused on actions that were meant to clear
 (consume/release) /held down/ modifiers, while I wanted to eliminate
 latched modifiers.  If that makes sense.
 
-**** What now?
+***** What now?
 
 Solving this problem would make a very niché use-case for this control
 key possible: latch two levels in order to get to a control key on the
