@@ -1,4 +1,4 @@
-* Can't map a key to use five or more levels :issue_resolved:
+* Can't map a key to use five or more levels :issue-closed:
 
 When I make a map looking like this:
 
@@ -200,7 +200,7 @@ I should use ~setxkbmap~ instead of ~xmodmap~ to map keys in the script, since
 Also, apparently running a ~setxkbmap~ after having run an ~xmodmap~ command
 might invalidate whatever changes the ~xmodmap~ invocation made.
 
-** The order matters when combining level 2 and level 3 shifts :issue_resolved:
+** The order matters when combining level 2 and level 3 shifts :issue-closed:
 
 This only happens for the ~<BKSL>~ key.
 
@@ -275,7 +275,7 @@ that nullified the changes done by ~xmodmap~), the ~Return~ key starts producing
 more than one newlines. It seems that the more times I run the script, the more
 newlines it produces.
 
-* Previous commit introduced errors :issue_resolved:
+* Previous commit introduced errors :issue-closed:
 
 The previous commit introduced these issues:
 
