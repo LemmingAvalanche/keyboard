@@ -562,6 +562,13 @@ I tried to move the include of the group switch last in both ~no-p3~,
 
 ** Control and alt keys on extend layers don’t work with latch keys :issue-closed:
 
+*Update 2017-10-25*: Like mentioned in an update further down this
+behaviour is pretty much to be expected.  It’s not an issue per se, but
+but I’ll keep it around since it can serve as an explanation for the
+behavior.
+
+---
+
 Right now I can access left control and left alt on the extend layers on
 the ~Q~ and ~F~ keys, respectively.  This works perfectly if I press
 down the different shift keys in the regular way (non-latch) in order to
