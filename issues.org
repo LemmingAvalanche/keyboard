@@ -560,8 +560,6 @@ And yes, return and backspace then still didn’t work on ~no-p4~.
 I tried to move the include of the group switch last in both ~no-p3~,
 ~no-p4~.  That did not make any difference.
 
-
-
 ** Control and alt keys on extend layers don’t work with latch keys :issue-closed:
 
 Right now I can access left control and left alt on the extend layers on
