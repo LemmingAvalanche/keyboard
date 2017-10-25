@@ -21,7 +21,7 @@ some "compose" key sequences of my own, and (3) get used to using this new
 setup. It only makes sense to worry about levels five to eight after I have done
 all of that.
 
-* Note that depressing all shift keys on the left side of the at the keyboard introduces jamming
+* Note that depressing all shift keys on the left side of the at the keyboard introduces jamming :issue-closed:
 
 When I try to press all shift levels on the left side of the keyboard, the third
 key won't register. I think this is because of keyboard jamming, i.e., that
@@ -43,7 +43,7 @@ keyboard jam, but most of the other keys on the right side work.
 
 [fn:xev_note] Found out by running ~xev~.
 
-* Find a way to compile and use configurations without having to be root
+* Find a way to compile and use configurations without having to be root :issue-closed:
 
 My current setup means that I need sudo privileges in order to use them; I copy
 the configuration files to ~/usr/share/X11/xkb/symbols/~ directory. This means
@@ -112,7 +112,7 @@ I found the repository in this email:
 
 https://groups.google.com/a/listserv.bat.ru/forum/#!topic/xkb/g0Mr_IJqMKQ
 
-* DONE find a project name
+* DONE find a project name :issue-closed:
   CLOSED: [2017-06-05 ma. 14:57]
 
   - CLOSING NOTE [2017-06-05 ma. 14:57] \\
@@ -129,7 +129,7 @@ includes don’t sneak in.
 I just found out that I used the wrong includes in my keymappings file.
 I should take steps to avoid this in the future.
 
-* DONE Make experimental keymapping using numeric row
+* DONE Make experimental keymapping using numeric row :issue-closed:
   CLOSED: [2017-07-03 ma. 20:10]
 
   - CLOSING NOTE [2017-07-03 ma. 20:10] \\
@@ -178,7 +178,7 @@ numbers and that I also use.
 One way to mitigate this would be to have an alternative keyboard layout
 to switch to when it becomes more convenient to use the numberic row.
 
-* Keyboard scripts
+* Keyboard scripts :issue-closed:
 
 ** "AltGr" button produces newline when quickly pressed
 
@@ -200,7 +200,7 @@ I should use ~setxkbmap~ instead of ~xmodmap~ to map keys in the script, since
 Also, apparently running a ~setxkbmap~ after having run an ~xmodmap~ command
 might invalidate whatever changes the ~xmodmap~ invocation made.
 
-** The order matters when combining level 2 and level 3 shifts :issue-closed:
+** The order matters when combining level 2 and level 3 shifts
 
 This only happens for the ~<BKSL>~ key.
 
@@ -268,7 +268,7 @@ file). Basically I used the xkb construct ~modifier_map~ to declare ~BKSL~ and
 ~LSGT~ to be ~mod3~ and ~mod5~, respectively. I also had to map all levels of
 these keys to their respective shift levels.
 
-* Re-running script causes ~Return~ key to produce multiple newlines
+* Re-running script causes ~Return~ key to produce multiple newlines :issue-closed:
 
 When I re-run the script (perhaps because I ran some ~setxkbmap~ command and
 that nullified the changes done by ~xmodmap~), the ~Return~ key starts producing
@@ -298,7 +298,7 @@ include "level3(caps_switch)"
 Which nicely does what I currently want; "CAPS" acts as a level 3 switch and
 nothing else (i.e., not a dual purpose key).
 
-* DONE option ~altwin(swap_alt_win)~ does not work for ~no-p2~
+* DONE option ~altwin(swap_alt_win)~ does not work for ~no-p2~ :issue-closed:
   CLOSED: [2017-06-23 fr. 20:54]
   - CLOSING NOTE [2017-06-23 fr. 20:54] \\
     Changing this line:
@@ -410,7 +410,7 @@ pressing the left.  I am guessing that this has to do with the fact that
 I map the ~AltGr~ key (right alt) to act like “alt”, i.e., to act like
 the right alt key.
 
-* DONE Use some hyper keybinding to change layouts or groups
+* DONE Use some hyper keybinding to change layouts or groups :issue-closed:
   CLOSED: [2017-09-01 Fri 12:41]
 
   - CLOSING NOTE [2017-09-01 Fri 12:41] \\
@@ -423,7 +423,7 @@ keybinding to change layouts or groups.  That way I could use ~no-p4~
 and then switch to ~no-p3~ when I need to change windows, since Xmonad
 does not work well with ~no-p4~ (that has to do with modifiers).
 
-* DONE Return and Backspace keys don’t work with a certain group switch setup
+* DONE Return and Backspace keys don’t work with a certain group switch setup :issue-closed:
   CLOSED: [2017-09-01 Fri 12:43]
 
   - CLOSING NOTE [2017-09-01 Fri 12:43] \\
@@ -559,7 +559,7 @@ Codeinput, but I don't know what they do.
 
 * [2017-09-01 Fri]
 
-** Control and alt keys on extend layers don’t work with latch keys
+** Control and alt keys on extend layers don’t work with latch keys :issue-closed:
 
 Right now I can access left control and left alt on the extend layers on
 the ~Q~ and ~F~ keys, respectively.  This works perfectly if I press
