@@ -645,17 +645,20 @@ xkb_symbols "my-extend" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, XF86Paste, XF86Paste
     ] };
+    // TODO: unmapped
     key <AB05> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, Pointer_Button1, Pointer_Button1
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // TODO: unmapped
     key <AB06> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, Pointer_Button2, Pointer_Button2
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // TODO: unmapped
     key <AB07> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, Pointer_Button3, Pointer_Button3
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     // TODO: unmapped
     key <AB08> { [
