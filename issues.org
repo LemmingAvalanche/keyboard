@@ -302,6 +302,11 @@ these keys to their respective shift levels.
 
 ** Re-running script causes ~Return~ key to produce multiple newlines :issue-closed:
 
+*Update 2017-10-25*: This is not relevant any more since I don’t use
+Xcape (I think that was what was causing it).
+
+---
+
 When I re-run the script (perhaps because I ran some ~setxkbmap~ command and
 that nullified the changes done by ~xmodmap~), the ~Return~ key starts producing
 more than one newlines. It seems that the more times I run the script, the more
