@@ -655,11 +655,24 @@ xkb_symbols "my-extend" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
-    // TODO: unmapped
-    key <AB07> { [
+    key <AB07> {
+    // Make an explicit group so that we can use an `actions` section
+    // (see below).
+    // NOTE: Pressing control and alt keys on the seventh and eight
+    // level by using latch keys does not work that well.  See: issue in
+    // the `issues.org` file dated 2017-09-01.
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
-    ] };
+        NoSymbol, NoSymbol, Alt_R, Alt_R
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate actions for alt keys.
+        SetMods(mods=Alt), SetMods(mods=Shift+Alt)
+    ]
+    };
     // TODO: unmapped
     key <AB08> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
