@@ -85,6 +85,13 @@ keyboard jam, but most of the other keys on the right side work.
 
 ** Find a way to compile and use configurations without having to be root :issue-closed:
 
+*Update 2017-10-25*: This issue is not relevant any more since I mirror
+the directory tree of Xkb which lets me set the layouts with Setxbmap
+directly.  This means that I point directly to the layouts instead of
+copying the layouts to ~/usr/share/X11/xkb/symbols~ using ~sudo~.
+
+---
+
 My current setup means that I need sudo privileges in order to use them; I copy
 the configuration files to ~/usr/share/X11/xkb/symbols/~ directory. This means
 that I can’t use these configurations on computers that aren’t my own. I should
