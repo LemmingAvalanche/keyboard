@@ -233,6 +233,11 @@ keys.
 
 *** I should use ~setxkbmap~ instead of ~xmodmap~
 
+*Update 2017-10-25*: I exclusively use Setxbmap and haven’t used Xmodmap
+in a long time.
+
+---
+
 I should use ~setxkbmap~ instead of ~xmodmap~ to map keys in the script, since
 ~xmodmap~ seems to be effectively deprecated in favour of ~setxkbmap~ in Ubuntu.
 Also, apparently running a ~setxkbmap~ after having run an ~xmodmap~ command
