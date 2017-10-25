@@ -214,6 +214,12 @@ to switch to when it becomes more convenient to use the numberic row.
 
 *** "AltGr" button produces newline when quickly pressed
 
+*Update 2017-10-25*: This is not relevant any more.  I think the issue
+was due to how I messed around with keycodes in keyboard setup script
+that I used.
+
+---
+
 This is due to the way I have mapped the "Return" key to "ISO_Level3_Shift", and
 then this modifier back to produce the "Return" action/character when pressed.
 Since "AltGr" is the original (only) character that was mapped to that
