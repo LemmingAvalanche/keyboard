@@ -46,7 +46,6 @@ This sets up the keyboard to use the layouts ~twin-dexter(no-p5)~ and
 ~twin-dexter(no-4)~.  You can switch between layouts by pressing
 ~Shift+ScrollLock~.  If you have a scroll lock light indicator on your
 keyboard, it will light on and off to indicate what layouts you are on.
-This might make it easier to use two layouts.
 
 * Layouts
 
