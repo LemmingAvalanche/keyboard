@@ -245,6 +245,12 @@ might invalidate whatever changes the ~xmodmap~ invocation made.
 
 *** The order matters when combining level 2 and level 3 shifts
 
+*Update 2017-10-25*: I solved this when I started setting up the
+modifiers in a better way; see the last subsection for the update about
+that.
+
+---
+
 This only happens for the ~<BKSL>~ key.
 
 If I press and hold the ~<BKSL>~ key, and then press and hold the ~<Shift_R>~
