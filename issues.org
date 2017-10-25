@@ -63,6 +63,13 @@ all of that.
 
 ** Note that depressing all shift keys on the left side of the at the keyboard introduces jamming :issue-closed:
 
+*Update 2017-10-25*: Key ghosting can of course not be solved in
+software; you need a keyboard with n-key rollover.  In any case the
+issue is not very relevant any more, at least for the higher layouts
+like ~no-p5~ (it’s been a while since I used layouts like ~no-p1~.
+
+---
+
 When I try to press all shift levels on the left side of the keyboard, the third
 key won't register. I think this is because of keyboard jamming, i.e., that
 these keys use the same circuits (or something) which limits how many of them
