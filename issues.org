@@ -561,9 +561,8 @@ I tried to move the include of the group switch last in both ~no-p3~,
 ~no-p4~.  That did not make any difference.
 
 
-** [2017-09-01 Fri]
 
-*** Control and alt keys on extend layers don’t work with latch keys :issue-closed:
+** Control and alt keys on extend layers don’t work with latch keys :issue-closed:
 
 Right now I can access left control and left alt on the extend layers on
 the ~Q~ and ~F~ keys, respectively.  This works perfectly if I press
@@ -591,7 +590,7 @@ lowercase ~h~ is the keypress event, as expected.  So the first key
 pressed after pressing the left control must have consumed the latch key
 states.
 
-**** Update 2017-09-02T01:29:51+02:00
+*** Update 2017-09-02T01:29:51+02:00
 
 On further reflection, a control key not consuming the latch states
 makes perfect sense.  When I for example want to press ~Control+D~ by
@@ -632,7 +631,7 @@ suspect that I focused on actions that were meant to clear
 (consume/release) /held down/ modifiers, while I wanted to eliminate
 latched modifiers.  If that makes sense.
 
-***** What now?
+**** What now?
 
 Solving this problem would make a very niché use-case for this control
 key possible: latch two levels in order to get to a control key on the
