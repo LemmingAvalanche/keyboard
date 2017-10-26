@@ -81,7 +81,7 @@ These are the layouts that are intended for use in
 - ~no-p3~ — Like ~no-p2~, but with an “alphabetic numpad”.
 - ~no-p4~ — Like ~no-p2~, but with a radically different “numeric row”.
 - ~no-4~ — Norwegian version of ~no-p4~.
-- ~eo-4~ — Esperanto version of `no-p4`.  Esperanto layouts use the same
+- ~eo-4~ — Esperanto version of ~no-p4~.  Esperanto layouts use the same
   strategy as the “programming” layouts with regards to the standard
   Norwegian layouts; replace the Norwegian keys with characters that are
   useful for Esperanto.
