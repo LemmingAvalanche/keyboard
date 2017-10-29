@@ -91,7 +91,7 @@ These are the layouts that are intended for use in
 
 The following are useful tools for working with Xkb.
 
-- ~ckbcomp~: “compile a XKB keyboard description to a keymap suitable
+- ~xkbcomp~: “compile a XKB keyboard description to a keymap suitable
   for loadkeys”.  Use this when the mapping won’t compile and you want
   better error messages.  Remember to use a relative path to the file if
   you want to try to compile a mapping in the current directory.
