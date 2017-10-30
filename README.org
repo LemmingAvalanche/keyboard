@@ -31,6 +31,10 @@ like ~+- ⇒ ±~, ~so ⇒ §~, ~!? ⇒ ‽~, ~<3 ⇒ ♥~ and many (many) more.
 The Xkb utilities ~setxkbmap~ and ~xkbcomp~ are needed for
 ~scripts/keyboard-setup~.
 
+If you have the Nix package manager as well as the Nix shell, you can
+run ~nix-shell --pure~ while in this directory in order to set up a
+shell from which you can run the ~scripts/keyboard-setup~.
+
 * Usage
 
 ~scripts/keyboard-setup~ is a wrapper around ~setxkbmap~ that I use to
