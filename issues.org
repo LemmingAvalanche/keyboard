@@ -36,16 +36,20 @@ Codeinput, but I don't know what they do.
 
 (Source: https://www.charvolant.org/doug/xkb/html/node5.html)
 
-* TODO Extend layer is not working right now
+* Closed issues
 
+** DONE Extend layer is not working right now :issue-closed:
+   CLOSED: [2017-11-01 Wed 00:37]
+
+  - CLOSING NOTE [2017-11-01 Wed 00:37] \\
+    It seems to be a problem with Xkbcomp 1.4.0.  Using version 1.3.1
+    instead solves the problem.
 The extend layer does not work.  I am unable to use keys like “home”,
 “end”, “page down”, etc. through this layer.  I suspect that this might
 be due to a version change in one of the tools that I am using to
 compile the keyboard layouts.  The reason for that is that I recently
 upgraded my OS and so I might have gotten a new version of one of the
 programs.
-
-* Closed issues
 
 ** Can't map a key to use five or more levels :issue-closed:
 
