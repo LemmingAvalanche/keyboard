@@ -48,7 +48,7 @@ scripts/keyboard-setup "twin-dexter(no-p5),twin-dexter(no-4)"
 
 This sets up the keyboard to use the layouts ~twin-dexter(no-p5)~ and
 ~twin-dexter(no-4)~.  You can switch between layouts by pressing
-~Shift+ScrollLock~.  If you have a scroll lock light indicator on your
+~ScrollLock~.  If you have a scroll lock light indicator on your
 keyboard, it will light on and off to indicate what layouts you are on.
 You can also use the keys ~W~, ~E~, ~R~, ~T~ in combination with the
 extend (~Ext~) modifier to change layouts.  So you can press ~Ext+<key>~
