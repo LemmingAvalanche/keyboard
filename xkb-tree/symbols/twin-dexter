@@ -23,24 +23,24 @@ xkb_symbols "latin" {
     key.type[Group1] = "EIGHT_LEVEL";
 
     key <AD01> { [
-        q, Q, leftsinglequotemark, U2607
+        q, Q, dollar, U2607
     ] };
     key <AD02> { [
-        w, W, rightsinglequotemark, dagger
+        w, W, exclam, dagger
     ] };
     // Duplicate commonly used symbols to third level of the alphabetic
     // section.
     key <AD03> { [
-        e, E, percent, righttack
+        e, E, quotedbl, righttack
     ] };
     key <AD04> { [
-        r, R, ampersand, NoSymbol
+        r, R, rightsinglequotemark, NoSymbol
     ] };
     key <AD05> { [
         t, T, bar, NoSymbol
     ] };
     key <AD06> { [
-        y, Y, backslash, NoSymbol
+        y, Y, at, NoSymbol
     ] };
     key <AD07> { [
         u, U, grave, NoSymbol
@@ -55,31 +55,38 @@ xkb_symbols "latin" {
         p, P, plus, NoSymbol
     ] };
     key <AC01> { [
-        a, A, less, NoSymbol
+        a, A, less, U2329
     ] };
     key <AC02> { [
-        s, S, greater, NoSymbol
+        s, S, leftdoublequotemark, NoSymbol
     ] };
     key <AC03> { [
-        d, D, exclam, NoSymbol
+        d, D, rightdoublequotemark, NoSymbol
     ] };
     key <AC04> { [
-        f, F, quotedbl, NoSymbol
+    // NOTE: Third level vacant.
+        f, F, NoSymbol, NoSymbol
     ] };
     key <AC05> { [
-        g, G, at, NoSymbol
+        g, G, leftsinglequotemark, NoSymbol
     ] };
     key <AC06> { [
-        h, H, numbersign, NoSymbol
+        h, H, numbersign, leftarrow
     ] };
     key <AC07> { [
-        j, J, dollar, NoSymbol
+        j, J, slash, downarrow
     ] };
     key <AC08> { [
-        k, K, apostrophe, NoSymbol
+        k, K, apostrophe, uparrow
     ] };
     key <AC09> { [
-        l, L, asterisk, NoSymbol
+        l, L, asterisk, rightarrow
+    ] };
+    key <AB06> { [
+        n, N, ampersand, U300D
+    ] };
+    key <AB07> { [
+        m, M, backslash, NoSymbol
     ] };
 };
 
@@ -106,15 +113,6 @@ xkb_symbols "no-common" {
     // new home.
     key <AD12> { [
         asciicircum, asciitilde, braceright, NoSymbol
-    ] };
-    key <AB05> { [
-        b, B, bracketleft, U300C
-    ] };
-    key <AB06> { [
-        n, N, bracketright, U300D
-    ] };
-    key <AB07> { [
-        m, M, slash, NoSymbol
     ] };
 };
 
@@ -173,30 +171,6 @@ xkb_symbols "no-p1" {
 
     // Keys <AC01> to <AC11> on this row contain diacritics on the
     // fifth level.
-    key <AC01> { [
-        a, A, less, U2329
-    ] };
-    key <AC02> { [
-        s, S, greater, U232A
-    ] };
-    key <AC03> { [
-        d, D, exclam, NoSymbol
-    ] };
-    key <AC04> { [
-        f, F, quotedbl, NoSymbol
-    ] };
-    key <AC05> { [
-        g, G, at, NoSymbol
-    ] };
-    key <AC06> { [
-        h, H, numbersign, leftarrow
-    ] };
-    key <AC07> { [
-        j, J, dollar, downarrow
-    ] };
-    key <AC08> { [
-        k, K, apostrophe, uparrow
-    ] };
     key <AC09> { [
         l, L, asterisk, rightarrow
     ] };
@@ -211,27 +185,23 @@ xkb_symbols "no-p1" {
     key <AB01> { [
         // TODO: the level four `‹` is not useful any more, since I
         // produce this through another means now.
-        z, Z, guillemotleft, U2039
+        z, Z, greater, U2039
     ] };
     key <AB02> { [
         // TODO: the level four `›` is not useful any more, since I
         // produce this through another means now.
-        x, X, guillemotright, U203A
+        // NOTE: Third level vacant.
+        x, X, NoSymbol, U203A
     ] };
     key <AB03> { [
-        c, C, leftdoublequotemark, NoSymbol
+        // NOTE: Third level vacant.
+        c, C, NoSymbol, NoSymbol
     ] };
     key <AB04> { [
-        v, V, rightdoublequotemark, NoSymbol
+        v, V, U25CA, NoSymbol
     ] };
     key <AB05> { [
-        b, B, U300E, U300C
-    ] };
-    key <AB06> { [
-        n, N, U300F, U300D
-    ] };
-    key <AB07> { [
-        m, M, U25CA, NoSymbol
+        b, B, percent, U300C
     ] };
     key <AB08> { [
         comma, semicolon, enfilledcircbullet, U2032
