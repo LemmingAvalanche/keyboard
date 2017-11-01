@@ -95,24 +95,34 @@ partial alphanumeric_keys
 xkb_symbols "no-common" {
     // Norwegian characters
     key <AD11>	{ [
-        aring, Aring, braceleft, NoSymbol
+        aring, Aring, asciicircum, asciitilde
     ] };
     key <AC10>	{ [
-        oslash, Ooblique, parenleft, U301A
+        oslash, Ooblique, parenleft, bracketleft
     ] };
     key <AC11>	{ [
-        ae, AE, parenright, U301B
+        ae, AE, parenright, bracketright
     ] };
 
-    // Make ASCII symbols and other useful symbols available on the
-    // alpbabetic section.
-    //
-    // For the “programming” keymappings, the Norwegian keys are used
-    // (<AD11>, <AC10>, and <AC11>) to make certain symbols available on
-    // the alpbabetic section.  So the displaced symbols need to get a
-    // new home.
+    // Move the braces to two free keys (see `latin`) since it is not
+    // room for them on `<AC11>`.
+    key <AB02> { [
+        x, X, braceleft, U203A
+    ] };
+    key <AB03> { [
+        c, C, braceright, NoSymbol
+    ] };
+    // Use Norwegian quotemarks instead of the English ones which are
+    // defined in `latin`.
+    key <AC02> { [
+        s, S, guillemotleft, NoSymbol
+    ] };
+    key <AC03> { [
+        d, D, guillemotright, NoSymbol
+    ] };
+
     key <AD12> { [
-        asciicircum, asciitilde, braceright, NoSymbol
+        asciicircum, asciitilde, NoSymbol, NoSymbol
     ] };
 };
 
