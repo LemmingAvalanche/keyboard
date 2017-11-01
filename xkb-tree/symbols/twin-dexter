@@ -31,10 +31,10 @@ xkb_symbols "latin" {
     // Duplicate commonly used symbols to third level of the alphabetic
     // section.
     key <AD03> { [
-        e, E, quotedbl, righttack
+        e, E, rightsinglequotemark, righttack
     ] };
     key <AD04> { [
-        r, R, rightsinglequotemark, NoSymbol
+        r, R, quotedbl, NoSymbol
     ] };
     key <AD05> { [
         t, T, bar, NoSymbol
