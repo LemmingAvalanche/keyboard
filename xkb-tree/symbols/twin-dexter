@@ -218,6 +218,13 @@ xkb_symbols "no-p1" {
     key <AB10> { [
         minus, underscore, endash, emdash
     ] };
+    // Use English quote marks.
+    key <AC02> { [
+        s, S, leftdoublequotemark, NoSymbol
+    ] };
+    key <AC03> { [
+        d, D, rightdoublequotemark, NoSymbol
+    ] };
 };
 
 // Swap the right Win key and the menu key.
