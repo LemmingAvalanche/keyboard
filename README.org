@@ -73,7 +73,7 @@ These are the layouts that are intended for use in
   ASCII) are duplicated on the “alphabetic section” on the third level
   (the level accessed by the ~AltGr~ on most European keyboards).
 - ~no-nodeadkeys~ — Like ~no~, but with dead keys disabled.  This makes
-  typing things like “caret” (ASCII circumflex) easier.
+  typing things like “caret” (~^~) easier.
 - ~no-p1~ — Like ~no-nodeadkeys~, but replaces the Norwegian characters
   ~Æ~, ~Ø~ and ~Å~ with characters that are useful for programming,
   namely ~)~, ~(~ and ~/~, respectively.  (This is the granddaddy of the
