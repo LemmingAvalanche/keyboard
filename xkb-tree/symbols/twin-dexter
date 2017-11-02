@@ -82,11 +82,26 @@ xkb_symbols "latin" {
     key <AC09> { [
         l, L, asterisk, rightarrow
     ] };
+    key <AB04> { [
+        v, V, U25CA, NoSymbol
+    ] };
+    key <AB05> { [
+        b, B, percent, U300C
+    ] };
     key <AB06> { [
         n, N, ampersand, U300D
     ] };
     key <AB07> { [
         m, M, backslash, NoSymbol
+    ] };
+    key <AB08> { [
+        comma, semicolon, enfilledcircbullet, U2032
+    ] };
+    key <AB09> { [
+        period, colon, periodcentered, abovedot
+    ] };
+    key <AB10> { [
+        minus, underscore, endash, emdash
     ] };
 };
 
@@ -175,9 +190,6 @@ xkb_symbols "no-p1" {
         asciicircum, asciitilde, U0302, NoSymbol
     ] };
 
-    key <AC09> { [
-        l, L, asterisk, rightarrow
-    ] };
     // →1
     key <AC10> { [
         parenleft, bracketleft, braceleft, U301A
@@ -200,21 +212,6 @@ xkb_symbols "no-p1" {
     key <AB03> { [
         // NOTE: Third level vacant.
         c, C, NoSymbol, NoSymbol
-    ] };
-    key <AB04> { [
-        v, V, U25CA, NoSymbol
-    ] };
-    key <AB05> { [
-        b, B, percent, U300C
-    ] };
-    key <AB08> { [
-        comma, semicolon, enfilledcircbullet, U2032
-    ] };
-    key <AB09> { [
-        period, colon, periodcentered, abovedot
-    ] };
-    key <AB10> { [
-        minus, underscore, endash, emdash
     ] };
     // Use English quote marks.
     key <AC02> { [
