@@ -175,8 +175,6 @@ xkb_symbols "no-p1" {
         asciicircum, asciitilde, U0302, NoSymbol
     ] };
 
-    // Keys <AC01> to <AC11> on this row contain diacritics on the
-    // fifth level.
     key <AC09> { [
         l, L, asterisk, rightarrow
     ] };
