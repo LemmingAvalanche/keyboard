@@ -120,10 +120,6 @@ xkb_symbols "no-common" {
     key <AC03> { [
         d, D, guillemotright, NoSymbol
     ] };
-
-    key <AD12> { [
-        dead_belowmacron
-    ] };
 };
 
 // “Esperanto common”.  Common keys for Esperanto-focused layouts,
@@ -459,6 +455,9 @@ xkb_symbols "no-p4" {
 xkb_symbols "no-4" {
     include "twin-dexter(no-p4)"
     include "twin-dexter(no-common)"
+    key <AD12> { [
+        dead_belowmacron
+    ] };
 };
 
 // Esperanto version of `no-p4`.
