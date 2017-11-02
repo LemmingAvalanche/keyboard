@@ -446,9 +446,6 @@ xkb_symbols "no-p4" {
     replace key <TLDE> {
         [ dead_greek ]
     };
-    replace key <AE12> {
-        [ dead_belowmacron ]
-    };
 };
 
 // Norwegian version of `no-p4`.
