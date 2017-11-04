@@ -516,10 +516,11 @@ xkb_symbols "q-as-control" {
     };
 };
 
-// Like no-p5 but with `tab-as-alt` (alt on tab key for levels 5–8).
+// Like no-p5 but with an additional way of accessing control and alt.
 xkb_symbols "no-p6" {
     include "twin-dexter(no-p5)"
     include "twin-dexter(tab-as-alt)"
+    include "twin-dexter(q-as-control)"
 };
 
 // My variation of extend layers, using levels seven and eight.
