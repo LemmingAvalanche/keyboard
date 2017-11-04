@@ -519,7 +519,7 @@ xkb_symbols "my-extend" {
     ] };
     key <AD06> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, Page_Up, Page_Up
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AD07> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
@@ -571,7 +571,7 @@ xkb_symbols "my-extend" {
     ] };
     key <AC06> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, Page_Down, Page_Down
+        NoSymbol, NoSymbol, Page_Up, Page_Up
     ] };
     key <AC07> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
@@ -614,10 +614,9 @@ xkb_symbols "my-extend" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
-    // TODO: unmapped
     key <AB06> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, Page_Down, Page_Down
     ] };
     key <AB07> {
     // Make an explicit group so that we can use an `actions` section
