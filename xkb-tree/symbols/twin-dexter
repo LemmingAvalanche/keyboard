@@ -496,6 +496,12 @@ xkb_symbols "tab-as-alt" {
     };
 };
 
+// Like no-p5 but with `tab-as-alt` (alt on tab key for levels 5–8).
+xkb_symbols "no-p6" {
+    include "twin-dexter(no-p5)"
+    include "twin-dexter(tab-as-alt)"
+};
+
 // My variation of extend layers, using levels seven and eight.
 //
 // See: https://forum.colemak.com/topic/2014-extend-extra-extreme/
