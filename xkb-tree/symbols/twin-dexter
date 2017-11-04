@@ -478,6 +478,24 @@ xkb_symbols "no-p5" {
     };
 };
 
+// Maps `Tab` on levels 5–8 to `Alt_L`.
+xkb_symbols "tab-as-alt" {
+    key <TAB> {
+    symbols[Group1] = [
+        Tab, ISO_Left_Tab, Tab, Tab,
+        Alt_L, Alt_L, Alt_L, Alt_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for levels 1–4.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        // TODO: should the mod `Shift` be set for levels like level 8,
+        // since that involves the shift key?
+        SetMods(mods=Alt), SetMods(mods=Alt),
+        SetMods(mods=Alt), SetMods(mods=Alt)
+    ]
+    };
+};
+
 // My variation of extend layers, using levels seven and eight.
 //
 // See: https://forum.colemak.com/topic/2014-extend-extra-extreme/
