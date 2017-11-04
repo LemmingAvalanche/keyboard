@@ -480,6 +480,7 @@ xkb_symbols "no-p5" {
 
 // Maps `Tab` on levels 5–8 to `Alt_L`.
 xkb_symbols "tab-as-alt" {
+    key.type[Group1] = "EIGHT_LEVEL";
     key <TAB> {
     symbols[Group1] = [
         Tab, ISO_Left_Tab, Tab, Tab,
