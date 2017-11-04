@@ -497,6 +497,25 @@ xkb_symbols "tab-as-alt" {
     };
 };
 
+// Maps `Q` on levels 5–8 to `Control_L`.
+xkb_symbols "q-as-control" {
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <AD01> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Control_L, Control_L, Control_L, Control_L
+    ],
+    actions[Group1] = [
+        // Do not set any action for levels 1–4.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        // TODO: should the mod `Shift` be set for levels like level 8,
+        // since that involves the shift key?
+        SetMods(mods=Control), SetMods(mods=Control),
+        SetMods(mods=Control), SetMods(mods=Control)
+    ]
+    };
+};
+
 // Like no-p5 but with `tab-as-alt` (alt on tab key for levels 5–8).
 xkb_symbols "no-p6" {
     include "twin-dexter(no-p5)"
