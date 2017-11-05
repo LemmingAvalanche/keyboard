@@ -17,6 +17,7 @@ in rec {
     version = "1";
     src = ./.;
     buildInputs = [
+      pkgs.xorg.xkeyboardconfig
       pkgs.xorg.setxkbmap
       xkbcomp
     ];
