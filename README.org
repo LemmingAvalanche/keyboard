@@ -115,6 +115,18 @@ The following are useful tools for working with Xkb.
 - ~xkbwatch~: reports the changes to the Xkb states.  This might be
   useful if you want some visual indication of things like the lock- or
   lach-state of the various shifts, for example.
+- ~gkbd-keyboard-display~: display a keyboard layout from the command
+  line.  Much more convenient than using ~xkbprint~ if you simply want
+  to quickly find out what some standard layout looks like.  Example
+  usage: display the ~us~ layout with ~gkbd-keyboard-display -l us~.
+  ([[https://askubuntu.com/a/459997/136104][Source]].)
+  Note: you might want to run ~setxkbmap -option "" <layout>~
+  before running this command in order to reset any options.  I’ve run
+  into some confusing behavior in which the mappings from the keyboard
+  that I was currently using seemed to bleed into the visual
+  description, although it had nothing to do with that layout.  More
+  concretely, I ran ~gkbd-keyboard-display -l 'us(intl)'~ which showed
+  some mappings that are not supposed to be on that layout.
 
 * Files
 
