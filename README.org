@@ -93,7 +93,8 @@ These are the layouts that are intended for use in
 
 * Tools
 
-The following are useful tools for working with Xkb.
+The following are useful tools for working with Xkb and keyboard layouts
+on Linux.
 
 - ~xkbcomp~: “compile a XKB keyboard description to a keymap suitable
   for loadkeys”.  Use this when the mapping won’t compile and you want
