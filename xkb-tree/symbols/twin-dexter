@@ -376,6 +376,70 @@ xkb_symbols "numpad-and-combining" {
     ] };
 };
 
+xkb_symbols "alt-group" {
+
+    // Function keys on the first alphabetic row
+    key <AD01> {
+      [],
+      [ F1 ]
+    };
+
+    key <AD02> {
+      [],
+      [ F2 ]
+    };
+
+    key <AD03> {
+      [],
+      [ F3 ]
+    };
+
+    key <AD04> {
+      [],
+      [ F4 ]
+    };
+
+    key <AD05> {
+      [],
+      [ F5 ]
+    };
+
+    key <AD06> {
+      [],
+      [ F6 ]
+    };
+
+    key <AD07> {
+      [],
+      [ F7 ]
+    };
+
+    key <AD08> {
+      [],
+      [ F8 ]
+    };
+
+    key <AD09> {
+      [],
+      [ F9 ]
+    };
+
+    key <AD10> {
+      [],
+      [ F10 ]
+    };
+
+    key <AD11> {
+      [],
+      [ F11 ]
+    };
+
+    key <AD12> {
+      [],
+      [ F12 ]
+    };
+};
+
 // Like `no-p2`, but with an “alphabetic numpad”.
 xkb_symbols "no-p3" {
     include "twin-dexter(no-p2)"
