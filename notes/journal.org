@@ -258,3 +258,26 @@ Should probably be changed to this:
 #+BEGIN_EXAMPLE
 <Multi_key> <dollar> <y> : "¥" # YEN SIGN
 #+END_EXAMPLE
+
+* [2017-11-11 Sat]
+
+** Group latch works with the compose key
+
+It turns out that I can latch the next group (choose the next group or
+layout for the next non-modifier keypress) while in the middle of a
+compose sequence.  That means that I can press the compose key, choose
+the next layout with the group latch key (since perhaps the key is only
+on the group or layout), press the relevant key, and continue with the
+compose mapping in the same layout.
+
+The test that I used was to try to produce ~≠~ (not equals) with the
+compose mapping ~/ =~.  I started on a Norwegian layout, which has the
+~/~ key that the programming layouts use mapped to ~å~.  This was the
+sequence I used:
+
+- Press compose.
+- Press latch group.
+- Press the ~/~ key (~å~ in the current layout)
+- Press the ~=~ key.
+
+And it produced ~≠~, as hoped for.
