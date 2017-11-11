@@ -19,3 +19,26 @@ https://github.com/aspiers/desktop-config/tree/master/.xkb
 
 His keymappings (the ~symbols~ directory) might be useful to look at in
 order to figure out how to structure things.
+
+* Interesting document about Xkb
+
+[[https://github.com/Delapouite/xkb-walkthrough][This repository]] has some nice information about Xkb.  This part in
+particular struck me, since I didn’t know you could use ~|~ [fn:converted-formatting]:
+
+#+BEGIN_QUOTE
+In some case ~include~ statements can turn into behemoths, like :
+
+#+BEGIN_SRC
+include "file1(map3)+file7+file2(map1)|file1(map2)"
+#+END_SRC
+
+Two separators are involved :
+
+- ~+~ will override an existing definition
+- ~|~ will augment an existing definition
+#+END_QUOTE
+
+[fn:converted-formatting]: I’ve converted to Org formatting.
+
+The part about the meaning of ~VoidSymbol~ was also useful, since I
+should probably use that in a few places instead of ~NoSymbol~.
