@@ -281,3 +281,17 @@ sequence I used:
 - Press the ~=~ key.
 
 And it produced ~≠~, as hoped for.
+
+** Testing out adding another group to ~no-p6~
+
+Now that I have to latch group keys I wanted to experiment with adding a
+new group to ~no-p6~.  I have started by adding a new group that maps
+the topmost alphabetic row to the twelve first function keys.
+
+First of all I had to remove the options that had to do with group
+toggling (changing layouts, in the case that I’ve been using it).  I
+have not been able to get this to work when both layouts are selected.
+I figured that the second layout (~no-4~) would now become group 3.  It
+seems that that is not the case.  I am able to use the second group via
+the group latch key if I only select one layout (only ~no-p6~, not
+~no-4~).
