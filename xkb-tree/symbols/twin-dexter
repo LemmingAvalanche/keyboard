@@ -543,7 +543,7 @@ xkb_symbols "no-p5" {
     key <AD11> { [
         slash, asciicircum, asciitilde, NoSymbol
     ] };
-    replace key <AD12> {
+    key <AD12> {
         [ dead_iota ]
     };
 };
