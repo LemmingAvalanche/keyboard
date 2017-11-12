@@ -449,6 +449,16 @@ xkb_symbols "no-p3" {
 
 xkb_compat {
     include "level5"
+
+    interpret ISO_Second_Group {
+        action= LockGroup(group=2);
+    };
+    interpret ISO_Third_Group {
+        action= LockGroup(group=3);
+    };
+    interpret ISO_Fourth_Group {
+        action= LockGroup(group=4);
+    };
 };
 
 xkb_symbols "no-p4" {
