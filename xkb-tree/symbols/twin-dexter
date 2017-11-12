@@ -658,14 +658,34 @@ xkb_symbols "my-extend" {
         NoAction()
     ]
     };
-    key <AD04> { [
+    key <AD04> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, ISO_Next_Group, NoSymbol
-    ] };
-    key <AD05> { [
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate action for group locking.
+        LockGroup(group=3),
+        NoAction()
+    ]
+    };
+    key <AD05> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, ISO_Last_Group, NoSymbol
-    ] };
+    ],
+    actions[Group1] = [
+        // Do not set any action for non-Extend layer keys.
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        NoAction(), NoAction(),
+        // We need to set appropriate action for group locking.
+        LockGroup(group=4),
+        NoAction()
+    ]
+    };
     key <AD06> {
     // Make an explicit group so that we can use an `actions` section
     // (see below).
