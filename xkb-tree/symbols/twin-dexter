@@ -378,63 +378,64 @@ xkb_symbols "numpad-and-combining" {
 
 xkb_symbols "alt-group" {
 
-    // Function keys on the first alphabetic row
-    key <AD01> {
+    // Function keys on the third alphabetic row plus two on the second
+    // row.
+    key <AB01> {
       [],
       [ F1 ]
     };
 
-    key <AD02> {
+    key <AB02> {
       [],
       [ F2 ]
     };
 
-    key <AD03> {
+    key <AB03> {
       [],
       [ F3 ]
     };
 
-    key <AD04> {
+    key <AB04> {
       [],
       [ F4 ]
     };
 
-    key <AD05> {
+    key <AB05> {
       [],
       [ F5 ]
     };
 
-    key <AD06> {
+    key <AB06> {
       [],
       [ F6 ]
     };
 
-    key <AD07> {
+    key <AB07> {
       [],
       [ F7 ]
     };
 
-    key <AD08> {
+    key <AB08> {
       [],
       [ F8 ]
     };
 
-    key <AD09> {
+    key <AB09> {
       [],
       [ F9 ]
     };
 
-    key <AD10> {
+    key <AB10> {
       [],
       [ F10 ]
     };
 
-    key <AD11> {
+    key <AC05> {
       [],
       [ F11 ]
     };
 
-    key <AD12> {
+    key <AC06> {
       [],
       [ F12 ]
     };
