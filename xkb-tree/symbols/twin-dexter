@@ -459,13 +459,18 @@ xkb_symbols "no-p3" {
 xkb_compat {
     include "level5"
 
-    interpret ISO_Second_Group {
+    // Hacks: use existing keysyms to implement keys to choose groups
+    // 2–4 directly.
+    // Group 2
+    interpret ISO_Prev_Group {
         action= LockGroup(group=2);
     };
-    interpret ISO_Third_Group {
+    // Group 3
+    interpret ISO_Next_Group {
         action= LockGroup(group=3);
     };
-    interpret ISO_Fourth_Group {
+    // Group 4
+    interpret ISO_Last_Group {
         action= LockGroup(group=4);
     };
 };
