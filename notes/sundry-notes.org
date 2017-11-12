@@ -53,4 +53,15 @@ practice only “first” and “last”).  Instead I want to replace “next”
 the group.  In that question he defines two such keys.  If it is correct
 I should be able to use the same thing.
 
-** TODO try to define “second” and “third” group like in that question
+** DONE try to define “second” and “third” group like in that question
+   CLOSED: [2017-11-12 Sun 22:04]
+   - CLOSING NOTE [2017-11-12 Sun 22:04] \\
+     This has been implemented; see r#ae441a12c7ff (“Merge branch
+     ‘group-locks’ into next”, 2017-11-12).  I can choose (lock) all four
+     groups directly.
+
+     I ended up doing it in a different way than in the StackOverflow
+     question.  I tried to define keys like `ISO_Second_Group` in the
+     `compat` section, but that didn’t work.  For more information on that,
+     see r#ca33ce4ac83b (“Revert “Change “previous”, “next”, etc. to the new
+     keys””, 2017-11-12).
