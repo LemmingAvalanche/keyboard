@@ -42,3 +42,15 @@ Two separators are involved :
 
 The part about the meaning of ~VoidSymbol~ was also useful, since I
 should probably use that in a few places instead of ~NoSymbol~.
+
+* Apropos question about changing groups
+
+[[https://stackoverflow.com/questions/39315057/xkb-three-key-shortcut-to-acyclic-switch-keyboart-layout-like-in-windows][This SO question]] is related to something that I want to do.  I want to
+have four keys to switch between the (up to) four groups.  Currently I
+use “first”, “last”, “next”, and “previous” group keys (although in
+practice only “first” and “last”).  Instead I want to replace “next” and
+“previous” with “second” and “third”, so that I have three keys to lock
+the group.  In that question he defines two such keys.  If it is correct
+I should be able to use the same thing.
+
+** TODO try to define “second” and “third” group like in that question
