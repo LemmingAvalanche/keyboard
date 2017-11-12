@@ -55,6 +55,19 @@ For the “candidate” keysyms you should probably search for ~candidate~
 and not ~multiplecandidate~ or ~singlecandidate~.  It will give you more
 results.
 
+* TODO Can you latch modifiers like control and hyper?
+
+Apparently this is how the latch action is defined (taken from
+~xkb/compat/iso9995):
+
+#+BEGIN_SRC
+action= LatchMods(modifiers=LevelThree);
+#+END_SRC
+
+~Hyper~ is a modifier.  I’ve seen it been used like this:
+~modifiers=Hyper~.  So maybe one can implement latch keys for things
+like control and hyper?  That could be useful.
+
 * Closed issues
 
 ** DONE Extend layer is not working right now :issue-closed:
