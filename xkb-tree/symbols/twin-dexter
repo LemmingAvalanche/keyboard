@@ -634,15 +634,15 @@ xkb_symbols "my-extend" {
     ] };
     key <AD03> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, ISO_Prev_Group, NoSymbol
+        NoSymbol, NoSymbol, ISO_Second_Group, NoSymbol
     ] };
     key <AD04> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, ISO_Next_Group, NoSymbol
+        NoSymbol, NoSymbol, ISO_Third_Group, NoSymbol
     ] };
     key <AD05> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, ISO_Last_Group, NoSymbol
+        NoSymbol, NoSymbol, ISO_Fourth_Group, NoSymbol
     ] };
     key <AD06> {
     // Make an explicit group so that we can use an `actions` section
