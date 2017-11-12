@@ -574,6 +574,18 @@ xkb_symbols "no-p5" {
     };
 };
 
+// For testing a fourth layout.
+xkb_symbols "no-p6-test" {
+    include "twin-dexter(no-p6)"
+    // Redefine two keys only.
+    key <AC11> { [
+        u
+    ] };
+    key <AC12> { [
+        u
+    ] };
+};
+
 // Maps `Tab` on levels 5–8 to `Alt_L`.
 xkb_symbols "tab-as-alt" {
     key.type[Group1] = "EIGHT_LEVEL";
