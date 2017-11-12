@@ -644,6 +644,14 @@ xkb_symbols "my-extend" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, ISO_First_Group, NoSymbol
     ] };
+    // NOTE: on the next three keys (`ISO_Prev_Group` to
+    // ISO_Last_Group) I use a hack where I redefine the actions so that
+    // they work as locking keys for levels 2–4.  This makes it so that
+    // these keys don’t do what they are named and originally intended
+    // to do.  But it seems that I need to redefine the actions of some
+    // original keys in order to get what I want, namely lock keys for
+    // all the four groups.  I have tried to invent new keysyms in the
+    // `compat` section of this file, but that didn’t work.
     key <AD03> {
     symbols[Group1] =[
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
