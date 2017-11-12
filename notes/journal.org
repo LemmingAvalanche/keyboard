@@ -296,6 +296,33 @@ seems that that is not the case.  I am able to use the second group via
 the group latch key if I only select one layout (only ~no-p6~, not
 ~no-4~).
 
+*** Update 2017-11-12T03:40:35+01:00
+
+It struck me that it might be the case that giving this command:
+
+#+BEGIN_SRC shell
+keyboard-setup "twin-dexter(no-p6),twin-dexter(no-4)"
+#+END_SRC
+
+Makes it so that the second layout works as a second group by
+effectively overwriting the second group to the first layout.  With that
+in mind, I tried the following:
+
+#+BEGIN_SRC shell
+keyboard-setup "twin-dexter(no-p6),,twin-dexter(no-4)"
+#+END_SRC
+
+Notice the extra comma.  The intent here is to make the second layout
+/the third group/, so that the second group of the first layout is not
+effectively overwritten.  This seems to work like I thought it would.
+After issuing the above command, the first group and second group of the
+first layout become the first and second group of the current setup,
+while the first group of the second layout becomes the third group.
+There is one minor thing, though.  Since the second layout has a second
+group as well (the same as the first layout), I thought that the second
+group of the second layout would become the fourth group.  But that does
+not seem to be the case.  I only seem to get these three groups.
+
 ** Some nice documentation on making new layouts
 
 I’ve just looked through a lot of [[https://www.x.org/releases/X11R7.7/doc/xorg-docs/input/XKB-Enhancing.html][this document]] and it looks very
