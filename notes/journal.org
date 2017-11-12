@@ -295,3 +295,10 @@ I figured that the second layout (~no-4~) would now become group 3.  It
 seems that that is not the case.  I am able to use the second group via
 the group latch key if I only select one layout (only ~no-p6~, not
 ~no-4~).
+
+** Some nice documentation on making new layouts
+
+I’ve just looked through a lot of [[https://www.x.org/releases/X11R7.7/doc/xorg-docs/input/XKB-Enhancing.html][this document]] and it looks very
+promising as a guide on how to define new layouts.  And it looks like it
+comes from some authorative source (www.x.org).  Where have this gem
+been all this time‽
