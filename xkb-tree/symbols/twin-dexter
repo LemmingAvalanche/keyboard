@@ -376,6 +376,15 @@ xkb_symbols "numpad-and-combining" {
     ] };
 };
 
+xkb_symbols "test-groups-3-and-4" {
+    key <AD01> {
+    [],
+    [],
+    [ u ],
+    [ p ]
+    };
+};
+
 xkb_symbols "alt-group" {
 
     // Function keys on the first alphabetic row
@@ -603,6 +612,7 @@ xkb_symbols "no-p6" {
     include "twin-dexter(no-p5)"
     include "twin-dexter(tab-as-alt)"
     include "twin-dexter(q-as-control)"
+    include "twin-dexter(test-groups-3-and-4)"
 };
 
 // My variation of extend layers, using levels seven and eight.
