@@ -36,6 +36,25 @@ Codeinput, but I don't know what they do.
 
 (Source: https://www.charvolant.org/doug/xkb/html/node5.html)
 
+** Update 2017-11-12T22:07:44+01:00
+
+You can get some more hints about these keys by trying to search for
+aliases for them.  Like `Mode_switch`, it seems that there are several
+aliases which are more specifically named for their intended purpose.
+
+For example, if you search for ~codeinput~ you will find these other
+keysyms:
+
+#+BEGIN_SRC
+#define XK_Kanji_Bangou                  0xff37  /* Codeinput */
+…
+#define XK_Hangul_Codeinput              0xff37  /* Hangul code input mode */
+#+END_SRC
+
+For the “candidate” keysyms you should probably search for ~candidate~
+and not ~multiplecandidate~ or ~singlecandidate~.  It will give you more
+results.
+
 * Closed issues
 
 ** DONE Extend layer is not working right now :issue-closed:
