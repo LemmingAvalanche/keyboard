@@ -652,6 +652,10 @@ xkb_symbols "my-extend" {
     // original keys in order to get what I want, namely lock keys for
     // all the four groups.  I have tried to invent new keysyms in the
     // `compat` section of this file, but that didn’t work.
+    //
+    // NOTE: it seems that this hack makes it so that the keys are not
+    // reported correctly in `xev`.  But that does not seem to have any
+    // impact beyond the cosmetic
     key <AD03> {
     symbols[Group1] =[
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
