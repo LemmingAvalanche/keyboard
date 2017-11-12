@@ -378,6 +378,11 @@ xkb_symbols "numpad-and-combining" {
 
 xkb_symbols "alt-group" {
 
+    key <AD02> {
+        [],
+        [ StickyKeys_Enable ]
+    };
+
     // Function keys on the third alphabetic row plus two on the second
     // row.
     //
