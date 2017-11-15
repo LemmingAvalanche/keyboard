@@ -173,7 +173,6 @@ xkb_symbols "no-p1" {
 
     // Make levels 5–8 possible.
     include "level5(modifier_mapping)"
-    include "level5(lsgt_switch)"
     key.type[Group1] = "EIGHT_LEVEL";
 
     // Make the <TLDE> and <AE12> key into compose keys.
