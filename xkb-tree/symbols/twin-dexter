@@ -146,9 +146,11 @@ xkb_symbols "eo-common" {
     // These replaces the Norwegian characters, which are not used in
     // Esperanto.
     key <AC10>	{ [
+        // level 1: combining circumflex, for example: `ĝ`.
         U0302, section, parenleft, U301A
     ] };
     key <AC11>	{ [
+        // level 1: `ŭ`.
         U016D, U016C, parenright, U301B
     ] };
 };
