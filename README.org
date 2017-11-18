@@ -55,14 +55,10 @@ on.  You can also use the keys ~W~, ~E~, ~R~, ~T~ in combination with
 the extend (~Ext~) modifier to change groups.  So you can press
 ~Ext+<key>~ to:
 
-- Go to the first group (“home”): ~Ext+W~.
-- Go to the next group: ~Ext+E~.
-- Go to the previous group: ~Ext+R~.
-- Go to the last group (“end”): ~Ext+T~.
-
-If you are only using two group it is probably easier to just use “home”
-(~Ext+W~) and “end” (~Ext+T~), since then you won’t keep have to keep
-which group you are on in your head.
+- Go to the first group: ~Ext+W~.
+- Go to the second group: ~Ext+E~.
+- Go to the third group: ~Ext+R~.
+- Go to the fourth group: ~Ext+T~.
 
 †. 1: I am using the term “group” here since that seems to be what Xkb
    does.  In the example we set up two layouts, but it is better to
