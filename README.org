@@ -47,21 +47,28 @@ scripts/keyboard-setup "twin-dexter(no-p5),twin-dexter(no-4)"
 #+END_SRC
 
 This sets up the keyboard to use the layouts ~twin-dexter(no-p5)~ and
-~twin-dexter(no-4)~.  You can switch between layouts by pressing
-~ScrollLock~.  If you have a scroll lock light indicator on your
-keyboard, it will light on and off to indicate what layouts you are on.
-You can also use the keys ~W~, ~E~, ~R~, ~T~ in combination with the
-extend (~Ext~) modifier to change layouts.  So you can press ~Ext+<key>~
-to:
+~twin-dexter(no-4)~.  These two layouts now act as two different
+/groups/ in the declared order (†1).  You can switch between groups by
+pressing ~ScrollLock~.  If you have a scroll lock light indicator on
+your keyboard, it will light on and off to indicate what group you are
+on.  You can also use the keys ~W~, ~E~, ~R~, ~T~ in combination with
+the extend (~Ext~) modifier to change groups.  So you can press
+~Ext+<key>~ to:
 
-- Go to the first layout (“home”): ~Ext+W~.
-- Go to the next layout: ~Ext+E~.
-- Go to the previous layout: ~Ext+R~.
-- Go to the last layout (“end”): ~Ext+T~.
+- Go to the first group (“home”): ~Ext+W~.
+- Go to the next group: ~Ext+E~.
+- Go to the previous group: ~Ext+R~.
+- Go to the last group (“end”): ~Ext+T~.
 
-If you are only using two layouts it is probably easier to just use
-“home” (~Ext+W~) and “end” (~Ext+T~), since then you won’t keep have to
-keep which layout you are on in your head.
+If you are only using two group it is probably easier to just use “home”
+(~Ext+W~) and “end” (~Ext+T~), since then you won’t keep have to keep
+which group you are on in your head.
+
+†. 1: I am using the term “group” here since that seems to be what Xkb
+   does.  In the example we set up two layouts, but it is better to
+   consider it as one layout with two groups.  I don’t think Xkb has a
+   concept of multiple layouts that are available at the same time; only
+   groups.
 
 * Layouts
 
