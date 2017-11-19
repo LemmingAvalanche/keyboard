@@ -377,7 +377,7 @@ xkb_symbols "numpad-and-combining" {
     ] };
 };
 
-xkb_symbols "alt-group" {
+xkb_symbols "group-2" {
 
     key <AD02> {
         [],
@@ -479,7 +479,7 @@ xkb_symbols "no-p4" {
     include "twin-dexter(numpad-and-combining)"
     include "twin-dexter(delete-group-switch)"
     // For a useful group 2.
-    include "twin-dexter(alt-group)"
+    include "twin-dexter(group-2)"
 
     // For latches
     // Levels
