@@ -378,29 +378,33 @@ xkb_symbols "numpad-and-combining" {
 };
 
 xkb_symbols "group-2" {
+    include "twin-dexter(group-2-function-keys)"
 
     key <AD02> {
         [],
         [ StickyKeys_Enable ]
     };
 
-    // Function keys on the third alphabetic row plus two on the second
-    // row.
-    //
-    // Each key has one of the “basic” function keys, meaning one of the
-    // first 12, in addition to the key that is “12 higher up” (Fy =
-    // Fx+12, where x is the lower function key).
-    //
-    // There are two levels each of these keys to allow for keybindings
-    // like `Shift+Fx`.  Notice how both level 2 and level 4 need (in
-    // part) the shift key to be accessed, so this should work.  Also
-    // keep in mind that accessing the fourth level *does not work*
-    // if you choose to do that by holding the latch keys on the numeric
-    // row (level 1, level 2, and group latch).  This is because holding
-    // these three keys at the same time leads to key jamming.  So if you
-    // need to type for example `Shift+F24` you need to use some other
-    // method, like for example using one of the keys as a latch, locking
-    // the group, or something like that.
+};
+
+// Function keys on the third alphabetic row plus two on the second
+// row.
+//
+// Each key has one of the “basic” function keys, meaning one of the
+// first 12, in addition to the key that is “12 higher up” (Fy =
+// Fx+12, where x is the lower function key).
+//
+// There are two levels each of these keys to allow for keybindings
+// like `Shift+Fx`.  Notice how both level 2 and level 4 need (in
+// part) the shift key to be accessed, so this should work.  Also
+// keep in mind that accessing the fourth level *does not work*
+// if you choose to do that by holding the latch keys on the numeric
+// row (level 1, level 2, and group latch).  This is because holding
+// these three keys at the same time leads to key jamming.  So if you
+// need to type for example `Shift+F24` you need to use some other
+// method, like for example using one of the keys as a latch, locking
+// the group, or something like that.
+xkb_symbols "group-2-function-keys" {
     key.type[Group2] = "FOUR_LEVEL";
     key <AB01> {
       [],
