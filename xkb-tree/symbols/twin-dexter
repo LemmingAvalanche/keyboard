@@ -414,7 +414,7 @@ xkb_symbols "alt-group" {
 
     key <AB03> {
       [],
-      [ F3, F3, F15, F14 ]
+      [ F3, F3, F15, F15 ]
     };
 
     key <AB04> {
