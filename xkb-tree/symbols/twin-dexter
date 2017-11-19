@@ -400,6 +400,28 @@ xkb_symbols "group-2" {
 
 };
 
+xkb_symbols "group-2-tab-as-alt" {
+    key <TAB> {
+    symbols[Group2] = [
+        Alt_L
+    ],
+    actions[Group2] = [
+        SetMods(mods=Alt)
+    ]
+    };
+};
+
+xkb_symbols "group-2-q-as-control" {
+    key <AD01> {
+    symbols[Group2] = [
+        Control_L
+    ],
+    actions[Group2] = [
+        SetMods(mods=Control)
+    ]
+    };
+};
+
 // Function keys on the third alphabetic row plus two on the second
 // row.
 //
@@ -587,28 +609,6 @@ xkb_symbols "no-p5" {
     ] };
     key <AD12> {
         [ dead_iota ]
-    };
-};
-
-xkb_symbols "group-2-tab-as-alt" {
-    key <TAB> {
-    symbols[Group2] = [
-        Alt_L
-    ],
-    actions[Group2] = [
-        SetMods(mods=Alt)
-    ]
-    };
-};
-
-xkb_symbols "group-2-q-as-control" {
-    key <AD01> {
-    symbols[Group2] = [
-        Control_L
-    ],
-    actions[Group2] = [
-        SetMods(mods=Control)
-    ]
     };
 };
 
