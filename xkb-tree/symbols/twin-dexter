@@ -380,6 +380,17 @@ xkb_symbols "numpad-and-combining" {
 xkb_symbols "group-2" {
     include "twin-dexter(group-2-function-keys)"
 
+    // Press to toggle on and off sticky keys.  Note that sticky keys
+    // seems to affect all modifiers, so keys like control and alt will
+    // also be sticky.
+    //
+    // NOTE: This key (or just sticky keys in itself) is kind of
+    // finnicky.  It seems that sticky is in effect until it is
+    // either toggled off again, or if you use a modifier key
+    // as a regular modifier key.  For example, if you hold down
+    // a control key and then press another key (not pressing and
+    // then releasing the control key and pressing the other key).
+    // This makes it very easy to sticky off by accident.
     key <AD02> {
         [],
         [ StickyKeys_Enable ]
