@@ -416,7 +416,7 @@ xkb_symbols "group-2" {
 // method, like for example using one of the keys as a latch, locking
 // the group, or something like that.
 xkb_symbols "group-2-function-keys" {
-    key.type[Group2] = "FOUR_LEVEL";
+    key.type[Group2] = "EIGHT_LEVEL";
     key <AB01> {
       [],
       [ F1, F1, F13, F13, F25, F25 ]
