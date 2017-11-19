@@ -378,6 +378,8 @@ xkb_symbols "numpad-and-combining" {
 };
 
 xkb_symbols "group-2" {
+    include "twin-dexter(group-2-tab-as-alt)"
+    include "twin-dexter(group-2-q-as-control)"
     include "twin-dexter(group-2-function-keys)"
 
     // Press to toggle on and off sticky keys.  Note that sticky keys
