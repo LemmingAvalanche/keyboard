@@ -275,14 +275,10 @@ xkb_symbols "alphabet-section-numpad" {
     ] };
     // Second numpad row.
     key <AC01> { [
-        // TODO: the level four `〈` is not useful any more, since I
-        // produce this through another means now.
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         comma, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC02> { [
-        // TODO: the level four `〉` is not useful any more, since I
-        // produce this through another means now.
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         4, NoSymbol, NoSymbol, NoSymbol
     ] };
