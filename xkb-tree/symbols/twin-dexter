@@ -250,10 +250,6 @@ xkb_symbols "no-p2" {
     };
 };
 
-xkb_symbols "delete-group-switch" {
-    key <DELE> { [ Delete, Delete, ISO_Next_Group ] };
-};
-
 // Make a “numpad”.
 // This numpad has zero on the lowest right corner.  Comma and
 // period are on the second and third row from the top, respectively.
@@ -501,7 +497,6 @@ xkb_symbols "group-2-function-keys" {
 // Like `no-p2`, but with an “alphabetic numpad”.
 xkb_symbols "no-p3" {
     include "twin-dexter(no-p2)"
-    include "twin-dexter(delete-group-switch)"
     include "twin-dexter(alphabet-section-numpad)"
 };
 
@@ -512,7 +507,6 @@ xkb_compat {
 xkb_symbols "no-p4" {
     include "twin-dexter(no-p2)"
     include "twin-dexter(numpad-and-combining)"
-    include "twin-dexter(delete-group-switch)"
     // For a useful group 2.
     include "twin-dexter(group-2)"
 
