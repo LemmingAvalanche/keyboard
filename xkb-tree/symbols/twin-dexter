@@ -122,18 +122,18 @@ xkb_symbols "no-common" {
     // Move the braces to two free keys (see `latin`) since it is not
     // room for them on `<AC11>`.
     key <AB02> { [
-        x, X, braceleft, U203A
+        NoSymbol, NoSymbol, braceleft, U203A
     ] };
     key <AB03> { [
-        c, C, braceright, NoSymbol
+        NoSymbol, NoSymbol, braceright, NoSymbol
     ] };
     // Use Norwegian quotemarks instead of the English ones which are
     // defined in `latin`.
     key <AC02> { [
-        s, S, guillemotleft, NoSymbol
+        NoSymbol, NoSymbol, guillemotleft, NoSymbol
     ] };
     key <AC03> { [
-        d, D, guillemotright, NoSymbol
+        NoSymbol, NoSymbol, guillemotright, NoSymbol
     ] };
 };
 
