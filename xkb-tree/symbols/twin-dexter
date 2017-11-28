@@ -58,7 +58,7 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, less, U2329
     ] };
     key <AC02> { [
-        NoSymbol, NoSymbol, leftdoublequotemark, NoSymbol
+        NoSymbol, NoSymbol, leftdoublequotemark, U232A
     ] };
     key <AC03> { [
         NoSymbol, NoSymbol, rightdoublequotemark, NoSymbol
