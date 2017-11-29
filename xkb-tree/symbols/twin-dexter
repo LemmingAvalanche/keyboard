@@ -717,6 +717,10 @@ xkb_symbols "my-extend" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, Delete, Delete
     ] };
+    key <AD11> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, Insert, Insert
+    ] };
     key <AC01> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, Escape, Escape
