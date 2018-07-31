@@ -683,24 +683,27 @@ xkb_symbols "my-extend" {
         NoAction()
     ]
     };
-    key <AD06> {
-    // Make an explicit group so that we can use an `actions` section
-    // (see below).
-    // NOTE: Pressing control and alt keys on the seventh and eight
-    // level by using latch keys does not work that well.  See: issue in
-    // the `issues.org` file dated 2017-09-01.
-    symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, Control_R, Control_R
-    ],
-    actions[Group1] = [
-        // Do not set any action for non-Extend layer keys.
-        NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction(),
-        // We need to set appropriate actions for control keys.
-        SetMods(mods=Control), SetMods(mods=Shift+Control)
-    ]
-    };
+    // HOT FIX: Commenting this out fixes the issue with the `y` key on
+    // `no-p5`.
+    // TODO: Fix this without having to remove this costumization.
+    // key <AD06> {
+    // // Make an explicit group so that we can use an `actions` section
+    // // (see below).
+    // // NOTE: Pressing control and alt keys on the seventh and eight
+    // // level by using latch keys does not work that well.  See: issue in
+    // // the `issues.org` file dated 2017-09-01.
+    // symbols[Group1] = [
+    //     NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+    //     NoSymbol, NoSymbol, Control_R, Control_R
+    // ],
+    // actions[Group1] = [
+    //     // Do not set any action for non-Extend layer keys.
+    //     NoAction(), NoAction(), NoAction(), NoAction(),
+    //     NoAction(), NoAction(),
+    //     // We need to set appropriate actions for control keys.
+    //     SetMods(mods=Control), SetMods(mods=Shift+Control)
+    // ]
+    // };
     key <AD07> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, Home, Home
