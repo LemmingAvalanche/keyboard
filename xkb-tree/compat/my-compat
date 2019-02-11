@@ -77,4 +77,16 @@ default partial xkb_compatibility "default"  {
 	!allowExplicit;
 	groups= All-Group1;
     };
+
+    indicator "Shift lvl 3 Lock" {
+        !allowExplicit;
+        whichModState= Locked;
+        modifiers= mod5;
+    };
+
+    indicator "Shift lvl 5 Lock" {
+        !allowExplicit;
+        whichModState= Locked;
+        modifiers= mod3;
+    };
 };
