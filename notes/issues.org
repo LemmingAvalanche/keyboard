@@ -728,3 +728,17 @@ reward to bother with.
 
 In case I come back to this for some reason, I should ask someone else
 about this.
+
+* TODO use xkb indicators in status bar
+
+I want to show keyboard state in the status bar/system tray.  Things
+like the lock/latch state of all the shift keys.
+
+See:
+
+- https://github.com/sneetsher/indicator-xkbmod
+- https://github.com/sneetsher/keyboard_modifiers_status
+-
+   https://web.archive.org/web/20020707211630/http://www.tsu.ru/~pascal/en/xkb/gram-compat.html
+
+See also the tag ~keyboard-indicators~ in my Firefox bookmarks.
