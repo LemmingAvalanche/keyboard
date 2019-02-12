@@ -124,6 +124,7 @@ on Linux.
   to quickly find out what some standard layout looks like.  Example
   usage: display the ~us~ layout with ~gkbd-keyboard-display -l us~.
   ([[https://askubuntu.com/a/459997/136104][Source]].)
+
   Note: you might want to run ~setxkbmap -option "" <layout>~
   before running this command in order to reset any options.  I’ve run
   into some confusing behavior in which the mappings from the keyboard
