@@ -184,9 +184,7 @@ xkb_symbols "no-p1" {
     // Map Norwegian characters “æøå” to other symbols.  Useful when
     // programming (hence the name `no-p1`: the `p1` stands for
     // “programming 1”.  See also: [→1].
-    key <AD11> { [
-        slash, bar, U2044, NoSymbol
-    ] };
+    // NOTE: `AD11` omitted since it is not needed.
     key <AD12> { [
         asciicircum, asciitilde, U0302, NoSymbol
     ] };
@@ -594,7 +592,7 @@ xkb_symbols "no-p5" {
     // Move the keys that I’ve used that on `<AD12>` to `<AD11>`, since
     // `<AD12>` gets remapped to a dead key.
     key <AD11> { [
-        slash, asciicircum, asciitilde, NoSymbol
+        NoSymbol, asciicircum, asciitilde, NoSymbol
     ] };
     key <AD12> {
         [ dead_iota ]
