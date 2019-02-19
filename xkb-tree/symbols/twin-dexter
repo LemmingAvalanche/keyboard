@@ -184,7 +184,9 @@ xkb_symbols "no-p1" {
     // Map Norwegian characters “æøå” to other symbols.  Useful when
     // programming (hence the name `no-p1`: the `p1` stands for
     // “programming 1”.  See also: [→1].
-    // NOTE: `AD11` omitted since it is not needed.
+    key <AD11> { [
+        NoSymbol, asciicircum, asciitilde, NoSymbol
+    ] };
     key <AD12> { [
         asciicircum, asciitilde, U0302, NoSymbol
     ] };
