@@ -191,10 +191,10 @@ xkb_symbols "no-p1" {
 
     // →1
     key <AC10> { [
-        NoSymbol, NoSymbol, bracketleft, NoSymbol
+        dead_belowtilde, NoSymbol, bracketleft, NoSymbol
     ] };
     key <AC11> { [
-        NoSymbol, NoSymbol, bracketright, NoSymbol
+        dead_circumflex, NoSymbol, bracketright, NoSymbol
     ] };
 
     key <AB01> { [
