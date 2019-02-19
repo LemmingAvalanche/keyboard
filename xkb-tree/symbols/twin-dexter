@@ -92,16 +92,16 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, ampersand, U300D
     ] };
     key <AB07> { [
-        NoSymbol, NoSymbol, backslash, NoSymbol
+        NoSymbol, NoSymbol, backslash, U2032
     ] };
     key <AB08> { [
-        comma, semicolon, enfilledcircbullet, U2032
+        comma, semicolon, periodcentered, abovedot
     ] };
     key <AB09> { [
-        period, colon, periodcentered, abovedot
+        period, colon, emdash, enfilledcircbullet
     ] };
     key <AB10> { [
-        minus, underscore, endash, emdash
+        minus, underscore, endash, NoSymbol
     ] };
 };
 
