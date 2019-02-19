@@ -23,7 +23,8 @@ xkb_symbols "latin" {
     key.type[Group1] = "EIGHT_LEVEL";
 
     key <AD01> { [
-        NoSymbol, NoSymbol, dollar, U2607
+    // NOTE Third level free.
+        NoSymbol, NoSymbol, NoSymbol, U2607
     ] };
     key <AD02> { [
         NoSymbol, NoSymbol, exclam, dagger
@@ -31,7 +32,7 @@ xkb_symbols "latin" {
     // Duplicate commonly used symbols to third level of the alphabetic
     // section.
     key <AD03> { [
-        NoSymbol, NoSymbol, rightsinglequotemark, righttack
+        NoSymbol, NoSymbol, rightsinglequotemark, leftsinglequotemark
     ] };
     key <AD04> { [
         NoSymbol, NoSymbol, quotedbl, NoSymbol
@@ -55,7 +56,7 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, plus, NoSymbol
     ] };
     key <AC01> { [
-        NoSymbol, NoSymbol, less, U2329
+        NoSymbol, NoSymbol, percent, U2329
     ] };
     key <AC02> { [
         NoSymbol, NoSymbol, leftdoublequotemark, U232A
@@ -64,11 +65,10 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, rightdoublequotemark, NoSymbol
     ] };
     key <AC04> { [
-    // NOTE: Third level vacant.
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, parenleft, NoSymbol
     ] };
     key <AC05> { [
-        NoSymbol, NoSymbol, leftsinglequotemark, NoSymbol
+        NoSymbol, NoSymbol, parenright, NoSymbol
     ] };
     key <AC06> { [
         NoSymbol, NoSymbol, numbersign, leftarrow
@@ -86,7 +86,7 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, U25CA, NoSymbol
     ] };
     key <AB05> { [
-        NoSymbol, NoSymbol, percent, U300C
+        NoSymbol, NoSymbol, dollar, U300C
     ] };
     key <AB06> { [
         NoSymbol, NoSymbol, ampersand, U300D
@@ -147,11 +147,11 @@ xkb_symbols "eo-common" {
     // Esperanto.
     key <AC10>	{ [
         // level 1: combining circumflex, for example: `ĝ`.
-        U0302, section, parenleft, U301A
+        U0302, section, NoSymbol, NoSymbol
     ] };
     key <AC11>	{ [
         // level 1: `ŭ`.
-        U016D, U016C, parenright, U301B
+        U016D, U016C, NoSymbol, NoSymbol
     ] };
 };
 
@@ -193,26 +193,25 @@ xkb_symbols "no-p1" {
 
     // →1
     key <AC10> { [
-        parenleft, bracketleft, braceleft, U301A
+        NoSymbol, NoSymbol, bracketleft, NoSymbol
     ] };
     key <AC11> { [
-        parenright, bracketright, braceright, U301B
+        NoSymbol, NoSymbol, bracketright, NoSymbol
     ] };
 
     key <AB01> { [
         // TODO: the level four `‹` is not useful any more, since I
         // produce this through another means now.
-        z, Z, greater, U2039
+        z, Z, less, U2039
     ] };
     key <AB02> { [
-        // TODO: the level four `›` is not useful any more, since I
-        // produce this through another means now.
-        // NOTE: Third level vacant.
-        x, X, NoSymbol, U203A
+        x, X, greater, U203A
     ] };
     key <AB03> { [
-        // NOTE: Third level vacant.
-        c, C, NoSymbol, NoSymbol
+        c, C, braceleft, NoSymbol
+    ] };
+    key <AB04> { [
+        v, V, braceright, NoSymbol
     ] };
     // Use English quote marks.
     key <AC02> { [
