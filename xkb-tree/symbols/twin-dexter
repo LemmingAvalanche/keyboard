@@ -65,10 +65,10 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, rightdoublequotemark, NoSymbol
     ] };
     key <AC04> { [
-        NoSymbol, NoSymbol, parenleft, NoSymbol
+        NoSymbol, NoSymbol, apostrophe, NoSymbol
     ] };
     key <AC05> { [
-        NoSymbol, NoSymbol, parenright, NoSymbol
+        NoSymbol, NoSymbol, asterisk, NoSymbol
     ] };
     key <AC06> { [
         NoSymbol, NoSymbol, numbersign, leftarrow
@@ -77,10 +77,10 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, slash, downarrow
     ] };
     key <AC08> { [
-        NoSymbol, NoSymbol, apostrophe, uparrow
+        NoSymbol, NoSymbol, parenleft, uparrow
     ] };
     key <AC09> { [
-        NoSymbol, NoSymbol, asterisk, rightarrow
+        NoSymbol, NoSymbol, parenright, rightarrow
     ] };
     key <AB04> { [
         NoSymbol, NoSymbol, U25CA, NoSymbol
