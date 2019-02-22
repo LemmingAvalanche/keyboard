@@ -589,8 +589,11 @@ xkb_symbols "eo-4" {
 };
 
 // Like no-p4 but with dead key on `<AD12>`.
+//
+// Also with Hyper keys.
 xkb_symbols "no-p5" {
     include "twin-dexter(no-p4)"
+    include "twin-dexter(hyper)"
     // Move the keys that I’ve used that on `<AD12>` to `<AD11>`, since
     // `<AD12>` gets remapped to a dead key.
     key <AD11> { [
@@ -827,4 +830,26 @@ xkb_symbols "my-extend" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
 
+};
+
+// Template source: https://askubuntu.com/a/794087/136104
+partial modifier_keys
+xkb_symbols "hyper" {
+
+    replace key <HYPR> {
+      vmods = NumLock,
+      symbols[Group1] = [ NoSymbol ],
+      actions[Group1] = [ SetMods(modifiers=NumLock) ]
+    };
+    replace key <CAPS> {
+      vmods = NumLock,
+      symbols[Group1] = [ Hyper_L ],
+      actions[Group1] = [ SetMods(modifiers=NumLock) ]
+    };
+    replace key <BKSL> {
+      vmods = NumLock,
+      symbols[Group1] = [ Hyper_R ],
+      actions[Group1] = [ SetMods(modifiers=NumLock) ]
+    };
+    replace modifier_map Mod2 { <HYPR>, Hyper_L, Hyper_R };
 };
