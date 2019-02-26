@@ -857,6 +857,7 @@ xkb_symbols "hyper" {
 };
 
 xkb_symbols "lvl-5-media-keys" {
+    key.type[Group1] = "EIGHT_LEVEL";
     key <UP> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         XF86AudioPlay, NoSymbol, NoSymbol, NoSymbol
