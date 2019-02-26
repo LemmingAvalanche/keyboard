@@ -594,6 +594,8 @@ xkb_symbols "eo-4" {
 xkb_symbols "no-p5" {
     include "twin-dexter(no-p4)"
     include "twin-dexter(hyper)"
+    // Experimental
+    include "twin-dexter(lvl-5-media-keys)"
     // Move the keys that I’ve used that on `<AD12>` to `<AD11>`, since
     // `<AD12>` gets remapped to a dead key.
     key <AD11> { [
@@ -852,4 +854,11 @@ xkb_symbols "hyper" {
       actions[Group1] = [ SetMods(modifiers=NumLock) ]
     };
     replace modifier_map Mod2 { <HYPR>, Hyper_L, Hyper_R };
+};
+
+xkb_symbols "lvl-5-media-keys" {
+    key <UP> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        XF86AudioPlay, NoSymbol, NoSymbol, NoSymbol
+    ] };
 };
