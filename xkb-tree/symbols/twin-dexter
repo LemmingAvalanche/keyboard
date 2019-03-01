@@ -508,7 +508,18 @@ xkb_symbols "no-p4" {
     include "twin-dexter(numpad-and-combining)"
     // For a useful group 2.
     include "twin-dexter(group-2)"
+    include "twin-dexter(latches-menu-and-compose)"
 
+    // TODO: Make some use of these dead keys by making mappings in the
+    // ~.XCompose~ file (see the dotfiles repository).
+    replace key <TLDE> {
+        [ dead_greek ]
+    };
+};
+
+// Shift latches, group latches, menu key and compose key on the
+// “number row”.
+xkb_symbols "latches-menu-and-compose" {
     // For latches
     // Levels
     replace key <AE02> {
@@ -564,12 +575,6 @@ xkb_symbols "no-p4" {
     replace key <AE11> {
         type[Group1]="ONE_LEVEL",
         [ ISO_Group_Latch ]
-    };
-
-    // TODO: Make some use of these dead keys by making mappings in the
-    // ~.XCompose~ file (see the dotfiles repository).
-    replace key <TLDE> {
-        [ dead_greek ]
     };
 };
 
