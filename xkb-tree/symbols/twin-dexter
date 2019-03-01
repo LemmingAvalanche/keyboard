@@ -11,7 +11,6 @@ xkb_symbols "latin" {
     include "level3(modifier_mapping)"
     include "level3(bksl_switch)"
     include "level3(caps_switch)"
-    include "twin-dexter(my-extend)"
     // Use right Alt as Alt key, instead of AltGr key.
     key <RALT> { [ Alt_R ] };
 
@@ -502,6 +501,7 @@ xkb_symbols "no-p4" {
     // For a useful group 2.
     include "twin-dexter(group-2)"
     include "twin-dexter(latches-menu-and-compose)"
+    include "twin-dexter(my-extend)"
 
     // TODO: Make some use of these dead keys by making mappings in the
     // ~.XCompose~ file (see the dotfiles repository).
