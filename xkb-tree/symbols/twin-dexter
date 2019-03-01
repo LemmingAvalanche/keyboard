@@ -15,13 +15,6 @@ xkb_symbols "latin" {
     // Use right Alt as Alt key, instead of AltGr key.
     key <RALT> { [ Alt_R ] };
 
-    // Make levels 5–8 possible.
-    //
-    // This layout does not define any keys on levels 5–8, but it
-    // inherits (includes) `my-extend` which defines keys for the
-    // seventh and eighth level.
-    key.type[Group1] = "EIGHT_LEVEL";
-
     key <AD01> { [
     // NOTE Third level free.
         NoSymbol, NoSymbol, NoSymbol, U2607
