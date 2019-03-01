@@ -14,6 +14,10 @@ xkb_symbols "latin" {
     // Use right Alt as Alt key, instead of AltGr key.
     key <RALT> { [ Alt_R ] };
 
+    // Make levels 5–8 possible.
+    include "level5(modifier_mapping)"
+    key.type[Group1] = "EIGHT_LEVEL";
+
     key <AD01> { [
     // NOTE Third level free.
         NoSymbol, NoSymbol, NoSymbol, U2607
@@ -164,10 +168,6 @@ xkb_symbols "no-nodeadkeys" {
 partial alphanumeric_keys
 xkb_symbols "no-p1" {
     include "twin-dexter(no-nodeadkeys)"
-
-    // Make levels 5–8 possible.
-    include "level5(modifier_mapping)"
-    key.type[Group1] = "EIGHT_LEVEL";
 
     // Make the <TLDE> and <AE12> key into compose keys.
     key <TLDE> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
