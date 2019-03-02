@@ -1080,6 +1080,7 @@ xkb_symbols "group-3-experimental" {
     symbols[Group3] = [
         ISO_First_Group
     ]
+    };
 };
 
 // Regular symbols on Group 3.  For testing the group.
@@ -1102,5 +1103,4 @@ xkb_symbols "group-3-test-symbols" {
         [ at, NoSymbol ]
     };
 
-    };
 };
