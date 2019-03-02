@@ -408,8 +408,10 @@ xkb_symbols "group-2-q-as-control" {
     };
 };
 
-// Function keys on the third alphabetic row plus two on the second
-// row.
+// Function keys on the “numpad” (†1) (`F1`–`F9`) plus keys `B`, `G`,
+// and `T` (`F10`–`F12`).
+//
+// † 1: The same layout as `alphabet-section-numpad`.
 //
 // Each key has one of the “basic” function keys, meaning one of the
 // first 12, in addition to the key that is “12 higher up” (Fy =
@@ -426,53 +428,57 @@ xkb_symbols "group-2-q-as-control" {
 // method, like for example using one of the keys as a latch, locking
 // the group, or something like that.
 xkb_symbols "group-2-function-keys" {
+    // Keys `X`–`V`.
     key.type[Group2] = "EIGHT_LEVEL";
-    key <AB01> {
+    key <AB02> {
       [],
       [ F1, F1, F13, F13, F25, F25 ]
     };
 
-    key <AB02> {
+    key <AB03> {
       [],
       [ F2, F2, F14, F14, F26, F26 ]
     };
 
-    key <AB03> {
+    key <AB04> {
       [],
       [ F3, F3, F15, F15, F27, F27 ]
     };
 
-    key <AB04> {
+    // Keys `S`–`F`.
+    key <AC02> {
       [],
       [ F4, F4, F16, F16, F28, F28 ]
     };
 
-    key <AB05> {
+    key <AC03> {
       [],
       [ F5, F5, F17, F17, F29, F29 ]
     };
 
-    key <AB06> {
+    key <AC04> {
       [],
       [ F6, F6, F18, F18, F30, F30 ]
     };
 
-    key <AB07> {
+    // Keys `W`–`R`.
+    key <AD02> {
       [],
       [ F7, F7, F19, F19, F31, F31 ]
     };
 
-    key <AB08> {
+    key <AD03> {
       [],
       [ F8, F8, F20, F20, F32, F32 ]
     };
 
-    key <AB09> {
+    key <AD04> {
       [],
       [ F9, F9, F21, F21, F33, F33 ]
     };
 
-    key <AB10> {
+    // Keys `B`, `G`, and `T`.
+    key <AB05> {
       [],
       [ F10, F10, F22, F22, F34, F34 ]
     };
@@ -482,7 +488,7 @@ xkb_symbols "group-2-function-keys" {
       [ F11, F11, F23, F23, F35, F35 ]
     };
 
-    key <AC06> {
+    key <AD05> {
       [],
       [ F12, F12, F24, F24 ]
     };
