@@ -1082,7 +1082,7 @@ xkb_symbols "group-3-experimental" {
 };
 
 // Regular symbols on Group 3.  For testing the group.
-xkb_symbols {
+xkb_symbols "group-3-test-symbols" {
 
     // keys `D`, `F`, and `G`.  Just for testing
     key <AC03> {
