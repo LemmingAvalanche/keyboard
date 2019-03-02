@@ -607,6 +607,38 @@ xkb_symbols "no-p5" {
     };
 };
 
+// Lock levels by first pressing a latch key and then `<RTRN>`.
+xkb_symbols "return-lock-shift-levels" {
+    key.type[Group1] = "EIGHT_LEVEL";
+    // NOTE I tried to make locks like these:
+    //
+    //        actions[Group1] = [
+    //            NoAction(), LockMods(modifiers=Shift),
+    //            LockMods(modifiers=LevelThree),
+    //            LockMods(modifiers=Shift,LevelThree),
+    //            …
+    //        ] };
+    //
+    //   I.e., to lock multiple shifts for levels four, six, seven
+    //   and eight.  This does not seem to work, however.  For the
+    //   action `LockMods(modifiers=Shift,LevelThree)`, only the first
+    //   shift level locks, i.e. `Shift` (level 2).
+    key <RTRN> {
+    symbols[Group1] = [
+        Return, Shift_Lock, ISO_Level3_Lock, ISO_Level3_Lock,
+        ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock
+    ],
+    // NOTE Need to set the action associated with `Shift_Lock` since it
+    //   won’t work otherwise.
+    actions[Group1] = [
+        NoAction(), LockMods(modifiers=Shift),
+        LockMods(modifiers=LevelThree), LockMods(modifiers=LevelThree),
+        LockMods(modifiers=LevelFive), LockMods(modifiers=LevelFive),
+        LockMods(modifiers=LevelFive), LockMods(modifiers=LevelFive)
+    ]
+    };
+};
+
 // Similar to `no-p5` but uses an alternative to `my-extend`.
 xkb_symbols "no-p6" {
     include "twin-dexter(no-p3)"
