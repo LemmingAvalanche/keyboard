@@ -1077,8 +1077,18 @@ xkb_symbols "group-3-experimental" {
     symbols[Group2] = [
         ISO_First_Group
     ],
+    // NOTE Apparently I need to declare this action explicitly.  If I
+    //     don’t the key seems to lock to Group 2 instead of Group 1.  I
+    //     have no idea why.
+    actions[Group2] = [
+        LockGroup(group=1)
+    ],
     symbols[Group3] = [
         ISO_First_Group
+    ],
+    // NOTE Ditto the note above.
+    actions[Group3] = [
+        LockGroup(group=1)
     ]
     };
 };
