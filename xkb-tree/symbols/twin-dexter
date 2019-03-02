@@ -604,6 +604,34 @@ xkb_symbols "no-p5" {
     };
 };
 
+// Similar to `no-p5` but uses an alternative to `my-extend`.
+xkb_symbols "no-p6" {
+    include "twin-dexter(no-p3)"
+    include "twin-dexter(right-side-nav-and-misc)"
+    include "twin-dexter(hyper)"
+    // For a useful group 2.
+    include "twin-dexter(group-2)"
+    include "twin-dexter(latches-menu-and-compose)"
+
+    // Experimental
+    include "twin-dexter(lvl-5-media-keys)"
+
+    // TODO: Make some use of these dead keys by making mappings in the
+    // ~.XCompose~ file (see the dotfiles repository).
+    replace key <TLDE> {
+        [ dead_greek ]
+    };
+
+    // Move the keys that I’ve used that on `<AD12>` to `<AD11>`, since
+    // `<AD12>` gets remapped to a dead key.
+    key <AD11> { [
+        NoSymbol, asciicircum, asciitilde, NoSymbol
+    ] };
+    key <AD12> {
+        [ dead_iota ]
+    };
+};
+
 // A fifth- and sixth-level alternative to `my-extend`.  Uses only the
 // the right side of the keyboard since `alphabet-section-numpad` uses
 // the left side.
