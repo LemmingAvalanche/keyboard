@@ -169,6 +169,9 @@ partial alphanumeric_keys
 xkb_symbols "no-p1" {
     include "twin-dexter(no-nodeadkeys)"
 
+    // Set `EIGHT_LEVEL` in case it is necessary.
+    key.type[Group1] = "EIGHT_LEVEL";
+
     // Make the <TLDE> and <AE12> key into compose keys.
     key <TLDE> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
     key <AE12> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
