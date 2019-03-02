@@ -54,10 +54,13 @@ default partial xkb_compatibility "default"  {
 	action= LatchGroup(group=2);
     };
 
+    // Repurposed as latch group 3 key.
+    // NOTE I don’t know if this section i necessary.  I have to set the
+    // `action` in `twin-dexter(group-3-experimental)`, anyway.
     interpret ISO_Next_Group {
 	useModMapMods= level1;
 	virtualModifier= AltGr;
-	action= LockGroup(group=+1);
+	action= LatchGroup(group=3);
     };
 
     interpret ISO_Prev_Group {

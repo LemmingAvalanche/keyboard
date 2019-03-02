@@ -619,6 +619,9 @@ xkb_symbols "no-p6" {
     // Experimental
     include "twin-dexter(lvl-5-media-keys)"
 
+    // Experimental
+    include "twin-dexter(group-3-experimental)"
+
     // TODO: Make some use of these dead keys by making mappings in the
     // ~.XCompose~ file (see the dotfiles repository).
     replace key <TLDE> {
@@ -985,4 +988,31 @@ xkb_symbols "lvl-5-media-keys" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         XF86AudioPlay, NoSymbol, NoSymbol, NoSymbol
     ] };
+};
+
+// Experimental: third group mappings.  Just to see if it works.
+xkb_symbols "group-3-experimental" {
+    replace key <AE12> {
+        type[Group1]="ONE_LEVEL",
+        // NOTE This key is repurposed to “group level 3 latch”.
+        //     See: xkb-tree/compat/my-compat
+        symbols[Group1] = [ ISO_Next_Group ],
+        actions[Group1] = [ LatchGroup(group=3) ]
+    };
+    // keys `D`, `F`, and `G`.  Just for testing
+    key <AC03> {
+        [],
+        [],
+        [ equal, NoSymbol ]
+    };
+    key <AC04> {
+        [],
+        [],
+        [ grave, NoSymbol ]
+    };
+    key <AC05> {
+        [],
+        [],
+        [ at, NoSymbol ]
+    };
 };
