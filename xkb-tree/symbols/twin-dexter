@@ -646,6 +646,7 @@ xkb_symbols "no-p6" {
 
     // Experimental
     include "twin-dexter(group-3-experimental)"
+    include "twin-dexter(group-3-test-symbols)"
 
     // TODO: Make some use of these dead keys by making mappings in the
     // ~.XCompose~ file (see the dotfiles repository).
