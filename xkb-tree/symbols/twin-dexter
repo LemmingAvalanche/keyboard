@@ -641,6 +641,8 @@ xkb_symbols "no-p6" {
     include "twin-dexter(group-2)"
     include "twin-dexter(latches-menu-and-compose)"
 
+    include "twin-dexter(return-lock-shift-levels)"
+
     // Experimental
     include "twin-dexter(lvl-5-media-keys)"
 
