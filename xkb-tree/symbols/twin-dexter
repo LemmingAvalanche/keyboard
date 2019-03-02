@@ -1015,4 +1015,47 @@ xkb_symbols "group-3-experimental" {
         [],
         [ at, NoSymbol ]
     };
+
+    // Group locks.
+
+    key <AC07> {
+    symbols[Group2] =[
+        ISO_First_Group
+    ],
+    symbols[Group3] =[
+        ISO_First_Group
+    ]
+    };
+
+    // Prev_Group: lock level 2.
+    key <AC08> {
+    symbols[Group2] =[
+        ISO_Prev_Group
+    ],
+    actions[Group2] = [
+        LockGroup(group=2)
+    ],
+    symbols[Group3] =[
+        ISO_Prev_Group
+    ],
+    actions[Group3] = [
+        LockGroup(group=2)
+    ]
+    };
+
+    // Last_Group: lock level 3.
+    key <AC09> {
+    symbols[Group2] =[
+        ISO_Last_Group
+    ],
+    actions[Group2] = [
+        LockGroup(group=3)
+    ],
+    symbols[Group3] =[
+        ISO_Last_Group
+    ],
+    actions[Group3] = [
+        LockGroup(group=3)
+    ]
+    };
 };
