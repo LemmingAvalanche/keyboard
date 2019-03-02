@@ -1042,22 +1042,6 @@ xkb_symbols "group-3-experimental" {
         symbols[Group1] = [ ISO_Next_Group ],
         actions[Group1] = [ LatchGroup(group=3) ]
     };
-    // keys `D`, `F`, and `G`.  Just for testing
-    key <AC03> {
-        [],
-        [],
-        [ equal, NoSymbol ]
-    };
-    key <AC04> {
-        [],
-        [],
-        [ grave, NoSymbol ]
-    };
-    key <AC05> {
-        [],
-        [],
-        [ at, NoSymbol ]
-    };
 
     // Group locks.
 
