@@ -604,6 +604,99 @@ xkb_symbols "no-p5" {
     };
 };
 
+// A fifth- and sixth-level alternative to `my-extend`.  Uses only the
+// the right side of the keyboard since `alphabet-section-numpad` uses
+// the left side.
+//
+// The fifth level requires only one modifier to be pressed.  This in
+// contrast to the seventh layer which requires two.
+xkb_symbols "right-side-nav-and-misc" {
+    // Row `Y`, `U`, `I`, etc.
+    //
+    // Vi-style navigation on keys `Y`–`O`.
+    key <AD06> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Right, Right, NoSymbol, NoSymbol
+    };
+    key <AD07> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Down, Down, NoSymbol, NoSymbol
+    };
+    key <AD08> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Up, Up, NoSymbol, NoSymbol
+    };
+    key <AD09> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Left, Left, NoSymbol, NoSymbol
+    };
+    // TODO map to something
+    key <AD10> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    };
+    // TODO map to something
+    key <AD11> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    };
+    // TODO map to something
+    key <AD12> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    };
+    // Row `H`, `J`, `K`, etc.
+    key <AC06> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Page_Up, Page_Up, NoSymbol, NoSymbol
+    };
+    // TODO map to something
+    key <AC07> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    };
+    // `Escape` on the middle finger.
+    key <AC08> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Escape, Escape, NoSymbol, NoSymbol
+    };
+    key <AC09> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        BackSpace, BackSpace, NoSymbol, NoSymbol
+    };
+    key <AC10> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Delete, Delete, NoSymbol, NoSymbol
+    };
+    // TODO map to something
+    key <AC11> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    };
+    // Row `N`, `M`, `,`, etc.
+    key <AB06> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Page_Down, Page_Down, NoSymbol, NoSymbol
+    };
+    key <AB07> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Return, Return, NoSymbol, NoSymbol
+    };
+    key <AB08> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        Home, Home, NoSymbol, NoSymbol
+    };
+    key <AB09> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        End, End, NoSymbol, NoSymbol
+    };
+    // TODO map to something
+    key <AB10> {
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    };
+};
+
 // My variation of extend layers, using levels seven and eight.
 //
 // See: https://forum.colemak.com/topic/2014-extend-extra-extreme/
