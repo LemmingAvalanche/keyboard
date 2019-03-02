@@ -464,7 +464,10 @@ xkb_symbols "group-2-function-keys" {
     // Keys `W`–`R`.
     key <AD02> {
       [],
-      [ F7, F7, F19, F19, F31, F31 ]
+      // NOTE keyboard jams on levels three and four due to the
+      // combination of depressed keys needed to access these levels.
+      // The `F19` is therefore moved to the `Z` (
+      [ F7, F7, NoSymbol, NoSymbol, F31, F31 ]
     };
 
     key <AD03> {
@@ -491,6 +494,12 @@ xkb_symbols "group-2-function-keys" {
     key <AD05> {
       [],
       [ F12, F12, F24, F24 ]
+    };
+
+    // `F19` on key `Z`.  Moved from `<AD02>` due to keyboard jamming.
+    key <AB01> {
+      [],
+      [ NoSymbol, NoSymbol, F19, F19, NoSymbol, NoSymbol ]
     };
 };
 
