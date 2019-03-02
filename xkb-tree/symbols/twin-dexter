@@ -647,7 +647,7 @@ xkb_symbols "right-side-nav-and-misc" {
     // Vi-style navigation on keys `Y`–`O`.
     key <AD06> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        Right, Right, NoSymbol, NoSymbol
+        Left, Left, NoSymbol, NoSymbol
     ] };
     key <AD07> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
@@ -659,7 +659,7 @@ xkb_symbols "right-side-nav-and-misc" {
     ] };
     key <AD09> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        Left, Left, NoSymbol, NoSymbol
+        Right, Right, NoSymbol, NoSymbol
     ] };
     // TODO map to something
     key <AD10> { [
