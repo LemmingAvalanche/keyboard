@@ -1174,7 +1174,7 @@ xkb_symbols "group-3-test-symbols" {
 
 };
 
-// Regular symbols on Group 3.  For testing the group.
+// Regular symbols on Group 4.  For testing the group.
 xkb_symbols "group-4-test-symbols" {
 
     // keys `D`, `F`, and `G`.  Just for testing
