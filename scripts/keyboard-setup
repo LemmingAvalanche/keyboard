@@ -8,7 +8,7 @@
 #
 # Example usage:
 #
-#     keyboard-setup "twin-dexter(no-p5),twin-dexter(no-4)"
+#     keyboard-setup "twin-dexter(no-p6)"
 #
 # NOTE: the `-compat` option is so that level 2 latch works properly.
 setxkbmap -option "" -layout "$1" \
