@@ -1028,45 +1028,96 @@ xkb_symbols "group-3-experimental" {
     };
 
     // Group locks.
+    // Keys `I`, `O`, `P`, and `Å` (`<AD11>`).
+    // TODO Probably not completely tested.  Right now I have only made
+    //     a few Group 3 mappings just to test things, and I have made
+    //     no Group 4 mappings.
 
-    key <AC07> {
+    // Lock Group 1.
+    key <AD08> {
     symbols[Group2] =[
-        ISO_First_Group
+        ISO_First_Group_Lock
+    ],
+    actions[Group2] = [
+        LockGroup(group=1)
     ],
     symbols[Group3] =[
-        ISO_First_Group
+        ISO_First_Group_Lock
+    ],
+    actions[Group3] = [
+        LockGroup(group=1)
+    ],
+    symbols[Group4] =[
+        ISO_First_Group_Lock
+    ],
+    actions[Group4] = [
+        LockGroup(group=1)
     ]
     };
 
-    // Prev_Group: lock level 2.
-    key <AC08> {
+    // Lock Group 2.
+    key <AD09> {
     symbols[Group2] =[
-        ISO_Prev_Group
+        ISO_Prev_Group_Lock
     ],
     actions[Group2] = [
         LockGroup(group=2)
     ],
     symbols[Group3] =[
-        ISO_Prev_Group
+        ISO_Prev_Group_Lock
     ],
     actions[Group3] = [
+        LockGroup(group=2)
+    ],
+    symbols[Group4] =[
+        ISO_Prev_Group_Lock
+    ],
+    actions[Group4] = [
         LockGroup(group=2)
     ]
     };
 
-    // Last_Group: lock level 3.
-    key <AC09> {
+    // Lock Group 3.
+    key <AD10> {
     symbols[Group2] =[
-        ISO_Last_Group
+        ISO_Next_Group_Lock
     ],
     actions[Group2] = [
         LockGroup(group=3)
     ],
     symbols[Group3] =[
-        ISO_Last_Group
+        ISO_Next_Group_Lock
     ],
     actions[Group3] = [
         LockGroup(group=3)
+    ],
+    symbols[Group4] =[
+        ISO_Next_Group_Lock
+    ],
+    actions[Group4] = [
+        LockGroup(group=3)
+    ]
+    };
+
+    // Lock Group 4.
+    key <AD11> {
+    symbols[Group2] =[
+        ISO_Last_Group
+    ],
+    actions[Group2] = [
+        LockGroup(group=4)
+    ],
+    symbols[Group3] =[
+        ISO_Last_Group
+    ],
+    actions[Group3] = [
+        LockGroup(group=4)
+    ],
+    symbols[Group4] =[
+        ISO_Last_Group
+    ],
+    actions[Group4] = [
+        LockGroup(group=4)
     ]
     };
 
