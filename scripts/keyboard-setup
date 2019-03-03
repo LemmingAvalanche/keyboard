@@ -3,8 +3,8 @@
 # Set keyboard layouts and options relating to keyboard layouts
 #
 # This program excepts one argument, namely all the layouts separated by
-# commas.  I think you can only use up to four layouts, so you should
-# probably not pass in more than four layouts.
+# commas.  Passing in more than one layout is not recommended, since I
+# want to be able to use all four groups per layout.
 #
 # Example usage:
 #
