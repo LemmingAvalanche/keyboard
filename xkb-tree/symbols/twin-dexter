@@ -1089,6 +1089,13 @@ xkb_symbols "group-3-experimental" {
     // NOTE Ditto the note above.
     actions[Group3] = [
         LockGroup(group=1)
+    ],
+    symbols[Group4] = [
+        ISO_First_Group
+    ],
+    // NOTE Ditto the note above.
+    actions[Group4] = [
+        LockGroup(group=1)
     ]
     };
 };
