@@ -1029,13 +1029,15 @@ xkb_symbols "group-3-experimental" {
     };
 
     // Group locks.
-    // Keys `I`, `O`, `P`, and `Å` (`<AD11>`).
+    // Keys `<AD09>` (`O`),`<AD10>` (`P`), `<AD11>` (`Å`), and
+    // `<AD12>`.
+    //
     // TODO Probably not completely tested.  Right now I have only made
     //     a few Group 3 mappings just to test things, and I have made
     //     no Group 4 mappings.
 
     // Lock Group 1.
-    key <AD08> {
+    key <AD09> {
     symbols[Group2] =[
         ISO_First_Group_Lock
     ],
@@ -1057,7 +1059,7 @@ xkb_symbols "group-3-experimental" {
     };
 
     // Lock Group 2.
-    key <AD09> {
+    key <AD10> {
     symbols[Group2] =[
         ISO_Prev_Group_Lock
     ],
@@ -1079,7 +1081,7 @@ xkb_symbols "group-3-experimental" {
     };
 
     // Lock Group 3.
-    key <AD10> {
+    key <AD11> {
     symbols[Group2] =[
         ISO_Next_Group_Lock
     ],
@@ -1101,7 +1103,7 @@ xkb_symbols "group-3-experimental" {
     };
 
     // Lock Group 4.
-    key <AD11> {
+    key <AD12> {
     symbols[Group2] =[
         ISO_Last_Group
     ],
