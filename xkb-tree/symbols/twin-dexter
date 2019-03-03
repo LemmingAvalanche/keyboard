@@ -647,6 +647,7 @@ xkb_symbols "no-p6" {
     // Experimental
     include "twin-dexter(group-3-experimental)"
     include "twin-dexter(group-3-test-symbols)"
+    include "twin-dexter(group-4-test-symbols)"
 
     // TODO: Make some use of these dead keys by making mappings in the
     // ~.XCompose~ file (see the dotfiles repository).
@@ -1169,6 +1170,31 @@ xkb_symbols "group-3-test-symbols" {
         [],
         [],
         [ at, NoSymbol ]
+    };
+
+};
+
+// Regular symbols on Group 3.  For testing the group.
+xkb_symbols "group-4-test-symbols" {
+
+    // keys `D`, `F`, and `G`.  Just for testing
+    key <AC03> {
+        [],
+        [],
+        [],
+        [ plus, NoSymbol ]
+    };
+    key <AC04> {
+        [],
+        [],
+        [],
+        [ dollar, NoSymbol ]
+    };
+    key <AC05> {
+        [],
+        [],
+        [],
+        [ colon, NoSymbol ]
     };
 
 };
