@@ -20,8 +20,7 @@ xkb_symbols "latin" {
     key.type[Group1] = "EIGHT_LEVEL";
 
     key <AD01> { [
-    // NOTE Third level free.
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, asciicircum, NoSymbol
     ] };
     key <AD02> { [
         NoSymbol, NoSymbol, exclam, NoSymbol
@@ -228,17 +227,6 @@ xkb_symbols "no-p1" {
     key <TLDE> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
     key <AE12> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
 
-    // Map Norwegian characters “æøå” to other symbols.  Useful when
-    // programming (hence the name `no-p1`: the `p1` stands for
-    // “programming 1”.  See also: [→1].
-    key <AD11> { [
-        NoSymbol, asciicircum, asciitilde, NoSymbol
-    ] };
-    key <AD12> { [
-        asciicircum, asciitilde, U0302, NoSymbol
-    ] };
-
-    // →1
     key <AC10> { [
         NoSymbol, NoSymbol, bracketleft, NoSymbol
     ] };
@@ -645,11 +633,6 @@ xkb_symbols "no-p5" {
     include "twin-dexter(hyper)"
     // Experimental
     include "twin-dexter(lvl-5-media-keys)"
-    // Move the keys that I’ve used that on `<AD12>` to `<AD11>`, since
-    // `<AD12>` gets remapped to a dead key.
-    key <AD11> { [
-        NoSymbol, asciicircum, asciitilde, NoSymbol
-    ] };
     key <AD12> {
         [ kana_u ]
     };
@@ -705,11 +688,6 @@ xkb_symbols "no-p6" {
         [ kana_a ]
     };
 
-    // Move the keys that I’ve used that on `<AD12>` to `<AD11>`, since
-    // `<AD12>` gets remapped to a dead key.
-    key <AD11> { [
-        NoSymbol, asciicircum, asciitilde, NoSymbol
-    ] };
     key <AD12> {
         [ kana_u ]
     };
