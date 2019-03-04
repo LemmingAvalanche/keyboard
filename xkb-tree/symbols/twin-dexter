@@ -11,6 +11,7 @@ xkb_symbols "latin" {
     include "level3(modifier_mapping)"
     include "level3(bksl_switch)"
     include "level3(caps_switch)"
+    include "twin-dexter(level-four-symbols)"
     // Use right Alt as Alt key, instead of AltGr key.
     key <RALT> { [ Alt_R ] };
 
@@ -20,13 +21,13 @@ xkb_symbols "latin" {
 
     key <AD01> { [
     // NOTE Third level free.
-        NoSymbol, NoSymbol, NoSymbol, U2607
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AD02> { [
-        NoSymbol, NoSymbol, exclam, dagger
+        NoSymbol, NoSymbol, exclam, NoSymbol
     ] };
     key <AD03> { [
-        NoSymbol, NoSymbol, rightsinglequotemark, leftsinglequotemark
+        NoSymbol, NoSymbol, rightsinglequotemark, NoSymbol
     ] };
     key <AD04> { [
         NoSymbol, NoSymbol, quotedbl, NoSymbol
@@ -50,10 +51,10 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, plus, NoSymbol
     ] };
     key <AC01> { [
-        NoSymbol, NoSymbol, percent, U2329
+        NoSymbol, NoSymbol, percent, NoSymbol
     ] };
     key <AC02> { [
-        NoSymbol, NoSymbol, leftdoublequotemark, U232A
+        NoSymbol, NoSymbol, leftdoublequotemark, NoSymbol
     ] };
     key <AC03> { [
         NoSymbol, NoSymbol, rightdoublequotemark, NoSymbol
@@ -65,37 +66,90 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, asterisk, NoSymbol
     ] };
     key <AC06> { [
-        NoSymbol, NoSymbol, numbersign, leftarrow
+        NoSymbol, NoSymbol, numbersign, NoSymbol
     ] };
     key <AC07> { [
-        NoSymbol, NoSymbol, slash, downarrow
+        NoSymbol, NoSymbol, slash, NoSymbol
     ] };
     key <AC08> { [
-        NoSymbol, NoSymbol, parenleft, uparrow
+        NoSymbol, NoSymbol, parenleft, NoSymbol
     ] };
     key <AC09> { [
-        NoSymbol, NoSymbol, parenright, rightarrow
+        NoSymbol, NoSymbol, parenright, NoSymbol
     ] };
     key <AB04> { [
         NoSymbol, NoSymbol, U25CA, NoSymbol
     ] };
     key <AB05> { [
-        NoSymbol, NoSymbol, dollar, U300C
+        NoSymbol, NoSymbol, dollar, NoSymbol
     ] };
     key <AB06> { [
-        NoSymbol, NoSymbol, ampersand, U300D
+        NoSymbol, NoSymbol, ampersand, NoSymbol
     ] };
     key <AB07> { [
-        NoSymbol, NoSymbol, backslash, U2032
+        NoSymbol, NoSymbol, backslash, NoSymbol
     ] };
     key <AB08> { [
-        comma, semicolon, periodcentered, abovedot
+        comma, semicolon, periodcentered, NoSymbol
     ] };
     key <AB09> { [
-        period, colon, emdash, enfilledcircbullet
+        period, colon, emdash, NoSymbol
     ] };
     key <AB10> { [
         minus, underscore, endash, NoSymbol
+    ] };
+};
+
+xkb_symbols "level-four-symbols" {
+    key <AD01> { [
+        NoSymbol, NoSymbol, NoSymbol, U2607
+    ] };
+    key <AD02> { [
+        NoSymbol, NoSymbol, NoSymbol, dagger
+    ] };
+    key <AC01> { [
+        NoSymbol, NoSymbol, NoSymbol, U2329
+    ] };
+    key <AC02> { [
+        NoSymbol, NoSymbol, NoSymbol, U232A
+    ] };
+    key <AC06> { [
+        NoSymbol, NoSymbol, NoSymbol, leftarrow
+    ] };
+    key <AC07> { [
+        NoSymbol, NoSymbol, NoSymbol, downarrow
+    ] };
+    key <AC08> { [
+        NoSymbol, NoSymbol, NoSymbol, uparrow
+    ] };
+    key <AC09> { [
+        NoSymbol, NoSymbol, NoSymbol, rightarrow
+    ] };
+    key <AB05> { [
+        NoSymbol, NoSymbol, NoSymbol, U300C
+    ] };
+    key <AB06> { [
+        NoSymbol, NoSymbol, NoSymbol, U300D
+    ] };
+    key <AB07> { [
+        NoSymbol, NoSymbol, NoSymbol, U2032
+    ] };
+    key <AB08> { [
+        NoSymbol, NoSymbol, NoSymbol, abovedot
+    ] };
+    key <AB09> { [
+        NoSymbol, NoSymbol, NoSymbol, enfilledcircbullet
+    ] };
+    key <AB10> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB01> { [
+        // TODO: the level four `‹` is not useful any more, since I
+        // produce this through another means now.
+        NoSymbol, NoSymbol, NoSymbol, U2039
+    ] };
+    key <AB02> { [
+        NoSymbol, NoSymbol, NoSymbol, U203A
     ] };
 };
 
@@ -116,7 +170,7 @@ xkb_symbols "no-common" {
     // Move the braces to two free keys (see `latin`) since it is not
     // room for them on `<AC11>`.
     key <AB02> { [
-        NoSymbol, NoSymbol, braceleft, U203A
+        NoSymbol, NoSymbol, braceleft, NoSymbol
     ] };
     key <AB03> { [
         NoSymbol, NoSymbol, braceright, NoSymbol
@@ -198,7 +252,7 @@ xkb_symbols "no-p1" {
         z, Z, less, U2039
     ] };
     key <AB02> { [
-        x, X, greater, U203A
+        x, X, greater, NoSymbol
     ] };
     key <AB03> { [
         c, C, braceleft, NoSymbol
