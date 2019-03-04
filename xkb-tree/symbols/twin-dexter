@@ -559,7 +559,7 @@ xkb_symbols "no-p4" {
     // TODO: Make some use of these dead keys by making mappings in the
     // ~.XCompose~ file (see the dotfiles repository).
     replace key <TLDE> {
-        [ dead_greek ]
+        [ kana_a ]
     };
 };
 
@@ -629,7 +629,7 @@ xkb_symbols "no-4" {
     include "twin-dexter(no-p4)"
     include "twin-dexter(no-common)"
     key <AD12> { [
-        dead_belowmacron
+        kana_i
     ] };
 };
 
@@ -653,7 +653,7 @@ xkb_symbols "no-p5" {
         NoSymbol, asciicircum, asciitilde, NoSymbol
     ] };
     key <AD12> {
-        [ dead_iota ]
+        [ kana_u ]
     };
 };
 
@@ -704,7 +704,7 @@ xkb_symbols "no-p6" {
     // TODO: Make some use of these dead keys by making mappings in the
     // ~.XCompose~ file (see the dotfiles repository).
     replace key <TLDE> {
-        [ dead_greek ]
+        [ kana_a ]
     };
 
     // Move the keys that I’ve used that on `<AD12>` to `<AD11>`, since
@@ -713,7 +713,7 @@ xkb_symbols "no-p6" {
         NoSymbol, asciicircum, asciitilde, NoSymbol
     ] };
     key <AD12> {
-        [ dead_iota ]
+        [ kana_u ]
     };
 };
 
