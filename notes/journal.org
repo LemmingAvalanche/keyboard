@@ -329,3 +329,33 @@ I’ve just looked through a lot of [[https://www.x.org/releases/X11R7.7/doc/xor
 promising as a guide on how to define new layouts.  And it looks like it
 comes from some authorative source (www.x.org).  Where have this gem
 been all this time‽
+
+* 2019-03-03
+
+** Idea about ad hoc compose mappings
+
+Given this “home row”:
+
+#+BEGIN_SRC
+a, s, d, f, g, h, g, j, k, l
+#+END_SRC
+
+Let’s say that the ~d~ and ~k~ are sometimes useful as “dead key”
+spots.  One way is to override these keys with some dead keys.  But
+there’s another way: keep the keys (~d~ and ~k~) and load in compose
+mappings that use ~d~ and ~k~ mppings.  In other words, mappings that
+look like this in the ~.Xcompose~ file:
+
+#+BEGIN_SRC
+<d> … : ‹result›
+…
+<k> … : ‹result›
+#+END_SRC
+
+This could perhaps be done by appending to the ~.Xcompose~ file
+dynamically.  And then falling back on the previous ~.Xcompose~ file
+once you don’t want the mapping any more.
+
+This is probably impractical and a pain in the back compared to just
+overriding the keys with some regular compose keys (dead keys or
+whatever).  But I thought it was an intriguing thought.
