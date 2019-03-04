@@ -25,8 +25,6 @@ xkb_symbols "latin" {
     key <AD02> { [
         NoSymbol, NoSymbol, exclam, dagger
     ] };
-    // Duplicate commonly used symbols to third level of the alphabetic
-    // section.
     key <AD03> { [
         NoSymbol, NoSymbol, rightsinglequotemark, leftsinglequotemark
     ] };
