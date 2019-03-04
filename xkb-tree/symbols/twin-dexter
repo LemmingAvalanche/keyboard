@@ -556,8 +556,6 @@ xkb_symbols "no-p4" {
     include "twin-dexter(latches-menu-and-compose)"
     include "twin-dexter(my-extend)"
 
-    // TODO: Make some use of these dead keys by making mappings in the
-    // ~.XCompose~ file (see the dotfiles repository).
     replace key <TLDE> {
         [ kana_a ]
     };
