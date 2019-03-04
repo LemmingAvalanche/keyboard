@@ -20,7 +20,7 @@ xkb_symbols "latin" {
     key.type[Group1] = "EIGHT_LEVEL";
 
     key <AD01> { [
-        NoSymbol, NoSymbol, asciicircum, NoSymbol
+        NoSymbol, NoSymbol, at, NoSymbol
     ] };
     key <AD02> { [
         NoSymbol, NoSymbol, exclam, NoSymbol
@@ -32,10 +32,10 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, quotedbl, NoSymbol
     ] };
     key <AD05> { [
-        NoSymbol, NoSymbol, bar, NoSymbol
+        NoSymbol, NoSymbol, asciicircum, NoSymbol
     ] };
     key <AD06> { [
-        NoSymbol, NoSymbol, at, NoSymbol
+        NoSymbol, NoSymbol, bar, NoSymbol
     ] };
     key <AD07> { [
         NoSymbol, NoSymbol, grave, NoSymbol
