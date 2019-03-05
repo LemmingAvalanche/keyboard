@@ -1,0 +1,53 @@
+xkb_symbols "name-here" {
+    // 1st keyboard row
+    key <TLDE> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE01> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE02> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE03> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE04> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE05> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE06> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE07> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE08> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE09> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE10> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE11> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE12> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+
+    // 2nd keyboard row
+    key <AD01> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD02> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD03> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD04> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD05> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD06> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD07> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD08> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD09> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD10> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD11> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD12> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+
+    // 3rd keyboard row
+    key <AC01> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC02> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC03> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC04> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC07> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC08> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC09> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC10> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC11> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+
+    // 4th keyboard row
+    key <AB01> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB02> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB03> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB04> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB05> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB06> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB07> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB08> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB09> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB10> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+};
