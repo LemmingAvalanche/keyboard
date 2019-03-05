@@ -792,6 +792,13 @@ xkb_symbols "right-side-nav-and-misc" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+
+    // Delete key.
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <DELE> { [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        StickyKeys_Enable, NoSymbol, NoSymbol, NoSymbol
+    ] };
 };
 
 // My variation of extend layers, using levels seven and eight.
