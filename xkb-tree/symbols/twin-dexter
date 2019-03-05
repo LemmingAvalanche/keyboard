@@ -156,6 +156,7 @@ xkb_symbols "level-four-symbols" {
 partial alphanumeric_keys
 xkb_symbols "no-common" {
     // Norwegian characters
+    key.type[Group1] = "EIGHT_LEVEL";
     key <AD11>	{ [
         aring, Aring, asciitilde, NoSymbols
     ] };
@@ -697,7 +698,8 @@ xkb_symbols "no-p6" {
     };
     // `kana_e`: box-drawing mappings.
     key <AD11> { [
-        kana_e
+        kana_e, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
 };
 
@@ -727,15 +729,13 @@ xkb_symbols "right-side-nav-and-misc" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         Right, Right, NoSymbol, NoSymbol
     ] };
-    // TODO map to something
     key <AD10> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        XF86Copy, XF86Paste, NoSymbol, NoSymbol
     ] };
-    // TODO map to something
     key <AD11> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        Undo, Redo, NoSymbol, NoSymbol
     ] };
     // TODO map to something
     key <AD12> { [
