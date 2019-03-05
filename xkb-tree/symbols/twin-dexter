@@ -636,6 +636,10 @@ xkb_symbols "no-p5" {
     key <AD12> {
         [ kana_u ]
     };
+    // `kana_e`: box-drawing mappings.
+    key <AD11> { [
+        kana_e
+    ] };
 };
 
 // Lock levels by first pressing a latch key and then `<RTRN>`.
@@ -691,6 +695,10 @@ xkb_symbols "no-p6" {
     key <AD12> {
         [ kana_u ]
     };
+    // `kana_e`: box-drawing mappings.
+    key <AD11> { [
+        kana_e
+    ] };
 };
 
 // A fifth- and sixth-level alternative to `my-extend`.  Uses only the
