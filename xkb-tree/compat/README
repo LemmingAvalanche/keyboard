@@ -1,3 +1,5 @@
 Custom compat files for getting the key `ISO_Level2_Latch` to work
 properly.  Also for making indicators so that I can query the state of
 modifier and group locks.
+
+Useful document: https://web.archive.org/web/20020202090345/http://www.tsu.ru/~pascal/en/xkb/gram-action.html
