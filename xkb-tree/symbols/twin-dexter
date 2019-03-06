@@ -158,7 +158,7 @@ xkb_symbols "no-common" {
     // Norwegian characters
     key.type[Group1] = "EIGHT_LEVEL";
     key <AD11>	{ [
-        aring, Aring, asciitilde, NoSymbols
+        aring, Aring, asciitilde, NoSymbol
     ] };
     key <AC10>	{ [
         oslash, Ooblique, parenleft, bracketleft
