@@ -65,3 +65,17 @@ I should be able to use the same thing.
      `compat` section, but that didn’t work.  For more information on that,
      see r#ca33ce4ac83b (“Revert “Change “previous”, “next”, etc. to the new
      keys””, 2017-11-12).
+
+* Multiple actions
+
+I found this in one of the compat files in the xkb files:
+
+#+BEGIN_SRC
+interpret Mode_switch {
+    useModMapMods= level1;
+    virtualModifier= AltGr;
+    action= SetGroup(group=2,clearLocks);
+};
+#+END_SRC
+
+I did not know that you could ~clearLocks~ in a ~SetGroup~.
