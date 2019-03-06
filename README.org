@@ -135,6 +135,22 @@ on Linux.
 - Run ~xset q~ in order to see a lot information about the current
   state/settings.  The most interesting part is probably the indicators
   which show the modifiers that are currently locked.
+- ~xmodmap -pm~ prints the modifiers and what keys they are mapped to.
+  For example:
+
+  #+BEGIN_SRC
+  > xmodmap -pm
+  xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
+
+  shift       Shift_L (0x32),  Shift_R (0x3e)
+  lock
+  control     Control_L (0x25),  Control_R (0x69)
+  mod1        Alt_L (0x85),  Alt_R (0x87),  Meta_L (0xcd)
+  mod2        Hyper_R (0x33),  Hyper_L (0x42),  Num_Lock (0x4d),  Hyper_L (0xcf)
+  mod3        ISO_Level5_Shift (0xcb)
+  mod4        Super_L (0x40),  Super_R (0x6c),  Super_L (0xce)
+  mod5        ISO_Level3_Shift (0x5c)
+  #+END_SRC
 
 * Files
 
