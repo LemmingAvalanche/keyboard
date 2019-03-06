@@ -1045,6 +1045,8 @@ xkb_symbols "hyper" {
     };
     replace key <BKSL> {
       vmods = NumLock,
+      // TODO When shift and shift level 3 are active, this key
+      //     (`<BKSL>`) outputs `|`.
       symbols[Group1] = [ Hyper_R ],
       actions[Group1] = [ SetMods(modifiers=NumLock) ]
     };
