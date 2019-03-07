@@ -79,3 +79,16 @@ interpret Mode_switch {
 #+END_SRC
 
 I did not know that you could ~clearLocks~ in a ~SetGroup~.
+
+* ~+Exactly(_)~?
+
+I found this thing in the [[https://pastebin.com/QhBbWAXi][wild]]:
+
+#+BEGIN_SRC
+interpret ISO_Level2_Latch+Exactly(Shift) {
+    useModMapMods=level1;
+    action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
+};
+#+END_SRC
+
+I didn’t know that ~Exactly(_)~ existed.
