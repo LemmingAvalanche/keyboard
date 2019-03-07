@@ -742,3 +742,7 @@ See:
    https://web.archive.org/web/20020707211630/http://www.tsu.ru/~pascal/en/xkb/gram-compat.html
 
 See also the tag ~keyboard-indicators~ in my Firefox bookmarks.
+
+* TODO check out ~ISO_Lock~
+
+https://web.archive.org/web/20020202090345/http://www.tsu.ru/~pascal/en/xkb/gram-action.html
