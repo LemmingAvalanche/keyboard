@@ -25,6 +25,8 @@ level and type symbols like the braces (~{}~) and brackets (~[]~).
 ~no-p1~ also makes the [[https://en.wikipedia.org/wiki/Compose_key][Compose key]] available on both sides of the
 keyboard, which makes it convenient to type combinations (compositions)
 like ~+- ⇒ ±~, ~so ⇒ §~, ~!? ⇒ ‽~, ~<3 ⇒ ♥~ and many (many) more.
+(Default compose/dead key mappings may be locale-dependent; see [[https://cgit.freedesktop.org/xorg/lib/libX11/plain/nls/][here]] for
+all the different XCompose files.
 
 * Software needed
 
