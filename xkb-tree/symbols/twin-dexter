@@ -104,7 +104,12 @@ xkb_symbols "level-four-symbols" {
         NoSymbol, NoSymbol, NoSymbol, U2607
     ] };
     key <AD02> { [
-        NoSymbol, NoSymbol, NoSymbol, dagger
+        NoSymbol, NoSymbol, NoSymbol, leftsinglequotemark
+    ] };
+    // NOTE Intentionally duplicated; also occurs on level three of this
+    // key.
+    key <AD03> { [
+        NoSymbol, NoSymbol, NoSymbol, rightsinglequotemark
     ] };
     key <AC01> { [
         NoSymbol, NoSymbol, NoSymbol, U2329
