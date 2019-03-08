@@ -229,7 +229,7 @@ xkb_symbols "no-p1" {
     key <AE12> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
 
     key <AC10> { [
-        NoSymbol, NoSymbol, bracketleft, NoSymbol
+        rightsinglequotemark, NoSymbol, bracketleft, NoSymbol
     ] };
     key <AC11> { [
         NoSymbol, NoSymbol, bracketright, NoSymbol
