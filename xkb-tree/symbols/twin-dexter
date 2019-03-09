@@ -1076,6 +1076,61 @@ xkb_symbols "lvl-5-media-keys" {
         redirectkey(key=<I172>, clearMods=LevelFive), NoAction(),
         NoAction(), NoAction()
     ] };
+    // Next song (Spotify).
+    key <PGDN> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        XF86AudioNext, NoSymbol, NoSymbol, NoSymbol
+    ],
+    actions[Group1] = [
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        redirectkey(key=<I171>, clearMods=LevelFive), NoAction(),
+        NoAction(), NoAction()
+    ] };
+    // Previous song (Spotify).
+    key <PGUP> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        XF86AudioPrev, NoSymbol, NoSymbol, NoSymbol
+    ],
+    actions[Group1] = [
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        redirectkey(key=<I173>, clearMods=LevelFive), NoAction(),
+        NoAction(), NoAction()
+    ] };
+    // Volume mute.
+    key <DOWN> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        XF86AudioMute, NoSymbol, NoSymbol, NoSymbol
+    ],
+    actions[Group1] = [
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        redirectkey(key=<MUTE>, clearMods=LevelFive), NoAction(),
+        NoAction(), NoAction()
+    ] };
+    // Volume decrease.
+    key <LEFT> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        XF86AudioPrev, NoSymbol, NoSymbol, NoSymbol
+    ],
+    actions[Group1] = [
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        redirectkey(key=<VOL->, clearMods=LevelFive), NoAction(),
+        NoAction(), NoAction()
+    ] };
+    // Volume increase.
+    key <RGHT> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        XF86AudioPrev, NoSymbol, NoSymbol, NoSymbol
+    ],
+    actions[Group1] = [
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        redirectkey(key=<VOL+>, clearMods=LevelFive), NoAction(),
+        NoAction(), NoAction()
+    ] };
 };
 
 // Experimental: third group mappings.  Just to see if it works.
