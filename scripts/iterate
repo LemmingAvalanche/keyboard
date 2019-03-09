@@ -1,0 +1,7 @@
+#!/bin/sh
+
+/home/kristoffer/xkb/scripts/keyboard-setup 'twin-dexter(no-p6)' &> temp
+killall xbindkeys
+xbindkeys &
+killall xchainkeys
+xchainkeys &
