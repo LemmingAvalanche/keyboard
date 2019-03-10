@@ -694,6 +694,7 @@ xkb_symbols "no-p6" {
 
     // In development
     include "twin-dexter(fake-latch-escape-level-four)"
+    include "twin-dexter(fake-g1l1-on-g4l4)"
 
     // TODO: Make some use of these dead keys by making mappings in the
     // ~.XCompose~ file (see the dotfiles repository).
@@ -1352,4 +1353,133 @@ xkb_symbols "fake-latch-escape-level-four" {
         NoAction(), NoAction(), NoAction(), LatchGroup(group=4)
     ]
     };
+};
+
+// Fake group 1, level 1 on group 4, level 4.
+xkb_symbols "fake-g1l1-on-g4l4" {
+    // 2nd keyboard row
+    key <AD01> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, q
+    ] };
+    key <AD02> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, w
+    ] };
+    key <AD03> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, e
+    ] };
+    key <AD04> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, r
+    ] };
+    key <AD05> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, t
+    ] };
+    key <AD06> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, y
+    ] };
+    key <AD07> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, u
+    ] };
+    key <AD08> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, i
+    ] };
+    key <AD09> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, o
+    ] };
+    key <AD10> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, p
+    ] };
+
+    // 3rd keyboard row
+    key <AC01> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, a
+    ] };
+    key <AC02> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, s
+    ] };
+    key <AC03> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, d
+    ] };
+    key <AC04> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, f
+    ] };
+    key <AC05> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, g
+    ] };
+    key <AC06> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, h
+    ] };
+    key <AC07> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, j
+    ] };
+    key <AC08> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, k
+    ] };
+    key <AC09> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, l
+    ] };
+    key <AC10> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, rightsinglequotemark
+    ] };
+
+    // 4th keyboard row
+    key <AB01> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, z
+    ] };
+    key <AB02> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, x
+    ] };
+    key <AB03> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, c
+    ] };
+    key <AB04> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, v
+    ] };
+    key <AB05> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, b
+    ] };
+    key <AB06> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, n
+    ] };
+    key <AB07> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, m
+    ] };
+    key <AB08> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, comma
+    ] };
+    key <AB09> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, period
+    ] };
+    key <AB10> {
+    symbols[Group4] = [
+        NoSymbol, NoSymbol, NoSymbol, minus
+    ] };
 };
