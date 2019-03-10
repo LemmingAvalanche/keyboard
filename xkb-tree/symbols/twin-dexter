@@ -692,6 +692,9 @@ xkb_symbols "no-p6" {
     include "twin-dexter(group-3-test-symbols)"
     include "twin-dexter(group-4-test-symbols)"
 
+    // In development
+    include "twin-dexter(fake-latch-escape-level-four)"
+
     // TODO: Make some use of these dead keys by making mappings in the
     // ~.XCompose~ file (see the dotfiles repository).
     replace key <TLDE> {
@@ -1328,4 +1331,25 @@ xkb_symbols "group-4-test-symbols" {
         [ colon, NoSymbol ]
     };
 
+};
+
+// Latch group 4.
+xkb_symbols "fake-latch-escape-level-four" {
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <TAB> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, ISO_Last_Group
+    ],
+    actions[Group1] = [
+        NoAction(), NoAction(), NoAction(), LatchGroup(group=4)
+    ]
+    };
+    key <AD12> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, ISO_Last_Group
+    ],
+    actions[Group1] = [
+        NoAction(), NoAction(), NoAction(), LatchGroup(group=4)
+    ]
+    };
 };
