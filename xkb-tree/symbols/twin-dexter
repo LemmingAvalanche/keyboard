@@ -697,6 +697,7 @@ xkb_symbols "no-p6" {
     include "twin-dexter(fake-g1l1-on-g4l4)"
 
     include "twin-dexter(iso-lock)"
+    include "twin-dexter(lock-unlocker)"
 
     // TODO: Make some use of these dead keys by making mappings in the
     // ~.XCompose~ file (see the dotfiles repository).
@@ -1161,6 +1162,16 @@ xkb_symbols "iso-lock" {
     ],
     actions[Group1] = [
         ISOLock(modifiers=Lock, affect=all)
+    ]
+    };
+};
+
+// Complement `ISO_Lock`.
+xkb_symbols "lock-unlocker" {
+    // Print key
+    replace key <PRSC> {
+    symbols[Group1] = [
+        Farsi_0
     ]
     };
 };
