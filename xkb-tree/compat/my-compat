@@ -98,6 +98,22 @@ default partial xkb_compatibility "default"  {
     // Use Farsi keysyms since they are otherwise useless (to me).
     // Farsi_0 is used for redirection.
     //
+    // §2 Implementation and dependency
+    //
+    // Dependency: https://bitbucket.org/Guildenstern/dotfiles/src/master/xbindkeys/.xbindkeysrc
+    //
+    // `Farsi_0` is redirected to the appropriate keysym using a
+    // Xbindkeys daemon.  Xbindkeys watches for `Farsi_0` keypresses
+    // and uses Xdotool to simulate a keypress which then gets
+    // interpreted here so that the appropriate locks are unlocked.  As
+    // an example, here is the implementation for `ctrl+alt+Farsi_0`:
+    //
+    //     # ctrl+alt+Farsi_0
+    //     "xdotool key --clearmodifiers Farsi_3"
+    //       Control + Alt + Farsi_0
+    //
+    // ⁂
+    //
     // ctrl+Farsi_0
     interpret Farsi_1 {
 	action=LockMods(modifiers=Control);

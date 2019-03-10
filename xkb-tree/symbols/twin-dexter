@@ -1167,6 +1167,8 @@ xkb_symbols "iso-lock" {
 };
 
 // Complement `ISO_Lock`.
+//
+// Dependency: https://bitbucket.org/Guildenstern/dotfiles/src/master/xbindkeys/.xbindkeysrc
 xkb_symbols "lock-unlocker" {
     // Print key
     replace key <PRSC> {
