@@ -2,7 +2,7 @@
 // to provide reasonable default behavior
 
 default partial xkb_compatibility "default"  {
-    virtual_modifiers LevelThree,AltGr;
+    virtual_modifiers LevelThree,AltGr,Alt,Super;
 
     interpret.repeat= False;
     setMods.clearLocks= True;
@@ -91,5 +91,39 @@ default partial xkb_compatibility "default"  {
         !allowExplicit;
         whichModState= Locked;
         modifiers= mod3;
+    };
+
+    // § Unlock locks
+    //
+    // Use Farsi keysyms since they are otherwise useless (to me).
+    // Farsi_0 is used for redirection.
+    //
+    // ctrl+Farsi_0
+    interpret Farsi_1 {
+	action=LockMods(modifiers=Control);
+    };
+     // alt+Farsi_0
+    interpret Farsi_2 {
+	action=LockMods(modifiers=Alt);
+    };
+    // ctrl+alt+Farsi_0
+    interpret Farsi_3 {
+	action=LockMods(modifiers=Control+Alt);
+    };
+    // super+Farsi_0
+    interpret Farsi_4 {
+	action=LockMods(modifiers=Super);
+    };
+    // ctrl+super+Farsi_0
+    interpret Farsi_5 {
+	action=LockMods(modifiers=Control+Super);
+    };
+    // alt+super+Farsi_0
+    interpret Farsi_6 {
+	action=LockMods(modifiers=Alt+Super);
+    };
+    // ctrl+alt+super+Farsi_0
+    interpret Farsi_7 {
+	action=LockMods(modifiers=Control+Alt+Super);
     };
 };
