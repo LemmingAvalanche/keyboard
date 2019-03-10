@@ -120,6 +120,14 @@ xkb_symbols "name-here" {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    key <AC05> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC06> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
     key <AC07> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
