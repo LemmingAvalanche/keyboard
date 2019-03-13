@@ -92,3 +92,29 @@ interpret ISO_Level2_Latch+Exactly(Shift) {
 #+END_SRC
 
 I didn’t know that ~Exactly(_)~ existed.
+
+* Key chording on Linux: it’s not looking good :chording:
+
+Apparently it is hard to implement key chording on Linux:
+
+#+BEGIN_QUOTE
+Part of the problem is that there is no such thing to an X server or
+client as "simultaneous key presses," except for modifier keys such as
+Ctrl and Alt. Whatever code would be involved would have to look for
+XKeyPress events for W, E, and F in any order sequentially.
+#+END_QUOTE
+
+https://unix.stackexchange.com/questions/176927/method-to-convert-simultaneous-key-chord-letter-key-combo-into-another-key#comment295974_176927
+
+However, there might still be some hope:
+
+#+BEGIN_QUOTE
+So after four years, I finally have a rough draft of an answer to this
+question. The answer is to use Interception Tools which uses libevdev to
+grab keyboard input and do processing on it before re-emitting
+it. Regarding simultaneous key mapping, I have made a rough plugin for
+Interception Tools called Chorded Keymap that lets h, j, k, l act like
+the arrow keys when s and d are pressed simultaneously.
+#+END_QUOTE
+
+https://unix.stackexchange.com/a/403671/185805
