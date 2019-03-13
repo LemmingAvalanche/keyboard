@@ -2,7 +2,7 @@
 
 # Set keyboard layouts and options relating to keyboard layouts
 #
-# This program excepts one argument, namely all the layouts separated by
+# This program expects one argument, namely all the layouts separated by
 # commas.  Passing in more than one layout is not recommended, since I
 # want to be able to use all four groups per layout.
 #
