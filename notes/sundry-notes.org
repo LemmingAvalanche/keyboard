@@ -118,3 +118,30 @@ the arrow keys when s and d are pressed simultaneously.
 #+END_QUOTE
 
 https://unix.stackexchange.com/a/403671/185805
+
+* Empty type causes segmentation fault
+
+It seems that assigning an “empty type” (~type[Group1] = [
+]~) to a key causes a segmentation fault.  Something like this:
+
+#+BEGIN_SRC
+xkb_symbols "lock-unlocker" {
+    // Print key
+    replace key <PRSC> {
+    type[Group1] = [
+
+    ],
+    symbols[Group1] = [
+    …
+#+END_SRC
+
+Leads to this:
+
+#+BEGIN_SRC
+Warning:          Multiple definitions of the FOUR_LEVEL_KEYPAD key type
+                  Earlier definition ignored
+Warning:          Multiple default components in twin-dexter
+                  Using latin, ignoring default
+/home/kristoffer/xkb/scripts/keyboard-setup: line 18:  9854 Done                    setxkbmap -option "" -layout "$1" -compat my-complete -option nbsp:none -option numpad:mac -print
+      9855 Segmentation fault      | xkbcomp -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
+#+END_SRC
