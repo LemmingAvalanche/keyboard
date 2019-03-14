@@ -1,0 +1,26 @@
+// `cas` = “control, alt, super”.
+default xkb_types "default" {
+
+    virtual_modifiers Alt,Super;
+
+    type "CTRL_ALT_SUPER" {
+       modifiers = Control+Alt+Super;
+       map[None] = Level1;
+       Map[Control] = Level2;
+       Map[Alt] = Level3;
+       Map[Control+Alt] = Level4;
+       Map[Super] = Level5;
+       Map[Control+Super] = Level6;
+       Map[Alt+Super] = Level7;
+       Map[Control+Alt+Super] = Level8;
+       level_name[Level1] = "Base";
+       level_name[Level2] = "Control";
+       level_name[Level3] = "Alt";
+       level_name[Level4] = "Control+Alt";
+       level_name[Level5] = "Super";
+       level_name[Level6] = "Control+Super";
+       level_name[Level7] = "Alt+Super";
+       level_name[Level8] = "Control+Alt+Super";
+    };
+
+};
