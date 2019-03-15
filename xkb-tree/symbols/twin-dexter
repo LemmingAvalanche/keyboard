@@ -3,12 +3,12 @@ default partial alphanumeric_keys
 xkb_symbols "base" {
     include "no"
 
+    // Make levels 5–8 possible.
     include "level3(modifier_mapping)"
+    include "level5(modifier_mapping)"
     // Use right Alt as Alt key, instead of AltGr key.
     key <RALT> { [ Alt_R ] };
 
-    // Make levels 5–8 possible.
-    include "level5(modifier_mapping)"
     include "twin-dexter(lsgt-as-shift)"
     include "twin-dexter(set-up-alts-and-windows)"
 
