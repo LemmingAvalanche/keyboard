@@ -15,6 +15,7 @@ xkb_symbols "base" {
     include "level5(modifier_mapping)"
 
     include "twin-dexter(base-punctuation)"
+    include "twin-dexter(rightsinglequotemark)"
     include "twin-dexter(level-three-symbols)"
 };
 
@@ -35,6 +36,13 @@ xkb_symbols "base-punctuation" {
     ] };
     key <AB10> { [
         minus, underscore, NoSymbol, NoSymbol
+    ] };
+};
+
+// Right single quote mark (apostrophe) on the `Ø` key.
+xkb_symbols "rightsinglequotemark" {
+    key <AC10> { [
+        rightsinglequotemark, NoSymbol, NoSymbol, NoSymbol
     ] };
 };
 
