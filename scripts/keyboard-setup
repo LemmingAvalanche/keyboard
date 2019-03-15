@@ -11,9 +11,12 @@
 #     keyboard-setup "twin-dexter(no-p6)"
 #
 # NOTE: the `-compat` option is so that level 2 latch works properly.
-setxkbmap -option "" -layout "$1" \
+setxkbmap \
+         -option "" \
+         -layout "$1" \
          -compat my-complete \
          -option nbsp:none \
          -option numpad:mac \
-         -types cas -print |
+         -types cas \
+         -print |
              xkbcomp -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
