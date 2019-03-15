@@ -16,9 +16,10 @@ xkb_symbols "base" {
     include "twin-dexter(level-three-symbols)"
     include "twin-dexter(level-four-symbols)"
 
+    // level 5
     include "twin-dexter(alphabet-section-numpad)"
-
     include "twin-dexter(right-side-nav-and-misc)"
+
     include "twin-dexter(hyper)"
     // For a useful group 2.
     include "twin-dexter(group-2)"
