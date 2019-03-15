@@ -251,10 +251,6 @@ xkb_symbols "no-p2" {
     };
     include "altwin(swap_alt_win)"
     include "twin-dexter(swap_r_win_menu_key)"
-    // Use this key to access the “numpad level”.
-    key <RWIN> {
-        [ ISO_Level5_Shift ]
-    };
 };
 
 // Make a “numpad”.
