@@ -1,11 +1,7 @@
-// Common layout for all other layouts in this file to build on.  Not
-// really meant to be used directly.
-//
-// The name “latin” is just taken from the naming that Xkb itself used.
-// European layouts like `no` (Norwegian) inherit from some “latin”/
-// variant.
+// Initial setup.  Set things like modifiers.  Most regular keys are defined
+// in other layouts in this file.
 default partial alphanumeric_keys
-xkb_symbols "latin" {
+xkb_symbols "base" {
     // Use caps lock and the key to the left of the return key (on
     // European (105) keyboards) to access the third level.
     include "level3(modifier_mapping)"
@@ -172,7 +168,7 @@ xkb_symbols "no-common" {
         ae, AE, parenright, bracketright
     ] };
 
-    // Move the braces to two free keys (see `latin`) since it is not
+    // Move the braces to two free keys (see `base`) since it is not
     // room for them on `<AC11>`.
     key <AB02> { [
         NoSymbol, NoSymbol, braceleft, NoSymbol
@@ -181,7 +177,7 @@ xkb_symbols "no-common" {
         NoSymbol, NoSymbol, braceright, NoSymbol
     ] };
     // Use Norwegian quotemarks instead of the English ones which are
-    // defined in `latin`.
+    // defined in `base`.
     key <AC02> { [
         NoSymbol, NoSymbol, guillemotleft, NoSymbol
     ] };
@@ -193,14 +189,14 @@ xkb_symbols "no-common" {
 partial alphanumeric_keys
 xkb_symbols "no" {
     include "no(basic)"
-    include "twin-dexter(latin)"
+    include "twin-dexter(base)"
     include "twin-dexter(no-common)"
 };
 
 partial alphanumeric_keys
 xkb_symbols "no-nodeadkeys" {
     include "no(nodeadkeys)"
-    include "twin-dexter(latin)"
+    include "twin-dexter(base)"
     include "twin-dexter(no-common)"
 };
 
