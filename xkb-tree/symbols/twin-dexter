@@ -26,7 +26,6 @@ xkb_symbols "base" {
 
     include "twin-dexter(return-lock-shift-levels)"
 
-    // Experimental
     include "twin-dexter(lvl-5-media-keys)"
 
     // Experimental
