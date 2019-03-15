@@ -230,7 +230,7 @@ xkb_symbols "no-nodeadkeys" {
     include "twin-dexter(no-common)"
 };
 
-partial modifier_keys
+hidden partial modifier_keys
 xkb_symbols "menu-to-ralt" {
     replace key <MENU> { [ Alt_R ] };
 };
