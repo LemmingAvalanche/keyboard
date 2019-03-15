@@ -521,7 +521,7 @@ xkb_symbols "group-2-function-keys" {
 
 // Like `no-p2`, but with an “alphabetic numpad”.
 xkb_symbols "no-p3" {
-    include "twin-dexter(no-p2)"
+    include "twin-dexter(no-nodeadkeys)"
     include "twin-dexter(alphabet-section-numpad)"
 };
 
@@ -530,7 +530,7 @@ xkb_compat {
 };
 
 xkb_symbols "no-p4" {
-    include "twin-dexter(no-p2)"
+    include "twin-dexter(no-nodeadkeys)"
     include "twin-dexter(numpad-and-combining)"
     // For a useful group 2.
     include "twin-dexter(group-2)"
