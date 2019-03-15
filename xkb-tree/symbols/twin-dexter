@@ -13,6 +13,8 @@ xkb_symbols "base" {
 
     // Make levels 5–8 possible.
     include "level5(modifier_mapping)"
+    include "twin-dexter(lsgt-as-shift)"
+    include "twin-dexter(set-up-alts-and-windows)"
 
     include "twin-dexter(base-punctuation)"
     include "twin-dexter(rightsinglequotemark)"
@@ -262,8 +264,6 @@ xkb_symbols "menu-to-ralt" {
 partial alphanumeric_keys
 xkb_symbols "no-p2" {
     include "twin-dexter(no-nodeadkeys)"
-    include "twin-dexter(lsgt-as-shift)"
-    include "twin-dexter(set-up-alts-and-windows)"
 };
 
 // Effectively “extend” the left shift key by mapping the key to the
