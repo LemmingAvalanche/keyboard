@@ -230,10 +230,8 @@ xkb_symbols "no-nodeadkeys" {
     include "twin-dexter(no-common)"
 };
 
-// Swap the right Win key and the menu key.
 partial modifier_keys
-xkb_symbols "swap_r_win_menu_key" {
-    replace key <RWIN> { [ Multi_key ] };
+xkb_symbols "menu-to-ralt" {
     replace key <MENU> { [ Alt_R ] };
 };
 
@@ -244,7 +242,7 @@ xkb_symbols "no-p2" {
     include "twin-dexter(no-nodeadkeys)"
     include "twin-dexter(lsgt-as-shift)"
     include "altwin(swap_alt_win)"
-    include "twin-dexter(swap_r_win_menu_key)"
+    include "twin-dexter(menu-to-ralt)"
 };
 
 // Effectively “extend” the left shift key by mapping the key to the
