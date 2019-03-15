@@ -16,10 +16,8 @@ xkb_symbols "base" {
     include "twin-dexter(level-three-symbols)"
     include "twin-dexter(level-four-symbols)"
 
-    // `no-p3`
     include "twin-dexter(alphabet-section-numpad)"
 
-    // `no-p6`
     include "twin-dexter(right-side-nav-and-misc)"
     include "twin-dexter(hyper)"
     // For a useful group 2.
