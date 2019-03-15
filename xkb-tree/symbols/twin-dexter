@@ -106,7 +106,7 @@ xkb_symbols "level-three-symbols" {
         NoSymbol, NoSymbol, parenright, NoSymbol
     ] };
     key <AB04> { [
-        NoSymbol, NoSymbol, U25CA, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB05> { [
         NoSymbol, NoSymbol, dollar, NoSymbol
