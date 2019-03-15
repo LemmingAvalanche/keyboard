@@ -64,6 +64,34 @@ xkb_symbols "no" {
     include "twin-dexter(no-common)"
 };
 
+// Mappings for Norwegian layouts.
+//
+// Include this layout on top of other modifications if you want a
+// layout for writing Norwegian.
+partial alphanumeric_keys
+xkb_symbols "no-common" {
+    // Norwegian characters
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <AD11>	{ [
+        aring, Aring, NoSymbol, NoSymbol
+    ] };
+    key <AC10>	{ [
+        oslash, Ooblique, NoSymbol, NoSymbol
+    ] };
+    key <AC11>	{ [
+        ae, AE, NoSymbol, NoSymbol
+    ] };
+
+    // Use Norwegian quotemarks instead of the English ones which are
+    // defined in `base`.
+    key <AC02> { [
+        NoSymbol, NoSymbol, guillemotleft, NoSymbol
+    ] };
+    key <AC03> { [
+        NoSymbol, NoSymbol, guillemotright, NoSymbol
+    ] };
+};
+
 // Punctuation on the first and second levels of the keys next to the
 // `M` key:
 //
@@ -237,34 +265,6 @@ xkb_symbols "level-four-symbols" {
     ] };
     key <AB02> { [
         NoSymbol, NoSymbol, NoSymbol, U203A
-    ] };
-};
-
-// Mappings for Norwegian layouts.
-//
-// Include this layout on top of other modifications if you want a
-// layout for writing Norwegian.
-partial alphanumeric_keys
-xkb_symbols "no-common" {
-    // Norwegian characters
-    key.type[Group1] = "EIGHT_LEVEL";
-    key <AD11>	{ [
-        aring, Aring, NoSymbol, NoSymbol
-    ] };
-    key <AC10>	{ [
-        oslash, Ooblique, NoSymbol, NoSymbol
-    ] };
-    key <AC11>	{ [
-        ae, AE, NoSymbol, NoSymbol
-    ] };
-
-    // Use Norwegian quotemarks instead of the English ones which are
-    // defined in `base`.
-    key <AC02> { [
-        NoSymbol, NoSymbol, guillemotleft, NoSymbol
-    ] };
-    key <AC03> { [
-        NoSymbol, NoSymbol, guillemotright, NoSymbol
     ] };
 };
 
