@@ -259,13 +259,6 @@ xkb_symbols "menu-to-ralt" {
     replace key <MENU> { [ Alt_R ] };
 };
 
-// Like `no-p1`, but with a new level 2 shift key and more convenient
-// Alt keys.
-partial alphanumeric_keys
-xkb_symbols "no-p2" {
-    include "twin-dexter(no-nodeadkeys)"
-};
-
 // Effectively “extend” the left shift key by mapping the key to the
 // right of it as another `Shift_L` key.  This makes it easier to
 // use shift together with left Alt (on the Windows key in this
