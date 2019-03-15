@@ -1167,13 +1167,23 @@ xkb_symbols "iso-lock" {
 };
 
 // Complement `ISO_Lock`.
-//
-// Dependency: https://bitbucket.org/Guildenstern/dotfiles/src/master/xbindkeys/.xbindkeysrc
 xkb_symbols "lock-unlocker" {
     // Print key
     replace key <PRSC> {
+    type[Group1] = "CTRL_ALT_SUPER",
     symbols[Group1] = [
-        Farsi_0
+        VoidSymbol, VoidSymbol, VoidSymbol, VoidSymbol,
+        VoidSymbol, VoidSymbol, VoidSymbol, VoidSymbol
+    ],
+    actions[Group1] = [
+        NoAction(),
+	LockMods(modifiers=Control),
+	LockMods(modifiers=Alt),
+	LockMods(modifiers=Control+Alt),
+	LockMods(modifiers=Super),
+	LockMods(modifiers=Control+Super),
+	LockMods(modifiers=Alt+Super),
+	LockMods(modifiers=Control+Alt+Super)
     ]
     };
 };

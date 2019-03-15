@@ -14,5 +14,6 @@
 setxkbmap -option "" -layout "$1" \
          -compat my-complete \
          -option nbsp:none \
-         -option numpad:mac -print |
+         -option numpad:mac \
+         -types cas -print |
              xkbcomp -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
