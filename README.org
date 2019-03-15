@@ -4,10 +4,7 @@ This repository contains keyboard layouts which are based on an ISO
 (European) 105 key Qwerty layout, more specifically the Norwegian layout
 (~no~).  The two main layout variations are “programming” (meant for
 writing English and programming) and “Norwegian” (meant for writing
-Norwegian, not great for programming).  The range of layouts vary from
-small (but arguably very worthwhile) customizations to radical
-customizations that makes the typing experience much better, in the
-author’s experience.
+Norwegian, not great for programming).
 
 These layouts are Qwerty in the sense that no letters are changed
 around.  But the customizations are still quite drastic.  The goal of
@@ -16,17 +13,8 @@ optimized for speed or ergonomics of writing prose (based on alternating
 hands, letter frequencies, etc.), like layouts like Dvorak and Colemaks
 tries to do.  Instead, the goal of these layouts could be contrasted by
 describing them as customizing the /fringes/ of the layouts, such as the
-~Caps Lock~ key and the numeric row.  For example, layout ~no-p1~ uses
-the ~Caps Lock~ key and the ~BKSL~ key (left of the ~Return~ key on
-European keyboards) to access “shift level 3”, which makes it easier to
-access a lot of symbols compared to the regular Norwegian layout; on the
-regular Norwegian layout one has to use the ~AltGr~ to access the third
-level and type symbols like the braces (~{}~) and brackets (~[]~).
-~no-p1~ also makes the [[https://en.wikipedia.org/wiki/Compose_key][Compose key]] available on both sides of the
-keyboard, which makes it convenient to type combinations (compositions)
-like ~+- ⇒ ±~, ~so ⇒ §~, ~!? ⇒ ‽~, ~<3 ⇒ ♥~ and many (many) more.
-(Default compose/dead key mappings may be locale-dependent; see [[https://cgit.freedesktop.org/xorg/lib/libX11/plain/nls/][here]] for
-all the different XCompose files.
+~Caps Lock~ key and the numeric row.  See ~xkb-tree/symbols/twin-dexter~
+for details.
 
 * Software needed
 
@@ -37,60 +25,47 @@ If you have the Nix package manager as well as the Nix shell, you can
 run ~nix-shell --pure~ while in this directory in order to set up a
 shell from which you can run the ~scripts/keyboard-setup~.
 
-* Usage
-
-~scripts/keyboard-setup~ is a wrapper around ~setxkbmap~ that I use to
-set up some of the layouts in ~xkb-tree/symbols/~.
-
-Example usage:
-
-#+BEGIN_SRC shell
-scripts/keyboard-setup "twin-dexter(no-p5),twin-dexter(no-4)"
-#+END_SRC
-
-This sets up the keyboard to use the layouts ~twin-dexter(no-p5)~ and
-~twin-dexter(no-4)~.  These two layouts now act as two different
-/groups/ in the declared order (†1).  You can switch between groups by
-pressing ~ScrollLock~.  If you have a scroll lock light indicator on
-your keyboard, it will light on and off to indicate what group you are
-on.  You can also use the keys ~W~, ~E~, ~R~, ~T~ in combination with
-the extend (~Ext~) modifier to change groups.  So you can press
-~Ext+<key>~ to:
-
-- Go to the first group: ~Ext+W~.
-- Go to the second group: ~Ext+E~.
-- Go to the third group: ~Ext+R~.
-- Go to the fourth group: ~Ext+T~.
-
-†. 1: I am using the term “group” here since that seems to be what Xkb
-   does.  In the example we set up two layouts, but it is better to
-   consider it as one layout with two groups.  I don’t think Xkb has a
-   concept of multiple layouts that are available at the same time; only
-   groups.
-
 * Layouts
 
-These are the layouts that are intended for use in
-~xkb-tree/symbols/twin-dexter~ as of 2017-09-01:
+There are two layouts:
 
-- ~no~ — Basic Norwegian layout.  The primary difference from the
-  regular Norwegian layout on Linux is that common symbols (mostly
-  ASCII) are duplicated on the “alphabetic section” on the third level
-  (the level accessed by the ~AltGr~ on most European keyboards).
-- ~no-nodeadkeys~ — Like ~no~, but with dead keys disabled.  This makes
-  typing things like “caret” (~^~) easier.
-- ~no-p1~ — Like ~no-nodeadkeys~, but replaces the Norwegian characters
-  ~Æ~, ~Ø~ and ~Å~ with characters that are useful for programming,
-  namely ~)~, ~(~ and ~/~, respectively.  (This is the granddaddy of the
-  other layouts—wanting to remap the Norwegian characters to symbols
-  that are useful for programming was my initial motivation for
-  learning about keyboard layouts under Linux (Xserver).)
-- ~no-p2~ — Like ~no-p1~, but with a new level 2 shift key and more
-  convenient ~Alt~ keys.
-- ~no-p3~ — Like ~no-p2~, but with an “alphabetic numpad”.
-- ~no-p4~ — Like ~no-p2~, but with a radically different “numeric row”.
-- ~no-4~ — Norwegian version of ~no-p4~.
-- ~no-p5~ — A minor variation of ~no-p4~.  Of no real general interest.
+- a main (base) layout for writing English and programming; and
+- a Norwegian variant which simply maps the three Norwegian letters to
+  the usual keys and maps the Norwegian quotemarks to what is the
+  English double quotemarks on the main layout.
+
+* Usage
+
+~scripts/keyboard-setup~ is a wrapper around ~setxkbmap~.
+
+There are only two layouts: the main layout (~base~) and the Norwegian
+variant ~no~.  The main layout is invoked as ~twin-dexter~:
+
+#+BEGIN_SRC shell
+scripts/keyboard-setup "twin-dexter"
+#+END_SRC
+
+While the Norwegian variant is invoked as ~twin-dexter(no)~:
+
+#+BEGIN_SRC shell
+scripts/keyboard-setup "twin-dexter(no)"
+#+END_SRC
+
+** Using multiple layouts
+
+It is possible to pass up to four layouts to Setxkbmap.  These are
+treated as “groups”.  And since ~scripts/keyboard-setup~ is just a
+wrapper around Setxkbmap it is possible to do this:
+
+#+BEGIN_SRC shell
+scripts/keyboard-setup "us,twin-dexter"
+#+END_SRC
+
+(Standard US layout (~us~) on the first /group/, ~twin-dexter~ on the
+other.)
+
+This is not recommended, however, since ~twin-dexter~ uses several
+groups of its own.
 
 * Tools
 
