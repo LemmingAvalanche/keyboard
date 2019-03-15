@@ -21,7 +21,6 @@ xkb_symbols "base" {
     include "twin-dexter(right-side-nav-and-misc)"
 
     include "twin-dexter(hyper)"
-    // For a useful group 2.
     include "twin-dexter(group-2)"
     include "twin-dexter(latches-menu-and-compose)"
 
