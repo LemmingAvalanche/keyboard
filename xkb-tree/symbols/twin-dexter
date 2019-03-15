@@ -190,24 +190,6 @@ xkb_symbols "no-common" {
     ] };
 };
 
-// “Esperanto common”.  Common keys for Esperanto-focused layouts,
-// adopted from a Norwegian keyboard.
-partial alphanumeric_keys
-xkb_symbols "eo-common" {
-    // Esperanto accents.
-    //
-    // These replaces the Norwegian characters, which are not used in
-    // Esperanto.
-    key <AC10>	{ [
-        // level 1: combining circumflex, for example: `ĝ`.
-        U0302, section, NoSymbol, NoSymbol
-    ] };
-    key <AC11>	{ [
-        // level 1: `ŭ`.
-        U016D, U016C, NoSymbol, NoSymbol
-    ] };
-};
-
 partial alphanumeric_keys
 xkb_symbols "no" {
     include "no(basic)"
@@ -623,12 +605,6 @@ xkb_symbols "no-4" {
     key <AD12> { [
         kana_i
     ] };
-};
-
-// Esperanto version of `no-p4`.
-xkb_symbols "eo-4" {
-    include "twin-dexter(no-p4)"
-    include "twin-dexter(eo-common)"
 };
 
 // Like no-p4 but with dead key on `<AD12>`.
