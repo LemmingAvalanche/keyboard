@@ -207,13 +207,6 @@ xkb_symbols "no-common" {
 };
 
 partial alphanumeric_keys
-xkb_symbols "no" {
-    include "no(basic)"
-    include "twin-dexter(base)"
-    include "twin-dexter(no-common)"
-};
-
-partial alphanumeric_keys
 xkb_symbols "no-nodeadkeys" {
     include "no(nodeadkeys)"
     include "twin-dexter(base)"
