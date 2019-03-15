@@ -1,5 +1,4 @@
-// Initial setup.  Set things like modifiers.  Most regular keys are defined
-// in other layouts in this file.
+// Main layout.
 default partial alphanumeric_keys
 xkb_symbols "base" {
     include "no"
