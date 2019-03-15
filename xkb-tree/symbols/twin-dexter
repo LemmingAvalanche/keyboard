@@ -19,6 +19,12 @@ xkb_symbols "base" {
     include "twin-dexter(base-punctuation)"
     include "twin-dexter(rightsinglequotemark)"
     include "twin-dexter(level-three-symbols)"
+
+    // `nodeadkeys`
+    include "no(nodeadkeys)"
+    // `no-p3`
+    include "twin-dexter(alphabet-section-numpad)"
+
 };
 
 // Punctuation on the first and second levels of the keys next to the
@@ -223,12 +229,6 @@ xkb_symbols "no-common" {
     key <AC03> { [
         NoSymbol, NoSymbol, guillemotright, NoSymbol
     ] };
-};
-
-partial alphanumeric_keys
-xkb_symbols "no-nodeadkeys" {
-    include "no(nodeadkeys)"
-    include "twin-dexter(base)"
 };
 
 // To be used for my current keyboard.
@@ -511,12 +511,6 @@ xkb_symbols "group-2-function-keys" {
     };
 };
 
-// Like `no-p2`, but with an “alphabetic numpad”.
-xkb_symbols "no-p3" {
-    include "twin-dexter(no-nodeadkeys)"
-    include "twin-dexter(alphabet-section-numpad)"
-};
-
 xkb_compat {
     include "level5"
 };
@@ -609,7 +603,7 @@ xkb_symbols "return-lock-shift-levels" {
 
 // Similar to `no-p5` but uses an alternative to `my-extend`.
 xkb_symbols "no-p6" {
-    include "twin-dexter(no-p3)"
+    include "twin-dexter(base)"
     include "twin-dexter(right-side-nav-and-misc)"
     include "twin-dexter(hyper)"
     // For a useful group 2.
