@@ -8,7 +8,6 @@ xkb_symbols "base" {
     include "level3(modifier_mapping)"
     include "level3(bksl_switch)"
     include "level3(caps_switch)"
-    include "twin-dexter(level-four-symbols)"
     // Use right Alt as Alt key, instead of AltGr key.
     key <RALT> { [ Alt_R ] };
 
@@ -17,9 +16,11 @@ xkb_symbols "base" {
     include "twin-dexter(lsgt-as-shift)"
     include "twin-dexter(set-up-alts-and-windows)"
 
+    // symbols
     include "twin-dexter(base-punctuation)"
     include "twin-dexter(rightsinglequotemark)"
     include "twin-dexter(level-three-symbols)"
+    include "twin-dexter(level-four-symbols)"
 
     // `no-p3`
     include "twin-dexter(alphabet-section-numpad)"
