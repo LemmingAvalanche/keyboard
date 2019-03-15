@@ -57,6 +57,13 @@ xkb_symbols "base" {
     ] };
 };
 
+// Like the “main” layout but with Norwegian letters and Norwegian double
+// quotes.
+xkb_symbols "no" {
+    include "twin-dexter(base)"
+    include "twin-dexter(no-common)"
+};
+
 // Punctuation on the first and second levels of the keys next to the
 // `M` key:
 //
