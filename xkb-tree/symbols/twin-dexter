@@ -6,8 +6,6 @@ xkb_symbols "base" {
     // Make levels 5–8 possible.
     include "level3(modifier_mapping)"
     include "level5(modifier_mapping)"
-    // Use right Alt as Alt key, instead of AltGr key.
-    key <RALT> { [ Alt_R ] };
 
     include "twin-dexter(lsgt-as-shift)"
     include "twin-dexter(set-up-alts-and-windows)"
@@ -268,7 +266,7 @@ xkb_symbols "no-common" {
 
 // To be used for my current keyboard.
 //
-// This changes this layout (†):
+// This changes this layout:
 //
 //     ┌──────┬──────┬──────┬────────────┬──────┬──────┬──────┐
 //     │      │      │      │            │      │      │      │
@@ -280,10 +278,9 @@ xkb_symbols "no-common" {
 //     │      │      │      │            │      │      │      │
 //     │Ctrl  │Alt   │Win   │    Space   │   Win│   Alt│  Ctrl│
 //     └──────┴──────┴──────┴────────────┴──────┴──────┴──────┘
-//
-// † 1: More or less: `AltGr` might be replaced with `Alt_R` somewhere
-//     else in this file.
 xkb_symbols "set-up-alts-and-windows" {
+    // Use right Alt as Alt key, instead of AltGr key.
+    key <RALT> { [ Alt_R ] };
     include "twin-dexter(menu-to-ralt)"
     include "altwin(swap_alt_win)"
 };
