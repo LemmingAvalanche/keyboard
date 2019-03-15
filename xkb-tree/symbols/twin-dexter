@@ -14,7 +14,28 @@ xkb_symbols "base" {
     // Make levels 5–8 possible.
     include "level5(modifier_mapping)"
 
+    include "twin-dexter(base-punctuation)"
     include "twin-dexter(level-three-symbols)"
+};
+
+// Punctuation on the first and second levels of the keys next to the
+// `M` key:
+//
+// ┌─────┬─────┬─────┬─────┬─────────────┐
+// │ M   │;    │:    │_    │Shift        │
+// │ m   │,    │.    │-    │             │
+// └─────┴─────┴─────┴─────┴─────────────┘
+//
+xkb_symbols "base-punctuation" {
+    key <AB08> { [
+        comma, semicolon, NoSymbol, NoSymbol
+    ] };
+    key <AB09> { [
+        period, colon, NoSymbol, NoSymbol
+    ] };
+    key <AB10> { [
+        minus, underscore, NoSymbol, NoSymbol
+    ] };
 };
 
 xkb_symbols "level-three-symbols" {
@@ -89,13 +110,13 @@ xkb_symbols "level-three-symbols" {
         NoSymbol, NoSymbol, backslash, NoSymbol
     ] };
     key <AB08> { [
-        comma, semicolon, periodcentered, NoSymbol
+        NoSymbol, NoSymbol, periodcentered, NoSymbol
     ] };
     key <AB09> { [
-        period, colon, emdash, NoSymbol
+        NoSymbol, NoSymbol, emdash, NoSymbol
     ] };
     key <AB10> { [
-        minus, underscore, endash, NoSymbol
+        NoSymbol, NoSymbol, endash, NoSymbol
     ] };
 };
 
