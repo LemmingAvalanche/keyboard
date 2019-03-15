@@ -230,6 +230,28 @@ xkb_symbols "no-nodeadkeys" {
     include "twin-dexter(no-common)"
 };
 
+// To be used for my current keyboard.
+//
+// This changes this layout (†):
+//
+//     ┌──────┬──────┬──────┬────────────┬──────┬──────┬──────┐
+//     │      │      │      │            │      │      │      │
+//     │Ctrl  │Win   │Alt   │    Space   │ AltGr│  Menu│  Ctrl│
+//     └──────┴──────┴──────┴────────────┴──────┴──────┴──────┘
+//
+// To this:
+//     ┌──────┬──────┬──────┬────────────┬──────┬──────┬──────┐
+//     │      │      │      │            │      │      │      │
+//     │Ctrl  │Alt   │Win   │    Space   │   Win│   Alt│  Ctrl│
+//     └──────┴──────┴──────┴────────────┴──────┴──────┴──────┘
+//
+// † 1: More or less: `AltGr` might be replaced with `Alt_R` somewhere
+//     else in this file.
+xkb_symbols "set-up-alts-and-windows" {
+    include "twin-dexter(menu-to-ralt)"
+    include "altwin(swap_alt_win)"
+};
+
 hidden partial modifier_keys
 xkb_symbols "menu-to-ralt" {
     replace key <MENU> { [ Alt_R ] };
@@ -241,8 +263,7 @@ partial alphanumeric_keys
 xkb_symbols "no-p2" {
     include "twin-dexter(no-nodeadkeys)"
     include "twin-dexter(lsgt-as-shift)"
-    include "altwin(swap_alt_win)"
-    include "twin-dexter(menu-to-ralt)"
+    include "twin-dexter(set-up-alts-and-windows)"
 };
 
 // Effectively “extend” the left shift key by mapping the key to the
