@@ -522,19 +522,6 @@ xkb_compat {
     include "level5"
 };
 
-xkb_symbols "no-p4" {
-    include "twin-dexter(no-nodeadkeys)"
-    include "twin-dexter(numpad-and-combining)"
-    // For a useful group 2.
-    include "twin-dexter(group-2)"
-    include "twin-dexter(latches-menu-and-compose)"
-    include "twin-dexter(my-extend)"
-
-    replace key <TLDE> {
-        [ kana_a ]
-    };
-};
-
 // Shift latches, group latches, menu key and compose key on the
 // “number row”.
 xkb_symbols "latches-menu-and-compose" {
@@ -594,32 +581,6 @@ xkb_symbols "latches-menu-and-compose" {
         type[Group1]="ONE_LEVEL",
         [ ISO_Group_Latch ]
     };
-};
-
-// Norwegian version of `no-p4`.
-xkb_symbols "no-4" {
-    include "twin-dexter(no-p4)"
-    include "twin-dexter(no-common)"
-    key <AD12> { [
-        kana_i
-    ] };
-};
-
-// Like no-p4 but with dead key on `<AD12>`.
-//
-// Also with Hyper keys.
-xkb_symbols "no-p5" {
-    include "twin-dexter(no-p4)"
-    include "twin-dexter(hyper)"
-    // Experimental
-    include "twin-dexter(lvl-5-media-keys)"
-    key <AD12> {
-        [ kana_u ]
-    };
-    // `kana_e`: box-drawing mappings.
-    key <AD11> { [
-        kana_e
-    ] };
 };
 
 // Lock levels by first pressing a latch key and then `<RTRN>`.
