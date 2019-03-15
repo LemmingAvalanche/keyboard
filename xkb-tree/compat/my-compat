@@ -76,6 +76,24 @@ default partial xkb_compatibility "default"  {
 	action= LockGroup(group=2);
     };
 
+    // § Backspace Word
+    //
+    // Use redirection to a keycode mapped to the keysym `BackSpace` and
+    // activate `Control`.  `Ctrl+BackSpace` is mapped to “kill word
+    // backwards” in most applications.
+    //
+    // `Farsi_0` is an arbitrary keysym that I have no other need for.
+    // The actual keysym doesn’t matter since it is only used for
+    // redirection.
+    //
+    // `<I120>` is `#define KEY_MACRO` according to
+    // `xkb/keycodes/evdev`.  Just a keycode that I have no other use
+    // for.
+    interpret Farsi_0 {
+	interpret.repeat = True;
+	action = redirectkey(key=<I120>, modifiers=Control);
+    };
+
     indicator "Group 2" {
 	!allowExplicit;
 	groups= All-Group1;

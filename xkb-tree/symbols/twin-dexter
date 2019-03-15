@@ -691,6 +691,7 @@ xkb_symbols "no-p6" {
     include "twin-dexter(group-3-experimental)"
     include "twin-dexter(group-3-test-symbols)"
     include "twin-dexter(group-4-test-symbols)"
+    include "twin-dexter(backspace-word)"
 
     // In development
     include "twin-dexter(fake-latch-escape-level-four)"
@@ -1519,4 +1520,30 @@ xkb_symbols "fake-g1l1-on-g4l4" {
     symbols[Group4] = [
         NoSymbol, NoSymbol, NoSymbol, minus
     ] };
+};
+
+// § Backspace Word
+//
+// `Ctrl+BackSpace` on level 1, `BackSpace` on level 2.  Most
+// applications map `Ctrl+BackSpace` to something like “erase word
+// backwards”.
+//
+// See `compat/mycompat`, section “BackSpace Word”, for the rest of the
+// implementation.
+xkb_symbols "backspace-word" {
+
+    // `Farsi_0` is an arbitrary keysym that I have no other need for.
+    // The actual keysym doesn’t matter since it is only used for
+    // redirection.
+    key <BKSP> { [
+	Farsi_0, BackSpace
+    ] };
+
+    // `<I120>` is `#define KEY_MACRO` according to
+    // `xkb/keycodes/evdev`.  Just a keycode that I have no other use
+    // for.
+    key <I120> { [
+	BackSpace
+    ] };
+
 };
