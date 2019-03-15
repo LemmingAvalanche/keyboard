@@ -184,23 +184,15 @@ xkb_symbols "no-common" {
     // Norwegian characters
     key.type[Group1] = "EIGHT_LEVEL";
     key <AD11>	{ [
-        aring, Aring, asciitilde, NoSymbol
+        aring, Aring, NoSymbol, NoSymbol
     ] };
     key <AC10>	{ [
-        oslash, Ooblique, parenleft, bracketleft
+        oslash, Ooblique, NoSymbol, NoSymbol
     ] };
     key <AC11>	{ [
-        ae, AE, parenright, bracketright
+        ae, AE, NoSymbol, NoSymbol
     ] };
 
-    // Move the braces to two free keys (see `base`) since it is not
-    // room for them on `<AC11>`.
-    key <AB02> { [
-        NoSymbol, NoSymbol, braceleft, NoSymbol
-    ] };
-    key <AB03> { [
-        NoSymbol, NoSymbol, braceright, NoSymbol
-    ] };
     // Use Norwegian quotemarks instead of the English ones which are
     // defined in `base`.
     key <AC02> { [
