@@ -150,6 +150,9 @@ xkb_symbols "level-three-symbols" {
     key <AD10> { [
         NoSymbol, NoSymbol, plus, NoSymbol
     ] };
+    key <AD11> { [
+        NoSymbol, NoSymbol, asciitilde, NoSymbol
+    ] };
     key <AC01> { [
         NoSymbol, NoSymbol, percent, NoSymbol
     ] };
