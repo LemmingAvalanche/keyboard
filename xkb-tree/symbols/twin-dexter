@@ -29,7 +29,6 @@ xkb_symbols "base" {
     include "twin-dexter(lvl-5-media-keys)"
 
     // Experimental
-    include "twin-dexter(group-3-experimental)"
     include "twin-dexter(group-3-test-symbols)"
     include "twin-dexter(group-4-test-symbols)"
 
@@ -1258,114 +1257,6 @@ xkb_symbols "lock-unlocker" {
 	LockMods(modifiers=Control+Alt+Super)
     ]
     };
-};
-
-// Experimental: third group mappings.  Just to see if it works.
-xkb_symbols "group-3-experimental" {
-    replace key <AE12> {
-        type[Group1]="ONE_LEVEL",
-        // NOTE This key is repurposed to “group level 3 latch”.
-        //     See: xkb-tree/compat/my-compat
-        symbols[Group1] = [ ISO_Next_Group ],
-        actions[Group1] = [ LatchGroup(group=3) ]
-    };
-
-    // Group locks.
-    // Keys `<AD09>` (`O`),`<AD10>` (`P`), `<AD11>` (`Å`), and
-    // `<AD12>`.
-    //
-    // TODO Probably not completely tested.  Right now I have only made
-    //     a few Group 3 mappings just to test things, and I have made
-    //     no Group 4 mappings.
-
-    // Lock Group 1.
-    key <AD09> {
-    symbols[Group2] =[
-        ISO_First_Group_Lock
-    ],
-    actions[Group2] = [
-        LockGroup(group=1)
-    ],
-    symbols[Group3] =[
-        ISO_First_Group_Lock
-    ],
-    actions[Group3] = [
-        LockGroup(group=1)
-    ],
-    symbols[Group4] =[
-        ISO_First_Group_Lock
-    ],
-    actions[Group4] = [
-        LockGroup(group=1)
-    ]
-    };
-
-    // Lock Group 2.
-    key <AD10> {
-    symbols[Group2] =[
-        ISO_Prev_Group_Lock
-    ],
-    actions[Group2] = [
-        LockGroup(group=2)
-    ],
-    symbols[Group3] =[
-        ISO_Prev_Group_Lock
-    ],
-    actions[Group3] = [
-        LockGroup(group=2)
-    ],
-    symbols[Group4] =[
-        ISO_Prev_Group_Lock
-    ],
-    actions[Group4] = [
-        LockGroup(group=2)
-    ]
-    };
-
-    // Lock Group 3.
-    key <AD11> {
-    symbols[Group2] =[
-        ISO_Next_Group_Lock
-    ],
-    actions[Group2] = [
-        LockGroup(group=3)
-    ],
-    symbols[Group3] =[
-        ISO_Next_Group_Lock
-    ],
-    actions[Group3] = [
-        LockGroup(group=3)
-    ],
-    symbols[Group4] =[
-        ISO_Next_Group_Lock
-    ],
-    actions[Group4] = [
-        LockGroup(group=3)
-    ]
-    };
-
-    // Lock Group 4.
-    key <AD12> {
-    symbols[Group2] =[
-        ISO_Last_Group
-    ],
-    actions[Group2] = [
-        LockGroup(group=4)
-    ],
-    symbols[Group3] =[
-        ISO_Last_Group
-    ],
-    actions[Group3] = [
-        LockGroup(group=4)
-    ],
-    symbols[Group4] =[
-        ISO_Last_Group
-    ],
-    actions[Group4] = [
-        LockGroup(group=4)
-    ]
-    };
-
 };
 
 // Group escape.
