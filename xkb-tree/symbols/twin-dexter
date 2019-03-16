@@ -1366,9 +1366,12 @@ xkb_symbols "group-3-experimental" {
     ]
     };
 
-    // Group escape.
-    //
-    // Use `<RTRN>` to escape back to Group 1.
+};
+
+// Group escape.
+//
+// Use `<RTRN>` to escape back to Group 1.
+xkb_symbols "return-group-escape" {
     key <RTRN> {
     symbols[Group2] = [
         ISO_First_Group
