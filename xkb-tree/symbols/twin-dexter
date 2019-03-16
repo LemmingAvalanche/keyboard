@@ -32,7 +32,6 @@ xkb_symbols "base" {
     include "twin-dexter(group-3-experimental)"
     include "twin-dexter(group-3-test-symbols)"
     include "twin-dexter(group-4-test-symbols)"
-    include "twin-dexter(backspace-word)"
 
     // In development
     include "twin-dexter(fake-latch-escape-level-four)"
