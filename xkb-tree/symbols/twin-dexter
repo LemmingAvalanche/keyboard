@@ -225,6 +225,12 @@ xkb_symbols "level-three-symbols" {
     ] };
 };
 
+// § Level Four Symbols
+//
+// For symbols that are nice to have at hand but that are needed less
+// frequently than the level three symbols (see `level-three-symbols`).
+//
+// Most of these keys are yet to be mapped to.
 xkb_symbols "level-four-symbols" {
     key <AD01> { [
         NoSymbol, NoSymbol, NoSymbol, U2607
