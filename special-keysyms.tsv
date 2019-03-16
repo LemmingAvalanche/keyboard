@@ -1,0 +1,5 @@
+Keysym	Description
+Farsi_0	Used to implement “BackSpace Word”; see relevant sections in `xkb-tree/symbols/twin-dexter` and `xkb-tree/compat/my-compat`.
+kana_a	Key mapping; see `~/.XCompose` in the `dotfiles` project.
+kana_i	Key mapping used in `~/.XCompose`.
+kana_e	Key mapping used in `~/.XCompose`.
