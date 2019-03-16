@@ -193,6 +193,12 @@ xkb_symbols "level-three-symbols" {
     key <AC09> { [
         NoSymbol, NoSymbol, parenright, NoSymbol
     ] };
+    key <AC10> { [
+        NoSymbol, NoSymbol, bracketleft, NoSymbol
+    ] };
+    key <AC11> { [
+        NoSymbol, NoSymbol, bracketright, NoSymbol
+    ] };
     key <AB01> { [
         NoSymbol, NoSymbol, less, NoSymbol
     ] };
