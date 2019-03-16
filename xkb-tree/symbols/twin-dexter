@@ -133,6 +133,7 @@ xkb_symbols "rightsinglequotemark" {
 // • Midpoint (`·`) which is currently not in use.
 xkb_symbols "level-three-symbols" {
     key.type[Group1] = "EIGHT_LEVEL";
+    // 2nd keyboard row
     key <AD01> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, at, NoSymbol
@@ -177,6 +178,7 @@ xkb_symbols "level-three-symbols" {
     symbols[Group1] = [
         NoSymbol, NoSymbol, asciitilde, NoSymbol
     ] };
+    // 3rd keyboard row
     key <AC01> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, percent, NoSymbol
@@ -221,6 +223,7 @@ xkb_symbols "level-three-symbols" {
     symbols[Group1] = [
         NoSymbol, NoSymbol, bracketright, NoSymbol
     ] };
+    // 4th keyboard row
     key <AB01> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, less, NoSymbol
