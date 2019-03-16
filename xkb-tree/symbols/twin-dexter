@@ -575,6 +575,7 @@ xkb_symbols "numpad-and-combining" {
 
 xkb_symbols "group-2" {
     include "twin-dexter(group-2-lhs-function-keys)"
+    include "twin-dexter(group-2-rhs-function-keys)"
 };
 
 // Function keys on the “numpad” (†1) (`F1`–`F9`) plus keys `B`, `G`,
@@ -670,6 +671,61 @@ xkb_symbols "group-2-lhs-function-keys" {
       [],
       [ NoSymbol, NoSymbol, F19, F19, NoSymbol, NoSymbol ]
     };
+};
+
+xkb_symbols "group-2-rhs-function-keys" {
+    // F13–F15
+    key <AB07> {
+    symbols[Group2] = [
+        F13, F13
+    ] };
+    key <AB08> {
+    symbols[Group2] = [
+        F14, F14
+    ] };
+    key <AB09> {
+    symbols[Group2] = [
+        F15, F15
+    ] };
+    // F16–F18
+    key <AC07> {
+    symbols[Group2] = [
+        F16, F16
+    ] };
+    key <AC08> {
+    symbols[Group2] = [
+        F17, F17
+    ] };
+    key <AC09> {
+    symbols[Group2] = [
+        F18, F18
+    ] };
+    // F19–F21
+    key <AD07> {
+    symbols[Group2] = [
+        F19, F19
+    ] };
+    key <AD08> {
+    symbols[Group2] = [
+        F20, F20
+    ] };
+    key <AD09> {
+    symbols[Group2] = [
+        F21, F21
+    ] };
+    // F22–F24
+    key <AB10> {
+    symbols[Group2] = [
+        F22, F22
+    ] };
+    key <AC10> {
+    symbols[Group2] = [
+        F23, F23
+    ] };
+    key <AD10> {
+    symbols[Group2] = [
+        F24, F24
+    ] };
 };
 
 xkb_compat {
