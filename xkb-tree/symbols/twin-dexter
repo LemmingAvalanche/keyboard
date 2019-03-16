@@ -280,8 +280,6 @@ xkb_symbols "level-four-symbols" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB01> { [
-        // TODO: the level four `‹` is not useful any more, since I
-        // produce this through another means now.
         NoSymbol, NoSymbol, NoSymbol, U2039
     ] };
     key <AB02> { [
