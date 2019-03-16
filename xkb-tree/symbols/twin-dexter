@@ -1,24 +1,126 @@
-// Common layout for all other layouts in this file to build on.  Not
-// really meant to be used directly.
-//
-// The name “latin” is just taken from the naming that Xkb itself used.
-// European layouts like `no` (Norwegian) inherit from some “latin”/
-// variant.
+// Main layout.
 default partial alphanumeric_keys
-xkb_symbols "latin" {
-    // Use caps lock and the key to the left of the return key (on
-    // European (105) keyboards) to access the third level.
-    include "level3(modifier_mapping)"
-    include "level3(bksl_switch)"
-    include "level3(caps_switch)"
-    include "twin-dexter(level-four-symbols)"
-    // Use right Alt as Alt key, instead of AltGr key.
-    key <RALT> { [ Alt_R ] };
+xkb_symbols "base" {
+    include "no"
 
     // Make levels 5–8 possible.
+    include "level3(modifier_mapping)"
     include "level5(modifier_mapping)"
-    key.type[Group1] = "EIGHT_LEVEL";
 
+    include "twin-dexter(lsgt-as-shift)"
+    include "twin-dexter(set-up-alts-and-windows)"
+
+    // symbols
+    include "twin-dexter(base-punctuation)"
+    include "twin-dexter(rightsinglequotemark)"
+    include "twin-dexter(level-three-symbols)"
+    include "twin-dexter(level-four-symbols)"
+
+    // level 5
+    include "twin-dexter(alphabet-section-numpad)"
+    include "twin-dexter(right-side-nav-and-misc)"
+
+    include "twin-dexter(hyper)"
+    include "twin-dexter(group-2)"
+    include "twin-dexter(latches-menu-and-compose)"
+
+    include "twin-dexter(return-lock-shift-levels)"
+
+    include "twin-dexter(lvl-5-media-keys)"
+
+    // Experimental
+    include "twin-dexter(group-3-experimental)"
+    include "twin-dexter(group-3-test-symbols)"
+    include "twin-dexter(group-4-test-symbols)"
+    include "twin-dexter(backspace-word)"
+
+    // In development
+    include "twin-dexter(fake-latch-escape-level-four)"
+    include "twin-dexter(fake-g1l1-on-g4l4)"
+
+    include "twin-dexter(iso-lock)"
+    include "twin-dexter(lock-unlocker)"
+
+    // TODO: Make some use of these dead keys by making mappings in the
+    // ~.XCompose~ file (see the dotfiles repository).
+    replace key <TLDE> {
+        [ kana_a ]
+    };
+
+    key <AD12> {
+        [ kana_u ]
+    };
+    // `kana_e`: box-drawing mappings.
+    key <AD11> { [
+        kana_e, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+};
+
+// Like the “main” layout but with Norwegian letters and Norwegian double
+// quotes.
+xkb_symbols "no" {
+    include "twin-dexter(base)"
+    include "twin-dexter(no-common)"
+};
+
+// Mappings for Norwegian layouts.
+//
+// Include this layout on top of other modifications if you want a
+// layout for writing Norwegian.
+partial alphanumeric_keys
+xkb_symbols "no-common" {
+    // Norwegian characters
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <AD11>	{ [
+        aring, Aring, NoSymbol, NoSymbol
+    ] };
+    key <AC10>	{ [
+        oslash, Ooblique, NoSymbol, NoSymbol
+    ] };
+    key <AC11>	{ [
+        ae, AE, NoSymbol, NoSymbol
+    ] };
+
+    // Use Norwegian quotemarks instead of the English ones which are
+    // defined in `base`.
+    key <AC02> { [
+        NoSymbol, NoSymbol, guillemotleft, NoSymbol
+    ] };
+    key <AC03> { [
+        NoSymbol, NoSymbol, guillemotright, NoSymbol
+    ] };
+};
+
+// Punctuation on the first and second levels of the keys next to the
+// `M` key:
+//
+// ┌─────┬─────┬─────┬─────┬─────────────┐
+// │ M   │;    │:    │_    │Shift        │
+// │ m   │,    │.    │-    │             │
+// └─────┴─────┴─────┴─────┴─────────────┘
+//
+xkb_symbols "base-punctuation" {
+    key <AB08> { [
+        comma, semicolon, NoSymbol, NoSymbol
+    ] };
+    key <AB09> { [
+        period, colon, NoSymbol, NoSymbol
+    ] };
+    key <AB10> { [
+        minus, underscore, NoSymbol, NoSymbol
+    ] };
+};
+
+// Right single quote mark (apostrophe) on the `Ø` key.
+xkb_symbols "rightsinglequotemark" {
+    key <AC10> { [
+        rightsinglequotemark, NoSymbol, NoSymbol, NoSymbol
+    ] };
+};
+
+xkb_symbols "level-three-symbols" {
+    key.type[Group1] = "EIGHT_LEVEL";
     key <AD01> { [
         NoSymbol, NoSymbol, at, NoSymbol
     ] };
@@ -76,8 +178,17 @@ xkb_symbols "latin" {
     key <AC09> { [
         NoSymbol, NoSymbol, parenright, NoSymbol
     ] };
+    key <AB01> { [
+        NoSymbol, NoSymbol, less, NoSymbol
+    ] };
+    key <AB02> { [
+        NoSymbol, NoSymbol, greater, NoSymbol
+    ] };
+    key <AB03> { [
+        NoSymbol, NoSymbol, braceleft, NoSymbol
+    ] };
     key <AB04> { [
-        NoSymbol, NoSymbol, U25CA, NoSymbol
+        NoSymbol, NoSymbol, braceright, NoSymbol
     ] };
     key <AB05> { [
         NoSymbol, NoSymbol, dollar, NoSymbol
@@ -89,13 +200,13 @@ xkb_symbols "latin" {
         NoSymbol, NoSymbol, backslash, NoSymbol
     ] };
     key <AB08> { [
-        comma, semicolon, periodcentered, NoSymbol
+        NoSymbol, NoSymbol, periodcentered, NoSymbol
     ] };
     key <AB09> { [
-        period, colon, emdash, NoSymbol
+        NoSymbol, NoSymbol, emdash, NoSymbol
     ] };
     key <AB10> { [
-        minus, underscore, endash, NoSymbol
+        NoSymbol, NoSymbol, endash, NoSymbol
     ] };
 };
 
@@ -157,136 +268,40 @@ xkb_symbols "level-four-symbols" {
     ] };
 };
 
-// Common mappings for all “Norwegian” keymappings.
-partial alphanumeric_keys
-xkb_symbols "no-common" {
-    // Norwegian characters
-    key.type[Group1] = "EIGHT_LEVEL";
-    key <AD11>	{ [
-        aring, Aring, asciitilde, NoSymbol
-    ] };
-    key <AC10>	{ [
-        oslash, Ooblique, parenleft, bracketleft
-    ] };
-    key <AC11>	{ [
-        ae, AE, parenright, bracketright
-    ] };
-
-    // Move the braces to two free keys (see `latin`) since it is not
-    // room for them on `<AC11>`.
-    key <AB02> { [
-        NoSymbol, NoSymbol, braceleft, NoSymbol
-    ] };
-    key <AB03> { [
-        NoSymbol, NoSymbol, braceright, NoSymbol
-    ] };
-    // Use Norwegian quotemarks instead of the English ones which are
-    // defined in `latin`.
-    key <AC02> { [
-        NoSymbol, NoSymbol, guillemotleft, NoSymbol
-    ] };
-    key <AC03> { [
-        NoSymbol, NoSymbol, guillemotright, NoSymbol
-    ] };
+// To be used for my current keyboard.
+//
+// This changes this layout:
+//
+//     ┌──────┬──────┬──────┬────────────┬──────┬──────┬──────┐
+//     │      │      │      │            │      │      │      │
+//     │Ctrl  │Win   │Alt   │    Space   │ AltGr│  Menu│  Ctrl│
+//     └──────┴──────┴──────┴────────────┴──────┴──────┴──────┘
+//
+// To this:
+//     ┌──────┬──────┬──────┬────────────┬──────┬──────┬──────┐
+//     │      │      │      │            │      │      │      │
+//     │Ctrl  │Alt   │Win   │    Space   │   Win│   Alt│  Ctrl│
+//     └──────┴──────┴──────┴────────────┴──────┴──────┴──────┘
+xkb_symbols "set-up-alts-and-windows" {
+    // Use right Alt as Alt key, instead of AltGr key.
+    key <RALT> { [ Alt_R ] };
+    include "twin-dexter(menu-to-ralt)"
+    include "altwin(swap_alt_win)"
 };
 
-// “Esperanto common”.  Common keys for Esperanto-focused layouts,
-// adopted from a Norwegian keyboard.
-partial alphanumeric_keys
-xkb_symbols "eo-common" {
-    // Esperanto accents.
-    //
-    // These replaces the Norwegian characters, which are not used in
-    // Esperanto.
-    key <AC10>	{ [
-        // level 1: combining circumflex, for example: `ĝ`.
-        U0302, section, NoSymbol, NoSymbol
-    ] };
-    key <AC11>	{ [
-        // level 1: `ŭ`.
-        U016D, U016C, NoSymbol, NoSymbol
-    ] };
-};
-
-partial alphanumeric_keys
-xkb_symbols "no" {
-    include "no(basic)"
-    include "twin-dexter(latin)"
-    include "twin-dexter(no-common)"
-};
-
-partial alphanumeric_keys
-xkb_symbols "no-nodeadkeys" {
-    include "no(nodeadkeys)"
-    include "twin-dexter(latin)"
-    include "twin-dexter(no-common)"
-};
-
-partial alphanumeric_keys
-xkb_symbols "no-p1" {
-    include "twin-dexter(no-nodeadkeys)"
-
-    // Set `EIGHT_LEVEL` in case it is necessary.
-    key.type[Group1] = "EIGHT_LEVEL";
-
-    // Make the <TLDE> and <AE12> key into compose keys.
-    key <TLDE> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
-    key <AE12> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
-
-    key <AC10> { [
-        rightsinglequotemark, NoSymbol, bracketleft, NoSymbol
-    ] };
-    key <AC11> { [
-        NoSymbol, NoSymbol, bracketright, NoSymbol
-    ] };
-
-    key <AB01> { [
-        // TODO: the level four `‹` is not useful any more, since I
-        // produce this through another means now.
-        z, Z, less, U2039
-    ] };
-    key <AB02> { [
-        x, X, greater, NoSymbol
-    ] };
-    key <AB03> { [
-        c, C, braceleft, NoSymbol
-    ] };
-    key <AB04> { [
-        v, V, braceright, NoSymbol
-    ] };
-    // Use English quote marks.
-    key <AC02> { [
-        s, S, leftdoublequotemark, NoSymbol
-    ] };
-    key <AC03> { [
-        d, D, rightdoublequotemark, NoSymbol
-    ] };
-};
-
-// Swap the right Win key and the menu key.
-partial modifier_keys
-xkb_symbols "swap_r_win_menu_key" {
-    replace key <RWIN> { [ Multi_key ] };
+hidden partial modifier_keys
+xkb_symbols "menu-to-ralt" {
     replace key <MENU> { [ Alt_R ] };
 };
 
-// Like `no-p1`, but with a new level 2 shift key and more convenient
-// Alt keys.
-partial alphanumeric_keys
-xkb_symbols "no-p2" {
-    include "twin-dexter(no-p1)"
-    // Effectively “extend” the left shift key by mapping the key to the
-    // right of it as another `Shift_L` key.  This makes it easier to
-    // use shift together with left Alt (on the Windows key in this
-    // mapping).
+// Effectively “extend” the left shift key by mapping the key to the
+// right of it as another `Shift_L` key.  This makes it easier to
+// use shift together with left Alt (on the Windows key in this
+// mapping).
+xkb_symbols "lsgt-as-shift" {
+    key.type[Group1] = "ONE_LEVEL";
     key <LSGT> {
-      [ Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L ]
-    };
-    include "altwin(swap_alt_win)"
-    include "twin-dexter(swap_r_win_menu_key)"
-    // Use this key to access the “numpad level”.
-    key <RWIN> {
-        [ ISO_Level5_Shift ]
+      [ Shift_L ]
     };
 };
 
@@ -532,27 +547,8 @@ xkb_symbols "group-2-function-keys" {
     };
 };
 
-// Like `no-p2`, but with an “alphabetic numpad”.
-xkb_symbols "no-p3" {
-    include "twin-dexter(no-p2)"
-    include "twin-dexter(alphabet-section-numpad)"
-};
-
 xkb_compat {
     include "level5"
-};
-
-xkb_symbols "no-p4" {
-    include "twin-dexter(no-p2)"
-    include "twin-dexter(numpad-and-combining)"
-    // For a useful group 2.
-    include "twin-dexter(group-2)"
-    include "twin-dexter(latches-menu-and-compose)"
-    include "twin-dexter(my-extend)"
-
-    replace key <TLDE> {
-        [ kana_a ]
-    };
 };
 
 // Shift latches, group latches, menu key and compose key on the
@@ -616,38 +612,6 @@ xkb_symbols "latches-menu-and-compose" {
     };
 };
 
-// Norwegian version of `no-p4`.
-xkb_symbols "no-4" {
-    include "twin-dexter(no-p4)"
-    include "twin-dexter(no-common)"
-    key <AD12> { [
-        kana_i
-    ] };
-};
-
-// Esperanto version of `no-p4`.
-xkb_symbols "eo-4" {
-    include "twin-dexter(no-p4)"
-    include "twin-dexter(eo-common)"
-};
-
-// Like no-p4 but with dead key on `<AD12>`.
-//
-// Also with Hyper keys.
-xkb_symbols "no-p5" {
-    include "twin-dexter(no-p4)"
-    include "twin-dexter(hyper)"
-    // Experimental
-    include "twin-dexter(lvl-5-media-keys)"
-    key <AD12> {
-        [ kana_u ]
-    };
-    // `kana_e`: box-drawing mappings.
-    key <AD11> { [
-        kana_e
-    ] };
-};
-
 // Lock levels by first pressing a latch key and then `<RTRN>`.
 xkb_symbols "return-lock-shift-levels" {
     key.type[Group1] = "EIGHT_LEVEL";
@@ -671,49 +635,6 @@ xkb_symbols "return-lock-shift-levels" {
         LockMods(modifiers=Shift+LevelThree+LevelFive)
     ]
     };
-};
-
-// Similar to `no-p5` but uses an alternative to `my-extend`.
-xkb_symbols "no-p6" {
-    include "twin-dexter(no-p3)"
-    include "twin-dexter(right-side-nav-and-misc)"
-    include "twin-dexter(hyper)"
-    // For a useful group 2.
-    include "twin-dexter(group-2)"
-    include "twin-dexter(latches-menu-and-compose)"
-
-    include "twin-dexter(return-lock-shift-levels)"
-
-    // Experimental
-    include "twin-dexter(lvl-5-media-keys)"
-
-    // Experimental
-    include "twin-dexter(group-3-experimental)"
-    include "twin-dexter(group-3-test-symbols)"
-    include "twin-dexter(group-4-test-symbols)"
-    include "twin-dexter(backspace-word)"
-
-    // In development
-    include "twin-dexter(fake-latch-escape-level-four)"
-    include "twin-dexter(fake-g1l1-on-g4l4)"
-
-    include "twin-dexter(iso-lock)"
-    include "twin-dexter(lock-unlocker)"
-
-    // TODO: Make some use of these dead keys by making mappings in the
-    // ~.XCompose~ file (see the dotfiles repository).
-    replace key <TLDE> {
-        [ kana_a ]
-    };
-
-    key <AD12> {
-        [ kana_u ]
-    };
-    // `kana_e`: box-drawing mappings.
-    key <AD11> { [
-        kana_e, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
-    ] };
 };
 
 // A fifth- and sixth-level alternative to `my-extend`.  Uses only the
