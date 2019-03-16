@@ -273,6 +273,7 @@ xkb_symbols "level-four-symbols" {
     key <AB08> { [
         NoSymbol, NoSymbol, NoSymbol, abovedot
     ] };
+    // `•`, Bullet
     key <AB09> { [
         NoSymbol, NoSymbol, NoSymbol, enfilledcircbullet
     ] };
