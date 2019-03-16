@@ -1,0 +1,2 @@
+Keycode	Description
+<I120>	Apparently named `KEY_MACRO` (`xkb/keycodes/evdev`).  Used to implement “BackSpace Word”; see relevant sections in `xkb-tree/symbols/twin-dexter` and `xkb-tree/compat/my-compat`.
