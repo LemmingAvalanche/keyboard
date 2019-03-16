@@ -574,31 +574,7 @@ xkb_symbols "numpad-and-combining" {
 };
 
 xkb_symbols "group-2" {
-    include "twin-dexter(group-2-tab-as-alt)"
-    include "twin-dexter(group-2-q-as-control)"
     include "twin-dexter(group-2-function-keys)"
-};
-
-xkb_symbols "group-2-tab-as-alt" {
-    key <TAB> {
-    symbols[Group2] = [
-        Alt_L
-    ],
-    actions[Group2] = [
-        SetMods(mods=Alt)
-    ]
-    };
-};
-
-xkb_symbols "group-2-q-as-control" {
-    key <AD01> {
-    symbols[Group2] = [
-        Control_L
-    ],
-    actions[Group2] = [
-        SetMods(mods=Control)
-    ]
-    };
 };
 
 // Function keys on the “numpad” (†1) (`F1`–`F9`) plus keys `B`, `G`,
