@@ -41,7 +41,7 @@ xkb_symbols "base" {
     include "twin-dexter(lock-unlocker)"
 
     // TODO: Make some use of these dead keys by making mappings in the
-    // ~.XCompose~ file (see the dotfiles repository).
+    // `~/.XCompose` file (see the dotfiles repository).
     replace key <TLDE> {
         [ kana_a ]
     };
