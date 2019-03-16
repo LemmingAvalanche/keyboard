@@ -239,15 +239,18 @@ xkb_symbols "level-three-symbols" {
 // Most of these keys are yet to be mapped to.
 xkb_symbols "level-four-symbols" {
     // 2nd keyboard row
-    key <AD01> { [
+    key <AD01> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, U2607
     ] };
-    key <AD02> { [
+    key <AD02> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, leftsinglequotemark
     ] };
     // NOTE Intentionally duplicated; also occurs on level three of this
     // key.
-    key <AD03> { [
+    key <AD03> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, rightsinglequotemark
     ] };
     key <AD04> {
@@ -288,10 +291,12 @@ xkb_symbols "level-four-symbols" {
     ] };
 
     // 3rd keyboard row
-    key <AC01> { [
+    key <AC01> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, U2329
     ] };
-    key <AC02> { [
+    key <AC02> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, U232A
     ] };
     key <AC03> {
@@ -306,16 +311,20 @@ xkb_symbols "level-four-symbols" {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
-    key <AC06> { [
+    key <AC06> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, leftarrow
     ] };
-    key <AC07> { [
+    key <AC07> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, downarrow
     ] };
-    key <AC08> { [
+    key <AC08> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, uparrow
     ] };
-    key <AC09> { [
+    key <AC09> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, rightarrow
     ] };
     key <AC10> {
@@ -330,11 +339,13 @@ xkb_symbols "level-four-symbols" {
     // 4th keyboard row
     //
     // `‹`, Single Left-Pointing Angle Quotation Mark
-    key <AB01> { [
+    key <AB01> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, U2039
     ] };
     // `›`, Single Right-Pointing Angle Quotation Mark
-    key <AB02> { [
+    key <AB02> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, U203A
     ] };
     key <AB03> {
@@ -345,20 +356,25 @@ xkb_symbols "level-four-symbols" {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
-    key <AB05> { [
+    key <AB05> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, U300C
     ] };
-    key <AB06> { [
+    key <AB06> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, U300D
     ] };
-    key <AB07> { [
+    key <AB07> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, U2032
     ] };
-    key <AB08> { [
+    key <AB08> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, abovedot
     ] };
     // `•`, Bullet
-    key <AB09> { [
+    key <AB09> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, enfilledcircbullet
     ] };
     key <AB10> {
