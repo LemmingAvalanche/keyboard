@@ -279,9 +279,11 @@ xkb_symbols "level-four-symbols" {
     key <AB10> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // `‹`, Single Left-Pointing Angle Quotation Mark
     key <AB01> { [
         NoSymbol, NoSymbol, NoSymbol, U2039
     ] };
+    // `›`, Single Right-Pointing Angle Quotation Mark
     key <AB02> { [
         NoSymbol, NoSymbol, NoSymbol, U203A
     ] };
