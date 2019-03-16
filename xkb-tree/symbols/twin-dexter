@@ -133,100 +133,132 @@ xkb_symbols "rightsinglequotemark" {
 // • Midpoint (`·`) which is currently not in use.
 xkb_symbols "level-three-symbols" {
     key.type[Group1] = "EIGHT_LEVEL";
-    key <AD01> { [
+    key <AD01> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, at, NoSymbol
     ] };
-    key <AD02> { [
+    key <AD02> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, exclam, NoSymbol
     ] };
-    key <AD03> { [
+    key <AD03> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, rightsinglequotemark, NoSymbol
     ] };
-    key <AD04> { [
+    key <AD04> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, quotedbl, NoSymbol
     ] };
-    key <AD05> { [
+    key <AD05> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, asciicircum, NoSymbol
     ] };
-    key <AD06> { [
+    key <AD06> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, bar, NoSymbol
     ] };
-    key <AD07> { [
+    key <AD07> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, grave, NoSymbol
     ] };
-    key <AD08> { [
+    key <AD08> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, equal, NoSymbol
     ] };
-    key <AD09> { [
+    key <AD09> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, question, NoSymbol
     ] };
-    key <AD10> { [
+    key <AD10> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, plus, NoSymbol
     ] };
-    key <AD11> { [
+    key <AD11> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, asciitilde, NoSymbol
     ] };
-    key <AC01> { [
+    key <AC01> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, percent, NoSymbol
     ] };
-    key <AC02> { [
+    key <AC02> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, leftdoublequotemark, NoSymbol
     ] };
-    key <AC03> { [
+    key <AC03> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, rightdoublequotemark, NoSymbol
     ] };
-    key <AC04> { [
+    key <AC04> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, apostrophe, NoSymbol
     ] };
-    key <AC05> { [
+    key <AC05> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, asterisk, NoSymbol
     ] };
-    key <AC06> { [
+    key <AC06> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, numbersign, NoSymbol
     ] };
-    key <AC07> { [
+    key <AC07> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, slash, NoSymbol
     ] };
-    key <AC08> { [
+    key <AC08> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, parenleft, NoSymbol
     ] };
-    key <AC09> { [
+    key <AC09> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, parenright, NoSymbol
     ] };
-    key <AC10> { [
+    key <AC10> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, bracketleft, NoSymbol
     ] };
-    key <AC11> { [
+    key <AC11> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, bracketright, NoSymbol
     ] };
-    key <AB01> { [
+    key <AB01> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, less, NoSymbol
     ] };
-    key <AB02> { [
+    key <AB02> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, greater, NoSymbol
     ] };
-    key <AB03> { [
+    key <AB03> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, braceleft, NoSymbol
     ] };
-    key <AB04> { [
+    key <AB04> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, braceright, NoSymbol
     ] };
-    key <AB05> { [
+    key <AB05> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, dollar, NoSymbol
     ] };
-    key <AB06> { [
+    key <AB06> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, ampersand, NoSymbol
     ] };
-    key <AB07> { [
+    key <AB07> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, backslash, NoSymbol
     ] };
-    key <AB08> { [
+    key <AB08> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, periodcentered, NoSymbol
     ] };
-    key <AB09> { [
+    key <AB09> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, emdash, NoSymbol
     ] };
-    key <AB10> { [
+    key <AB10> {
+    symbols[Group1] = [
         NoSymbol, NoSymbol, endash, NoSymbol
     ] };
 };
