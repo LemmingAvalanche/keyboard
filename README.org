@@ -16,6 +16,12 @@ describing them as customizing the /fringes/ of the layouts, such as the
 ~Caps Lock~ key and the numeric row.  See ~xkb-tree/symbols/twin-dexter~
 for details.
 
+* Current setup
+
+#+BEGIN_SRC shell
+./scripts/keyboard-setup "twin-dexter,twin-dexter(all-f-keys)"
+#+END_SRC
+
 * Software needed
 
 The Xkb utilities ~setxkbmap~ and ~xkbcomp~ are needed for
