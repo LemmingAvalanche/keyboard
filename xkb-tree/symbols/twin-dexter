@@ -31,6 +31,9 @@ xkb_symbols "base" {
     include "twin-dexter(group-3-test-symbols)"
     include "twin-dexter(group-4-test-symbols)"
 
+    // Groups
+    include "twin-dexter(group-locks)"
+
     // In development
     include "twin-dexter(fake-latch-escape-level-four)"
     include "twin-dexter(fake-g1l1-on-g4l4)"
@@ -1305,6 +1308,90 @@ xkb_symbols "return-group-escape" {
     actions[Group4] = [
         LockGroup(group=1)
     ]
+    };
+};
+
+// § Group locks
+xkb_symbols "group-locks" {
+    key <HOME> {
+        symbols[Group2] = [
+            ISO_First_Group_Lock
+        ],
+        symbols[Group3] = [
+            ISO_First_Group_Lock
+        ],
+        symbols[Group4] = [
+            ISO_First_Group_Lock
+        ],
+        actions[Group2] = [
+            LockGroup(group=1)
+        ],
+        actions[Group3] = [
+            LockGroup(group=1)
+        ],
+        actions[Group4] = [
+            LockGroup(group=1)
+        ]
+    };
+    key <END> {
+       symbols[Group2] = [
+           ISO_Prev_Group_Lock
+       ],
+       symbols[Group3] = [
+           ISO_Prev_Group_Lock
+       ],
+       symbols[Group4] = [
+           ISO_Prev_Group_Lock
+       ],
+       actions[Group2] = [
+           LockGroup(group=2)
+       ],
+       actions[Group3] = [
+           LockGroup(group=2)
+       ],
+       actions[Group4] = [
+           LockGroup(group=2)
+       ]
+    };
+    key <PGUP> {
+       symbols[Group2] = [
+           ISO_Next_Group_Lock
+       ],
+       symbols[Group3] = [
+           ISO_Next_Group_Lock
+       ],
+       symbols[Group4] = [
+           ISO_Next_Group_Lock
+       ],
+       actions[Group2] = [
+           LockGroup(group=3)
+       ],
+       actions[Group3] = [
+           LockGroup(group=3)
+       ],
+       actions[Group4] = [
+           LockGroup(group=3)
+       ]
+    };
+    key <PGDN> {
+       symbols[Group2] = [
+           ISO_Last_Group_Lock
+       ],
+       symbols[Group3] = [
+           ISO_Last_Group_Lock
+       ],
+       symbols[Group4] = [
+           ISO_Last_Group_Lock
+       ],
+       actions[Group2] = [
+           LockGroup(group=4)
+       ],
+       actions[Group3] = [
+           LockGroup(group=4)
+       ],
+       actions[Group4] = [
+           LockGroup(group=4)
+       ]
     };
 };
 
