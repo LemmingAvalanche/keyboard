@@ -572,9 +572,9 @@ xkb_symbols "numpad-and-combining" {
     ] };
 };
 
-xkb_symbols "group-2" {
-    include "twin-dexter(group-2-lhs-function-keys)"
-    include "twin-dexter(group-2-rhs-function-keys)"
+xkb_symbols "all-f-keys" {
+    include "twin-dexter(lhs-function-keys)"
+    include "twin-dexter(rhs-function-keys)"
 };
 
 // Function keys on the “numpad” (†1) (`F1`–`F9`) plus keys `B`, `G`,
@@ -596,7 +596,7 @@ xkb_symbols "group-2" {
 // need to type for example `Shift+F24` you need to use some other
 // method, like for example using one of the keys as a latch, locking
 // the group, or something like that.
-xkb_symbols "group-2-lhs-function-keys" {
+xkb_symbols "lhs-function-keys" {
     // Keys `X`–`V`.
     key.type[Group1] = "EIGHT_LEVEL";
     key <AB02> {
@@ -659,7 +659,7 @@ xkb_symbols "group-2-lhs-function-keys" {
     };
 };
 
-xkb_symbols "group-2-rhs-function-keys" {
+xkb_symbols "rhs-function-keys" {
     // F13–F15
     key <AB07> {
     symbols[Group1] = [
