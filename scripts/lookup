@@ -8,6 +8,6 @@ my @keysyms;
 
 while (<>) {
     my @tmp = split / /;
-    push @hexes, $tmp[0];
+    push @hexes, hex($tmp[0]);
     push @keysyms, $tmp[1];
 }
