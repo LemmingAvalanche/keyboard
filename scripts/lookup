@@ -9,8 +9,12 @@ use charnames ':full';
 my @symbols;
 my @keysyms;
 
-while (<>) {
-    my @tmp = split / /;
+my $filename = "keysym-lookup";
+open(my $fh, '<:encoding(UTF-8)', $filename)
+    or die "lookup: error: could not open $filename.";
+
+while (my $row = <$fh>) {
+    my @tmp = split / /, $row;
     # The first column contains Unicode codepoints like e.g. U+2014 (EM
     # DASH).
     push @symbols, charnames::string_vianame("$tmp[0]");
