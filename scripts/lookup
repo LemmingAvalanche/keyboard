@@ -1,5 +1,9 @@
 #!/usr/bin/env perl
 
+# Example usage:
+#
+#     $ scripts/lookup •
+#     enfilledcircbullet
 use strict;
 use warnings;
 use utf8;
