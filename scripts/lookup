@@ -5,6 +5,11 @@ use warnings;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 use charnames ':full';
+# This module isn’t part of the Perl 5 package on my machine so it needs
+# to be installed:
+#
+#    nix-env -i -A nixos.perlPackages.ListMoreUtils
+use List::MoreUtils ':full';
 
 my @symbols;
 my @keysyms;
