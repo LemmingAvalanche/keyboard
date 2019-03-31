@@ -4,12 +4,13 @@ use strict;
 use warnings;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
+use charnames ':full';
 
 my @hexes;
 my @keysyms;
 
 while (<>) {
     my @tmp = split / /;
-    push @hexes, unpack ("U*", hex($tmp[0]));
+    push @hexes, charnames::string_vianame("$tmp[0]");
     push @keysyms, $tmp[1];
 }
