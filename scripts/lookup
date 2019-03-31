@@ -5,6 +5,7 @@ use warnings;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 use charnames ':full';
+use Encode qw(decode encode);
 # This module isn’t part of the Perl 5 package on my machine so it needs
 # to be installed:
 #
@@ -24,4 +25,14 @@ while (my $row = <$fh>) {
     # DASH).
     push @symbols, charnames::string_vianame("$tmp[0]");
     push @keysyms, $tmp[1];
+}
+
+# Explicit decoding is necessary for some reason.
+my $s = decode("utf-8", "$ARGV[0]");
+my $index = List::MoreUtils::first_index { $_ eq $s } @symbols;
+
+if ($index == -1) {
+    printf "lookup: symbol is not defined in keysymdef.h.\n";
+} else {
+    printf "$keysyms[$index]";
 }
