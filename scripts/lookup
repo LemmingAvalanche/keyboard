@@ -11,6 +11,8 @@ my @keysyms;
 
 while (<>) {
     my @tmp = split / /;
+    # The first column contains Unicode codepoints like e.g. U+2014 (EM
+    # DASH).
     push @symbols, charnames::string_vianame("$tmp[0]");
     push @keysyms, $tmp[1];
 }
