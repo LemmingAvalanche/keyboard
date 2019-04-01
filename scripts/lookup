@@ -16,8 +16,8 @@ use Encode qw(decode encode);
 #    nix-env -i -A nixos.perlPackages.ListMoreUtils
 use List::MoreUtils ':full';
 
-my @symbols = (0)x1700;
-my @keysyms = (0)x1700;
+my @symbols;
+my @keysyms;
 
 my $filename = "keysym-lookup";
 open(my $fh, '<:encoding(UTF-8)', $filename)
