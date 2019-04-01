@@ -30,6 +30,7 @@ while (my $row = <$fh>) {
     push @symbols, charnames::string_vianame("$tmp[0]");
     push @keysyms, $tmp[1];
 }
+close $fh;
 
 # Explicit decoding is necessary for some reason.
 my $s = decode("utf-8", "$ARGV[0]");
