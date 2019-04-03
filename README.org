@@ -1,3 +1,13 @@
+#+BEGIN_QUOTE
+And custom keyboard mapping which makes it possible to type parens
+without pressing Shift is complete idiocy, because you won't be able to
+work with anyone's machine.
+#+END_QUOTE
+
+—[[http://yosefk.com/blog/i-cant-believe-im-praising-tcl.html][yosefk]]
+
+-----
+
 Keyboard mappings for Linux using Xkb.
 
 This repository contains keyboard layouts which are based on an ISO
