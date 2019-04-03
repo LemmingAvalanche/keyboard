@@ -1,0 +1,43 @@
+#!/usr/bin/env perl
+
+# Example usage:
+#
+#     $ scripts/lookup •
+#     enfilledcircbullet
+use strict;
+use warnings;
+use utf8;
+use open ':std', ':encoding(UTF-8)';
+use charnames ':full';
+use Encode qw(decode encode);
+# This module isn’t part of the Perl 5 package on my machine so it needs
+# to be installed:
+#
+#    nix-env -i -A nixos.perlPackages.ListMoreUtils
+use List::MoreUtils ':full';
+
+my @symbols;
+my @keysyms;
+
+my $filename = "keysym-lookup";
+open(my $fh, '<:encoding(UTF-8)', $filename)
+    or die "lookup: error: could not open $filename.";
+
+while (my $row = <$fh>) {
+    my @tmp = split / /, $row;
+    # The first column contains Unicode codepoints like e.g. U+2014 (EM
+    # DASH).
+    push @symbols, charnames::string_vianame("$tmp[0]");
+    push @keysyms, $tmp[1];
+}
+close $fh;
+
+# Explicit decoding is necessary for some reason.
+my $s = decode("utf-8", "$ARGV[0]");
+my $index = List::MoreUtils::first_index { $_ eq $s } @symbols;
+
+if ($index == -1) {
+    printf "lookup: symbol is not defined in keysymdef.h.\n";
+} else {
+    printf "$keysyms[$index]";
+}
