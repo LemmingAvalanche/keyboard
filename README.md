@@ -127,7 +127,7 @@ on Linux.
   For example:
 
   ``` {.shell}
-  > xmodmap -pm
+  $ xmodmap -pm
   xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
 
   shift       Shift_L (0x32),  Shift_R (0x3e)
