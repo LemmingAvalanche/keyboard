@@ -55,6 +55,29 @@ For the “candidate” keysyms you should probably search for ~candidate~
 and not ~multiplecandidate~ or ~singlecandidate~.  It will give you more
 results.
 
+* TODO use xkb indicators in status bar
+
+I want to show keyboard state in the status bar/system tray.  Things
+like the lock/latch state of all the shift keys.
+
+See:
+
+- https://github.com/sneetsher/indicator-xkbmod
+- https://github.com/sneetsher/keyboard_modifiers_status
+-
+   https://web.archive.org/web/20020707211630/http://www.tsu.ru/~pascal/en/xkb/gram-compat.html
+
+See also the tag ~keyboard-indicators~ in my Firefox bookmarks.
+
+* TODO check out ~ISO_Lock~
+
+https://web.archive.org/web/20020202090345/http://www.tsu.ru/~pascal/en/xkb/gram-action.html
+
+* TODO Perhaps use AsciiDoc for documentation
+
+AsciiDoc might be a nice tool.  It seems geared towards technical
+documentation.
+
 * Closed issues
 
 ** DONE Extend layer is not working right now :issue-closed:
@@ -715,29 +738,6 @@ reward to bother with.
 
 In case I come back to this for some reason, I should ask someone else
 about this.
-
-* TODO use xkb indicators in status bar
-
-I want to show keyboard state in the status bar/system tray.  Things
-like the lock/latch state of all the shift keys.
-
-See:
-
-- https://github.com/sneetsher/indicator-xkbmod
-- https://github.com/sneetsher/keyboard_modifiers_status
--
-   https://web.archive.org/web/20020707211630/http://www.tsu.ru/~pascal/en/xkb/gram-compat.html
-
-See also the tag ~keyboard-indicators~ in my Firefox bookmarks.
-
-* TODO check out ~ISO_Lock~
-
-https://web.archive.org/web/20020202090345/http://www.tsu.ru/~pascal/en/xkb/gram-action.html
-
-* TODO Perhaps use AsciiDoc for documentation
-
-AsciiDoc might be a nice tool.  It seems geared towards technical
-documentation.
 
 ** DONE Can you latch modifiers like control and hyper? :issue-closed:
   CLOSED: [2019-04-06 Sat 23:44]
