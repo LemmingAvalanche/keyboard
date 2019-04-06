@@ -69,10 +69,6 @@ See:
 
 See also the tag ~keyboard-indicators~ in my Firefox bookmarks.
 
-* TODO check out ~ISO_Lock~
-
-https://web.archive.org/web/20020202090345/http://www.tsu.ru/~pascal/en/xkb/gram-action.html
-
 * TODO Perhaps use AsciiDoc for documentation
 
 AsciiDoc might be a nice tool.  It seems geared towards technical
@@ -771,3 +767,11 @@ action= LatchMods(modifiers=LevelThree);
 ~Hyper~ is a modifier.  I’ve seen it been used like this:
 ~modifiers=Hyper~.  So maybe one can implement latch keys for things
 like control and hyper?  That could be useful.
+
+** DONE check out ~ISO_Lock~ :issue-closed:
+  CLOSED: [2019-04-06 Sat 23:54]
+
+  - CLOSING NOTE [2019-04-06 Sat 23:54] \\
+    See r#f473b5ee48a2 (“Merge branch ‘lock-unlocker’ into next”,
+    2019-03-10).
+https://web.archive.org/web/20020202090345/http://www.tsu.ru/~pascal/en/xkb/gram-action.html
