@@ -55,19 +55,6 @@ For the “candidate” keysyms you should probably search for ~candidate~
 and not ~multiplecandidate~ or ~singlecandidate~.  It will give you more
 results.
 
-* TODO Can you latch modifiers like control and hyper?
-
-Apparently this is how the latch action is defined (taken from
-~xkb/compat/iso9995):
-
-#+BEGIN_SRC
-action= LatchMods(modifiers=LevelThree);
-#+END_SRC
-
-~Hyper~ is a modifier.  I’ve seen it been used like this:
-~modifiers=Hyper~.  So maybe one can implement latch keys for things
-like control and hyper?  That could be useful.
-
 * Closed issues
 
 ** DONE Extend layer is not working right now :issue-closed:
@@ -751,3 +738,36 @@ https://web.archive.org/web/20020202090345/http://www.tsu.ru/~pascal/en/xkb/gram
 
 AsciiDoc might be a nice tool.  It seems geared towards technical
 documentation.
+
+** DONE Can you latch modifiers like control and hyper? :issue-closed:
+  CLOSED: [2019-04-06 Sat 23:44]
+
+  - CLOSING NOTE [2019-04-06 Sat 23:44] \\
+    Just tested with control.  This worked as expected/hoped:
+
+    #+BEGIN_SRC
+    …
+    replace key <LFSH> {
+    symbols[Group1] = [
+        Control_R
+    ],
+    actions[Group1] = [
+        latchMods(modifiers=Control)
+    ]
+    };
+    …
+    #+END_SRC
+
+    Hyper might be trickier, but for unrelated reasons (the fact that it
+    is tied to the same modifier (~mod2~) as ~NumLock~).
+
+Apparently this is how the latch action is defined (taken from
+~xkb/compat/iso9995):
+
+#+BEGIN_SRC
+action= LatchMods(modifiers=LevelThree);
+#+END_SRC
+
+~Hyper~ is a modifier.  I’ve seen it been used like this:
+~modifiers=Hyper~.  So maybe one can implement latch keys for things
+like control and hyper?  That could be useful.
