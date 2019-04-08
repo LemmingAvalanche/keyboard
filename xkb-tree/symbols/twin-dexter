@@ -841,7 +841,7 @@ xkb_symbols "right-side-nav-and-misc" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         Undo, Redo, NoSymbol, NoSymbol
     ] };
-    // TODO map to something
+    // TODO unmapped
     key <AD12> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
@@ -851,7 +851,7 @@ xkb_symbols "right-side-nav-and-misc" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         Page_Up, Page_Up, NoSymbol, NoSymbol
     ] };
-    // TODO map to something
+    // TODO unmapped
     key <AC07> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
@@ -869,7 +869,7 @@ xkb_symbols "right-side-nav-and-misc" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         Delete, Delete, NoSymbol, NoSymbol
     ] };
-    // TODO map to something
+    // TODO unmapped
     key <AC11> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
@@ -891,7 +891,7 @@ xkb_symbols "right-side-nav-and-misc" {
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         End, End, NoSymbol, NoSymbol
     ] };
-    // TODO map to something
+    // TODO unmapped
     key <AB10> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
