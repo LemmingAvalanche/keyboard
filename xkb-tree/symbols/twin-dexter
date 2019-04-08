@@ -129,7 +129,7 @@ xkb_symbols "rightsinglequotemark" {
 //
 // • En-dash and em-dash.
 // • Curly quotes (`“”`) (English-style; overriden with Norwegian-style
-//   quotes (`«»`) in `no`).
+//   quotes (`«»`) in `no-common`).
 // • “Proper” (typographic) apostrophe (`’`).
 // • Midpoint (`·`) which is currently not in use.
 xkb_symbols "level-three-symbols" {
