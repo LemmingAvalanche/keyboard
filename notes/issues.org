@@ -36,7 +36,8 @@ Codeinput, but I don't know what they do.
 
 (Source: https://www.charvolant.org/doug/xkb/html/node5.html)
 
-** Update 2017-11-12T22:07:44+01:00
+** Update
+  [2017-11-12 Sun]
 
 You can get some more hints about these keys by trying to search for
 aliases for them.  Like `Mode_switch`, it seems that there are several
@@ -205,7 +206,8 @@ this in a neat way?
      #+END_SRC
 
      Seems like it doesn’t work.
-*** Update [2017-05-11 to.]
+*** Update
+  [2017-05-11 to.]
 
 It seems that this link contains some good pointers:
 
@@ -215,7 +217,8 @@ Also this one:
 
     https://askubuntu.com/questions/876005/what-file-is-the-setxkbmap-option-rules-meant-to-take-and-how-can-i-add-keyboa/896297#896297
 
-*** Update [2017-06-04 sø.]
+*** Update
+  [2017-06-04 sø.]
 
 I downloaded [[https://github.com/aspiers/desktop-config][Adam Spier’s]] keyboard configuration.  He has some custom
 keyboard mappings.  By figuring out how he uses ~setxkbmap~ to enable
@@ -604,7 +607,8 @@ next and previous group, respectively), but if I switch to ~no-p4~,
 these keys produce ~NoSymbol~ when unshifted (level 1), but can emit the
 group switches on the fourt level.
 
-*** Update 2017-07-08T16:51:01+0200
+*** Update
+    [2017-07-08 Sat 16:51]
 
 According to ~xev~, the return and backspace keys both emit ~NoSymbol~
 at level 2 and 3, the group switches at level 4, and the regular
@@ -639,7 +643,8 @@ I tried to do two things to try to find the problematic part of ~no-p4~:
 
 But neither of these worked.
 
-*** Update  2017-07-08T17:15:28+0200
+*** Update
+    [2017-07-08 Sat 17:15]
 
 I removed almost everything from ~no-p4~ to see if the problem
 persisted:
@@ -653,7 +658,8 @@ xkb_symbols "no-p4" {
 
 And yes, return and backspace then still didn’t work on ~no-p4~.
 
-*** Update 2017-07-08T17:30:30+0200
+*** Update
+    [2017-07-08 Sat 17:30]
 
 I tried to move the include of the group switch last in both ~no-p3~,
 ~no-p4~.  That did not make any difference.
@@ -693,7 +699,8 @@ lowercase ~h~ is the keypress event, as expected.  So the first key
 pressed after pressing the left control must have consumed the latch key
 states.
 
-*** Update 2017-09-02T01:29:51+02:00
+*** Update
+  [2017-09-02 Sat]
 
 On further reflection, a control key not consuming the latch states
 makes perfect sense.  When I for example want to press ~Control+D~ by
