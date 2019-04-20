@@ -74,6 +74,17 @@ See also the tag ~keyboard-indicators~ in my Firefox bookmarks.
 AsciiDoc might be a nice tool.  It seems geared towards technical
 documentation.
 
+* Ideas
+
+** Generate documentation from Xkb source files
+
+I should be able to generate documentation from the line-comments of the
+Xkb source files.  I could use a markup language like AsciiDoc or
+MarkDown.  I doubt that there is some off-the-shelf program that I could
+use.  Best case scenario I can use some doc generation program for some
+C-like language which accepts ~//~ comments (I’ve tested ~/**/~ comments
+and apparently Xkb source files cannot contain them).
+
 * Closed issues
 
 ** DONE Extend layer is not working right now :issue-closed:
