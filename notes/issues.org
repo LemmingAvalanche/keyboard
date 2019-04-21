@@ -78,6 +78,7 @@ documentation.
 * Ideas
 
 ** Generate documentation from Xkb source files
+   [2019-04-20 Sat]
 
 I should be able to generate documentation from the line-comments of the
 Xkb source files.  I could use a markup language like AsciiDoc or
