@@ -101,6 +101,9 @@ I have done some research on documentation generation.
   in C++, although not sure).
 - I didn’t [[http://discuss.asciidoctor.org/template/NamlServlet.jtp?macro=search_page&node=1&query=documentation+generator&days=0&i=24][find anything]] on an AsciiDoctor forum with the search string
   ~documentation generator~.
+- [[https://www.naturaldocs.org/reference/languages.txt/#adding_languages][Natural Docs]] seems promising since adding new languages seems easy
+  (just configuration apparently, no programming).  Unfortunately it
+  seems like Natural Docs is not in my package manager (Nixpkgs).
 
 * Closed issues
 
