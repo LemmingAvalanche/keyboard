@@ -87,6 +87,21 @@ use.  Best case scenario I can use some doc generation program for some
 C-like language which accepts ~//~ comments (I’ve tested ~/**/~ comments
 and apparently Xkb source files cannot contain them).
 
+*** Update
+  [2019-04-21 Sun]
+
+I have done some research on documentation generation.
+
+- Seems that the term to search for is “document generator”.
+- See the Wikipedia page [[https://en.wikipedia.org/wiki/Comparison_of_documentation_generators][“Comparison of documentation generators”]].
+- Doxygen looked promising.  [[http://www.doxygen.nl/manual/faq.html#faq_pgm_X][However]] it turns out that one cannot simply
+  use Doxygen as-is (with some configuration) for languages that it does
+  not support; you have to implement a parser for the language.  I’m not
+  keen on doing that in C or C++ (I suspect that Doxygen is implemented
+  in C++, although not sure).
+- I didn’t [[http://discuss.asciidoctor.org/template/NamlServlet.jtp?macro=search_page&node=1&query=documentation+generator&days=0&i=24][find anything]] on an AsciiDoctor forum with the search string
+  ~documentation generator~.
+
 * Closed issues
 
 ** DONE Extend layer is not working right now :issue-closed:
