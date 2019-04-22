@@ -277,7 +277,8 @@ xkb_symbols "level-four-symbols" {
     // 2nd keyboard row
     key <AD01> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, U2607
+        # Link 🔗
+        NoSymbol, NoSymbol, NoSymbol, U1F517
     ] };
     key <AD02> {
     symbols[Group1] = [
