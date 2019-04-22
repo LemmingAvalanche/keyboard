@@ -296,7 +296,9 @@ xkb_symbols "level-four-symbols" {
     ] };
     key <AD05> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        // 🔖 Bookmark
+        // Mnemonic: “t” for “tag”.
+        NoSymbol, NoSymbol, NoSymbol, U1F516
     ] };
     key <AD06> {
     symbols[Group1] = [
@@ -399,7 +401,13 @@ xkb_symbols "level-four-symbols" {
     ] };
     key <AB06> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, U300D
+        // 📓 Notebook
+        // Mnemonic: “note”.
+        // NOTE use to mean “comment” or “note”.  Use it as a prefix
+        // like this:
+        //
+        //     📓 Oh btw, keep the following in mind …
+        NoSymbol, NoSymbol, NoSymbol, U1F4D3
     ] };
     key <AB07> {
     symbols[Group1] = [
