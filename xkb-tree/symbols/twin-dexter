@@ -292,7 +292,8 @@ xkb_symbols "level-four-symbols" {
     ] };
     key <AD04> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        // ✳ Eight-Spoked Asterisk
+        NoSymbol, NoSymbol, NoSymbol, U2733
     ] };
     key <AD05> {
     symbols[Group1] = [
