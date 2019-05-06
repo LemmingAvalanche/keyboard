@@ -345,7 +345,8 @@ xkb_symbols "level-four-symbols" {
     ] };
     key <AC04> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        // ★ Black Star
+        NoSymbol, NoSymbol, NoSymbol, U2605
     ] };
     key <AC05> {
     symbols[Group1] = [
