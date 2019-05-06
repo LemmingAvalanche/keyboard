@@ -399,7 +399,8 @@ xkb_symbols "level-four-symbols" {
     ] };
     key <AB05> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, U300C
+        // ⋈ Bow Tie
+        NoSymbol, NoSymbol, NoSymbol, U22C8
     ] };
     key <AB06> {
     symbols[Group1] = [
