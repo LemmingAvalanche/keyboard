@@ -419,7 +419,8 @@ xkb_symbols "level-four-symbols" {
     ] };
     key <AC10> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        // 🏷 Label
+        NoSymbol, NoSymbol, NoSymbol, U1F3F7
     ] };
     key <AC11> {
     symbols[Group1] = [
