@@ -301,30 +301,79 @@ xkb_symbols "level-four-symbols" {
         // Mnemonic: “t” for “tag”.
         NoSymbol, NoSymbol, NoSymbol, U1F516
     ] };
+    // NOTE key jams when using the left hand to access this level on my
+    //     Windows [keyboard].
+    //
+    //     Need to lock level four in order to (ergonomically) access
+    //     level four of this key.
+    //
+    //     🔗 keyboard: https://www.amazon.com/Microsoft-Ergonomic-Wireless-Desktop-Keyboard/dp/B00CYX54C0/
     key <AD06> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // NOTE key jams when using the left hand to access this level on my
+    //     Windows [keyboard].
+    //
+    //     Need to lock level four in order to (ergonomically) access
+    //     level four of this key.
+    //
+    //     🔗 keyboard: https://www.amazon.com/Microsoft-Ergonomic-Wireless-Desktop-Keyboard/dp/B00CYX54C0/
     key <AD07> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // NOTE key jams when using the left hand to access this level on my
+    //     Windows [keyboard].
+    //
+    //     Need to lock level four in order to (ergonomically) access
+    //     level four of this key.
+    //
+    //     🔗 keyboard: https://www.amazon.com/Microsoft-Ergonomic-Wireless-Desktop-Keyboard/dp/B00CYX54C0/
     key <AD08> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // NOTE key jams when using the left hand to access this level on my
+    //     Windows [keyboard].
+    //
+    //     Need to lock level four in order to (ergonomically) access
+    //     level four of this key.
+    //
+    //     🔗 keyboard: https://www.amazon.com/Microsoft-Ergonomic-Wireless-Desktop-Keyboard/dp/B00CYX54C0/
     key <AD09> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // NOTE key jams when using the left hand to access this level on my
+    //     Windows [keyboard].
+    //
+    //     Need to lock level four in order to (ergonomically) access
+    //     level four of this key.
+    //
+    //     🔗 keyboard: https://www.amazon.com/Microsoft-Ergonomic-Wireless-Desktop-Keyboard/dp/B00CYX54C0/
     key <AD10> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // NOTE key jams when using the left hand to access this level on my
+    //     Windows [keyboard].
+    //
+    //     Need to lock level four in order to (ergonomically) access
+    //     level four of this key.
+    //
+    //     🔗 keyboard: https://www.amazon.com/Microsoft-Ergonomic-Wireless-Desktop-Keyboard/dp/B00CYX54C0/
     key <AD11> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // NOTE key jams when using the left hand to access this level on my
+    //     Windows [keyboard].
+    //
+    //     Need to lock level four in order to (ergonomically) access
+    //     level four of this key.
+    //
+    //     🔗 keyboard: https://www.amazon.com/Microsoft-Ergonomic-Wireless-Desktop-Keyboard/dp/B00CYX54C0/
     key <AD12> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
