@@ -81,11 +81,19 @@ xkb_symbols "no-common" {
 
     // Use Norwegian quotemarks instead of the English ones which are
     // defined in `base`.
+    //
+    // NOTE For some reason I have to set level 5 here again, even
+    //   though the `alphabet-section-numpad` section should have taken
+    //   care of it; if I simply set level 5 to `NoSymbol`, then these two
+    //   keys will output no symbols on level 5.  I have no idea why.  So
+    //   this is a hack, although it’s not much of a bother.
     key <AC02> { [
-        NoSymbol, NoSymbol, guillemotleft, NoSymbol
+        NoSymbol, NoSymbol, guillemotleft, NoSymbol,
+        4, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC03> { [
-        NoSymbol, NoSymbol, guillemotright, NoSymbol
+        NoSymbol, NoSymbol, guillemotright, NoSymbol,
+        5, NoSymbol, NoSymbol, NoSymbol
     ] };
 };
 
