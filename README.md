@@ -118,7 +118,7 @@ on Linux.
   confusing behavior in which the mappings from the keyboard that I was
   currently using seemed to bleed into the visual description, although
   it had nothing to do with that layout. More concretely, I ran
-  \~gkbd-keyboard-display -l 'us(intl)'\~ which showed some mappings
+  `gkbd-keyboard-display -l 'us(intl)'` which showed some mappings
   that are not supposed to be on that layout.
 - Run `xset q` in order to see a lot information about the current
   state/settings. The most interesting part is probably the indicators
