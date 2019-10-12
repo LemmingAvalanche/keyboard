@@ -75,22 +75,6 @@ See also the tag ~keyboard-indicators~ in my Firefox bookmarks.
 AsciiDoc might be a nice tool.  It seems geared towards technical
 documentation.
 
-* TODO Number keys ~4~ and ~5~ don’t work with
-
-I have ~H-e~ (~Hyper~ plus ~e~) bound to:
-
-#+BEGIN_SRC
-scripts/keyboard-setup "twin-dexter(no),twin-dexter(all-f-keys)"
-#+END_SRC
-
-Using Xchainkeys.[fn:xchainkeys]  This is my “Norwegian” setup, the
-setup that I use for writing in Norwegian.  It turns out that I can’t
-write the numbers ~4~ and ~5~ in the usual way, namely by typing ~S5-s~
-and ~S5~d~, respectively (~S5~ are the level shift keys).  So I guess
-there’s a problem in the `alphabet-section-numpad` section in
-~twin-dexter~?
-
-[fn:xchainkeys] See my “dotfiles” repository.
 
 * Ideas
 
@@ -829,3 +813,23 @@ like control and hyper?  That could be useful.
     See r#f473b5ee48a2 (“Merge branch ‘lock-unlocker’ into next”,
     2019-03-10).
 https://web.archive.org/web/20020202090345/http://www.tsu.ru/~pascal/en/xkb/gram-action.html
+
+** DONE Number keys ~4~ and ~5~ don’t work with
+  CLOSED: [2019-10-12 Sat 23:18]
+
+  - CLOSING NOTE [2019-10-12 Sat 23:18] \\
+    Fixed in r#aee1e7d38831 (“Fix the numpad issue”, 2019-10-12).
+I have ~H-e~ (~Hyper~ plus ~e~) bound to:
+
+#+BEGIN_SRC
+scripts/keyboard-setup "twin-dexter(no),twin-dexter(all-f-keys)"
+#+END_SRC
+
+Using Xchainkeys.[fn:xchainkeys]  This is my “Norwegian” setup, the
+setup that I use for writing in Norwegian.  It turns out that I can’t
+write the numbers ~4~ and ~5~ in the usual way, namely by typing ~S5-s~
+and ~S5~d~, respectively (~S5~ are the level shift keys).  So I guess
+there’s a problem in the `alphabet-section-numpad` section in
+~twin-dexter~?
+
+[fn:xchainkeys] See my “dotfiles” repository.
