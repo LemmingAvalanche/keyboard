@@ -353,3 +353,24 @@ once you don’t want the mapping any more.
 This is probably impractical and a pain in the back compared to just
 overriding the keys with some regular compose keys (dead keys or
 whatever).  But I thought it was an intriguing thought.
+
+* Constant issues with group locking
+  [2019-10-21 Mon]
+
+I keep having problems with group locking.  After having been logged
+into a graphical session for a while (X Windows), the following happens:
+
+- Pressing the ~ISO_Group_Shift~ keys (for accessing function keys)
+  /locks/ to group instead of acting as a /shift/.
+- Using the ~Hyper~ key /locks/ it instead of acting like a regular
+  modifier key.
+
+At this point I have to unplug the keyboard and run the setup script
+again.  If I do the same things again—that is, if I so much as touch the
+~ISO_Group_Shift~ or ~Hyper~ keys—I have to do the same
+unplug-and-rerun-setup song and dance.  The only way to get rid of this
+problem is to quit the graphical session and login again.  But then the
+same problem eventually comes back again, and then I have to log out
+again, and on and on.
+
+This is unacceptable.
