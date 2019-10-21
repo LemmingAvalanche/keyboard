@@ -54,6 +54,12 @@ xkb_symbols "base" {
     ] };
 };
 
+// Programming layout.
+xkb_symbols "pr" {
+    include "twin-dexter(base)"
+    include "twin-dexter(all-f-keys-group-2)"
+};
+
 // Like the “main” layout but with Norwegian letters and Norwegian double
 // quotes.
 xkb_symbols "no" {
