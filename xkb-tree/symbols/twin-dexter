@@ -65,6 +65,7 @@ xkb_symbols "pr" {
 xkb_symbols "no" {
     include "twin-dexter(base)"
     include "twin-dexter(no-common)"
+    include "twin-dexter(all-f-keys-group-2)"
 };
 
 // Mappings for Norwegian layouts.
