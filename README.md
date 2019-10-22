@@ -61,11 +61,11 @@ There are two layouts:
 
 `scripts/keyboard-setup` is a wrapper around `setxkbmap`.
 
-There are only two layouts: the main layout (`base`) and the Norwegian
-variant `no`. The main layout is invoked as `twin-dexter`:
+There are only two layouts: the main layout (`pr`) and the Norwegian
+variant `no`. The main layout is invoked as `twin-dexter(pr)`:
 
 ``` {.shell}
-scripts/keyboard-setup "twin-dexter"
+scripts/keyboard-setup "twin-dexter(pr)"
 ```
 
 While the Norwegian variant is invoked as `twin-dexter(no)`:
