@@ -24,20 +24,6 @@ describing them as customizing the *fringes* of the layouts, such as the
 `Caps Lock` key and the numeric row. See `xkb-tree/symbols/twin-dexter`
 for details.
 
-# Current setup
-
-For programming:
-
-``` {.shell}
-./scripts/keyboard-setup "twin-dexter(pr)"
-```
-
-For Norwegian:
-
-``` {.shell}
-./scripts/keyboard-setup "twin-dexter(no)"
-```
-
 # Software needed
 
 The Xkb utilities `setxkbmap` and `xkbcomp` are needed for
