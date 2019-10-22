@@ -374,3 +374,53 @@ same problem eventually comes back again, and then I have to log out
 again, and on and on.
 
 This is unacceptable.
+
+* Update about the issue with group locking
+  [2019-10-22 Tue]
+
+I wrote about my problems with group locking yesterday.  I came up with
+following theory: the problem is that I use multiple layouts in the call
+to ~keyboard-setup~:
+
+#+BEGIN_SRC
+scripts/keyboard-setup "twin-dexter,twin-dexter(all-f-keys)"
+#+END_SRC
+
+This call sets layout 1 to ~twin-dexter~ (base) and layout 2 to
+~twin-dexter(all-f-keys)~.  This should mean that ~twin-dexter~ (base)
+is group 1 and ~twin-dexter(all-f-keys)~ is group 2.  The nice thing
+about this approach is that we can implement ~all-f-keys~ as a group 1
+mapping and then effectively use it as a group 2 layout when calling
+~keyboard-setup~.  Thus we can use ~all-f-keys~ (or any other group 1
+mapping in ~twin-dexter~) as a group 1, group 2, group 3, or group 4
+mapping, simply by passing the layout in a different position to
+~keyboard-setup~.
+
+~keyboard-setup~ is a wrapper around setxkbmap(1) and the layouts are
+passed to the ~-layout~ option of setxkbmap(1).  My theory was that
+setxkbmap(1) does not behave well if you pass multiple layouts to it
+like that.  So I tried to make a new mapping, ~all-f-keys-group-2~,
+which implements ~all-f-keys~ but for group
+2.[fn:revision_all_f_keys_group_2]  Then I made a new layout ~pr~ which
+includes ~all-f-keys-group-2~.[fn:revision_pr]  Finally I modified the
+existing layout ~no~ to include ~all-f-keys-group-2~.[fn_revision_no]
+Thus I now only needed to pass one layout to ~keyboard-setup~:
+
+#+BEGIN_SRC
+scripts/keyboard-setup "twin-dexter(pr)"
+#+END_SRC
+
+Or:
+
+#+BEGIN_SRC
+scripts/keyboard-setup "twin-dexter(no)"
+#+END_SRC
+
+After I made this change I have not experienced the group locking
+issue.  So it seems that my theory was correct.
+
+[fn:revision_all_f_keys_group_2] r#3539212a1c62 (“Map function keys to group 2”, 2019-10-21)
+
+[fn:revision_pr] r#5e98cd61cf06 (“Make new layout `pr`”, 2019-10-21)
+
+[fn_revision_no] r#471a4bb1ff5d (“Also map function keys to group 2 in `no`”, 2019-10-21)
