@@ -45,8 +45,6 @@ There are two layouts:
 
 # Usage
 
-`scripts/keyboard-setup` is a wrapper around `setxkbmap`.
-
 There are only two layouts: the main layout (`pr`) and the Norwegian
 variant `no`. The main layout is invoked as `twin-dexter(pr)`:
 
