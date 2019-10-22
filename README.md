@@ -57,22 +57,6 @@ While the Norwegian variant is invoked as `twin-dexter(no)`:
 scripts/keyboard-setup "twin-dexter(no)"
 ```
 
-## Using multiple layouts
-
-It is possible to pass up to four layouts to Setxkbmap. These are
-treated as “groups”. And since `scripts/keyboard-setup` is just a
-wrapper around Setxkbmap it is possible to do this:
-
-``` {.shell}
-scripts/keyboard-setup "us,twin-dexter"
-```
-
-(Standard US layout (`us`) on the first *group*, `twin-dexter` on the
-other.)
-
-This is not recommended, however, since `twin-dexter` uses several
-groups of its own.
-
 # Tools
 
 The following are useful tools for working with Xkb and keyboard layouts
