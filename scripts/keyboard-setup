@@ -6,9 +6,9 @@
 # commas.  Passing in more than one layout is not recommended, since I
 # want to be able to use all four groups per layout.
 #
-# Example usage:
+# Example usage (programming setup):
 #
-#     keyboard-setup "twin-dexter(no-p6)"
+#     keyboard-setup "twin-dexter(pr)"
 #
 # NOTE: the `-compat` option is so that level 2 latch works properly.
 setxkbmap \
