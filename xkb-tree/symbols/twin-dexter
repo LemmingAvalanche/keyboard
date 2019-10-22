@@ -1,3 +1,21 @@
+// This file offers two layouts: `pr` (for programming) and `no`
+// (Norwegian).  Use `scripts/keyboard-setup` (run from the base of the
+// project):
+//
+//     scripts/keyboard-setup "twin-dexter(pr)"
+//
+// Note that you should only pass in _one_ layout; you should not pass
+// in both like this:
+//
+//     scripts/keyboard-setup "twin-dexter(pr),twin-dexter(no)"
+//
+// Instead, if you need to switch between the two, you should make
+// keybindings with a program like e.g. Xchainkeys:
+//
+//     # From a `xchainkeys.conf` file.
+//     mod2-w :exec <path to project>/scripts/keyboard-setup "twin-dexter(pr)"
+//     mod2-e :exec <path to project>/scripts/keyboard-setup "twin-dexter(no)"
+
 // Main layout.
 default partial alphanumeric_keys
 xkb_symbols "base" {
