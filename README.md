@@ -45,8 +45,7 @@ There are two layouts:
 
 # Usage
 
-There are only two layouts: the main layout (`pr`) and the Norwegian
-variant `no`. The main layout is invoked as `twin-dexter(pr)`:
+The main layout is invoked as `twin-dexter(pr)`:
 
 ``` {.shell}
 scripts/keyboard-setup "twin-dexter(pr)"
