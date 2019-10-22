@@ -51,10 +51,11 @@ shell from which you can run the `scripts/keyboard-setup`.
 
 There are two layouts:
 
-- a main (base) layout for writing English and programming; and
-- a Norwegian variant which simply maps the three Norwegian letters to
-  the usual keys and maps the Norwegian quotemarks to what is the
-  English double quotemarks on the main layout.
+- a main (base) layout for writing English and programming
+  (`twin-dexter(pr)`); and
+- a Norwegian variant (`twin-dexter(no)`) which simply maps the three
+  Norwegian letters to the usual keys and maps the Norwegian quotemarks
+  to what is the English double quotemarks on the main layout.
 
 # Usage
 
