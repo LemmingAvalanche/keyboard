@@ -26,8 +26,16 @@ for details.
 
 # Current setup
 
+For programming:
+
 ``` {.shell}
-./scripts/keyboard-setup "twin-dexter,twin-dexter(all-f-keys)"
+./scripts/keyboard-setup "twin-dexter(pr)"
+```
+
+For Norwegian:
+
+``` {.shell}
+./scripts/keyboard-setup "twin-dexter(no)"
 ```
 
 # Software needed
