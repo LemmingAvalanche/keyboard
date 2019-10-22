@@ -1019,11 +1019,11 @@ xkb_symbols "latches-menu-and-compose" {
     // twice does not lock the next group or layout.
     replace key <AE01> {
         type[Group1]="ONE_LEVEL",
-        [ ISO_Group_Shift ]
+        [ ISO_Group_Latch ]
     };
     replace key <AE11> {
         type[Group1]="ONE_LEVEL",
-        [ ISO_Group_Shift ]
+        [ ISO_Group_Latch ]
     };
 };
 
