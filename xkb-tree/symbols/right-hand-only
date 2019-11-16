@@ -4,6 +4,7 @@ xkb_symbols "base" {
     include "right-hand-only(mirrored-left-side-on-right-side-lower)"
     include "right-hand-only(mirrored-left-side-on-right-side-capital)"
     include "right-hand-only(modifiers-and-switchers)"
+    include "right-hand-only(tab)"
 };
 
 default partial alphanumeric_keys
@@ -230,4 +231,11 @@ xkb_symbols "mirrored-left-side-on-right-side-capital" {
         NoSymbol, NoSymbol, Z, NoSymbol,
         NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+};
+
+xkb_symbols "tab" {
+    // ^ (to the left of Return)
+    replace key <AD12> {
+        [ Tab ]
+    };
 };
