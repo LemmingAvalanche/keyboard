@@ -3,6 +3,31 @@ xkb_symbols "base" {
     include "no"
     include "right-hand-only(mirrored-left-side-on-right-side-lower)"
     include "right-hand-only(mirrored-left-side-on-right-side-capital)"
+    include "right-hand-only(modifiers-and-switchers)"
+};
+
+default partial alphanumeric_keys
+xkb_symbols "modifiers-and-switchers" {
+    // Make levels 5–8 possible.
+    include "level3(modifier_mapping)"
+    include "level5(modifier_mapping)"
+
+    // 7
+    replace key <AE07> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level2_Latch ]
+    };
+    // 8
+    replace key <AE08> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level3_Latch ]
+    };
+    // 9
+    replace key <AE09> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Level5_Latch ]
+    };
+
 };
 
 // Right side only
