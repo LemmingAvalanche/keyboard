@@ -31,7 +31,6 @@ xkb_symbols "modifiers-and-switchers" {
 
 };
 
-// Right side only
 default partial alphanumeric_keys
 xkb_symbols "mirrored-left-side-on-right-side-lower" {
 
