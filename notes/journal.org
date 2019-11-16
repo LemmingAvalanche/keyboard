@@ -424,3 +424,18 @@ issue.  So it seems that my theory was correct.
 [fn:revision_pr] r#5e98cd61cf06 (“Make new layout `pr`”, 2019-10-21)
 
 [fn_revision_no] r#471a4bb1ff5d (“Also map function keys to group 2 in `no`”, 2019-10-21)
+
+* New layout: ~right-hand-only~
+  [2019-11-16 Sat]
+
+I started implementing a new layout today: ~right-hand-only~.  It’s a
+layout which is supposed to be used by the right hand only.  This is
+achieved by moving all the typable symbols to the right side.  They are
+made reasonably accessible—i.e. without having to use crazy modifier
+combinations—by putting them on levels and groups which can be accessed
+with a single latch keys.  That means using levels 1, 2, 3 and 5 as well
+as all four groups; the four groups are used since I can make single
+latch keys to access the groups, while I don’t know how to make levels
+4 and 6—8 accessible by only pressing/latching one single key.
+
+The layout should be fairly usable now.
