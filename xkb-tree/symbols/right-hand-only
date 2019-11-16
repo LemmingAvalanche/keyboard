@@ -1,3 +1,136 @@
+// Right side only
+default partial alphanumeric_keys
+xkb_symbols "mirrored-left-side-on-right-side-lower" {
+
+    key.type[Group1] = "EIGHT_LEVEL";
+    // 1st keyboard row, right side
+    key <AE07> {
+    symbols[Group2] = [
+        t, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AE08> {
+    symbols[Group2] = [
+        r, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AE09> {
+    symbols[Group2] = [
+        e, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AE10> {
+    symbols[Group2] = [
+        w, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AE11> {
+    symbols[Group2] = [
+        q, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AE12> {
+    symbols[Group2] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // Second row, right side
+    key <AD06> {
+    symbols[Group2] = [
+        g, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AD07> {
+    symbols[Group2] = [
+        f, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AD08> {
+    symbols[Group2] = [
+        d, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AD09> {
+    symbols[Group2] = [
+        s, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AD10> {
+    symbols[Group2] = [
+        a, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AD11> {
+    symbols[Group2] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AD12> {
+    symbols[Group2] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+
+    // 3rd keyboard row, right side
+    key <AC06> {
+    symbols[Group2] = [
+        b, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC07> {
+    symbols[Group2] = [
+        v, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC08> {
+    symbols[Group2] = [
+        c, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC09> {
+    symbols[Group2] = [
+        x, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC10> {
+    symbols[Group2] = [
+        z, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AC11> {
+    symbols[Group2] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+
+    // 4th keyboard row, right side
+    key <AB06> {
+    symbols[Group2] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB07> {
+    symbols[Group2] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB08> {
+    symbols[Group2] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB09> {
+    symbols[Group2] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    key <AB10> {
+    symbols[Group2] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+    ] };
+};
+
 default partial alphanumeric_keys
 xkb_symbols "mirrored-left-side-on-right-side-capital" {
 
