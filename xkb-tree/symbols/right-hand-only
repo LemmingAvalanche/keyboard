@@ -5,6 +5,7 @@ xkb_symbols "base" {
     include "right-hand-only(mirrored-left-side-on-right-side-capital)"
     include "right-hand-only(modifiers-and-switchers)"
     include "right-hand-only(tab)"
+    include "right-hand-only(numpad)"
 };
 
 default partial alphanumeric_keys
@@ -33,6 +34,77 @@ xkb_symbols "modifiers-and-switchers" {
         type[Group1]="ONE_LEVEL",
         [ ISO_Group_Latch ]
     };
+
+};
+
+xkb_symbols "numpad" {
+
+    // 2nd keyboard row, right side
+
+    // u
+    key <AD07> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        7, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // i
+    key <AD08> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        8, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // o
+    key <AD09> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        9, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // 3rd keyboard row, right side
+
+    // j
+    key <AC07> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        4, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // k
+    key <AC08> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        5, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // l
+    key <AC09> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        6, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // 4th keyboard row, right side
+
+    // n
+    key <AB06> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        0, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // m
+    key <AB07> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        1, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // ,
+    key <AB08> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        2, NoSymbol, NoSymbol, NoSymbol
+    ] };
+    // .
+    key <AB09> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        9, NoSymbol, NoSymbol, NoSymbol
+    ] };
 };
 
 default partial alphanumeric_keys
