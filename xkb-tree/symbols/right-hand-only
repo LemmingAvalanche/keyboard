@@ -29,6 +29,26 @@ xkb_symbols "modifiers-and-switchers" {
         type[Group1]="ONE_LEVEL",
         [ ISO_Level5_Latch ]
     };
+    // 0
+    replace key <AE10> {
+        type[Group1]="ONE_LEVEL",
+        symbols[Group1] = [
+            ISO_Last_Group
+        ],
+        actions[Group1] = [
+            LatchGroup(group=3)
+        ]
+    };
+    // +
+    replace key <AE11> {
+        type[Group1]="ONE_LEVEL",
+        symbols[Group1] = [
+            ISO_Last_Group
+        ],
+        actions[Group1] = [
+            LatchGroup(group=4)
+        ]
+    };
 
     replace key <RALT> {
         type[Group1]="ONE_LEVEL",
