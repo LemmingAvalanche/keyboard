@@ -435,8 +435,6 @@ xkb_symbols "name-here" {
 // Right side only
 default partial alphanumeric_keys
 xkb_symbols "right-side-only" {
-    include "no"
-
     // 1st keyboard row, right side
     key <AE07> {
     symbols[Group1] = [
