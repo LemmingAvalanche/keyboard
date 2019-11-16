@@ -29,6 +29,10 @@ xkb_symbols "modifiers-and-switchers" {
         [ ISO_Level5_Latch ]
     };
 
+    replace key <RALT> {
+        type[Group1]="ONE_LEVEL",
+        [ ISO_Group_Latch ]
+    };
 };
 
 default partial alphanumeric_keys
