@@ -7,3 +7,13 @@
 xkb_symbols "replace-printscreen-with-alt" {
     key <PRSC> { [ Alt_R ] };
 };
+
+xkb_symbols "pr" {
+    include "twin-dexter(pr)"
+    include "thinkpad(replace-printscreen-with-alt)"
+};
+
+xkb_symbols "no" {
+    include "twin-dexter(no)"
+    include "thinkpad(replace-printscreen-with-alt)"
+};
