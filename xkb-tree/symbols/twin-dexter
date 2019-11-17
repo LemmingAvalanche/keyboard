@@ -45,8 +45,6 @@ xkb_symbols "base" {
 
     include "twin-dexter(lvl-5-media-keys)"
 
-    include "twin-dexter(lock-unlocker)"
-
     // TODO: Make some use of these dead keys by making mappings in the
     // `~/.XCompose` file (see the dotfiles repository).
     replace key <TLDE> {
