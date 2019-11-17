@@ -1,0 +1,9 @@
+// Customize the Lenovo Thinkpad T590 keyboard.
+
+// Thinkpad laptops place the Print Screen key where the `<RALT>` key
+// is on a normal keyboard.  Since we want the key at the usual
+// `<RALT>` spot to act like `ALT_R`, we need to remap `<PRSC>` to
+// `ALT_R`.
+xkb_symbols "replace-printscreen-with-alt" {
+    key <PRSC> { [ Alt_R ] };
+};
