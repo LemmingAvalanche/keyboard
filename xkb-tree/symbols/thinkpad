@@ -5,7 +5,7 @@
 // `<RALT>` spot to act like `ALT_R`, we need to remap `<PRSC>` to
 // `ALT_R`.
 xkb_symbols "replace-printscreen-with-alt" {
-    key <PRSC> { [ Alt_R ] };
+    replace key <PRSC> { [ Alt_R ] };
 };
 
 xkb_symbols "pr" {
