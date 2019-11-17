@@ -45,17 +45,6 @@ xkb_symbols "base" {
 
     include "twin-dexter(lvl-5-media-keys)"
 
-    // Experimental
-    include "twin-dexter(group-3-test-symbols)"
-    include "twin-dexter(group-4-test-symbols)"
-
-    // Groups
-    include "twin-dexter(group-locks)"
-
-    // In development
-    include "twin-dexter(fake-latch-escape-level-four)"
-    include "twin-dexter(fake-g1l1-on-g4l4)"
-
     include "twin-dexter(lock-unlocker)"
 
     // TODO: Make some use of these dead keys by making mappings in the
