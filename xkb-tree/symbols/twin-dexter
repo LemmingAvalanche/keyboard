@@ -41,7 +41,7 @@ xkb_symbols "base" {
     include "twin-dexter(hyper)"
     include "twin-dexter(latches-menu-and-compose)"
 
-    include "twin-dexter(return-lock-shift-levels)"
+    include "twin-dexter(six-lock-shift-levels)"
 
     include "twin-dexter(lvl-5-media-keys)"
 
@@ -896,6 +896,33 @@ xkb_symbols "return-lock-shift-levels" {
     key <RTRN> {
     symbols[Group1] = [
         Return, Shift_Lock, ISO_Level3_Lock, ISO_Level3_Lock,
+        ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock
+    ],
+    // NOTE Need to set the actions explicitly because:
+    //     1. `Shift_Lock` won’t work otherwise (it won’t lock shift
+    //        level 2).
+    //     3. In order to lock multiple modifiers (e.g. level four:
+    //        `modifiers=Shift+LevelThree`).
+    actions[Group1] = [
+        NoAction(), LockMods(modifiers=Shift),
+        LockMods(modifiers=LevelThree),
+        LockMods(modifiers=Shift+LevelThree),
+        LockMods(modifiers=LevelFive),
+        LockMods(modifiers=Shift+LevelFive),
+        LockMods(modifiers=LevelThree+LevelFive),
+        LockMods(modifiers=Shift+LevelThree+LevelFive)
+    ]
+    };
+};
+
+// Like the above but with the “6” number key.
+//
+// An alternative to replacing “6” with `Menu`.
+xkb_symbols "six-lock-shift-levels" {
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <AE06> {
+    symbols[Group1] = [
+        VoidSymbol, Shift_Lock, ISO_Level3_Lock, ISO_Level3_Lock,
         ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock
     ],
     // NOTE Need to set the actions explicitly because:
