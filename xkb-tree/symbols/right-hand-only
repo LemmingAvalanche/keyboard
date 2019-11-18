@@ -124,7 +124,7 @@ xkb_symbols "numpad" {
     key <AB09> {
     symbols[Group1] = [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        9, NoSymbol, NoSymbol, NoSymbol
+        3, NoSymbol, NoSymbol, NoSymbol
     ] };
 };
 
