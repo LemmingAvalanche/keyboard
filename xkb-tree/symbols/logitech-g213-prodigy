@@ -13,7 +13,6 @@
 //
 // Which means that I have one more key to map.
 
-// TODO does not work with Xchainkeys
 xkb_symbols "menu-to-hyper" {
     // We have to do the same dance as in twin-dexter(hyper).
     replace key <MENU> {
@@ -21,6 +20,7 @@ xkb_symbols "menu-to-hyper" {
       symbols[Group1] = [ Hyper_R ],
       actions[Group1] = [ SetMods(modifiers=NumLock) ]
     };
+    replace modifier_map Mod2 { <MENU>, Hyper_L, Hyper_R };
 };
 
 xkb_symbols "pr" {
