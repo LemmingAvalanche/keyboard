@@ -1,0 +1,34 @@
+// This keyboard has these modifiers on the right side:
+//     ┬────────────┬──────┬──────┬──────┐──────┐
+//     │            │      │      │      │      │
+//     │    Space   │ AltGr│  Win │  Menu│  Ctrl│
+//     ┴────────────┴──────┴──────┴──────┘──────┘
+//
+// I had this layout in mind when I made twin-dexter:
+//
+//     ┬────────────┬──────┬──────┬──────┐
+//     │            │      │      │      │
+//     │    Space   │ AltGr│  Menu│  Ctrl│
+//     ┴────────────┴──────┴──────┴──────┘
+//
+// Which means that I have one more key to map.
+
+
+xkb_symbols "menu-to-hyper" {
+    // We have to do the same dance as in twin-dexter(hyper).
+    replace key <MENU> {
+      vmods = NumLock,
+      symbols[Group1] = [ Hyper_R ],
+      actions[Group1] = [ SetMods(modifiers=NumLock) ]
+    };
+};
+
+xkb_symbols "pr" {
+    include "twin-dexter(pr)"
+    include "logitech-g213-prodigy(menu-to-hyper)"
+};
+
+xkb_symbols "no" {
+    include "twin-dexter(no)"
+    include "logitech-g213-prodigy(menu-to-hyper)"
+};
