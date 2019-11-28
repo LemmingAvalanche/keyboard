@@ -1228,6 +1228,10 @@ xkb_symbols "my-extend" {
 partial modifier_keys
 xkb_symbols "hyper" {
 
+    // Get rid of the physical numlock key in case it takes up space
+    // for other hyper modifier keys.
+    replace key <NMLK> { [Delete] };
+
     replace key <CAPS> {
       vmods = NumLock,
       symbols[Group1] = [ Hyper_L ],
