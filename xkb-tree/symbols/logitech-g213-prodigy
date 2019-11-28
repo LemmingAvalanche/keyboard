@@ -13,7 +13,7 @@
 //
 // Which means that I have one more key to map.
 
-
+// TODO does not work with Xchainkeys
 xkb_symbols "menu-to-hyper" {
     // We have to do the same dance as in twin-dexter(hyper).
     replace key <MENU> {
