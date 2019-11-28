@@ -1228,11 +1228,6 @@ xkb_symbols "my-extend" {
 partial modifier_keys
 xkb_symbols "hyper" {
 
-    replace key <HYPR> {
-      vmods = NumLock,
-      symbols[Group1] = [ NoSymbol ],
-      actions[Group1] = [ SetMods(modifiers=NumLock) ]
-    };
     replace key <CAPS> {
       vmods = NumLock,
       symbols[Group1] = [ Hyper_L ],
@@ -1245,7 +1240,7 @@ xkb_symbols "hyper" {
       symbols[Group1] = [ Hyper_R ],
       actions[Group1] = [ SetMods(modifiers=NumLock) ]
     };
-    replace modifier_map Mod2 { <HYPR>, Hyper_L, Hyper_R };
+    replace modifier_map Mod2 { Hyper_L, Hyper_R };
 };
 
 // Media keys on level 5.
