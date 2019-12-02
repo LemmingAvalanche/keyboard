@@ -1,0 +1,17 @@
+xkb_symbols "base" {
+    // From left to right…
+
+    // TODO map to something useful
+    key <AC01> {
+        type[Group1]="ONE_LEVEL",
+        symbols[Group1] = [ q ]
+    };
+    key <AB05> {
+        type[Group1]="ONE_LEVEL",
+        symbols[Group1] = [ w ]
+    };
+    key <AB03> {
+        type[Group1]="ONE_LEVEL",
+        symbols[Group1] = [ r ]
+    };
+};

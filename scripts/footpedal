@@ -1,0 +1,9 @@
+#!/bin/sh
+
+id=$(xinput list | sed -n 's/.*HID 1a86:e026 Keyboard.*id=\([0-9]*\).*keyboard.*/\1/p')
+
+setxkbmap \
+         -option "" \
+         -layout "footpedal" \
+         -print |
+             xkbcomp -i "$id" -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
