@@ -2,14 +2,20 @@
 
 # Set keyboard layouts and options relating to keyboard layouts
 #
-# This program expects one argument, namely all the layouts separated by
-# commas.  Passing in more than one layout is not recommended, since I
-# want to be able to use all four groups per layout.
+# This program expects two arguments:
+#
+# 1. The layouts, comma-separated (though preferably just one)
+# 2. (optional) The input id (use `xinput list` to find)
 #
 # Example usage (programming setup):
 #
 #     keyboard-setup "twin-dexter(pr)"
 #
+
+# input id (the second argument) is optional; don’t use the `-i` option
+# if we don’t get supplied an id.
+i_option="${2:+-i $2}"
+
 # NOTE: the `-compat` option is so that level 2 latch works properly.
 setxkbmap \
          -option "" \
@@ -19,4 +25,4 @@ setxkbmap \
          -option numpad:mac \
          -types cas \
          -print |
-             xkbcomp -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
+             xkbcomp "$i_option" -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
