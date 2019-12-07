@@ -22,7 +22,7 @@ setxkbmap \
          -types cas \
          -print |
     if [ -z "$2" ]; then
-        xkbcomp -i "$2" -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
-    else
         xkbcomp -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
+    else
+        xkbcomp -i "$2" -I"/home/kristoffer/xkb/xkb-tree" - "$DISPLAY"
     fi
