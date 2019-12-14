@@ -1,0 +1,85 @@
+// Exibel standalone keypad.
+
+// Physical layout:
+//
+// NumLock, /, * BackSpace
+// 7, 8, 9, -
+// 4, 5, 6, +
+// 1, 2, 3, Enter
+// Tab, 0, <comma>, Enter (extends two rows)
+
+// TODO placeholder keysymbols; ready to be filled out.
+xkb_symbols "base" {
+    // First row:
+    //
+    // 7, 8, 9, -
+    key <NMLK> { [
+        a
+    ] };
+    key <KPDV> { [
+        b
+    ] };
+    key <KPMU> { [
+        c
+    ] };
+    key <BKSP> { [
+        d
+    ] };
+    // Second row
+    //
+    // 4, 5, 6, +
+    key <KP7> { [
+        e
+    ] };
+    key <KP8> { [
+        f
+    ] };
+    key <KP9> { [
+        g
+    ] };
+    key <KPSU> { [
+        h
+    ] };
+    // Third row
+    //
+    // 1, 2, 3, Enter
+    key <KP4> { [
+        i
+    ] };
+    key <KP5> { [
+        j
+    ] };
+    key <KP6> { [
+        k
+    ] };
+    key <KPAD> { [
+        l
+    ] };
+    // Fourth row
+    //
+    // Tab, 0, <comma>
+    key <KP1> { [
+        m
+    ] };
+    key <KP2> { [
+        n
+    ] };
+    key <KP3> { [
+        o
+    ] };
+    key <KPEN> { [
+        p
+    ] };
+    // Fifth row
+    //
+    // Tab, 0, <comma>
+    key <TAB> { [
+        q
+    ] };
+    key <KP0> { [
+        r
+    ] };
+    key <KPDL> { [
+        s
+    ] };
+};
