@@ -439,3 +439,14 @@ latch keys to access the groups, while I don’t know how to make levels
 4 and 6—8 accessible by only pressing/latching one single key.
 
 The layout should be fairly usable now.
+
+* Differentiating input devices does not work under Gnome 3
+  [2019-12-14 Sat]
+
+When using multiple different keyboard-like devices (e.g. a keyboard
+plus a standalone numpad), I want to be able to differentiate between
+those devices so that I can use different layouts on them.  The way to
+do that is to pass the input id of the device to xkbcomp(1) (see the
+recent change to ~keyboard-setup~).  That works perfectly fine on Xmonad
+on NixOS.  However, it does not /at all/ work on Gnome 3 for some
+reason.  It seems to be a known issue.
