@@ -546,7 +546,7 @@ xkb_symbols "alphabet-section-numpad" {
     // First (topmost) numpad row.
     key <AD02> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        7, NoSymbol, NoSymbol, NoSymbol
+        9, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AD03> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
@@ -554,7 +554,7 @@ xkb_symbols "alphabet-section-numpad" {
     ] };
     key <AD04> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        9, NoSymbol, NoSymbol, NoSymbol
+        7, NoSymbol, NoSymbol, NoSymbol
     ] };
     // Second numpad row.
     key <AC01> { [
@@ -563,7 +563,7 @@ xkb_symbols "alphabet-section-numpad" {
     ] };
     key <AC02> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        4, NoSymbol, NoSymbol, NoSymbol
+        6, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AC03> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
@@ -571,7 +571,7 @@ xkb_symbols "alphabet-section-numpad" {
     ] };
     key <AC04> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        6, NoSymbol, NoSymbol, NoSymbol
+        4, NoSymbol, NoSymbol, NoSymbol
     ] };
     // Third numpad row.
     key <AB01> { [
@@ -580,7 +580,7 @@ xkb_symbols "alphabet-section-numpad" {
     ] };
     key <AB02> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        1, NoSymbol, NoSymbol, NoSymbol
+        3, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB03> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
@@ -588,7 +588,7 @@ xkb_symbols "alphabet-section-numpad" {
     ] };
     key <AB04> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        3, NoSymbol, NoSymbol, NoSymbol
+        1, NoSymbol, NoSymbol, NoSymbol
     ] };
     key <AB05> { [
         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
