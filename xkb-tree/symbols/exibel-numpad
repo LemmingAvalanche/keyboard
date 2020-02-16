@@ -8,7 +8,6 @@
 // 1, 2, 3, Enter
 // Tab, 0, <comma>, Enter (extends two rows)
 
-// TODO placeholder keysymbols; ready to be filled out.
 xkb_symbols "base" {
     // Fifth row
     //
