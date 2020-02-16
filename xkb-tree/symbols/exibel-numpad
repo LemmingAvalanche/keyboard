@@ -71,15 +71,15 @@ xkb_symbols "base" {
     //
     // Num Lock, /, *, Back Space
     key <NMLK> { [
-        Cyrillic_CHE_descender
+        Cyrillic_ha_descender
     ] };
     key <KPDV> { [
-        Cyrillic_che_descender
+        Cyrillic_CHE_descender
     ] };
     key <KPMU> { [
-        Cyrillic_CHE_vertstroke
+        Cyrillic_che_descender
     ] };
     key <BKSP> { [
-        Cyrillic_che_vertstroke
+        Cyrillic_CHE_vertstroke
     ] };
 };
