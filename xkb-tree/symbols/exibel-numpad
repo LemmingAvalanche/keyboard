@@ -8,6 +8,11 @@
 // 1, 2, 3, Enter
 // Tab, 0, <comma>, Enter (extends two rows)
 
+// § Keys
+//
+// See `keysymdef.h`, section “Cyrilic”.  I took the first 19 letters in order
+// to fill up all the keys.
+
 xkb_symbols "base" {
     // Fifth row
     //
