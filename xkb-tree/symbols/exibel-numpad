@@ -14,72 +14,72 @@ xkb_symbols "base" {
     //
     // 7, 8, 9, -
     key <NMLK> { [
-        a
+        Cyrillic_CHE_descender
     ] };
     key <KPDV> { [
-        b
+        Cyrillic_che_descender
     ] };
     key <KPMU> { [
-        c
+        Cyrillic_CHE_vertstroke
     ] };
     key <BKSP> { [
-        d
+        Cyrillic_che_vertstroke
     ] };
     // Second row
     //
     // 4, 5, 6, +
     key <KP7> { [
-        e
+        Cyrillic_u_straight
     ] };
     key <KP8> { [
-        f
+        Cyrillic_U_straight_bar
     ] };
     key <KP9> { [
-        g
+        Cyrillic_u_straight_bar
     ] };
     key <KPSU> { [
-        h
+        Cyrillic_HA_descender
     ] };
     // Third row
     //
     // 1, 2, 3, Enter
     key <KP4> { [
-        i
+        Cyrillic_ka_vertstroke
     ] };
     key <KP5> { [
-        j
+        Cyrillic_EN_descender
     ] };
     key <KP6> { [
-        k
+        Cyrillic_en_descender
     ] };
     key <KPAD> { [
-        l
+        Cyrillic_U_straight
     ] };
     // Fourth row
     //
     // Tab, 0, <comma>
     key <KP1> { [
-        m
+        Cyrillic_zhe_descender
     ] };
     key <KP2> { [
-        n
+        Cyrillic_KA_descender
     ] };
     key <KP3> { [
-        o
+        Cyrillic_ka_descender
     ] };
     key <KPEN> { [
-        p
+        Cyrillic_KA_vertstroke
     ] };
     // Fifth row
     //
     // Tab, 0, <comma>
     key <TAB> { [
-        q
+        Cyrillic_GHE_bar
     ] };
     key <KP0> { [
-        r
+        Cyrillic_ghe_bar
     ] };
     key <KPDL> { [
-        s
+        Cyrillic_ZHE_descender
     ] };
 };
