@@ -24,7 +24,7 @@ xkb_symbols "base" {
     ] };
     // Fourth row
     //
-    // Tab, 0, <comma>
+    // 1, 2, 3, Enter
     key <KP1> { [
         Cyrillic_zhe_descender
     ] };
@@ -39,7 +39,7 @@ xkb_symbols "base" {
     ] };
     // Third row
     //
-    // 1, 2, 3, Enter
+    // 4, 5, 6, +
     key <KP4> { [
         Cyrillic_ka_vertstroke
     ] };
@@ -54,7 +54,7 @@ xkb_symbols "base" {
     ] };
     // Second row
     //
-    // 4, 5, 6, +
+    // 7, 8, 9, -
     key <KP7> { [
         Cyrillic_u_straight
     ] };
@@ -69,7 +69,7 @@ xkb_symbols "base" {
     ] };
     // First row:
     //
-    // 7, 8, 9, -
+    // Num Lock, /, *, Back Space
     key <NMLK> { [
         Cyrillic_CHE_descender
     ] };
