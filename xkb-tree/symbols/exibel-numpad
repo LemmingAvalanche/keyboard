@@ -10,50 +10,17 @@
 
 // TODO placeholder keysymbols; ready to be filled out.
 xkb_symbols "base" {
-    // First row:
+    // Fifth row
     //
-    // 7, 8, 9, -
-    key <NMLK> { [
-        Cyrillic_CHE_descender
+    // Tab, 0, <comma>
+    key <TAB> { [
+        Cyrillic_GHE_bar
     ] };
-    key <KPDV> { [
-        Cyrillic_che_descender
+    key <KP0> { [
+        Cyrillic_ghe_bar
     ] };
-    key <KPMU> { [
-        Cyrillic_CHE_vertstroke
-    ] };
-    key <BKSP> { [
-        Cyrillic_che_vertstroke
-    ] };
-    // Second row
-    //
-    // 4, 5, 6, +
-    key <KP7> { [
-        Cyrillic_u_straight
-    ] };
-    key <KP8> { [
-        Cyrillic_U_straight_bar
-    ] };
-    key <KP9> { [
-        Cyrillic_u_straight_bar
-    ] };
-    key <KPSU> { [
-        Cyrillic_HA_descender
-    ] };
-    // Third row
-    //
-    // 1, 2, 3, Enter
-    key <KP4> { [
-        Cyrillic_ka_vertstroke
-    ] };
-    key <KP5> { [
-        Cyrillic_EN_descender
-    ] };
-    key <KP6> { [
-        Cyrillic_en_descender
-    ] };
-    key <KPAD> { [
-        Cyrillic_U_straight
+    key <KPDL> { [
+        Cyrillic_ZHE_descender
     ] };
     // Fourth row
     //
@@ -70,16 +37,49 @@ xkb_symbols "base" {
     key <KPEN> { [
         Cyrillic_KA_vertstroke
     ] };
-    // Fifth row
+    // Third row
     //
-    // Tab, 0, <comma>
-    key <TAB> { [
-        Cyrillic_GHE_bar
+    // 1, 2, 3, Enter
+    key <KP4> { [
+        Cyrillic_ka_vertstroke
     ] };
-    key <KP0> { [
-        Cyrillic_ghe_bar
+    key <KP5> { [
+        Cyrillic_EN_descender
     ] };
-    key <KPDL> { [
-        Cyrillic_ZHE_descender
+    key <KP6> { [
+        Cyrillic_en_descender
+    ] };
+    key <KPAD> { [
+        Cyrillic_U_straight
+    ] };
+    // Second row
+    //
+    // 4, 5, 6, +
+    key <KP7> { [
+        Cyrillic_u_straight
+    ] };
+    key <KP8> { [
+        Cyrillic_U_straight_bar
+    ] };
+    key <KP9> { [
+        Cyrillic_u_straight_bar
+    ] };
+    key <KPSU> { [
+        Cyrillic_HA_descender
+    ] };
+    // First row:
+    //
+    // 7, 8, 9, -
+    key <NMLK> { [
+        Cyrillic_CHE_descender
+    ] };
+    key <KPDV> { [
+        Cyrillic_che_descender
+    ] };
+    key <KPMU> { [
+        Cyrillic_CHE_vertstroke
+    ] };
+    key <BKSP> { [
+        Cyrillic_che_vertstroke
     ] };
 };
