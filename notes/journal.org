@@ -450,3 +450,46 @@ do that is to pass the input id of the device to xkbcomp(1) (see the
 recent change to ~keyboard-setup~).  That works perfectly fine on Xmonad
 on NixOS.  However, it does not /at all/ work on Gnome 3 for some
 reason.  It seems to be a known issue.
+
+* How to add Control-modified (or other modifier) keys
+  [2020-09-05 Sat]
+
+I used a redirection to a free keycode in order to implement
+Ctrl+Backspace on a single key:
+
+    // my-compat
+    interpret Farsi_0 {
+	interpret.repeat = True;
+	action = redirectkey(key=<I120>, modifiers=Control);
+    };
+    …
+    // twin-dexter
+    key <BKSP> { [
+	Farsi_0, BackSpace
+    ] };
+    key <I120> { [
+	BackSpace
+    ] };
+
+But it is in fact unnecessary to redirect to /another/ key: you can just
+remap to the same keycode.  For example, this is the current
+implementation of the same modifer + key in the section “” in
+`twin-dexter`:
+
+    key <AD10> {
+    symbols[Group1] = [
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+        BackSpace, BackSpace , NoSymbol, NoSymbol
+    ],
+    actions[Group1] = [
+        NoAction(), NoAction(), NoAction(), NoAction(),
+        Redirect(key=<AD10>,mods=Control), Redirect(key=<AD10>,mods=Control+Shift),
+        NoAction(), NoAction()
+    ]
+    };
+
+As you can see, you can just redirect the keycode to the same keycode
+(`<AD10>`).
+
+I figured this out by looking at DreymaR’s `extend` file
+(`xkb-tree/symbols/extend`).
