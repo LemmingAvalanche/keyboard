@@ -833,3 +833,33 @@ there’s a problem in the `alphabet-section-numpad` section in
 ~twin-dexter~?
 
 [fn:xchainkeys] See my “dotfiles” repository.
+
+* TODO Free keys
+
+Look at the output:
+
+    Warning:          No symbols defined for <AB11> (keycode 97)
+    Warning:          No symbols defined for <JPCM> (keycode 103)
+    Warning:          No symbols defined for <I120> (keycode 120)
+    Warning:          No symbols defined for <AE13> (keycode 132)
+    Warning:          No symbols defined for <I149> (keycode 149)
+    Warning:          No symbols defined for <I154> (keycode 154)
+    Warning:          No symbols defined for <I178> (keycode 178)
+    Warning:          No symbols defined for <I183> (keycode 183)
+    Warning:          No symbols defined for <I184> (keycode 184)
+    Warning:          No symbols defined for <FK19> (keycode 197)
+    Warning:          No symbols defined for <FK24> (keycode 202)
+    Warning:          No symbols defined for <I217> (keycode 217)
+    Warning:          No symbols defined for <I219> (keycode 219)
+    Warning:          No symbols defined for <I221> (keycode 221)
+    Warning:          No symbols defined for <I222> (keycode 222)
+    Warning:          No symbols defined for <I230> (keycode 230)
+    Warning:          No symbols defined for <I247> (keycode 247)
+    Warning:          No symbols defined for <I248> (keycode 248)
+    Warning:          No symbols defined for <I249> (keycode 249)
+    Warning:          No symbols defined for <I250> (keycode 250)
+    Warning:          No symbols defined for <I251> (keycode 251)
+    Warning:          No symbols defined for <I252> (keycode 252)
+    Warning:          No symbols defined for <I253> (keycode 253)
+
+These are basically free for the taking.
