@@ -39,6 +39,7 @@ xkb_symbols "base" {
     include "twin-dexter(right-side-nav-and-misc)"
 
     include "twin-dexter(hyper)"
+    include "twin-dexter(caps_ctrl_c)"
     include "twin-dexter(latches-menu-and-compose)"
 
     include "twin-dexter(six-lock-shift-levels)"
@@ -1317,6 +1318,17 @@ xkb_symbols "hyper" {
       actions[Group1] = [ SetMods(modifiers=NumLock) ]
     };
     replace modifier_map Mod2 { Hyper_L, Hyper_R };
+};
+
+// Ctrl+Shift+C also works, so you can copy stuff in gnome-terminal
+partial modifier_keys
+xkb_symbols "caps_ctrl_c" {
+    replace key <CAPS> {
+    type[Group1] = "TWO_LEVEL",
+    symbols[Group1] = [ c, C ],
+    actions[Group1] = [ Redirect(key=<CAPS>,mods=Control),
+        Redirect(key=<CAPS>,mods=Control)]
+    };
 };
 
 // Media keys on level 5.
