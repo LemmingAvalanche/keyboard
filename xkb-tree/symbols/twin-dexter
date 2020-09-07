@@ -40,6 +40,7 @@ xkb_symbols "base" {
 
     include "twin-dexter(hyper)"
     include "twin-dexter(caps_ctrl_c)"
+    include "twin-dexter(ctrl_v)"
     include "twin-dexter(latches-menu-and-compose)"
 
     include "twin-dexter(six-lock-shift-levels)"
@@ -1312,6 +1313,17 @@ xkb_symbols "caps_ctrl_c" {
     symbols[Group1] = [ c, C ],
     actions[Group1] = [ Redirect(key=<CAPS>,mods=Control),
         Redirect(key=<CAPS>,mods=Control)]
+    };
+};
+
+// Ctrl+Shift+V also works, so you can copy stuff in gnome-terminal
+partial modifier_keys
+xkb_symbols "ctrl_v" {
+    replace key <AE01> {
+    type[Group1] = "TWO_LEVEL",
+    symbols[Group1] = [ v, V ],
+    actions[Group1] = [ Redirect(key=<AE01>,mods=Control),
+        Redirect(key=<AE01>,mods=Control)]
     };
 };
 
