@@ -42,7 +42,7 @@ xkb_symbols "base" {
     include "twin-dexter(caps_ctrl_c)"
     include "twin-dexter(ctrl_v)"
     include "twin-dexter(shift_insert)"
-    include "twin-dexter(latches-menu-and-compose)"
+    include "twin-dexter(latches-and-compose)"
 
     include "twin-dexter(six-lock-shift)"
 
@@ -830,7 +830,7 @@ xkb_compat {
 
 // Shift latches, group latches, menu key and compose key on the
 // “number row”.
-xkb_symbols "latches-menu-and-compose" {
+xkb_symbols "latches-and-compose" {
     // For latches
     // Levels
     replace key <AE02> {
