@@ -49,10 +49,6 @@ xkb_symbols "base" {
 
     // TODO: Make some use of these dead keys by making mappings in the
     // `~/.XCompose` file (see the dotfiles repository).
-    replace key <TLDE> {
-        [ kana_a ]
-    };
-
     key <AD12> {
         [ kana_u ]
     };
