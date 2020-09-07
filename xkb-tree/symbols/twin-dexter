@@ -866,11 +866,6 @@ xkb_symbols "latches-menu-and-compose" {
         type[Group1]="ONE_LEVEL",
         [ Multi_key ]
     };
-    // Menu key (right mouse click).
-    replace key <AE06> {
-        type[Group1]="ONE_LEVEL",
-        [ Menu ]
-    };
 };
 
 // Lock levels by first pressing a latch key and then `<RTRN>`.
