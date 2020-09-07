@@ -43,6 +43,7 @@ xkb_symbols "base" {
     include "twin-dexter(ctrl_v)"
     include "twin-dexter(shift_insert)"
     include "twin-dexter(latches-and-compose)"
+    include "twin-dexter(menu)"
 
     include "twin-dexter(six-lock-shift)"
 
@@ -865,6 +866,14 @@ xkb_symbols "latches-and-compose" {
     replace key <AE07> {
         type[Group1]="ONE_LEVEL",
         [ Multi_key ]
+    };
+};
+
+// Menu on `0`
+xkb_symbols "menu" {
+    replace key <AE11> {
+        type[Group1] = "ONE_LEVEL",
+        [ Menu ]
     };
 };
 
