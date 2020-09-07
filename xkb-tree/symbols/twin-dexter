@@ -44,7 +44,7 @@ xkb_symbols "base" {
     include "twin-dexter(shift_insert)"
     include "twin-dexter(latches-menu-and-compose)"
 
-    include "twin-dexter(six-lock-shift-levels)"
+    include "twin-dexter(six-lock-shift)"
 
     include "twin-dexter(lvl-5-media-keys)"
 
@@ -921,6 +921,18 @@ xkb_symbols "six-lock-shift-levels" {
         LockMods(modifiers=Shift+LevelFive),
         LockMods(modifiers=LevelThree+LevelFive),
         LockMods(modifiers=Shift+LevelThree+LevelFive)
+    ]
+    };
+};
+
+xkb_symbols "six-lock-shift" {
+    key.type[Group1] = "ONE_LEVEL";
+    key <AE06> {
+    symbols[Group1] = [
+        Shift_Lock
+    ],
+    actions[Group1] = [
+        LockMods(modifiers=Shift)
     ]
     };
 };
