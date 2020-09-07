@@ -1304,7 +1304,7 @@ xkb_symbols "hyper" {
     // for other hyper modifier keys.
     replace key <NMLK> { [Delete] };
 
-    replace key <CAPS> {
+    replace key <LSGT> {
       vmods = NumLock,
       type[Group1] = "ONE_LEVEL",
       symbols[Group1] = [ Hyper_L ],
