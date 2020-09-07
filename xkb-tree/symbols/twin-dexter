@@ -41,6 +41,7 @@ xkb_symbols "base" {
     include "twin-dexter(hyper)"
     include "twin-dexter(caps_ctrl_c)"
     include "twin-dexter(ctrl_v)"
+    include "twin-dexter(shift_insert)"
     include "twin-dexter(latches-menu-and-compose)"
 
     include "twin-dexter(six-lock-shift-levels)"
@@ -1320,6 +1321,16 @@ xkb_symbols "ctrl_v" {
     symbols[Group1] = [ v, V ],
     actions[Group1] = [ Redirect(key=<AE01>,mods=Control),
         Redirect(key=<AE01>,mods=Control)]
+    };
+};
+
+// Shift+Insert will output the primary selection in some applications
+partial modifier_keys
+xkb_symbols "shift_insert" {
+    replace key <TLDE> {
+    type[Group1] = "ONE_LEVEL",
+    symbols[Group1] = [ Insert ],
+    actions[Group1] = [ Redirect(key=<TLDE>,mods=Shift) ]
     };
 };
 
