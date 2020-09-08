@@ -971,7 +971,7 @@ xkb_symbols "right-side-nav-and-misc" {
     ],
     actions[Group1] = [
         NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key=<AD06>,mods=Control,clearMods=LevelFive), Redirect(key=<AD06>,mods=Control+Shift,clearMods=LevelFive),
+        Redirect(key=<LEFT>,mods=Control,clearMods=LevelFive), Redirect(key=<LEFT>,mods=Control+Shift,clearMods=LevelFive),
         NoAction(), NoAction()
     ]
     };
@@ -991,7 +991,7 @@ xkb_symbols "right-side-nav-and-misc" {
     ],
     actions[Group1] = [
         NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key=<AD09>,mods=Control,clearMods=LevelFive), Redirect(key=<AD09>,mods=Control+Shift,clearMods=LevelFive),
+        Redirect(key=<RGHT>,mods=Control,clearMods=LevelFive), Redirect(key=<RGHT>,mods=Control+Shift,clearMods=LevelFive),
         NoAction(), NoAction()
     ]
     };
@@ -1003,7 +1003,7 @@ xkb_symbols "right-side-nav-and-misc" {
     ],
     actions[Group1] = [
         NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key=<AD10>,mods=Control,clearMods=LevelFive), Redirect(key=<AD10>,mods=Control+Shift,clearMods=LevelFive),
+        Redirect(key=<BKSP>,mods=Control,clearMods=LevelFive), Redirect(key=<BKSP>,mods=Control+Shift,clearMods=LevelFive),
         NoAction(), NoAction()
     ]
     };
@@ -1015,7 +1015,7 @@ xkb_symbols "right-side-nav-and-misc" {
     ],
     actions[Group1] = [
         NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key=<AD11> ,mods=Control,clearMods=LevelFive), Redirect(key=<AD11>,mods=Control+Shift,clearMods=LevelFive),
+        Redirect(key=<HOME>,mods=Control,clearMods=LevelFive), Redirect(key=<HOME>,mods=Control+Shift,clearMods=LevelFive),
         NoAction(), NoAction()
     ]
     };
@@ -1051,7 +1051,7 @@ xkb_symbols "right-side-nav-and-misc" {
     ],
     actions[Group1] = [
         NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key=<AC10>,mods=Control,clearMods=LevelFive), Redirect(key=<AC10>,mods=Control+Shift,clearMods=LevelFive),
+        Redirect(key=<DELE>,mods=Control,clearMods=LevelFive), Redirect(key=<DELE>,mods=Control+Shift,clearMods=LevelFive),
         NoAction(), NoAction()
     ]
     };
@@ -1063,7 +1063,7 @@ xkb_symbols "right-side-nav-and-misc" {
     ],
     actions[Group1] = [
         NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key=<AC11>,mods=Control,clearMods=LevelFive), Redirect(key=<AC11>,mods=Control+Shift,clearMods=LevelFive),
+        Redirect(key=<END>,mods=Control,clearMods=LevelFive), Redirect(key=<END>,mods=Control+Shift,clearMods=LevelFive),
         NoAction(), NoAction()
     ]
     };
@@ -1080,7 +1080,7 @@ xkb_symbols "right-side-nav-and-misc" {
     ],
     actions[Group1] = [
         NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key=<AB07>,mods=Control,clearMods=LevelFive), Redirect(key=<AB07>,mods=Control+Shift,clearMods=LevelFive),
+        Redirect(key=<PGUP>,mods=Control,clearMods=LevelFive), Redirect(key=<PGUP>,mods=Control+Shift,clearMods=LevelFive),
         NoAction(), NoAction()
     ]
     };
@@ -1091,7 +1091,7 @@ xkb_symbols "right-side-nav-and-misc" {
     ],
     actions[Group1] = [
         NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key=<AB08>,mods=Control,clearMods=LevelFive), Redirect(key=<AB08>,mods=Control+Shift,clearMods=LevelFive),
+        Redirect(key=<PGDN>,mods=Control,clearMods=LevelFive), Redirect(key=<PGDN>,mods=Control+Shift,clearMods=LevelFive),
         NoAction(), NoAction()
     ]
     };
