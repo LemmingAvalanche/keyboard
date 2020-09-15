@@ -863,3 +863,10 @@ Look at the output:
     Warning:          No symbols defined for <I253> (keycode 253)
 
 These are basically free for the taking.
+
+* TODO Use the right-of-(left-shift) key as a modifier
+
+Probably Hyper.  Since I will use the Caps Lock for locking Caps or
+level 2 shift.
+
+Inspiration: https://www.reddit.com/r/MechanicalKeyboards/comments/gz4yeo/those_with_an_iso_layout_do_you_remap_the_iso_key/
