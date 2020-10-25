@@ -401,15 +401,17 @@ xkb_symbols "level-four-symbols" {
     // 3rd keyboard row
     key <AC01> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, U2329
+        NoSymbol, NoSymbol, NoSymbol, NoSymbol
     ] };
+    // Norwegian quotation mark (left)
     key <AC02> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, U232A
+        NoSymbol, NoSymbol, NoSymbol, guillemotleft
     ] };
+    // Norwegian quotation mark (right)
     key <AC03> {
     symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
+        NoSymbol, NoSymbol, NoSymbol, guillemotright
     ] };
     key <AC04> {
     symbols[Group1] = [
