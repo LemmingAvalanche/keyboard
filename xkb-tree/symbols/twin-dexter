@@ -30,7 +30,6 @@ xkb_symbols "base" {
 
     // symbols
     include "twin-dexter(base-punctuation)"
-    include "twin-dexter(rightsinglequotemark)"
     include "twin-dexter(level-three-symbols)"
     include "twin-dexter(level-four-symbols)"
 
@@ -49,16 +48,16 @@ xkb_symbols "base" {
 
     include "twin-dexter(lvl-5-media-keys)"
 
+    // Proper apostrophe key (replace `'` with `’`)
+    key <BKSL> { [
+        rightsinglequotemark
+    ] };
+
     // TODO: Make some use of these dead keys by making mappings in the
     // `~/.XCompose` file (see the dotfiles repository).
     key <AD12> {
         [ kana_u ]
     };
-    // `kana_e`: box-drawing mappings.
-    key <AD11> { [
-        kana_e, NoSymbol, NoSymbol, NoSymbol,
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol
-    ] };
 };
 
 // Programming layout.
@@ -1309,12 +1308,6 @@ xkb_symbols "hyper" {
       vmods = NumLock,
       type[Group1] = "ONE_LEVEL",
       symbols[Group1] = [ Hyper_L ],
-      actions[Group1] = [ SetMods(modifiers=NumLock) ]
-    };
-    replace key <BKSL> {
-      vmods = NumLock,
-      type[Group1] = "ONE_LEVEL",
-      symbols[Group1] = [ Hyper_R, Hyper_R ],
       actions[Group1] = [ SetMods(modifiers=NumLock) ]
     };
     replace modifier_map Mod2 { Hyper_L, Hyper_R };
