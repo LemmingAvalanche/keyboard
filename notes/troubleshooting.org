@@ -1,0 +1,13 @@
+* Problem: keyboard doesn’t work in Firefox
+
+** Likely solution
+
+Hyper is probably locked, which might happen if you press =Num Lock=
+while using the regular keyboard (e.g. =setxkbmap(no)=) and then switch
+to
+
+** Solution
+
+Switch to a regular keyboard (e.g. =setxkbmap(no)=), press =Num Lock=
+(to disable lock state) and then switch back to the keyboard that you
+were using.
