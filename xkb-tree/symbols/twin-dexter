@@ -1399,39 +1399,39 @@ xkb_symbols "lvl-5-media-keys" {
         redirectkey(key=<I173>, clearMods=LevelFive), NoAction(),
         NoAction(), NoAction()
     ] };
-    // Volume mute.
-    key <DOWN> {
-    symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        XF86AudioMute, NoSymbol, NoSymbol, NoSymbol
-    ],
-    actions[Group1] = [
-        NoAction(), NoAction(), NoAction(), NoAction(),
-        redirectkey(key=<MUTE>, clearMods=LevelFive), NoAction(),
-        NoAction(), NoAction()
-    ] };
-    // Volume decrease.
-    key <LEFT> {
-    symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        XF86AudioPrev, NoSymbol, NoSymbol, NoSymbol
-    ],
-    actions[Group1] = [
-        NoAction(), NoAction(), NoAction(), NoAction(),
-        redirectkey(key=<VOL->, clearMods=LevelFive), NoAction(),
-        NoAction(), NoAction()
-    ] };
-    // Volume increase.
-    key <RGHT> {
-    symbols[Group1] = [
-        NoSymbol, NoSymbol, NoSymbol, NoSymbol,
-        XF86AudioPrev, NoSymbol, NoSymbol, NoSymbol
-    ],
-    actions[Group1] = [
-        NoAction(), NoAction(), NoAction(), NoAction(),
-        redirectkey(key=<VOL+>, clearMods=LevelFive), NoAction(),
-        NoAction(), NoAction()
-    ] };
+//     // Volume mute.
+//     key <DOWN> {
+//     symbols[Group1] = [
+//         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+//         XF86AudioMute, NoSymbol, NoSymbol, NoSymbol
+//     ],
+//     actions[Group1] = [
+//         NoAction(), NoAction(), NoAction(), NoAction(),
+//         redirectkey(key=<MUTE>, clearMods=LevelFive), NoAction(),
+//         NoAction(), NoAction()
+//     ] };
+// //     // Volume decrease.
+//     key <LEFT> {
+//     symbols[Group1] = [
+//         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+//         XF86AudioPrev, NoSymbol, NoSymbol, NoSymbol
+//     ],
+//     actions[Group1] = [
+//         NoAction(), NoAction(), NoAction(), NoAction(),
+//         redirectkey(key=<VOL->, clearMods=LevelFive), NoAction(),
+//         NoAction(), NoAction()
+//     ] };
+// //     // Volume increase.
+//     key <RGHT> {
+//     symbols[Group1] = [
+//         NoSymbol, NoSymbol, NoSymbol, NoSymbol,
+//         XF86AudioPre, NoSymbol, NoSymbol, NoSymbol
+//     ],
+//     actions[Group1] = [
+//         NoAction(), NoAction(), NoAction(), NoAction(),
+//         redirectkey(key=<VOL+>, clearMods=LevelFive), NoAction(),
+//         NoAction(), NoAction()
+//     ] };
 };
 
 // Use left shift as `ISO_Lock`.
