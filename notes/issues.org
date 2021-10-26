@@ -864,8 +864,11 @@ Look at the output:
 
 These are basically free for the taking.
 
-* TODO Use the right-of-(left-shift) key as a modifier
+* DONE Use the right-of-(left-shift) key as a modifier
+CLOSED: [2021-10-26 Tue 20:11]
 
+- CLOSING NOTE [2021-10-26 Tue 20:11] \\
+  Now let’s put it to some good use.
 Probably Hyper.  Since I will use the Caps Lock for locking Caps or
 level 2 shift.
 

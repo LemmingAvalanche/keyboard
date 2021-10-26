@@ -25,7 +25,7 @@ xkb_symbols "base" {
     include "level3(modifier_mapping)"
     include "level5(modifier_mapping)"
 
-    include "twin-dexter(lsgt-as-shift)"
+    include "twin-dexter(lsgt-as-hyper)"
     include "twin-dexter(set-up-alts-and-windows)"
 
     // symbols
@@ -527,14 +527,10 @@ xkb_symbols "menu-to-ralt" {
     replace key <MENU> { [ Alt_R ] };
 };
 
-// Effectively “extend” the left shift key by mapping the key to the
-// right of it as another `Shift_L` key.  This makes it easier to
-// use shift together with left Alt (on the Windows key in this
-// mapping).
-xkb_symbols "lsgt-as-shift" {
+xkb_symbols "lsgt-as-hyper" {
     key.type[Group1] = "ONE_LEVEL";
     key <LSGT> {
-      [ Shift_L ]
+      [ Hyper_L ]
     };
 };
 
